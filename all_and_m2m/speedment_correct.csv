@@ -1,0 +1,250 @@
+https://github.com/speedment/speedment/commit/9c40f2feb2388c5e477dbc662191a2901176ee0b,,common: Add module-info for all modules,True
+https://github.com/speedment/speedment/commit/e31c4c8ffd7324a41950d168482c6b4c5fe920e0,,runtime: begin add module-info,True
+https://github.com/speedment/speedment/commit/269f6a9a844cf30a021786cc1d3fa8c7cebac549,,common-rest: Fix #744 better error messages when invoking rest endpoints,True
+https://github.com/speedment/speedment/commit/ca496a1e7f0ff8dbac1a4ed7d6d68be0387f96d5,,"Injector: Many improvements to the injector
+
+* Better exceptions with more details about what went wrong
+* Misused @WithState-annotations now cause an exception to be thrown
+* @Inject means mandatory.
+* @InjectOrNull is used to get the old behavior
+* @Inject-annotated constructors always have precendence over regular ones
+* New @OnlyIfMissing-annotation for secondary constructors",True
+https://github.com/speedment/speedment/commit/1993570ad8ea69f022d5abbd9a1834be273317fd,,runtime-core: JavaTypeMap not injectable and TransactionComponent can be null,True
+https://github.com/speedment/speedment/commit/e772422065198b0d77d40c1186c70af5d99e7edc,,"sqlite: DriverComponent is optional, the other components are mandatory",True
+https://github.com/speedment/speedment/commit/0b617dd17fc661b7472357ec3014a95044038117,,Adapt AbstractManager to the injector's more strict checks,False
+https://github.com/speedment/speedment/commit/259ef41493319776a174151a182a3fa5755cb9b2,,"Add HasColumn::findColumnOrThrow, Fix #743",True
+https://github.com/speedment/speedment/commit/e62c6ad74d24a1862065db53bff1fe50b4b3d187,,Remove SonarQube warnings,True
+https://github.com/speedment/speedment/commit/0f543c26beebdd4917f8e9148ec2e3c2d2a0498a,,"Tool: Add ScrollPane to workspace, Fix #433",True
+https://github.com/speedment/speedment/commit/f3e9c234cfc1105c2ee5ef6223361ccd86d89eea,,Tool: Enable scoll and wrap in Output,True
+https://github.com/speedment/speedment/commit/c27275c82e1ae121ee8cf82164aa016b1bce46a2,,tool-core: Add button for clearing the output,True
+https://github.com/speedment/speedment/commit/216c1a1311a67614917902ed832b39d34522149d,,Fix SonarQube smells,True
+https://github.com/speedment/speedment/commit/5493b37422c97d4cbdce4531b9d9ca728e05c32c,,"Move constants for Project and others to utility class, Work on #754",True
+https://github.com/speedment/speedment/commit/c9e242505d40f247e4a6ace2701090a67767b07f,,"Move constants from Document types, Fix #754",True
+https://github.com/speedment/speedment/commit/f80e1aeaa5f3291d3e6abde80d77abf562639e1a,,"Remove wildcards and more, Fix #755",True
+https://github.com/speedment/speedment/commit/ee3ad733679270c9c97d35f65191d3770ddcb291,,Tool: Update graphical interface,True
+https://github.com/speedment/speedment/commit/a3026bd613172d6bf3bceee6a89ab88c4b560eb2,,Injector: Fix #758 constructor with parameter issue,True
+https://github.com/speedment/speedment/commit/c4693f0867c4aef6ceef9bf26ed886b8de583e53,,Injector: Clenup,True
+https://github.com/speedment/speedment/commit/c60254c3b23ef175688056e0fb9f5a1adc069114,,Make DbmsTypes immutable,True
+https://github.com/speedment/speedment/commit/649bc7591cb028f36c81e6b2779c2614344edcb5,,function: Make implementation internal,True
+https://github.com/speedment/speedment/commit/0edf76a11893f39c695deaa03591db286a67fdba,,Make OperationHandler implementations immutable,True
+https://github.com/speedment/speedment/commit/1d8690e75799a52dc8dcedcf926811d8fe47f4be,,Depend on newer JUnit and Mock and update headers,True
+https://github.com/speedment/speedment/commit/4012f4d70347a6f20beda7b7a803265902810f58,,Change license header start. Fix #769,False
+https://github.com/speedment/speedment/commit/d694593cd292007dcd2fc12855bee676d4d96281,,runtime: begin add module-info,True
+https://github.com/speedment/speedment/commit/044262018e07aa1c1a1fb78a098af01a8fd1e9b9,,Modularize generator components,True
+https://github.com/speedment/speedment/commit/7b91603086a6aa1ef8b32ee5a515607ee155a5aa,,Modularize tool components,True
+https://github.com/speedment/speedment/commit/9d38b7c73c2a4069e54c7b8f997493442f7486d1,,Modularize plugin components,True
+https://github.com/speedment/speedment/commit/94410212eabb48abf39f4dcc433b67c4f9cbf49b,,Grey out children if table is disabled,True
+https://github.com/speedment/speedment/commit/db6e0acc0c777062653f4d3d6497e6824ce29c0f,,Remove SonarQube issues,True
+https://github.com/speedment/speedment/commit/257419de92a084182554309c4cee37ba3f76951c,,Reduce warnings,True
+https://github.com/speedment/speedment/commit/c0ccbdf22aedbeef974a7485e392cbd3c5260586,,Fix build errors,True
+https://github.com/speedment/speedment/commit/0f191e4eb3f9078406f8eae2988b0580eb2a6496,,Fix more warnings,True
+https://github.com/speedment/speedment/commit/d32aaa58daa38146c78f4cb08930628f3f1ed88f,,codegen: Add LicenseTerm,True
+https://github.com/speedment/speedment/commit/c7bffd1a71f5dbfc13f692657ab57055ca0bdde2,,codegen: Fix rendering problem,True
+https://github.com/speedment/speedment/commit/ef6e385fc35ccb88bb7d0b9b6e1f3002479c8a62,,enum-generator: Remove Lazy dependency,True
+https://github.com/speedment/speedment/commit/7eca1bf97111e78a8dfa2612ac9fe187f606b121,,"Remove module Lazy, fix #763",True
+https://github.com/speedment/speedment/commit/264075c7cff0c22ce5d93dc3e5498a819abf86c6,,Fixup smaller IDE warnings,True
+https://github.com/speedment/speedment/commit/2d6a4a752043fc37c23219eedb1546c5d4c35afa,,Remove internal package usage: Fix #781,True
+https://github.com/speedment/speedment/commit/24295597ac9654b45dd8bd1665eb44c24197f400,,jpms: Add transitive to module definitions,True
+https://github.com/speedment/speedment/commit/7c80f565e22f020a579455f955dd134381ac1705,,runtime: Move internal components via delegates to exports,True
+https://github.com/speedment/speedment/commit/45064c72c8d1af4ecb3d939db760c7e5c415433c,,"Add feature to allow AbstractDbmsType to be removed, Work on #317",True
+https://github.com/speedment/speedment/commit/d66a9a42aa0dfe3c96ac00691cac1df78c601369,,Fix error in Delegate,True
+https://github.com/speedment/speedment/commit/52107e2f8c6429b6abbf56e5f67ff7fc3461ca50,,mariadb: Remove AbstractDbmsType,True
+https://github.com/speedment/speedment/commit/213b97eb45a2fc66601dbffbcb8cfa63656737ab,,postgres: Remove AbstractDbmsType,True
+https://github.com/speedment/speedment/commit/3c811b4119e291391adb56ed6e1aecb8ed7b01b5,,Rework connectors,True
+https://github.com/speedment/speedment/commit/2b4b7013406b7288c0e6806e7705bbe051bbcc43,,Rest of rework connectors,True
+https://github.com/speedment/speedment/commit/381ac9d2582d325a4c70673ef99de7e4d73e7680,,Rework Join,True
+https://github.com/speedment/speedment/commit/af0380d7f4407f144ac3372fcfdadf5833bc694c,,Fix JPMS issues,True
+https://github.com/speedment/speedment/commit/cf17bacf6ae7d73b237ec7d29034afb4188ae571,,"Disallow private constructors in Injector, Work on #757",True
+https://github.com/speedment/speedment/commit/a2fbe19a808e4829aa7e65d3bbf81a868f7fd829,,Fix tests and more,True
+https://github.com/speedment/speedment/commit/fe60602b7ab74798a91a6600ce700b5cf03126b4,,Fix failing tests related to constructors,True
+https://github.com/speedment/speedment/commit/2baa1a725dcc6fa6c7b77d3b4d3479a5a928bd2b,,Fix constructor issues in tool,True
+https://github.com/speedment/speedment/commit/a507a4d53842aab12f4fcf19667448d12411cafa,,injector: Add method and documentation,True
+https://github.com/speedment/speedment/commit/75623bc191d274661613c0834c4ff2e26149eaee,,basic-example: cleanup,True
+https://github.com/speedment/speedment/commit/24ac0082b404bf9cc06bc226304bd306e25dde60,,Add generation of project specific InjectorProxy,True
+https://github.com/speedment/speedment/commit/73aae95cbd5dbd05c05c1c697515caa7b7dce7ff,,Cleanup,True
+https://github.com/speedment/speedment/commit/840f0456011d9b9ffc08abb60b33cc322258cfe6,,runtime-application: Add require transitive,True
+https://github.com/speedment/speedment/commit/ba67be51fa6f5439d35cfa4d35d31d92c8155c14,,join: Fix module dependencies,True
+https://github.com/speedment/speedment/commit/9a1bae8943b9189407e318a3f43bfbf6153e81c1,,Cleanup,False
+https://github.com/speedment/speedment/commit/8251e64e1c0d31b97acb1ed8274016c04bffc9bb,,Close OperationalHandler on app close,True
+https://github.com/speedment/speedment/commit/16c286715f63dba1bf4fb0a4e4159b7b1da1d222,,connectors: Expose xxxComponent directly,True
+https://github.com/speedment/speedment/commit/cf6a496a70766cbee6700b03739511f35ca1b9ce,,"injector: Fix injection order, Fix #788",True
+https://github.com/speedment/speedment/commit/729cf58bee5fd29f4f2fb0e840a0c836b884330d,,injector: Internalize StandardInjectorProxy and disallow field setting,True
+https://github.com/speedment/speedment/commit/380f0574b4092a704010a6d3db79fcdc65a1cbb1,,"Remove field.setAccessable() requirement, Fix #757",True
+https://github.com/speedment/speedment/commit/0843e8489d0e8137ad556e4d055c8ad94cd7a4aa,,Eliminate setAccessable() requirements,True
+https://github.com/speedment/speedment/commit/c3afd5a82bfcda6a521b0d5d6f5e70847c20b3fd,,Fix too related issues related to setAccessable(),False
+https://github.com/speedment/speedment/commit/963116fdd8fc10776e1f3dec405c40de7598932e,,Fix component,True
+https://github.com/speedment/speedment/commit/2664a5b3e5ab02533e2c2014665ca5dac5baa938,,Export codegen internals to codegenxml,True
+https://github.com/speedment/speedment/commit/d23e8847950cfbdae0d4422826e8ba704606d33b,,codegen: Add additional export packages,True
+https://github.com/speedment/speedment/commit/b0d92a43547072c65e8028c367b99b075dc01d2f,,codegenxml: Add require transitive,True
+https://github.com/speedment/speedment/commit/53abe76d9c514e84d9fb7f1b02086d56ee25f44b,,codegen: add provider package to module,True
+https://github.com/speedment/speedment/commit/d4852e78f8abee6f11ac1c47a0949349e3237684,,codegen: move CollectorUtil to public util package,True
+https://github.com/speedment/speedment/commit/fcf02498f8eda5203ad31668914064cd4f44aeb3,,codegenxml: inherit delegated components,True
+https://github.com/speedment/speedment/commit/a27cbe78fda0cd53709808da4f500677dd20673c,,codegen: missing semicolon,False
+https://github.com/speedment/speedment/commit/160d2e5358104aa649e399c6d0097f428dc27767,,runtime: add java.sql modules to typemapper,True
+https://github.com/speedment/speedment/commit/2041745528cab55b07bbe7e7b1baf3d934f63bb4,,config: add project implementation delegate,True
+https://github.com/speedment/speedment/commit/652f521597154bc88361b1fe77ae6c04821ede36,,runtime-connector: replace internal impl with delegate,True
+https://github.com/speedment/speedment/commit/fe847b3967ee1657071dde438f5c3371120a8c7f,,Provide static constructor in Project,True
+https://github.com/speedment/speedment/commit/d201298a15c7e44aa60e84ccbf2cf89ae3375678,,Provide static constructor for Dbms,True
+https://github.com/speedment/speedment/commit/d31bf0f55ef3b1d098e044778a1c0bd7e809aa28,,Provide static constructor for ImmutableProject,True
+https://github.com/speedment/speedment/commit/47848be9306ed787cc75504f5d593c6c38e0c6c0,,Add static constructor for SchemaImpl,True
+https://github.com/speedment/speedment/commit/5a8feac2bb6b1b119f186356968b06503e823741,,Add static constructor for TableImpl,True
+https://github.com/speedment/speedment/commit/48f289397ba1ea2a6d15abbc1fbd6f2c1f3941a8,,Add static constructor for ColumnImpl,True
+https://github.com/speedment/speedment/commit/6d156916cb62deb468c0a436e22d962d1ba89a13,,Add static constructor for IndexImpl,True
+https://github.com/speedment/speedment/commit/0d212f42ea143230fc24a8750df197631515d29e,,Add static constructor for IndexColumnImpl,True
+https://github.com/speedment/speedment/commit/d9b79da25bfb32a721437f6796d2efaf848419b3,,Add static constructor for ForeignKeyImpl,True
+https://github.com/speedment/speedment/commit/f12206d3102a8555408b482a85209a60cdc76357,,Add static constructor for ForeignKeyColumnImpl,True
+https://github.com/speedment/speedment/commit/cc24f07312295b4b481d1d7251acd6fa0c5a90d0,,Add static constructor for PrimaryKeyColumnImpl,True
+https://github.com/speedment/speedment/commit/ed847f184f39c4dd20d580a6882bd0bf01b2eb0f,,runtime-application: Expose classes,True
+https://github.com/speedment/speedment/commit/beba3c3aa2331f0e5ce7f5db87fdd71e9274e51a,,runtime-core: Fix module issues,True
+https://github.com/speedment/speedment/commit/fa01c75f8d181ec72b194df31c54f4d2577ebc8b,,Expose BaseDocument,True
+https://github.com/speedment/speedment/commit/0f55788d96d1253fd3127b4c5b12fbc4069c754b,,runtime-config: exports provider,True
+https://github.com/speedment/speedment/commit/351d3720307b8ade901efcfc251267b4f4605ad1,,Move util class to config module,True
+https://github.com/speedment/speedment/commit/ea3e944d1987c4a274c7ac8901dd372e12f30299,,translator: add static constructor to JavaLanguageNamer,False
+https://github.com/speedment/speedment/commit/db05afcc86f6cc5dbc1288f2f1f74d5710aafcdb,,translator: remove unused import,True
+https://github.com/speedment/speedment/commit/676abf15782615aed40eac791ca1aa6dbd09836f,,translator: add common function module,True
+https://github.com/speedment/speedment/commit/b8bb94546c3b990e990b7e3f005b0013732b6cdc,,translator: use JavaGenerator delegate in bundle,True
+https://github.com/speedment/speedment/commit/0b4e1ac34f06d09f6f8204e27b9673e7e4d9b452,,Make Statistics util class publicly accessible,True
+https://github.com/speedment/speedment/commit/af6325c8c908d260bd8e154a2cea136d7c7fe271,,tool-config: delegate DocumentPropertyComponent,True
+https://github.com/speedment/speedment/commit/c91f008d3c825d53dd6ba1665c55c281b15b3177,,tool-core: remove config internal reference,True
+https://github.com/speedment/speedment/commit/d37117facd581e35e826b3bf9c8678b79dc69836,,tool-propertyeditor: delegate PropertyEditorComponent,True
+https://github.com/speedment/speedment/commit/be5d597c7deb6dca01213d1903fd87756955295e,,tool-core: remove propertyeditor internal reference,True
+https://github.com/speedment/speedment/commit/0b844b736c14c8751162a631d11041971494f9bc,,Improve JPMS printout,True
+https://github.com/speedment/speedment/commit/687a1cfd6b60cd7c2d4e23ec29d6cd1e229077b3,,Remove internal reference and create static constructor,True
+https://github.com/speedment/speedment/commit/664e830d4e0cfea6b713e4322d657a9ae207b184,,generator-core: Create injectable standard implementations,True
+https://github.com/speedment/speedment/commit/02086e0e5ac08c855d84dde265adfe805971c545,,codegen: Rework how classes are exposed and delegated,True
+https://github.com/speedment/speedment/commit/6c1d28182b0dde66c2814021cff0f99a3d7f6f8f,,generator-translator: Add provider package and classes,True
+https://github.com/speedment/speedment/commit/09c456bffe194aef1ddb50e9e8b834e85e4921e6,,runtime-code: Provide a stream() method to SqlStreamOptimizerComponent,True
+https://github.com/speedment/speedment/commit/7afcd6c237497724f36ac1211173840a02d471c9,,Break out JPMS specifics into separate util and introduce a new log type,True
+https://github.com/speedment/speedment/commit/5c1b627826ed033d551e051ff9939c7caed92b18,,generator: add missing module exports,True
+https://github.com/speedment/speedment/commit/ca82a71011aa8d4bd930ec1ed1fcf491bbeab285,,rest: add json module,True
+https://github.com/speedment/speedment/commit/f726cbf750814572737dadfb8bd0153f1c361203,,sqlite: Add requires transitive statements in module-info,True
+https://github.com/speedment/speedment/commit/af45dc7c4a057a5c426fd44c490d4890a564ad10,,enum: remove propertyeditor internal references,True
+https://github.com/speedment/speedment/commit/b588ee6b3c06cb7b7c8d67bb687340c64eed9d3d,,generator-translator: Create objects via explicit constructor,True
+https://github.com/speedment/speedment/commit/9f663c187984235bd21583a713f2fefb0fb570fb,,tool: remove unused import,True
+https://github.com/speedment/speedment/commit/0ea775c14ab19ce205f9384ddef20dcdb1035992,,Remove unused import,True
+https://github.com/speedment/speedment/commit/0446b15f62c8e06fa5160a21c734f8c1b7ad5e3a,,generator: fix typos,False
+https://github.com/speedment/speedment/commit/e6ed18aef09256d95b9eb4fd1ddc2752342fc67b,,runtime-field: Add requires transitive statements in module-info,True
+https://github.com/speedment/speedment/commit/74c7938c85732ccd88337ce16b9c006ef5a204c2,,runtime-application: Fix imports,True
+https://github.com/speedment/speedment/commit/580b199c3d89cdaa75f6e21609911fa0f9074115,,runtime-bulk: Add requires transitive statements in module-info,True
+https://github.com/speedment/speedment/commit/8a2dfa338908e2087cd6d38377a7a011ba6d7060,,runtime-compute: Add requires transitive statements in module-info,True
+https://github.com/speedment/speedment/commit/62f4ec65c05a7a85874378c3209a044ca7afcfd3,,runtime-config: Add requires transitive statements in module-info,True
+https://github.com/speedment/speedment/commit/059a18d413cab56fa1c9c3846f6625737dfdfcb6,,sqlite: Add requires transitive statements in module-info,True
+https://github.com/speedment/speedment/commit/1119eb8ec152d1c1bd804346d121772752f2f97a,,postgres: Add requires transitive statements in module-info,True
+https://github.com/speedment/speedment/commit/6e2d38aeb72f7f00d756aa2a01b2ca65fad55580,,mysql: Add requires transitive statements in module-info,True
+https://github.com/speedment/speedment/commit/f00be963817010860490b1c5b5b954d5c2a08958,,mariadb: Add requires transitive statements in module-info,True
+https://github.com/speedment/speedment/commit/3664912cc9ab7cee0dbfb41b109373bc8e2542db,,runtime-core: Add requires transitive statements in module-info,True
+https://github.com/speedment/speedment/commit/d1af0bc9b9aabb7f57a0a1e8053f95573f3d0320,,runtime-join: Add requires transitive statements in module-info,True
+https://github.com/speedment/speedment/commit/e4ac55abe586a89cf69ee1fae375dc482df4e9a2,,runtime-typemapper:  Add requires transitive statements in module-info,True
+https://github.com/speedment/speedment/commit/0be84431114c3a1474d3f969e64b0f3f2f98eb35,,injector: add requires transitive statements to module-info,True
+https://github.com/speedment/speedment/commit/330219e07d15f28089a9d4674c9f9a18052c08e1,,rest: remove unused import,True
+https://github.com/speedment/speedment/commit/8b84b3eb1cebe3a2d9195166efd5982bf45b31ce,,Detach example-parent and add module system under Java 11 min,True
+https://github.com/speedment/speedment/commit/154383186d415c7faf0163c9a086727ec75c3512,,tool-actions: add requires transitive statements in module-info,True
+https://github.com/speedment/speedment/commit/471cbf553ad1ac36ff32eb4d063901e8f6a98f07,,tool-config: add requires transitive statements in module-info,True
+https://github.com/speedment/speedment/commit/9c7c5d4c013393b55d99a5d9e3d0142c7ca66610,,Deprecate ADbmsOH and add StandardDbmsOperationHandler,True
+https://github.com/speedment/speedment/commit/2b63527544da6d8742e4d7391c1f10636151bddb,,mysql: Use StandardDbmsOperationHandler,True
+https://github.com/speedment/speedment/commit/cdc3a45a2a7a94c9cfb8b4d6a7854bc49c4409a6,,tool-propertyeditor: add requires transitive statements in module-info,True
+https://github.com/speedment/speedment/commit/dd8bab3b399ab80e938a8e3d66dde100f83756a7,,"postgres: Use StandardDbmsOperationHandler, Work on #787",True
+https://github.com/speedment/speedment/commit/8ae8c34f5ac82e19cf8604aba00396501f077e69,,tool-core: add requires transitive statements in module-info,True
+https://github.com/speedment/speedment/commit/d4d44a4c005d7fb41d39b68e9e4f2f8f4f17209c,,"sqlite: Use StandardDbmsOperationHandler, Work on #787",True
+https://github.com/speedment/speedment/commit/f4cbb7d0eb4bb819aa49fe3179bb6df85b885a81,,runtime-core: Allow generatedKeyHandler as a parameter,True
+https://github.com/speedment/speedment/commit/a0a05cd0bddb36a054b782359702ae915a9670a4,,runtime-application: Improve JPMS printout,True
+https://github.com/speedment/speedment/commit/075a689ab29f58635ca0fe7f99150a4309a10d9d,,"Remove usage of AbstractDbmsOperationHandler, Fix #787",True
+https://github.com/speedment/speedment/commit/63fdee16ff24e2f73cf956ff207e8d7f45da80a8,,runtime-core: Fix bugg in DbmsOperationHandlerImpl,True
+https://github.com/speedment/speedment/commit/647e079818656535caf0af478ba9f6dfd90f634b,,runtime-core: Require java.prefs for EmailUtil class,True
+https://github.com/speedment/speedment/commit/613a2620a64c15d5351a4280e39779e7b2b1a331,,Add entity creation method to Manager,True
+https://github.com/speedment/speedment/commit/120a238ba3455e7b81e433206037b907fa006966,,Include Manager#create() method in generator,True
+https://github.com/speedment/speedment/commit/d6304ecb1d7f3a66c03c5cdcb1f27dbd6ee8b361,,runtime: Rearrange classes for correct exposure,True
+https://github.com/speedment/speedment/commit/475faca648b4da9073f2934f7dba43f84069ce67,,Expose DefaultApplicationMetadata class,True
+https://github.com/speedment/speedment/commit/cbe4cc7e62637f2c22ed6079d3b78ba8311e0a76,,Fix SonarQube issues,True
+https://github.com/speedment/speedment/commit/1657d50236c43c30aa6ff95abc22ea3e2428f17e,,enum-generator: Expose fields for Injector and more,True
+https://github.com/speedment/speedment/commit/5043bf68897623fb5a8a1a2870cd53240b61fd31,,json-stream: Expose fields for Injector and more,True
+https://github.com/speedment/speedment/commit/552d1e48bd39dec9027818bc5c4eb69b02a2453b,,"Remove several StaticClassUtil  classes, Fix#796",True
+https://github.com/speedment/speedment/commit/9c6c3f1a4e3e7a66146719f501c0fd34f19b909b,,"Allow only public ExecuteBefore and rename close, Fix #802 FIx #807",True
+https://github.com/speedment/speedment/commit/a094036c15374f98c0d8de4ef1999fb5f15a6a27,,"runtime-typemapper: Remove SerialBlob usage, Fix #803",True
+https://github.com/speedment/speedment/commit/0dc168c0ae1e40d127ecc3acf1c0823d68acadc9,,"tool: Add toggle/expand all in context menu, Fix #800",True
+https://github.com/speedment/speedment/commit/3fab13a49848964cacb1d0ca5ca7be939024a788,,runtime-core: Improve AbstractDbmsMetadataHandler,True
+https://github.com/speedment/speedment/commit/9386d556e6322656693eda94be914f370e7f57d4,,logger: Use ms in timestamp,True
+https://github.com/speedment/speedment/commit/f8d2541b8e8b039edc3a521fe33bcadab956f09f,,"Remove Remove OSGI packaging, Fix #812",True
+https://github.com/speedment/speedment/commit/042817e9c95e8997191c4de9641f7746562e4985,,Fix warnings and tests,True
+https://github.com/speedment/speedment/commit/defada02240d9be4f189e256bf0db6bde529c4e6,,runtime-application: Remove usage of requiresNonNulls,True
+https://github.com/speedment/speedment/commit/24ae8df1a0c5fc18fb89df8bd713cdf9610b95c3,,"Fix module issues and javadoc issues, Fix #817",True
+https://github.com/speedment/speedment/commit/15aebcb961c77021b62a3f5bbda2ba5d82cee9db,,Add jlink examples,True
+https://github.com/speedment/speedment/commit/f95f24c0206fbc322e2341e5d0f63bda87707759,,"Remove module mutable-streams, Fix #816",True
+https://github.com/speedment/speedment/commit/008bcb0825fba2299054a9207065fdeca2dd115a,,tool-parent: Create DelegateUserInterfaceComponent,True
+https://github.com/speedment/speedment/commit/1a4416c9d5bea4bbe19ef83d0941f2b22cadb02a,,Injector: Use InjectorProxy also for Injector access,True
+https://github.com/speedment/speedment/commit/cbf2276dba9aabd5abc72f4dff2db7af0d0350a8,,injector: Improve error logging,False
+https://github.com/speedment/speedment/commit/e1245047f149c6c1e94fcd3e27e71a216990215c,,Reduce technical debt,True
+https://github.com/speedment/speedment/commit/a74d239e836fcd00ba690429a04dca945cb6c3e2,,"Use InjectorProxy when setting config fields, Fix #822",True
+https://github.com/speedment/speedment/commit/f92ca4152158e8e32285c5842e96dc02c22c7ca7,,Reduce warnings in SonarCube,False
+https://github.com/speedment/speedment/commit/49ef98908966c5283e192c252d6081c0b305794f,,"Remove example moduled, Fix #823",True
+https://github.com/speedment/speedment/commit/a2e3c780e880150a06ceeb45ba016fef729fc540,,Bump version to 3.2.2-SNAPSHOT and remove SQ issues,True
+https://github.com/speedment/speedment/commit/f662ca4393c9dcc899f359970a16a8c00f27168b,,tuple: Reduce duplicate code and add tests,True
+https://github.com/speedment/speedment/commit/bea586bb23b9d99de5598d651ecd79de62dddaa8,,runtime-field: Reorder of imports,False
+https://github.com/speedment/speedment/commit/be2a751dc4460de619446836a1f067b4f34c17aa,,plugin-parent: Resolve SQ issues,True
+https://github.com/speedment/speedment/commit/28791cd67ba2b4db5502300eba0c1ea05e6a8773,,generator-parent: Resolve SQ issues,True
+https://github.com/speedment/speedment/commit/fb64cea6cacc6af67bb46aa9c9682c39a9f78691,,common-parent.tuple: Resolve SQ issues,True
+https://github.com/speedment/speedment/commit/4aa0d01cfb11e6dc65b85df248bca650cd7178ce,,common-parent.logger: Resolve SQ issues,True
+https://github.com/speedment/speedment/commit/9d5e4f547bff481d98da4e4e3b2b0d75c7ef3fa6,,common-parent.json: Resolve SQ issues,True
+https://github.com/speedment/speedment/commit/40569bb004b63ecf803641edf6da02f5b4413801,,common-parent.injector: Resolve SQ issues,True
+https://github.com/speedment/speedment/commit/71b2676bad6992e1d996f6202c3844de7e9ff4a3,,common-parent.codegenxml: Resolve SQ issues,True
+https://github.com/speedment/speedment/commit/6c701f54545e048761ba5cf1d9044f0a6bedd401,,common-parent.codegen: Resolve SQ issues,True
+https://github.com/speedment/speedment/commit/bc49e8849e4221a4ef413fd4533e47b716169dc9,,tool-parent.tool-core: Resolve SQ issues,True
+https://github.com/speedment/speedment/commit/98c480e42b7e1a8c977671348c45cfb3632196dd,,tool-parent.tool-actions: Resolve SQ issues,True
+https://github.com/speedment/speedment/commit/9dc52f2ae933ae65319acc72d7cffe3dde92ee01,,runtime-parent.join: Resolve SQ issues,True
+https://github.com/speedment/speedment/commit/da7564d67a1a0c5ffc4f40d15e32ee5764458bb2,,runtime-parent.field: Resolve SQ issues,True
+https://github.com/speedment/speedment/commit/2cadaf45bc020dd984d84f0d2f42a7828cf97190,,runtime-parent.core: Resolve SQ issues,True
+https://github.com/speedment/speedment/commit/a301e5c3a09bc6e4df91f86ce19107cee2fa9175,,runtime-parent.connector: Resolve SQ issues,True
+https://github.com/speedment/speedment/commit/bb3e736dd010e80c453ec64e908761f1ac88a1f7,,runtime-parent.config: Resolve SQ issues,True
+https://github.com/speedment/speedment/commit/410b17558d581bd15119b2ca198fee11c09d16df,,runtime-parent.bulk: Resolve SQ issues,False
+https://github.com/speedment/speedment/commit/da1576a0dd7257f12f6d5bc074504d2e6b9fe847,,"Fix modifier order on fields, Fix #828",True
+https://github.com/speedment/speedment/commit/270ff9c5af6a301142ebb1b9a6cdf24916313fb9,,maven-plugin: Remove unused import,True
+https://github.com/speedment/speedment/commit/474a99365615c8908877cb36117e121a73f5dae6,,tuple: Reduce SQ warnings,True
+https://github.com/speedment/speedment/commit/874dde0d92f08661ecb73e95f507719e8e5f7e99,,enum-generator: Fix SQ minors,False
+https://github.com/speedment/speedment/commit/36fe1b4fc096816ae3fa23840892d82b92c3d3fe,,generator: Fix SQ minors,True
+https://github.com/speedment/speedment/commit/3623e47c110f65e2d48f4bbb8a187156923fcc3a,,tuple: Fix SQ minors,True
+https://github.com/speedment/speedment/commit/fc997747b24a71a1d3d6375e3f8e50034e28e4c8,,json: Fix SQ minors,True
+https://github.com/speedment/speedment/commit/243eb003f3fe2bf423756f18d1dceb9628444bd9,,codegen: Fix SQ minors,True
+https://github.com/speedment/speedment/commit/d415088eea006357b00b2ae75d0ba3799a29f40e,,runtime-compute: Fix SQ minors,True
+https://github.com/speedment/speedment/commit/31899e3b9e8d0e0abeb961b04b5b629a232b50da,,runtime-config: Fix SQ minors,True
+https://github.com/speedment/speedment/commit/cf9f99a6a0a8ee39aa39ae3af552546b5ff885a5,,runtime-core: Fix SQ minors,True
+https://github.com/speedment/speedment/commit/0db316ef06bb09334f0e60529542cb2f454416b2,,Fix more SQ minors,True
+https://github.com/speedment/speedment/commit/9220cb36849b09928df508de80f0a89f6368057c,,Change signature of method and optimize file operations,False
+https://github.com/speedment/speedment/commit/6c0fa9b18da4e4f741e167a88b40cad6b44db457,,runtime-core: use logger instead of System.out,True
+https://github.com/speedment/speedment/commit/867e4cd05895b86fb21d3b0d2037733278b3ca86,,runtime-core: Remove unused type,False
+https://github.com/speedment/speedment/commit/7fdbad78f60c64327c5fe88c307141d2e67ec373,,runtime-core: Remove unused type variable,False
+https://github.com/speedment/speedment/commit/208a25f960cef533665a87976e3242c6b162dfd2,,Fix a large number of SQ issues,False
+https://github.com/speedment/speedment/commit/f8fa1836776e322246dc710966713f7b378b3cfd,,common-parent: Fix SQ critical,True
+https://github.com/speedment/speedment/commit/eb7c2ec2432511de5638292569f6d47b98c9ed0b,,generator-parent: Fix critical SQ issues,True
+https://github.com/speedment/speedment/commit/5a2ef675d56fe1eae503956136f789287906812f,,common-parent: Fix critical SQ issues,True
+https://github.com/speedment/speedment/commit/18e7975aec4e7060f1a27a2e35a110dd7e2e7296,,Fix a large number of SQ issues,True
+https://github.com/speedment/speedment/commit/c731a76789ae356e5fa4b86a953127441cbb4f40,,Remove unused imports,True
+https://github.com/speedment/speedment/commit/576c1678b8650aa8d2597573fe55746829dc0398,,injector: Reduce complexity,True
+https://github.com/speedment/speedment/commit/39ccd0b366f2cb9c108eaedb6d13b6901f0c675e,,runtime-core: Add Merger method. Fix #287,True
+https://github.com/speedment/speedment/commit/2008d79ef5c2a0b85c4170f6ea35d4cb0d55ea1f,,"runtime-core: Fix merger issues, Work on #287",True
+https://github.com/speedment/speedment/commit/54ccf2c8fca14acb8f4d5ffafeddd865c1d248f6,,json: Add exports to module description,True
+https://github.com/speedment/speedment/commit/35d46b359f5fdc5d96c54fd969240a50c025bcc8,,tool-core: Improve map handling,True
+https://github.com/speedment/speedment/commit/b3d03b7a045d24b866324e2a6849ce0a47c7f965,,tool-parent: Fix SQ critical issue,True
+https://github.com/speedment/speedment/commit/757333bfd962d0fcf73dfb3f3370ff85c8f295ac,,tool-parent: Fix SQ critical,True
+https://github.com/speedment/speedment/commit/de25bf77fb362539c6ac3ccf7e015726a1a5f29b,,generator-standard: Reduce complexity,True
+https://github.com/speedment/speedment/commit/7b55b082fd0b5e0d6ac54183dd4df00a6c7b8e9d,,Fix SQ minor issues,True
+https://github.com/speedment/speedment/commit/c47949ca9e6a38629fadbdf5e7cb605a54342d39,,maven-plugin: remove unused imports,True
+https://github.com/speedment/speedment/commit/23a5a7fd83313a7d2cba2f90c4230c864aab071e,,Fix SQ issues,True
+https://github.com/speedment/speedment/commit/4fc025ce034494422a344fd0ed2dea6f74fb80c6,,Fix more SQ issues,True
+https://github.com/speedment/speedment/commit/f1966fbc701dc1fc7aeec090bd1396ffefc02059,,runtime-core: Fix MergeUtil class,True
+https://github.com/speedment/speedment/commit/2627177686a2794755c28196e5c92228e59ee173,,runtime-core: Add Manager::merger,True
+https://github.com/speedment/speedment/commit/1995e2f27719c803ebf0b3f038ea464658d8e18e,,runtime-config: Remove dependency on MapStream,True
+https://github.com/speedment/speedment/commit/2983ac73123b79134425706ac624d2f1847b0259,,"runtime-core: Remove use of MapStream, Fix #833",True
+https://github.com/speedment/speedment/commit/2618ad4c5b5a9e7a2ff5c4068ca3f64e7fd62d24,,"Move the interface TypeMapperComponent to runtime, Fix #826",True
+https://github.com/speedment/speedment/commit/74fec996316abb6e43f0bbf4b4e497a4be682729,,"Make Translator take Injector as a parameter, Fix #790",True
+https://github.com/speedment/speedment/commit/bc23e846b1dc275100aca2021728849273d6ac84,,Fix SonarQube issues,True
+https://github.com/speedment/speedment/commit/eec25c3c4c3b45db4c02805302dfb0eef4e889a3,,combinatorics: Add tests,True
+https://github.com/speedment/speedment/commit/61ef674a6a7e79c118e59c68edcfbb60e0a09fde,,"Fix problem with streamOf, Fix #840",True
+https://github.com/speedment/speedment/commit/ad0cd090d2dde8a9972df5f8b58bd0006ca999dc,,compute: add tests,False
+https://github.com/speedment/speedment/commit/997f4511074b962906cc30e265cf8b6b38a38bf3,,"Remove module mapbuilder, Fix #846",True
+https://github.com/speedment/speedment/commit/4ffd15dde2f4109b99223b34f72f09e7425b46d9,,runtime-field: Add StringField tests,False
+https://github.com/speedment/speedment/commit/1d7128173ccd8c78f8f8cc6d0d61bb6567a508f2,,runtime-field: Add tests,False
+https://github.com/speedment/speedment/commit/1f9b8b0c2b207b4ec7bd26c78bd07fab6442d006,,"typemapper: Fix conversion from DateInt to Short, Fix #845",True
+https://github.com/speedment/speedment/commit/4c18cca611826ece51c2ca855458d74d3f17ea36,,compute: add internal expression utility tests,False
+https://github.com/speedment/speedment/commit/82d20eaec5aeafa1fd833680818a69414a3797c0,,compute: add pow and sqrt tests,False
+https://github.com/speedment/speedment/commit/16327f54f2bf72bde6ff512db9949816e51bd686,,"map-stream: Protect null invariant, fix #849",True
+https://github.com/speedment/speedment/commit/d89565c2f24d3be02ff8759f0864f37514ef6fb7,,compute: add OrElseUtil test,False

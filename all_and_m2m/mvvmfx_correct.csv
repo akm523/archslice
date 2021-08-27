@@ -1,0 +1,11 @@
+https://github.com/sialcasa/mvvmFX/commit/8d08945fc00f6d6958618844d39a05d5647d2cd8,,Add missing immutable field methods. Add tests,True
+https://github.com/sialcasa/mvvmFX/commit/a7b0d37d2ab0981ac20b35d801f217122a8fa25e,,Implement possibility to add custom builder factories,True
+https://github.com/sialcasa/mvvmFX/commit/5d92be424fa679b07037ca017cc71bbd3e7827f4,,Add possibility to define local builder factories for a single loading procedure,False
+https://github.com/sialcasa/mvvmFX/commit/4cc4d34faf8b3562d2e794b9f69dfae55cd035c7,,Add support for multiple resourceBundles in FluentViewLoader #518,False
+https://github.com/sialcasa/mvvmFX/commit/4932a323e3577c5a8b1f832b9ec7c3fba040f4f6,,"[#543] Incorrect exception message in ViewLoaderReflectionUtils
+
+Signed-off-by: Nils Christian Ehmke <nils@rhocas.de>",False
+https://github.com/sialcasa/mvvmFX/commit/6978e4bea0a8655823c102429aa6cfb641fa7a37,,"Fix for #547 remove static dependency to PostConstruct annotation
+
+This way it's now easier to use the library with Java 9 and upwards as in Java 9 the annotation `@PostConstruct` isn't available anymore by default.",False
+https://github.com/sialcasa/mvvmFX/commit/0bf7d190812c49b2bf0ba5777057dec89cefe247,,Enables to change configurations via maven-profile.,True

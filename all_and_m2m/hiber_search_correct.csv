@@ -1,0 +1,171 @@
+https://github.com/hibernate/hibernate-search/commit/1cf93d1325d9c1635bf919198916f2fdf6977dd6,,"HSEARCH-2781 Introduce IndexManagerSelector to hide IndexShardingStrategy from SPIs
+
+This will allow integrators to arbitrarily route indexing works (using
+the selector) without having to use Class<?> to refer to indexed types
+(which IndexShardingStrategy mandates).",True
+https://github.com/hibernate/hibernate-search/commit/b7c1dd6924087983a99df937341d8ab4051cc5a0,,HSEARCH-2772 Debug the elasticsearch-aws module and use the latest version of aws-v4-signer-java,True
+https://github.com/hibernate/hibernate-search/commit/a7f233f04f0af5c0398ee6539864c80cc8e95bba,,HSEARCH-2772 Pre-compute repeatedly used regex expressions,False
+https://github.com/hibernate/hibernate-search/commit/c4c66d8cb33369ff254593ff413a01cfa41bf741,,HSEARCH-2772 Bootstrap configuration exception should be a SearchException,False
+https://github.com/hibernate/hibernate-search/commit/b01b2fb773815caca2683a1b95301e2eb4518bd8,,HSEARCH-2785 Fix DSL match/phrase queries on normalized fields with Elasticsearch,False
+https://github.com/hibernate/hibernate-search/commit/b40d93cde37b838af5cb33e20181e568c3bdd9f2,,"Remove dead code in Elasticsearch2SchemaTranslator
+
+I probably forgot this in 47d6b8a9344eaa5a49b02cf92a2981d1e2f6fceb when
+working on HSEARCH-2458.",False
+https://github.com/hibernate/hibernate-search/commit/97b0d008c133944f92714e8c54edd495efbccfa3,,"HSEARCH-2700 Make simpleQueryString() throw an exception on null input and match nothing on empty input
+
+As per our discussion with Guillaume.",False
+https://github.com/hibernate/hibernate-search/commit/bc521cae1c83330c377b1abcd81c4339b85dbd68,,HSEARCH-2770 Remove deprecated method DocumentBuilder#getBeanClass,False
+https://github.com/hibernate/hibernate-search/commit/f1add6b27605ff93609e46a0f7d055322dbd5d1c,,HSEARCH-2770 Remove deprecated methods frok Work and InstanceInitializer contracts,False
+https://github.com/hibernate/hibernate-search/commit/b14a058c54062588c130f49d6733cf262ecd869c,,HSEARCH-2770 Remove deprecated method getDocumentBuilderContainedEntity(Class),False
+https://github.com/hibernate/hibernate-search/commit/6f69e2f17e0f2abf1357a6e88146c271a440bb5e,,HSEARCH-2770 Remove deprecated SortConfigurations#setEntityType(Class),False
+https://github.com/hibernate/hibernate-search/commit/79b68ff388fe2a19b74ca98f12d8002ba6a942d8,,HSEARCH-2770 Remove deprecated ConversionContext#setClass,False
+https://github.com/hibernate/hibernate-search/commit/fa3d969d2f8da6c33a590021e14c27389c00c593,,HSEARCH-2770 Remove deprecated method SearchIntegrator#getIndexBinding(Class),False
+https://github.com/hibernate/hibernate-search/commit/b05869d91bd1b6d30900eaf18bd5198125106c07,,HSEARCH-2770 Remove deprecated method searchIntegrator#getIndexedTypes,False
+https://github.com/hibernate/hibernate-search/commit/ff64068f5da4e85d50302ba3ce6959def52f752b,,HSEARCH-2808 Resolve more deprecations from Hibernate ORM,False
+https://github.com/hibernate/hibernate-search/commit/82d6692352c4d11e3d858933f3d32b825da82474,,HSEARCH-2808 Avoid some back and forth casting between SessionImplementor and Session,False
+https://github.com/hibernate/hibernate-search/commit/fb663a3c931d68962a2cde9f1bf01d4fe46e1296,,HSEARCH-2808 Avoid deprecated SessionFactoryImplementor#getClassMetadata,False
+https://github.com/hibernate/hibernate-search/commit/35b985c5308188cbb622649a550b68796bd0c6e7,,HSEARCH-2811 Migrate from IndexWriter.setWriteLockTimeout to SleepingLockWrapper,False
+https://github.com/hibernate/hibernate-search/commit/2d6c574477f2da164d767e8a69b5248d0df2275e,,HSEARCH-2812 Refactor IdUniquenessResolver to use the new IndexedTypeIdentifier,False
+https://github.com/hibernate/hibernate-search/commit/acc9e640e443d02b1bc215e15716c5e98bdc37b8,,"HSEARCH-2813 Improve error messages when receiving garbage from Elasticsearch
+
+This won't change anything in real-world application, but it helps when
+stubbing the Elasticsearch client in tests.",False
+https://github.com/hibernate/hibernate-search/commit/764e9d9b3a28b29ad041c57630c0af386db1c862,,"HSEARCH-2821 Move JSON pretty-printing for logging to actual JBoss formatters
+
+... to allow the boilerplate formatting code everywhere.
+
+After this patch, we don't use dialect-specific Gson instances for
+logging anymore, but this shouldn't matter as the only difference between
+those are some custom type adapters, and when logging we only use the
+JsonElement class hierarchy.",True
+https://github.com/hibernate/hibernate-search/commit/39a26ddaf2cb505f2c6d3626f98db2a4adc4410c,,"HSEARCH-2640 Ensure all instance resources get a chance to be closed whatever happens
+
+... instead of giving up as soon as one resource fails to close, like we
+used to.",True
+https://github.com/hibernate/hibernate-search/commit/01554b0e9bc98928df6f5d5badc30b0aeabdcba1,,HSEARCH-2831 Require a dedicated configuration option to be set to enable AWS request signing,False
+https://github.com/hibernate/hibernate-search/commit/3aea77f55fe88d9888d18e107affced92128e840,,HSEARCH-2801 Use an IndexedTypeMap to pass custom type metadata when creating HSQueries,True
+https://github.com/hibernate/hibernate-search/commit/92e368081c02e4ceca7dc0b050b3e8040188f79e,,"HSEARCH-2764 Only include request/response in ElasticsearchWork wrapping exceptions
+
+This will make it much easier to handle exceptions in CompletableFutures
+in the next commits.
+
+Granted, this makes the exception traces longer, but to be fair it only
+*adds* to the traces, so users won't have to scroll more unless they
+want to know more.",False
+https://github.com/hibernate/hibernate-search/commit/ffa77a24b7f1bd8c259b68156438e23b6c8e5ef5,,"HSEARCH-2764 Use CompletableFuture in ElasticsearchWorks
+
+This is the first step toward making asynchronous requests more
+""reactive"".",True
+https://github.com/hibernate/hibernate-search/commit/0aa11d92d06b18810b669431a79f0411701dd904,,"HSEARCH-2764 Use CompletableFuture for orchestration in ElasticsearchWorkProcessor
+
+But still execute works sequentially for now.",True
+https://github.com/hibernate/hibernate-search/commit/683fefe8fd36e0925984de72d922cabaa8433f5d,,"HSEARCH-2764 Introduce ElasticsearchWorkBulker and ElasticsearchWorkSequenceBuilder
+
+Those two classes encapsulate the logic of bulking and building a
+sequence of works, making it easier to orchestrate works in many
+different ways (see the following commits).
+
+Also, compared the the previous way of executing works, this fixes the
+following issues:
+
+ 1. In async mode, a failure will now only affect the changeset of the
+    failing work, subsequent changesets will execute normally.
+    And (that's the hard part) bulks can still span multiple changesets:
+    each changeset will only be affected by failures from its own
+    bulked works.
+ 2. The stack traces of failures in bulked works are now much more
+    similar to failures in non-bulked works.
+ 3. That's just a side-effect, but bulked works can now return a result,
+    though for now the result is ignored. This mainly means that
+    if one day we need to inspect the result of bulked works
+    (for statistics, in particular), it will be that much easier.
+ 4. We now have thorough unit tests for work bulking and sequencing.",True
+https://github.com/hibernate/hibernate-search/commit/36e5b65713635112e86b83ab219b7b4dc4c7a27b,,"HSEARCH-2764 Introduce ElasticsearchWorkOrchestrator to better manage inter-work dependency when running asynchronously
+
+This will allow more flexibility in work orchestration in the following
+commits.",True
+https://github.com/hibernate/hibernate-search/commit/6714c133e3838a8b35930a9d90b211bb9d4a4657,,"HSEARCH-2764 Avoid a very rare race condition in async work processing
+
+If, between the end of the processing loop and the call to
+processingScheduled.set( false ) at the end of processing, another
+thread somehow managed to submit a changeset and call awaitCompletion(),
+then this thread ended up not waiting for its changeset, but only for
+the previous ones.
+
+This commit fixes the issue by avoiding the use of multiple instances of
+CountDownLatch, and instead relying on Phaser so that we can safely
+change what waiting threads are waiting for (i.e. we can just say
+""oh sorry, you were waiting for the previous runnable, but another one
+needs to be ran before I let you go""). Also part of the solution is
+systematically checking whether a new processing runnable must be
+scheduled before arriving at the phaser.",False
+https://github.com/hibernate/hibernate-search/commit/0625df3caedafaa71fb665664d9955f56d19fda5,,HSEARCH-2764 Use an orchestrator for synchronous safe processing,True
+https://github.com/hibernate/hibernate-search/commit/d5aa35fc12976e9e5f9e2016929b134463ea9780,,"HSEARCH-2764 Add a parallel orchestrator for streamed work
+
+This could lead to better performance with large Elasticsearch
+connection pools when works affect multiple indexes.",True
+https://github.com/hibernate/hibernate-search/commit/9d46d3f8b8f803dd8502f44681e56ddf2d95d97c,,HSEARCH-2764 Clarify the purpose of each ElasticsearchWorkExecutionContext impl,True
+https://github.com/hibernate/hibernate-search/commit/5b37a84212ce6098783920f9162ea823c3f2f71b,,"HSEARCH-2764 Don't refresh indexes for streamed Elasticsearch works
+
+Those works are executed out of order anyway, and the only way for
+the client to be sure they've been executed is to perform a flush (which
+is followed by a refresh), so there's no point trying to refresh for
+every single work.",True
+https://github.com/hibernate/hibernate-search/commit/44699df02b898c79ac013debe488afa489a02851,,"HSEARCH-2764 Make Elasticsearch non-stream orchestrators index-specific
+
+The downside is we may not be able to bulk as much as we used to, but
+there are a few advantages too:
+
+1. We're finally able to force executing synchronous works in order
+(by using one serial orchestrator per index). Note that this may impact
+performance negatively, but at least we'll avoid some errors.
+2. We can finally disable the 'refresh' in bulk API calls when
+'refreshAfterWrite' is disabled for the index. Previously we couldn't,
+because this parameter can take a different value for each index
+manager.",False
+https://github.com/hibernate/hibernate-search/commit/8ae9cf78b832132f32cb900beebafc907e457de6,,"HSEARCH-2764 Limit the size of Elasticsearch work queues
+
+If we don't, we run the risk of OutOfMemoryErrors when a huge stream
+of works is pushed continuously to the index manager (for instance,
+when mass indexing).",False
+https://github.com/hibernate/hibernate-search/commit/a15d34af1c765e52d0a206b78df8de5d0bde3ef3,,"HSEARCH-2764 Remove the delay in BatchingSharedElasticsearchWorkOrchestrator
+
+There's no need for such a delay:
+
+ * if works are submitted more slowly than they are processed, then
+there's no need to try doing more bulking (especially if it means adding
+an artificial delay)
+ * if works are submitted faster than they are processed, then the queue
+should progressively fill up, we'll start doing bulking, and we'll end
+up ignoring the delay anyway.",False
+https://github.com/hibernate/hibernate-search/commit/95b796b88b550a31a218d8940e059dc036315c9c,,"HSEARCH-2837 Clarify errors when interrupted during submission of work to the ES client
+
+ * Include the orchestrator name in the error message
+ * Do not use the interrupted exception as a cause in the
+SearchException, for the sake of brevity
+ * And while we're at it, create the exception using the JBoss logger.",False
+https://github.com/hibernate/hibernate-search/commit/91df954af1836d1d5e3b708540530fd2f3c22f4a,,"HSEARCH-2837 Secure the ES orchestrator shutdown process
+
+1. Throw an exception when trying to submit a changeset during shutdown
+1. Throw an exception when trying to submit a changeset after shutdown",False
+https://github.com/hibernate/hibernate-search/commit/8fab357e6265af53c4537a90ddadb84bb7159862,,"HSEARCH-2841 Move Elasticsearch query class and tools to a specific package
+
+Because it's starting to get crowded in the generic ""impl"" package, and
+the next commits will add more.",False
+https://github.com/hibernate/hibernate-search/commit/88267290fffeee145fdc73158745d1cc1e7d1642,,HSEARCH-2841 Move Elasticsearch Projection classes to their own file,True
+https://github.com/hibernate/hibernate-search/commit/5d9e92644634104140a3e171f070f9e74b201b68,,HSEARCH-2841 Move Elasticsearch query hit conversion code out of ElasticsearchHSQueryImpl,True
+https://github.com/hibernate/hibernate-search/commit/dc742da2a5767d8ce68d889a9fdd5c553ddc1bc1,,HSEARCH-2841 Move the Elasticsearch IndexSearcher to a separate file,True
+https://github.com/hibernate/hibernate-search/commit/f5cc95b35f263b47b0f5ef126f1565153845872e,,HSEARCH-2841 Move ElasticsearchScrollAPIDocumentExtractor to a separate file,True
+https://github.com/hibernate/hibernate-search/commit/f3153bf2ef9ffb9f077c048ad316574730ecf1c0,,"HSEARCH-2840 Allow projecting on dynamic object fields
+
+Also, fix HSEARCH-2839 in the process (because the default field
+projection now gets effectively overridden by bridge-defined field
+projections).",False
+https://github.com/hibernate/hibernate-search/commit/2125d24e523844c01d7643ec755724c6ca826d8f,,HSEARCH-2846 Remove a dead method which doesn't compile in latest Java 9 builds,False
+https://github.com/hibernate/hibernate-search/commit/b649420b4c52fb541a063c311707c0d7e5f903d8,,HSEARCH-2818 Optimise encoding of GSON elements into HTTP client buffers,True
+https://github.com/hibernate/hibernate-search/commit/8e28a02858414c919af91178e36773cd14017525,,HSEARCH-2818 Avoid also excessive allocation of small buffers within TLAB,False
+https://github.com/hibernate/hibernate-search/commit/510173ed05df7088c80689dbac679612042e8522,,HSEARCH-2818 Avoid chunked HTTP encoding if the message fits in the buffer,False
+https://github.com/hibernate/hibernate-search/commit/d2ca89827502cd324a0e572fab8166c3ac667b37,,HSEARCH-2806 Remove the deprecated method EntityIndexBinding.getIndexManagers,False
+https://github.com/hibernate/hibernate-search/commit/c5fc0c718428971a595c333e1f615d4fe6fdb27d,,HSEARCH-2862 Add a configuration option to enable or disable JSON pretty-printing in logs,True
+https://github.com/hibernate/hibernate-search/commit/36049c96b804366649d7a4ff2cba28b2183906ce,,HSEARCH-2849 Leverage content-length computation when computing AWS hash,True
+https://github.com/hibernate/hibernate-search/commit/630560e9674a39bb6d511d1e245c55bae1c2182f,,HSEARCH-2872 Introduce an IndexedTypeMaps#singletonMapping helper,False

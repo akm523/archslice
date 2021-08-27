@@ -1,0 +1,1485 @@
+https://github.com/aionnetwork/aion/commit/410ea2a1d7a0561f7388c1ceaf3f903dc76cdd15,,modP2p init import.,True
+https://github.com/aionnetwork/aion/commit/74ca480114c19becefe298f4e03179c6b6bc1fa2,,version header use first two byte in ctrl field. TBC.,True
+https://github.com/aionnetwork/aion/commit/b203ac5add4164ac197d73e6c2b57b44c2af620c,,modCrypto init import.,True
+https://github.com/aionnetwork/aion/commit/2e67f359adf1213614b94a8e24ee99e1ff7142d2,,1) modCrypto submodule integration. 2) remove unused deps.,True
+https://github.com/aionnetwork/aion/commit/ec7f9d767eb65bc0bea3ab0eada10a118273dfa2,,modAionBase init import.,True
+https://github.com/aionnetwork/aion/commit/d496441745af0224f2d4ec859c877d97bc4a3b2c,,aion modulizations changes.,True
+https://github.com/aionnetwork/aion/commit/7966ebaf43ad6893e0eed1ab077aa39e32061066,,modMcf init import.,True
+https://github.com/aionnetwork/aion/commit/fa8ea5c4a3f4767165f7783396f5e1c0cb890fe9,,"modAion,  modAionImpl init import.",True
+https://github.com/aionnetwork/aion/commit/1857c8f767bb8c7495abdab7071c1d6fbba6d3a4,,"modTxpool, modEvt, modApiServer init import.",True
+https://github.com/aionnetwork/aion/commit/fd66c3b7f85bd0c5af10fd8f1a756b5997609c93,,"modDbImpl, modRlp, modBoot init import.",True
+https://github.com/aionnetwork/aion/commit/dbda75ac9780f1f522ec42afa5c1783ec7abc8e6,,"fix serialization, internal issue #375",True
+https://github.com/aionnetwork/aion/commit/b7794db7e51f49bab4c11f1203713c1dba67f250,,"migrate unmerged internal patch, fixes getAccountState #367, fixes eth_getTransactionHash",True
+https://github.com/aionnetwork/aion/commit/b9ce90a0b5926fcb08e6cea54e68b52f192638c2,,update p2p interface,True
+https://github.com/aionnetwork/aion/commit/fbb40f00cf950c65fe79b830783e8b0119944967,,refactorying p2p impl,True
+https://github.com/aionnetwork/aion/commit/8bfde86f58cd2338ce7b78ac67e1aed63aee7e86,,set short id(for display) on set id,True
+https://github.com/aionnetwork/aion/commit/192ab04f5202076601117bca2790b70ec164e8a3,,correcting use of abstraction for the block rules and their tests,True
+https://github.com/aionnetwork/aion/commit/6d6a8e2508c84d41b7acf294d958d6ca06dda795,,refactory sync with p2p,True
+https://github.com/aionnetwork/aion/commit/c699de67a6aece26556b41af84cb081f33c31b65,,hookup p2p shutdown to aionhub,False
+https://github.com/aionnetwork/aion/commit/465977e9362372b86a033b970c66ee84b43a118a,,improving db recovery functionality with revert feature,False
+https://github.com/aionnetwork/aion/commit/308663e9686de61fd03c68a143b8bffa82caea84,,replaced while loop with longstream for getBlockDetailsByLatest - javaapi,True
+https://github.com/aionnetwork/aion/commit/b95c1384817340513bf8303d22ac5f0fcc09e51e,,fix p2p missing route,True
+https://github.com/aionnetwork/aion/commit/cccb9375883c742987a6d93d53255bd78eff61ea,,rebase #55,True
+https://github.com/aionnetwork/aion/commit/f94bf32ef951f02e4b484172209c6df99f90f1f6,,add state response for propagation #55,True
+https://github.com/aionnetwork/aion/commit/98d6e1dafcc53e93f01d02cb951d5db97b629525,,rebase #55,True
+https://github.com/aionnetwork/aion/commit/49b8f29639a25f0e6c32c9e4b04e1d155d8f5c05,,add state response for propagation #55,True
+https://github.com/aionnetwork/aion/commit/7fb646975e0c0c70ac0dc95267fa9932697890e8,,update,True
+https://github.com/aionnetwork/aion/commit/517a3e3a5023737466ef8051e50bdca27ebf1a22,,add rolling file appender for log outputs,True
+https://github.com/aionnetwork/aion/commit/2cc7da1140c59e30415509fe204c7ad97b507fd5,,fixed inefficient cumulative nrg calculation for batch retrievals,True
+https://github.com/aionnetwork/aion/commit/0ef0b1f34a0cbc0ea9e1f6d8123b08465848aecd,,Move AionTxExecSummary to aion.zero module,True
+https://github.com/aionnetwork/aion/commit/ce5d16793d4435031f4d1569aa8b7f554426b837,,Rebased on dev,True
+https://github.com/aionnetwork/aion/commit/c37c3094653fc831257a8063a44f1b5c8634587a,,Update the ant build configurations,True
+https://github.com/aionnetwork/aion/commit/180d996f454199881700a59a3d50e392be7d361d,,make noncemgr flush method synchronized,True
+https://github.com/aionnetwork/aion/commit/5cd65d644189ffb8e9fa8db17ef7b0541f7a042a,,P2pmgr policy based random node pick impl.,True
+https://github.com/aionnetwork/aion/commit/9f9c657e8b02b8271408222433a726bce956a2e8,,1) queue up msg at onWrite status 2) fix get status routine hanging,True
+https://github.com/aionnetwork/aion/commit/0e19a3bfae1107c56990895f0107e2f1a7deac01,,update,True
+https://github.com/aionnetwork/aion/commit/3249dfab5a3808e4545dc8e51fcfb71b79c187f9,,update test case,False
+https://github.com/aionnetwork/aion/commit/88e3f083a1e3607fb081ac85c194b4b191092d67,,refactoring handlers,True
+https://github.com/aionnetwork/aion/commit/4d7fe2f0006267f143a9f0d929ada1f0ed98b65d,,fix nodemgr allnodes not updated when peer status refresh.,True
+https://github.com/aionnetwork/aion/commit/2a249405fb624c7fab193264052990b09fb4c476,,rewrite sync mgr,True
+https://github.com/aionnetwork/aion/commit/d1ebada50e0f8d65e0345ed978535464cef365e6,,sync status add a simple total diff check. need more work on it.,True
+https://github.com/aionnetwork/aion/commit/ee5681589315bd7e70cbf50ba13b1c0f31f94cb5,,update sync logging,True
+https://github.com/aionnetwork/aion/commit/0fecaf2fede8837999ecd6dc2276276b647950a0,,logging of the heap cache stats,True
+https://github.com/aionnetwork/aion/commit/6acd47432baed3f46673d778d12fcb3f19baebd4,,send headers to only high total difficulty,True
+https://github.com/aionnetwork/aion/commit/7a519f0b1e0cf3bcdceda5c3e8f6a686bb65339c,,update p2p logging & fetch headers based on td,True
+https://github.com/aionnetwork/aion/commit/c370619039a59008e2bec7922c3c2f37ff2e4ee3,,Persist nodes and metrics on disk,True
+https://github.com/aionnetwork/aion/commit/a151ebc4e04593bf28eaab2fb36a8d9bc89719db,,1) save back id if default placeholder as id on config.xml without create new config 2) simply cli 3) keep seed nodes on creating new config.xml,True
+https://github.com/aionnetwork/aion/commit/bf788ef0841bbbbb24cef8a883ba0a570e4edfed,,implement debug_getBlocksByNumber,True
+https://github.com/aionnetwork/aion/commit/797072f79d851b893623eb4ee4a941048d76f997,,cleanup interface IBlockStoreBase,True
+https://github.com/aionnetwork/aion/commit/c7e174ed8b8f4ae3e0f7adc77b5916b42ee5f563,,"Sort peer by total diff, print block hash",True
+https://github.com/aionnetwork/aion/commit/ae4d6a37340007df9e17f32ee2b249914fbd9539,,Remove dependencies,True
+https://github.com/aionnetwork/aion/commit/f53b1a039578064514dca673199922cda7970199,,fix broken module - expose org.aion.zero.impl.db to outside in modAionImpl,True
+https://github.com/aionnetwork/aion/commit/4feca888bd0a4b3e47b907452bf24ba5d7bc80b2,,"1.) refine version manage in the modAionImpl 2.) modify ant build, add fork info check",True
+https://github.com/aionnetwork/aion/commit/3dcb3c26a8040cf13a051699a9246935223693a3,,bug fix and error message logging,True
+https://github.com/aionnetwork/aion/commit/a3a20fbf1254730cfc06cb4f0b20cb6a0ad21ddf,,refactor package,False
+https://github.com/aionnetwork/aion/commit/0b36135be325a2ba170f8c69c2a50c23b6560498,,removing unused and incomplete clone functionality,False
+https://github.com/aionnetwork/aion/commit/80f240eedf26556204e8e2f1f4843d31a27cf666,,clean-up: removed flushDangerously method and integer casting for index database,True
+https://github.com/aionnetwork/aion/commit/c7415ff073f2e0ea3eeae593404eb54f5e56bd60,,automatic update of index to long and cli call for the functionality,True
+https://github.com/aionnetwork/aion/commit/268ec5ec353e401a64fbd3b81a248d8a45dff0e1,,implemented a pendingtx cache layer for Tx propagation for avoid the issue#125,True
+https://github.com/aionnetwork/aion/commit/ef6c163502d91429d990b4da637dc70a49a7cb65,,initial draft of json-rpc spec-compliant web3 filter implementation,True
+https://github.com/aionnetwork/aion/commit/99d7993f3f9a507d0088b77b3b177979ddc9b469,,1) start split runnable task from p2pmgr 2) update logging 3) hook revision and version to node info and handshake protocal,True
+https://github.com/aionnetwork/aion/commit/43c51b31dabcbc8baa2c2e17ab0d71de596d9a7d,,Show block hash in sync-status,True
+https://github.com/aionnetwork/aion/commit/ffc1845c0dfc38054ae3bbcb48b12d968ab1b6ce,,Refine branching log messages,True
+https://github.com/aionnetwork/aion/commit/6faae6354d12c0c30c8f5a369430831cffed6a04,,more cleanup on filters web3,True
+https://github.com/aionnetwork/aion/commit/21d8edfd782203be27ea1e6b36dbefd909888cdf,,remove child element version from root aion,True
+https://github.com/aionnetwork/aion/commit/457844092467477df275d9e6144e85a6fc57976d,,exclude seed from remote routine at node mgr,False
+https://github.com/aionnetwork/aion/commit/ae0d453b7e631cf78bf2b56caa813acfea3d4631,,remove timer in the PendingStateImpl,True
+https://github.com/aionnetwork/aion/commit/c6fc59ab42d44f78994e2f9b2794da44b6d7e536,,refactoring sync,True
+https://github.com/aionnetwork/aion/commit/44aa1a4bae7e8158f8f018f40ae38e1d3685514c,,1.) implement tx cache map size checking 2.) fix pendingStateImpl repo issue,True
+https://github.com/aionnetwork/aion/commit/a350cabdd2a5910adeb852a10f636dc6bfbdbf6f,,real fix the ConcurrentModificationException by adding temp map,True
+https://github.com/aionnetwork/aion/commit/aba73a21f848743f2497dfc25f983917905b59e4,,alternative implementation supporting both int and long keys,True
+https://github.com/aionnetwork/aion/commit/4d58814e54c7f5ca6b76b17f5f6e8ad24bd1bb8f,,1) init sync aid poc 2) refactoring sync process,False
+https://github.com/aionnetwork/aion/commit/326dbbd69a3d4602e8d54f37524162e6a49cadda,,more updates to web3 api,True
+https://github.com/aionnetwork/aion/commit/ef8a1840f95623b0105518f1fa46dfd2e6084565,,tests for new DataSourceArray implementation,True
+https://github.com/aionnetwork/aion/commit/70c7ea1ee6fdb53b035efd7028ed22edc8cced50,,Modified pool W3 interface to allow template timestamp updates,True
+https://github.com/aionnetwork/aion/commit/136ac3b9362579781b6dc650901710c421967ffd,,1) refactory version 0 handshake protocal 2) remove no use node info 3) add binary version on incoming success handshaked connection 4) update test cases,True
+https://github.com/aionnetwork/aion/commit/1b7b99de0d6fcd86cae71875861aecfe9dc63b86,,exposing database and repository compact functionality and some code clean-up,True
+https://github.com/aionnetwork/aion/commit/b011033132f9cf39ebc6f0025fadb62d48d8fde1,,refactory sync,True
+https://github.com/aionnetwork/aion/commit/7767c80f7256f89816d57eab6bb52d2b0456934d,,Candidate implementation,False
+https://github.com/aionnetwork/aion/commit/80a326208f7cdb337087ac2d20a8092a7daeef5f,,fix deadlock between BroadcastTxHandler and AionApi thread,False
+https://github.com/aionnetwork/aion/commit/14298fb916279e659c6fe28b8936a9ebd367d33b,,update node info td,True
+https://github.com/aionnetwork/aion/commit/bad6ecab27b90db0db11b75ad3eaefd8a26db301,,refactorying update network status logic,True
+https://github.com/aionnetwork/aion/commit/53e3cd15e518e171503d4fea4a4b76ab93f7b2f5,,"Optimize memory usage, duplicate detection and add more test cases",True
+https://github.com/aionnetwork/aion/commit/0a21d59a1f9fa0516e8e3ea5e0272abb9984fbf7,,refactor PendingState,True
+https://github.com/aionnetwork/aion/commit/d51de6565a961c33170a547c01705354eada4eb6,,Kill nonce manager,True
+https://github.com/aionnetwork/aion/commit/82677d0c11421e8044d407a5990f3c07f0511341,,Refactor broadcast transaction,False
+https://github.com/aionnetwork/aion/commit/47ec50a0794a0f836cbc825bd3cfd9178d924822,,Solve conflicts after rebasing,False
+https://github.com/aionnetwork/aion/commit/993f0ed6687fb572a7cc4980c6274c2419c77c5d,,adjust jump sync and get headers routine,True
+https://github.com/aionnetwork/aion/commit/9b62336f21fb1680fd55ed28b267ff0c2229de1d,,more changes to web3,True
+https://github.com/aionnetwork/aion/commit/7e8dda06bb5c7eb38baea652b061cf67960d7d96,,printing p2p status to file,True
+https://github.com/aionnetwork/aion/commit/c66d8186fff2891612c38e751b9f751463b35e7c,,Clean pending state implementation,False
+https://github.com/aionnetwork/aion/commit/a7077d02151cb76bdd0be3a1ea9705d7e0ec2d88,,printing the sync status reports,True
+https://github.com/aionnetwork/aion/commit/9521ffba694085e92cb1a2bebee2713f11175cb0,,Tentative changes to the high nonce tx cache,True
+https://github.com/aionnetwork/aion/commit/b950d88a8f8ad0cd3cfd66af40fff0025e8dfe78,,update,True
+https://github.com/aionnetwork/aion/commit/b53b235b5808bfe21537d43d8dccc71b7729dafd,,more refactoring to web3 api,True
+https://github.com/aionnetwork/aion/commit/6e07b32dcc6aa2ac42acea5076dd44f9f5ad637b,,update,True
+https://github.com/aionnetwork/aion/commit/a221653bdd0e60adf4af0c1fdce1427eec39d642,,Fix snapshot being called multiple times,True
+https://github.com/aionnetwork/aion/commit/c4e22408764ab3c70d875ecd374cc264c204394e,,Fix snapshot being called multiple times,True
+https://github.com/aionnetwork/aion/commit/4cca22a95a0e884cfb0752e547f1d0bf43d1ac4e,,Solve side-chain attack,True
+https://github.com/aionnetwork/aion/commit/566ca05e919206e6412a563517e402fe75a2b4a3,,Disable creating block template when mining is turned off,False
+https://github.com/aionnetwork/aion/commit/91953ddc57db43f572eb0464206d9e5d01ed568c,,more refactoring,True
+https://github.com/aionnetwork/aion/commit/b86a9fdec668bd4401f24ea184688cb39649b7c0,,refactor transaction boardcast,True
+https://github.com/aionnetwork/aion/commit/5e3e0f4ec629165c615a351e80d7fb941da7aa5e,,more bugfixes. ready for UAT,True
+https://github.com/aionnetwork/aion/commit/19b21f41cd5dee0cc5a6211125cd3e956346fb18,,"initial commit of structures for #231, focusing on extending NodeMgr",True
+https://github.com/aionnetwork/aion/commit/c5228664a5e5c1b185907bea96857ed5debdf39d,,printing block reports,True
+https://github.com/aionnetwork/aion/commit/7192c2faa6108ff02fe175f82f54e20d446c067e,,Cache imported block hashes,True
+https://github.com/aionnetwork/aion/commit/bf07a0e2cb19dc304532b3eb487a98aca8fe66e8,,config file for runtime reports  correcting .gitignore to avoid ignoring unintended folders,True
+https://github.com/aionnetwork/aion/commit/14b0182b596a1b0a5fa2f3ffeaf7f7720ea59903,,updates to include connection test,False
+https://github.com/aionnetwork/aion/commit/693bb1acb5b6f5008028c53c686ae86579d83e8f,,enabling runtime heap dumps,True
+https://github.com/aionnetwork/aion/commit/cffee7f43adee1391b2afcdf4b986b7514428494,,multiThread handler,True
+https://github.com/aionnetwork/aion/commit/3ac9ff6fa631f72274cd6ee02d06c00c58b683ec,,give eventcallback thread name,False
+https://github.com/aionnetwork/aion/commit/39100aa47e7f6aadf672962c07939a1e5dfa4dbb,,optimize import,True
+https://github.com/aionnetwork/aion/commit/da6cc8be8750cea154bd2d41be38caa0651ddcb7,,prepare for P2pMgr modifications,True
+https://github.com/aionnetwork/aion/commit/a8b7a10d4e8606562cf71dadf2e3b613b7c5fb6a,,printing thread and block info at regular intervals,True
+https://github.com/aionnetwork/aion/commit/44f8aeb4dc00c526e8a3d152ce999124265d7bbd,,adding stack trace to the thread dumps,True
+https://github.com/aionnetwork/aion/commit/f882f6ca52d8283e1435386c660f7c6356dbbaa2,,initial commit of new IO loop,True
+https://github.com/aionnetwork/aion/commit/5c118a7b89b0c2e092723a73f067643c2ddae98a,,"Don't lock aionblockchainimpl when retrieving list of block/hashes
+
+In case of exception/wrong data, the p2p will ignore it",True
+https://github.com/aionnetwork/aion/commit/e00ca6579ff4ca14d075a72494578503bb7974b3,,"another intermediate update, P2pMgr refactored to use MainIOLoop",True
+https://github.com/aionnetwork/aion/commit/2ab472e886e102e4d4bf4334318dce4cf4b30a72,,refactor cacheTx (ongoing),True
+https://github.com/aionnetwork/aion/commit/11f786d8b76e3b7470829d736844e4853573bb04,,refactor pendingTxCache,True
+https://github.com/aionnetwork/aion/commit/66dead93a26a30ae02fa4777363b88f4cc36b347,,working draft of jsonrpc 2.0 spec compliant server,True
+https://github.com/aionnetwork/aion/commit/9a6f80a7a11611095910060819c2018a47b27f0f,,"Handle ClosedChannelException sperately, rename p2p worker threads",True
+https://github.com/aionnetwork/aion/commit/b18d3a73d7a2951ad4b8fdee1fb244d88182f0c3,,rpc server test implementation (single threaded model to test new error handling scheme),True
+https://github.com/aionnetwork/aion/commit/5ab0bc2d18b0d469fc94232c6c8d345342188c7a,,swap energy strategy,True
+https://github.com/aionnetwork/aion/commit/435342e8dd0fcadc680f015cba83159a236a353c,,update launch logo,True
+https://github.com/aionnetwork/aion/commit/04e16d275acc2a71a48706638c1adadd79df1230,,Add block cache,True
+https://github.com/aionnetwork/aion/commit/ceceec52e8960f0834cae711185fcd5642432c26,,Display hash in the import status,True
+https://github.com/aionnetwork/aion/commit/33aab05735803d5a1f5b288c7acde2ecc1b175c8,,Switched to event based import block,True
+https://github.com/aionnetwork/aion/commit/62b5d7c13d68f04d43e9e22d1401b4f1ebe1acf1,,add caching to request block headers,True
+https://github.com/aionnetwork/aion/commit/47a3dae57db2d45919f9150b1239d58b58b39696,,nio rpc server with threadpool,True
+https://github.com/aionnetwork/aion/commit/1dcc1440d71fbfe0dd827599e1c0f92530fedcdf,,update,True
+https://github.com/aionnetwork/aion/commit/28c486e6327ce1408f87e082652d1e916431c2ea,,decouple the evtngr and the registed callback class method execute. (onbest event refactor),False
+https://github.com/aionnetwork/aion/commit/df2d53f38c28ea3fe92031316c68f21ae2fa8942,,update,True
+https://github.com/aionnetwork/aion/commit/1715e3feb2ed062e94eba648a903649c79a8b38c,,Introduce request status interval total and minimum,True
+https://github.com/aionnetwork/aion/commit/c21277a856e48215f094f2a45518431e939ae556,,callback method refactor(ongoing),True
+https://github.com/aionnetwork/aion/commit/fb51613ccdbb931de47f1af17d7ea4404c5109ac,,1. refactor callback function 2. introduce the EventExecuteService class,True
+https://github.com/aionnetwork/aion/commit/03f327afaebf4d61075d540fced12fd5a3ccfda5,,optimize blake2b compress method.,True
+https://github.com/aionnetwork/aion/commit/6dbe3897437091ed9f98339b027ba226725132ad,,"1.)remove unused methods 2.) adjust eventExecuteService position, need to be before register the eventcallback",False
+https://github.com/aionnetwork/aion/commit/48fba759164dedc964320957b44276d197ee6c45,,saving progress: changed the process of creating detabases to enable using unlocked databases,True
+https://github.com/aionnetwork/aion/commit/b21b022e0bed488681942d612f4cc6517e974fe4,,"java api refactor, move interface method implement into ApiAion0 class",True
+https://github.com/aionnetwork/aion/commit/bd9ec2d2abdb46f800b02e20a74d84179f8bae50,,replace arrayblockingqueue to linkedblockingqueue,True
+https://github.com/aionnetwork/aion/commit/95be4ed76d9942ff733c26e98bfa6be048cfd571,,first iteration of safe threading model for rpc server,True
+https://github.com/aionnetwork/aion/commit/c166078ffa679d77ffabab47b6aba6029bc548a8,,updating the locked database to follow the policy on returning runtime exceptions stated by the interface,True
+https://github.com/aionnetwork/aion/commit/59291aa8fc9cdb0ff92d8b90e8f6fb0bbeb3d18a,,printing cache statistics from inside the db class instead of the repository,True
+https://github.com/aionnetwork/aion/commit/0f18f5a0cffdccfa76d76d2e46da3506a436df4f,,minor documentation cleanup,False
+https://github.com/aionnetwork/aion/commit/ceab29e66d12b6d08adb0d506f6e55c2f25f3db4,,lock and concurrency test for save block,False
+https://github.com/aionnetwork/aion/commit/94b37842c5e65fdc69d056ad75dd454a32f13544,,first refactor #276,True
+https://github.com/aionnetwork/aion/commit/f199dbf9f574696db81360e306ae6b0a01a5fc61,,"revise rule broken on refactor, move TimestampRule to mcf #276",False
+https://github.com/aionnetwork/aion/commit/10bf0d39d687e20a60cc197611b27a9626000659,,rpc server with correct NIO threading model,True
+https://github.com/aionnetwork/aion/commit/e3205096a5e4c87fa81b15ce0e639e52aee6ac52,,Update sync logs,True
+https://github.com/aionnetwork/aion/commit/f544e7ac9652a3fae12f3a9feebec0b1ca8c0eaa,,Add RLP encoding optimizations,False
+https://github.com/aionnetwork/aion/commit/235b7d4531ce05f33dc68f2aa23f55b9ab2dc4d4,,"Revert ""Add RLP encoding optimisations""",False
+https://github.com/aionnetwork/aion/commit/b231979a26cb698fdc3d8198bdeecdd392479686,,fix cast error in ApiAion and pendingTxUpdate in ApiAion0 bug,True
+https://github.com/aionnetwork/aion/commit/a5c96cfe4c92b9f5e98f9bc575ad80acf0f72684,,first implementation for #284,True
+https://github.com/aionnetwork/aion/commit/85eb7de89e1a0635bd589746b0899e044d448863,,add filter in the EventExecuteService,True
+https://github.com/aionnetwork/aion/commit/32cc7f415a9eb352de0e5f84fe6de30ee04504f8,,Added native validator,True
+https://github.com/aionnetwork/aion/commit/e61754efff046509255c768f42e330a538e6ec29,,add cache_size and write_buffer_size parameters to config file #284,True
+https://github.com/aionnetwork/aion/commit/ecbf074bc9f1c4cb03e42472c2bd7341dd513c55,,update module-info to expose leveldb,True
+https://github.com/aionnetwork/aion/commit/b7e2f8007608871c8508212b55079b5a68be8136,,syntax error #284,False
+https://github.com/aionnetwork/aion/commit/e631617bd4d67ce59d5d6ed98d6d5d3ae9cc2eaf,,changed nrg price oracling to passive strategy,True
+https://github.com/aionnetwork/aion/commit/7a7413c6baebda2fecfdf2ce8859fd1fa65ed077,,Update api server to compile,True
+https://github.com/aionnetwork/aion/commit/609c8b599f6dfd2d8ac7efe2da256f1771687b93,,removing unnecessary inheritance between transaction store and object data source,True
+https://github.com/aionnetwork/aion/commit/03ed2f6268dfb911df7a3bf8d718838e1d536532,,read write locks inside the transaction store,True
+https://github.com/aionnetwork/aion/commit/9dc1beba7bd747973659433177ab457c51e84793,,adding defalut leveldb properties to DatabaseFactory to avoid null pointer exceptions when the properties are not specified,False
+https://github.com/aionnetwork/aion/commit/add64b08d7d2a9122013b672e4438ab7f3fef0c8,,removing the use of JournalPruneDataSource until tested with pruning enabled,False
+https://github.com/aionnetwork/aion/commit/bf519c4554dff61d016703bcd427ccaf048dd79c,,Update validation to use native blake2b hashing and remove synchronization,True
+https://github.com/aionnetwork/aion/commit/7fad154bc840179909091aa0e1f6c40ce0306daa,,txbuffer implement (ongoing),False
+https://github.com/aionnetwork/aion/commit/a63a0342afa41670a2e0ab7c81f14d8ca29112f5,,Modified HTTP stratum,True
+https://github.com/aionnetwork/aion/commit/a7edbe52f24965651c7bb10b31545a44dc4daf8e,,pendingPool txBuffer implement,False
+https://github.com/aionnetwork/aion/commit/caf9059e2f7645f282a8d3ccc0305a285a225dac,,cleaning up synchronization in the repository tracker,True
+https://github.com/aionnetwork/aion/commit/025facd6603296b68c958c54bec7244172b7262b,,"initial commit for #307, initial algo, initial config file, not integrate #307",True
+https://github.com/aionnetwork/aion/commit/5656483801609e7e9c976e05d3a8e0fef91c3381,,verify hashes,True
+https://github.com/aionnetwork/aion/commit/e9f2c6f92e89ad06a5ecf50cece25a57b2dc192c,,"refactored energy limit, now supports multiple variations #307",True
+https://github.com/aionnetwork/aion/commit/f4f56d933507d3c26fadb8f77fc294e9e6564606,,Added configuration and dummy block changes,True
+https://github.com/aionnetwork/aion/commit/3e1515d4c78697136373195fdcb8c89c22773871,,add pendingState/txpool dumptool,True
+https://github.com/aionnetwork/aion/commit/b78634509c594b0f50df8b33832f24e1662be0fd,,refacor the pooldumping function,True
+https://github.com/aionnetwork/aion/commit/8dfa24014796961fa2a2b3ace29aadc97c27ada3,,refactor dumppool as a config settings,True
+https://github.com/aionnetwork/aion/commit/aced2b6b84d66638fe41803e9d5ac81b060c5692,,1.) rename few bestnonce method. 2.) add buffer config 3.) rework repayTx,False
+https://github.com/aionnetwork/aion/commit/afbb972002fff9d26765a6fbfafbd618a3d9fdd3,,"refined EventHandler, added try catch handle",False
+https://github.com/aionnetwork/aion/commit/90bc10fe4c5648ef4d6ca705f0e2124eaff23695,,add more catch in P2pMgr,True
+https://github.com/aionnetwork/aion/commit/8db99f9e84152ee58a1a3feee3782511a4f19c72,,push commit messages,True
+https://github.com/aionnetwork/aion/commit/8fdc410d4f3bd4be17bc29b6d6517e98c6358a98,,"first implementation of a write queue, not complete",True
+https://github.com/aionnetwork/aion/commit/5add11688d8a42844198884cfdede5cf0849e3b3,,move writes onto channels and add fallback logic,True
+https://github.com/aionnetwork/aion/commit/f0cd90343753500d115d34338b7d28072e5d71ad,,added enable filters and enable oracle options to rpc,True
+https://github.com/aionnetwork/aion/commit/a082fc39d45e0b1bd44d83c9a2333af18e0789de,,A0header and validator reworked,True
+https://github.com/aionnetwork/aion/commit/5f64ea43ec52f56dd0e99261d88b68a55047c309,,Able to mine with updated validator,True
+https://github.com/aionnetwork/aion/commit/a0cc068365f1c8321e9be0b5a787893f2f6423f8,,"1.)rework lock for getPoolTx method, accountviewMap and mainMap 2.) more testcase",True
+https://github.com/aionnetwork/aion/commit/b59f6734f9fe6841082e68fee032aa3c1ef1e41f,,Temporarily disable tests,True
+https://github.com/aionnetwork/aion/commit/f70c4a86397d66cff3d11fd5d9327f0fcbec9fb4,,reenable task status,True
+https://github.com/aionnetwork/aion/commit/8779e589db17d590f7beb5d892f97be65dfec16e,,"revert changes to ReqStatusHandler, an alternatve solution must be found",True
+https://github.com/aionnetwork/aion/commit/d1872270b2a86211e03d97c04b68476d6fff2140,,Minor updates to p2p manager,True
+https://github.com/aionnetwork/aion/commit/5da3408dfa82649e5967c6b002028764298c98c5,,fix commit conflict from dev,True
+https://github.com/aionnetwork/aion/commit/5d0a06f7ed87d0be9283ae0dfb22e8739ddbe8da,,add buffer layer for the tx boardcast,False
+https://github.com/aionnetwork/aion/commit/5b5512a2d0963689bf47c9dc2f74a8fd45cd52b6,,remove unused import packages,True
+https://github.com/aionnetwork/aion/commit/b0964d96a5c1fa9ecb407db01434888c18f2c2f6,,non-working draft of operations api (web3),True
+https://github.com/aionnetwork/aion/commit/c4e064949cbd66f1418c7d93c53326c185802641,,modify sync to add logs,True
+https://github.com/aionnetwork/aion/commit/accfed883b4332b8507c418a2372f983bb432ef1,,"oops, forgot to convert to hex",True
+https://github.com/aionnetwork/aion/commit/399620d882e8fc78318906044dd75b570d5ee09a,,cached response for chain head data,True
+https://github.com/aionnetwork/aion/commit/70f807c78f4501a1223748ca45b327dea2edcc3c,,migrate the TxCollector from dev-ross,True
+https://github.com/aionnetwork/aion/commit/0cd673b6f031e428d524d3111a34448d140c5d14,,Fix issue #332,True
+https://github.com/aionnetwork/aion/commit/4f302cb933652474a8a29f5daa965e6727b531fd,,introduce rocksdb wrapper,True
+https://github.com/aionnetwork/aion/commit/a0db0d3d0004c0e3742aa0062106462bad66f9fd,,Added rocksdb to DatabaseFactory and RocksConstants,True
+https://github.com/aionnetwork/aion/commit/9fce4f2bb8e05d9764a230d47c64fc9348b21a56,,refine txbroadcast logic in the AionPendingStateImpl,True
+https://github.com/aionnetwork/aion/commit/a0d03ad0f7fda6d5bba68b5904026d33bb734ca9,,added new fields tx receipt + expanded queue size for rpc pending requests,True
+https://github.com/aionnetwork/aion/commit/e9cedcbad0bf8d64d90dd98ae83ac8ce2f3d6eb9,,locking the state database #327,True
+https://github.com/aionnetwork/aion/commit/ccd377a145e35a882329015bab6c98fe9ef6aae7,,implemented a rule to drop the node keep sending empty tx msg,True
+https://github.com/aionnetwork/aion/commit/c8f78ddb0c0afc97f9d25c55ae9e7ac7318e5073,,rework errorCheck mechanism,True
+https://github.com/aionnetwork/aion/commit/12733c5b646dc3712a571dc177556b98c1aabf3d,,refactory for loop based p2p impl to new package impl2.,True
+https://github.com/aionnetwork/aion/commit/e91491d9bb409ec2fc2569d3b9a4c4de8a078d7d,,bring back first p2p implementation with write queue proto.,True
+https://github.com/aionnetwork/aion/commit/7fdfa0242e6717ed3831fb825900de619418678d,,option for printing the past K blocks without running the kernel,True
+https://github.com/aionnetwork/aion/commit/57cfeee747cc6068add1cccd30d99c40c5485c5e,,"add seed node mode, disable the pendingState and txpool",False
+https://github.com/aionnetwork/aion/commit/f8ac62498f36a25e5c3fde2444d4ffb6e50ebf92,,Add errCheck into the P2pMgr(impl2),True
+https://github.com/aionnetwork/aion/commit/8c7d79d262b71d59683afc97f20a601727724cb5,,add confi error-Tolerance in the cfgP2p,False
+https://github.com/aionnetwork/aion/commit/d21c9edec0eab45195564ca54977036fb8013f76,,patch pendingState bug,False
+https://github.com/aionnetwork/aion/commit/87b99934c988d19eb90ca4f70c0e304428d95cfe,,1.)refine txpool 2.) add timestamp checking when picking the tx into the snapshot,False
+https://github.com/aionnetwork/aion/commit/6b7616d26426a157ca13e4e4753c88dc30f1e990,,"Add version tests, set version 1 in header and general clean up",True
+https://github.com/aionnetwork/aion/commit/8587f4926e28d62a6c23771b0f93173cc0aed6a2,,heuristic for skipping tryToConnect for obviously large blocks,True
+https://github.com/aionnetwork/aion/commit/d7f638ca6654fd73c5d6bdc6eba859dc3d8336ba,,Implement dual syncing strategy,True
+https://github.com/aionnetwork/aion/commit/3e63514a470831f095b6423f8ed7cc8bbbb42819,,Patch workers pool queue memory overflow,True
+https://github.com/aionnetwork/aion/commit/6911613eb4fb4a1463e933b5fe193a8ad33cc1db,,Add transaction validation cache,True
+https://github.com/aionnetwork/aion/commit/4707ec2f1f451f8fa10d570b398e6d4b7c7d2971,,modCrypto changes to address,True
+https://github.com/aionnetwork/aion/commit/15b07a28758f1bcc4d50b128a4d92a990307b0b2,,calling shutdown when no more disk space left #311,True
+https://github.com/aionnetwork/aion/commit/d1ed40eed027c8ff4b2448db17ee298d056e4e69,,updates operations api,True
+https://github.com/aionnetwork/aion/commit/86fa732a306fc1765cb5994d94b206fcfc6621d5,,changes to addresses,True
+https://github.com/aionnetwork/aion/commit/a6e5e6196bac104336ef652a363fdcd0ef8e0a48,,implement ban method,False
+https://github.com/aionnetwork/aion/commit/fcc5caa0f9bbb7d325eae6e62074bdab9de632b1,,comment out the p2pMgr.errCheck counting when msg decode error!,False
+https://github.com/aionnetwork/aion/commit/a132734f8a7b6ab7ca20eaadfb1f2aa3184bcf01,,add buffer layer into BroadcastTxHandler,True
+https://github.com/aionnetwork/aion/commit/f9bea0dbee176ab9b99075e42e863d85e0241ba7,,"initial and final targets for #363, changes to contract address for #364",True
+https://github.com/aionnetwork/aion/commit/febcefa57994d95f9656646e6cbf9e1a40ffd883,,initial implementation of genesis changes #365,True
+https://github.com/aionnetwork/aion/commit/65c7caba4497e63fe1593a4a11f9b181ba0f7262,,re-added logs to blockDetails java api,True
+https://github.com/aionnetwork/aion/commit/2f30070f4f979d0b75bc74392badaecdad5d26f7,,swapped out rpc-server NIO implementation with NanoHttpd,True
+https://github.com/aionnetwork/aion/commit/bc0e1466937bd0a243f49a22ca252b4f3fa88de7,,difficulty changes,True
+https://github.com/aionnetwork/aion/commit/cb0134554d508df8133dddfcb0a6758bd628b895,,"update tests for difficulty changes, explanation included",False
+https://github.com/aionnetwork/aion/commit/59dfe8c1662a535c8b3f2a7c97593ac56bfde951,,1.) pendingState refactor 2.) remove txpool synchonize due to pendingState already did 3.) add method to check chched tx in TxValidator 4.) refactor dummy object into the aionbase,True
+https://github.com/aionnetwork/aion/commit/4de6050d63f4cbd10197eac36839ecf24bf404a6,,refine api server classes,True
+https://github.com/aionnetwork/aion/commit/db595e1b3d1df0c88386bcc32c72c75f8865a129,,add tx energy validation rules,True
+https://github.com/aionnetwork/aion/commit/9ad076dc68a1794810ab069302de52a843f59c4b,,update TXValidator nrg rules for different tx type,True
+https://github.com/aionnetwork/aion/commit/b175fcf76ba2072fbdd073043587976bf46944cf,,refine TxNrgRule,False
+https://github.com/aionnetwork/aion/commit/e9fe3802f56f0e77ccc55c5cc1bf618952b539be,,added getTransactionInfoLite in AionBlockchainImpl to cut down on extra reads while retrieving reciepts from transactions db,True
+https://github.com/aionnetwork/aion/commit/01f271e7a76db927726306573464f49b2e584a95,,javaapi refactor,True
+https://github.com/aionnetwork/aion/commit/23ca66cc4c9ba503c07675ca642c9b09caf4f858,,small refactoring in PendingTxCache,True
+https://github.com/aionnetwork/aion/commit/e6559c4a0a96ce6a59446347004d12a5af7a0332,,Modified double hash,True
+https://github.com/aionnetwork/aion/commit/f618b40dbf49d5c55b04b3198275fc86e414910c,,using the same property values for db config thoughout the code,True
+https://github.com/aionnetwork/aion/commit/90b77c46a2a04187e2eb0d74738854a33e0c8694,,adding a delete all method to the database: needed for tx pool,True
+https://github.com/aionnetwork/aion/commit/acbcc770fae18dffb5e480eedd78a2405803d846,,Optimize contract details implementation,False
+https://github.com/aionnetwork/aion/commit/65ff0a0c0ed372a63f7f4d920aa6082ea54a8ae0,,implement the pendingTx store in DB and load the pendingTx when reboot the node,False
+https://github.com/aionnetwork/aion/commit/1e717fbaf162f7c51284a288b506868817d9aca8,,Fix contract detail sync when using external storage,True
+https://github.com/aionnetwork/aion/commit/73e623d14342769e07bebb4471a88b28bc812477,,"re-adding removed constructor,  removing unimplemented clone method",True
+https://github.com/aionnetwork/aion/commit/f30617fdc8bdd7fa0c444411dcbdf11d7e13ea17,,operational api enhancements,True
+https://github.com/aionnetwork/aion/commit/1244cc0be6633380ef44f7dad790b98ec101e3d9,,completely droping the database instead of deleting key by key,True
+https://github.com/aionnetwork/aion/commit/f3be20aa459338022e98b47e14a1695fd26d42f3,,improving the delete functionality,True
+https://github.com/aionnetwork/aion/commit/41a48a504a1861fb2ba87f3691bf981dca84e51f,,implement the pendingPool DB packup mechanism,True
+https://github.com/aionnetwork/aion/commit/9dadf4cc674248d5b560b442b2d51f0b9514774b,,align txpool and p2p block size.,True
+https://github.com/aionnetwork/aion/commit/06319a5aefdb1297a471c3d4610b25ef58ffe907,,refine txpool blockSize settings,True
+https://github.com/aionnetwork/aion/commit/656467a708f969a54f109b841382d215636661f0,,1.)refine PendingTxCache 2.)reformat code,False
+https://github.com/aionnetwork/aion/commit/3beef411c3a8a997b2014c15ea9efaf8bbfd41ad,,new functionality for travesing the trie,True
+https://github.com/aionnetwork/aion/commit/8a6c794d016c6e2c6336fb2e45b892863c992831,,removing the storage querying methods since the keys cannot be rcovered after hashing #389,True
+https://github.com/aionnetwork/aion/commit/01c1bc4561c2d10045352ff4080909e782fdffd3,,"working copy, blockSql api over java-api",True
+https://github.com/aionnetwork/aion/commit/8ec980f959b52c81e3f742d8f01f9a2340f693bf,,added isSyncOnlyNode option to config,False
+https://github.com/aionnetwork/aion/commit/e2a6fc2c704f02503286a98c6459eae78657f56e,,update server side APIs for monitoring and debugging,True
+https://github.com/aionnetwork/aion/commit/9c0577f26399a45a5320cb5594b1f51d8353f77e,,Add peer syncing states,True
+https://github.com/aionnetwork/aion/commit/2f5d121984cf25295b2de06232c614127177dfdc,,Implement three syncing modes,True
+https://github.com/aionnetwork/aion/commit/a2045cc26f29c5cd96ce09acd66759f679828269,,a new timed database for checking db performance,True
+https://github.com/aionnetwork/aion/commit/008e1220e227d8b0def28daa49666358bccb834e,,rule violations explicitly throw for headers,True
+https://github.com/aionnetwork/aion/commit/67aef4fc63c545e662aed96cc1cd3b1d9179f062,,Java API error detail info implement into the return message,True
+https://github.com/aionnetwork/aion/commit/132e853b15ee77132409d29eac6bfd9b11ead6b9,,p2p 1.) rate control. 10msg/channel/sec. 2.) fix io write high cpu usage.,True
+https://github.com/aionnetwork/aion/commit/c1950dc9b2afc30a49bb4ef061bb97aff55b0ac2,,export org.aion.zero.exceptions,True
+https://github.com/aionnetwork/aion/commit/208747e5ad916d3e2e3baf8d40db1d7f6440774e,,p2p response block with size check.,True
+https://github.com/aionnetwork/aion/commit/e3148c1008c02d5a6f0ac51c38b5817a34cd8fc2,,remove invalid return,True
+https://github.com/aionnetwork/aion/commit/66e361aec476f72347d32faebdbd1d821d1b9558,,adjust for peer call to show more stats,True
+https://github.com/aionnetwork/aion/commit/2a1a9a37575097f0b84963aaecb5dbdfa0c19172,,1.) pendingState tune-up 2.) modify p2p tx broadcast routing rate 3.) refine log.,False
+https://github.com/aionnetwork/aion/commit/5ab0054da0c7a3477f993c104fcf7204b8259a57,,1) push status to higher td nodes on block propation routing 2) disable status cache to prevent status flips,True
+https://github.com/aionnetwork/aion/commit/ca03661b183f5b9a9f1c2ef1ce8f1c72e85309fd,,responding to status requests in syncOnlyNode mode,False
+https://github.com/aionnetwork/aion/commit/dc79f525b2dfdd6aae395645fb1dd05e3c401168,,added syncPeers method,True
+https://github.com/aionnetwork/aion/commit/94735167212c67a1757013ac3c26118369d589b4,,individual configuration for the databases used by the blockchain,True
+https://github.com/aionnetwork/aion/commit/db956da0e4cc822718f488484c72f0358802710a,,add configuration call,False
+https://github.com/aionnetwork/aion/commit/33d04846ed7d37e3588722f3495e59ca5b8de8cb,,sync-only-node config move configuration in handlers to constructor,False
+https://github.com/aionnetwork/aion/commit/72d10e571c84d0ea22e5bd1b6bf5a60566ef1344,,adjust log level in EventExecuteService,False
+https://github.com/aionnetwork/aion/commit/76920eb95ddf3372c0790c976317a0b85267c2f7,,restore res status cache and refine log,True
+https://github.com/aionnetwork/aion/commit/2072cb9fbcabe83cdf243cd7d075a480c455afdf,,add drop event when addPendingTransactionImpl failed,True
+https://github.com/aionnetwork/aion/commit/44ea8af02a687782bcda1872aa4445f84d7308a7,,lockAccount and newAccount features for web3 api,True
+https://github.com/aionnetwork/aion/commit/7666e6ce84a01b0c441c33afc519d5186ee77460,,remove all nodes collection,True
+https://github.com/aionnetwork/aion/commit/868c8bcd72f93cd26c0ab1a3c25e0a2aefaa99fc,,hook up msg to channel close,True
+https://github.com/aionnetwork/aion/commit/b3226a732383039b348a5bd35bd41bb3621c39f8,,refactor Timer -> ScheduledExecutorService in AionPendingStateImpl/BroadcastTxHandler,True
+https://github.com/aionnetwork/aion/commit/874aeed3596a4e491d3294fb328983bfe41fce0a,,batching operations in transaction store,True
+https://github.com/aionnetwork/aion/commit/def6e8787cd7676a5a00c89e8a1b5fe670319f88,,p2p log refine & node collection swap patch,True
+https://github.com/aionnetwork/aion/commit/a6059657d5606b1431a95aed25b796dd8626377f,,more detailed info in timed db,True
+https://github.com/aionnetwork/aion/commit/903e3ee0787cd590a410143096c90cb39917396c,,implement 1/3 networkBestBlk rule to the pendingState to avoid the Txs import into the pool,True
+https://github.com/aionnetwork/aion/commit/ac8faad83ffed54df43be20274d56aa0ff5561c6,,Cleanup and remove placehlder code,False
+https://github.com/aionnetwork/aion/commit/31aea2206e4efd902fb4d40c702db05626acde18,,1) refine log to trace msg out 2) fix handshake process success routine,True
+https://github.com/aionnetwork/aion/commit/04d47094e51feabf2af65877b161ba094db63daa,,attach channel id to show status for debug & remove node refresh timestamp on send action,True
+https://github.com/aionnetwork/aion/commit/526960b318b51df30090aeb8dbb45ccb60d374db,,update p2p log,True
+https://github.com/aionnetwork/aion/commit/5a1ae80c08e47f89b417ae75a8018c228a1d24cc,,stratum stats exposed through api since too much overhead to do this logic on client side if sample window is large,True
+https://github.com/aionnetwork/aion/commit/6396a33d95cc94d96821e340839366e423cf6fea,,simplifying the database configuration by reducing the number of options for non-experts,True
+https://github.com/aionnetwork/aion/commit/df8682aaad0f4dd8e555b98144d246881d52d18a,,separate the Totaldiff to public and private class members,True
+https://github.com/aionnetwork/aion/commit/3c92ad4226511813d4349f1ba3a4383c810df2f0,,fix zmq workThread stucked been occupied by the long data pull API,True
+https://github.com/aionnetwork/aion/commit/ad16a920665a5306051ad18baa3aa050351c60a9,,refactoring the recovery method to work for sidechains as well as main chain,False
+https://github.com/aionnetwork/aion/commit/64694d5d496260299dde9b04add3e98c3928d04e,,adding functionality for index recovery + improved messages #449,False
+https://github.com/aionnetwork/aion/commit/d4a54fb38452e73ff462bf2451093bdfa1061ea5,,decoupling the revert functionality at load time from the state recovery,False
+https://github.com/aionnetwork/aion/commit/bb377afff20e78b89e54b6b116510e7256417729,,add testcase for the inner td and the pub td,False
+https://github.com/aionnetwork/aion/commit/4acbb573c1853d0cf69fcd5c0064f44180d053f6,,fix PR build error,False
+https://github.com/aionnetwork/aion/commit/a19a60442bcd8cc7a28e96dcf82a42f3565375ba,,reenabling the journal prune DS #298,True
+https://github.com/aionnetwork/aion/commit/4041344fe6cf1b04f41847f3419e5742555469ac,,"command line utils for exploring the state trie, corrections to the block printing utility",True
+https://github.com/aionnetwork/aion/commit/c43618e463d2dd5972cdf638564b950a325e51cb,,IMsg injection into AbstractTxTask,True
+https://github.com/aionnetwork/aion/commit/263d3699d66c150151fe3fc395ce3ed9b18a19ce,,some cleanups,True
+https://github.com/aionnetwork/aion/commit/93771380b659c3e54a41e05a6b1f423a8a95b55d,,"disabled pruning when pruneBlockCount is negative,  set a lower bound for the pruneBlockCount variable",False
+https://github.com/aionnetwork/aion/commit/493f112df2ccd0e262de41705a0abce9b18acbcd,,unit tests for JournalPruneDataSource.java,False
+https://github.com/aionnetwork/aion/commit/0f8031034eac766af78d8d508e9ec09d6a092287,,moved AbstractTxTask to modMcf,True
+https://github.com/aionnetwork/aion/commit/b044308095c53774bc2366906371357a44574062,,aion address format check in the KeyStore class,True
+https://github.com/aionnetwork/aion/commit/3b1900ef3a12f785eaed5884baa3d98d84b1b179,,google-java formatting applied to all modified classes,True
+https://github.com/aionnetwork/aion/commit/d785e3f7112122e4f28910d4fcb5729c2e867a46,,removed unnecessary IMsg interface,True
+https://github.com/aionnetwork/aion/commit/7965b3d9cc70685976151e62e11971f5a06ee505,,restored byte[0] test and moved IMsgHeader to modP2p,False
+https://github.com/aionnetwork/aion/commit/74d835d492a2b0e7a99ea2fdb9dc595aedadab43,,removed unmodified files from PR,False
+https://github.com/aionnetwork/aion/commit/4272bd9a17a7a8c42ecbf889dba324a5db79a730,,removed IMsgHeader interface,True
+https://github.com/aionnetwork/aion/commit/e529cc3d15781ced10973a38d69b4e1917561f6f,,fixed sendTransaction error handling,True
+https://github.com/aionnetwork/aion/commit/b67323ea581ccc9a6dc2f97449f3530cef98c35e,,storing the public total difficulty inside the best block,False
+https://github.com/aionnetwork/aion/commit/7aebd7e510d399cb9369c27de2db7e4be2af025c,,concurency test for verifying the correctness of the total difficulty,False
+https://github.com/aionnetwork/aion/commit/82aa3fc4109d041c8032ecbb08d6d02079fadf9d,,add new fields to blocktemplate,True
+https://github.com/aionnetwork/aion/commit/601e9056c097c9e73609b0cfed807ecfc2a3d7c1,,refactored JournalPruneDataSource to be independent of the block and block header,True
+https://github.com/aionnetwork/aion/commit/e92d842128b3fabd5d7e159812ad4fb7d05b6fab,,replacing synchronized methods with read-write locks,True
+https://github.com/aionnetwork/aion/commit/527f3820cf088da5012230bef072e75c86b0c317,,applying review comments,True
+https://github.com/aionnetwork/aion/commit/2f0ac3126541af6f8ec9204edb6d4093e51dc119,,added logger features,True
+https://github.com/aionnetwork/aion/commit/0d89dae088329f90232509e6f9d5714bb06ecde0,,logger feature added,False
+https://github.com/aionnetwork/aion/commit/808c1e1e741e818f8ea4233cdccda7b1a6f59a7e,,fix null console bug and account exist checks,True
+https://github.com/aionnetwork/aion/commit/9aed2d6653b20ccfeacd6114102442965761a1a4,,improved address validation,True
+https://github.com/aionnetwork/aion/commit/a2186ad55a26bdbad76b887041fed1284c456c8a,,allows user to toggle logger,True
+https://github.com/aionnetwork/aion/commit/dc0cc75d1d6ef7c39da3fbe508609f438446d809,,second refactor: separate TaskSend,True
+https://github.com/aionnetwork/aion/commit/4d8faec410a85b99a41d93f8321541537afffbbf,,"moved MsgOut/In classes, renames and cleanups",True
+https://github.com/aionnetwork/aion/commit/d1aba20ce445d3d28339a1a280449018aed44ea6,,"moved accept,read others into TaskInbound, cleanups",True
+https://github.com/aionnetwork/aion/commit/71827854866aedacda2f0fea07ac7860427c5005,,moved tasks to separate package,False
+https://github.com/aionnetwork/aion/commit/e3198507212c39449e1e4a76113930fe3b03174d,,using new detailed pruning configuration,True
+https://github.com/aionnetwork/aion/commit/471614e2b34caf3cd19e98be6864379c73bdc58e,,"refactored journal prune class to take a data store as argument,  method to check if open database added to data store interface",True
+https://github.com/aionnetwork/aion/commit/9c5b5522d06217ca0f42c1551a446e1b12def1f2,,building the journal prune on top of the data source with archive,True
+https://github.com/aionnetwork/aion/commit/8e487b5e7bce9d8940e6665c87a1ed731593a725,,archiving the world state at runtime,True
+https://github.com/aionnetwork/aion/commit/236dddf3fe2e6618455414b950c4a189f11b8a14,,file path check,True
+https://github.com/aionnetwork/aion/commit/5f654ca250fdeedd0b18fd600847ae043f12cb84,,code format,False
+https://github.com/aionnetwork/aion/commit/4666b676a3047786bf6797ad5da7be6893c15ef3,,added getNrgPrice functionality,True
+https://github.com/aionnetwork/aion/commit/629c5a86a55a8f9f3b88b56c150af2e9ef751d81,,init NrgOracle before get recommended nrg,True
+https://github.com/aionnetwork/aion/commit/0bdb50963bbb1ef36184d7705fa9a1a1b44d6939,,logger features,False
+https://github.com/aionnetwork/aion/commit/5f4ecec5c9940bc0fb0e3c2740de5acf62de7b10,,improved binding and db locking error messages,True
+https://github.com/aionnetwork/aion/commit/f8242dbbe22a4f16305b57140c597aab3cd0916c,,optimizing the sync BACKWARD and FORWARD behavior,False
+https://github.com/aionnetwork/aion/commit/47da91467d4fe3587c0dbe2b7efce30143afc6a2,,bugfix: printing the size of the trie states should only consider the main chain,False
+https://github.com/aionnetwork/aion/commit/b42dd5043b3db15e428555a4b7f1991ee68f4a7f,,additional stop condition for sync FORWARD mode,False
+https://github.com/aionnetwork/aion/commit/f31e6baf37c149f4347ad24ca28110b67fa7c765,,separated MsgIn and MsgOut,True
+https://github.com/aionnetwork/aion/commit/1d48630f1d5808408bcdeb9ca4aa2abe24724460,,defined fields in terms of interfaces,True
+https://github.com/aionnetwork/aion/commit/188a483e9092cc94cb4ab7b95914d95b452aa5ec,,state pruning as CLI options,False
+https://github.com/aionnetwork/aion/commit/3467903e1d977f7cbe5d0084ae51465f6c7b8353,,moved init nrgOracle logic to ApiAion,True
+https://github.com/aionnetwork/aion/commit/8a1160be9aef78726ce7580f3aa2ec4f848673d4,,"bugfix: checking for null keys, values and batches",False
+https://github.com/aionnetwork/aion/commit/51edfc468f1fb1e94bdf74141ead91078b8f16f4,,backward sync step as constant,True
+https://github.com/aionnetwork/aion/commit/341308ae1b09c3e63d195d69ac427ebe69fdbc0f,,p2p bug fix and TaskSend benchmarking(temp),True
+https://github.com/aionnetwork/aion/commit/a64362d504d8201b138a10ee10226d2c86ba9647,,added ssl to config,True
+https://github.com/aionnetwork/aion/commit/988bc792098a0286495b18b3fad5f3faccf09bcb,,"server accepts ssl, aion.sh lets create keystore dir",True
+https://github.com/aionnetwork/aion/commit/be0a4ee9f51d6abed85d9354e1a0d4591209f644,,created modPrecompiled,True
+https://github.com/aionnetwork/aion/commit/acba0a2059917f76078bd48021c8769b8e702ee6,,"added initial classes,  not all impl. done yet",True
+https://github.com/aionnetwork/aion/commit/e1e956aea6a2f42f44f9823bf16393d1e1628065,,p2pmgr & tasks enhancement,True
+https://github.com/aionnetwork/aion/commit/296c54f7d8055f143df222f9f1bf98a4d1e6e5d8,,"renamed class, added cert script",True
+https://github.com/aionnetwork/aion/commit/6ec9f879a76656085870e0515c8aaf4b6af341fc,,remove debugging cnt/log,True
+https://github.com/aionnetwork/aion/commit/7785dfacc8ec7a8aaa81004f633374c51ff9a28f,,"moved ANS to modPresompiled, and refractored the contract.",True
+https://github.com/aionnetwork/aion/commit/0a00315f0fb3aad382584d7b390093d7b9170f6c,,fixed ANS tests,True
+https://github.com/aionnetwork/aion/commit/bfbc0d73071eb7a6b55299af62771a961c2ffd35,,refactor p2p module,False
+https://github.com/aionnetwork/aion/commit/8cb0c66293a72143e3f1884e967fdb948c6f33ce,,"changed some input handling, now taking byte[] instead of string, refractored the class, all test cases should pass.",True
+https://github.com/aionnetwork/aion/commit/bc6cef6bd27e014a1c309c395a65781490e9326c,,small changes to sync with William,True
+https://github.com/aionnetwork/aion/commit/7ea47e5ed5f042100c1737e3c60105cfbd580912,,refactor p2p log system,True
+https://github.com/aionnetwork/aion/commit/4e9e8980584deeede55ea3635e35cb489a229e9b,,"removed Truth dependency, try config ant",True
+https://github.com/aionnetwork/aion/commit/a472c03d5b5b291249df84c49772043f73013db9,,1. refine p2plog 2. update ant build files,True
+https://github.com/aionnetwork/aion/commit/7c47ffc2db87e49a596662ff2d17ceab4c76e336,,ant script working now,True
+https://github.com/aionnetwork/aion/commit/0d707517791e3e4292a1466bc1416987633c7dd9,,refactor nrgOracle and java/web3 API refactors,True
+https://github.com/aionnetwork/aion/commit/cc5dc1d3cdfd8ee535716883fe477a8e571ae474,,replace log in TaskShowStatus,False
+https://github.com/aionnetwork/aion/commit/e221e98882cdf902c01848a8284bcbde0b1f9e10,,fixed now that vm does not have contracts,True
+https://github.com/aionnetwork/aion/commit/1ef6993b0b08f55c212a49233d163f3e46e1d5e2,,updated test case 'testInvalidValues'.,False
+https://github.com/aionnetwork/aion/commit/154167dedf0e762b96ea1b5365ff236ab23fd997,,remove giving seed during the random class construct,False
+https://github.com/aionnetwork/aion/commit/43a3ae20c071192f692904ea75681b1efc094ee0,,minor fixes to support fvm handling contracts in callback,True
+https://github.com/aionnetwork/aion/commit/33254de90a169b31f283eca73313fbc37188fcb9,,implemented basic functionalities for the auction contract and created a single test case. TODO: implement error handling and have domain name in byte[] input,True
+https://github.com/aionnetwork/aion/commit/6ce8f92170604138b4a82f3bbd986025614b38a5,,create wallet functionality done,True
+https://github.com/aionnetwork/aion/commit/464b474acfe83dc886bd45895c8eba5166387b0d,,bugfix: total diff set for best block at load time,False
+https://github.com/aionnetwork/aion/commit/6d7154513981f80e8354c9254575d7397f9acfde,,fix block import issue and merge conflict,True
+https://github.com/aionnetwork/aion/commit/34e6a5bde04696655dc14a325a68e76cbd985c70,,"removed chainId, other mods",True
+https://github.com/aionnetwork/aion/commit/3175e59e9256147f4ebc98d357a0f98e3057f295,,almost able to verify and send tx,True
+https://github.com/aionnetwork/aion/commit/5c3ac6af4feb2d4658a2b6490f4fcb82bbcdb229,,security refactoring for ssl certificate management,True
+https://github.com/aionnetwork/aion/commit/6bd140b410bc83b501ee6f3b57a33f4a2797d5c0,,"done contract, adding tests",True
+https://github.com/aionnetwork/aion/commit/a4afa87e85ad60bfc998ad44a9c368b74a1ab723,,more testing of blockchain functionality,True
+https://github.com/aionnetwork/aion/commit/8c515f10b97f24e25a974c804062157f3446a32c,,refactored and tested the getHeaders functionality,False
+https://github.com/aionnetwork/aion/commit/5120be52e91cb23515bb477fbe6336da0865ba15,,added more tests to send tx,True
+https://github.com/aionnetwork/aion/commit/d79de7eb3df84c3140aa21bfd96026690f26af74,,completely implemented aion auction contract with the use of the repository. TODO: finish testing and cleaning up.,True
+https://github.com/aionnetwork/aion/commit/09c80902214533c15a13ec5083e651e7efaddee1,,temp branch to finish feature,False
+https://github.com/aionnetwork/aion/commit/b77a821337da974cc59f81c0991c17dd678ad965,,fixed contract send tx,True
+https://github.com/aionnetwork/aion/commit/9a2cb3a2870d0dcff00a38a4449b1e445e9a1f52,,some improvements to contract,True
+https://github.com/aionnetwork/aion/commit/7dc7c9792236f347f0ef759e0be61e98fcdf290b,,handling negative bigint amount properly now,True
+https://github.com/aionnetwork/aion/commit/4a3bbc5cb9c99bcd8cd8d3d81c0159d11918f49e,,basic outline of TRS,True
+https://github.com/aionnetwork/aion/commit/9c2f4002b66b648de93844fd1aa77741b5fe40e1,,"Initial version of Aion kernel GUI.  Supports a single use case: open GUI, launch the kernel, exit GUI, re-open GUI, terminate kernel.",True
+https://github.com/aionnetwork/aion/commit/eda82d3dcd2847b55fdd749d36c3863cb127013b,,"added create to owner, minor mod in private",True
+https://github.com/aionnetwork/aion/commit/331f46d477516f18b87fdbbab4ccaeb05795fdc4,,"handled name to address implementation, added query method, adjusted storage of domains.",True
+https://github.com/aionnetwork/aion/commit/89d7c3617ec5eda5e389748a2851d933fe2790a2,,slight improvements to TRS architecture,True
+https://github.com/aionnetwork/aion/commit/fc4eaec6e46ee94d76eb2fef8389ca3b1f6f425d,,fix Iterator.remove exception in the nodeMgr,False
+https://github.com/aionnetwork/aion/commit/fc0bfc756ba8ecba8199aa4e16f4bc96183a80d2,,using IDataWord for db type,True
+https://github.com/aionnetwork/aion/commit/6606b8538661608426399b7618fc1aef58d5f11c,,implemented DoubleDataWord,True
+https://github.com/aionnetwork/aion/commit/75b6275b392b2867598f2b79678f5d90df48fe1f,,integrated double word into TRS,True
+https://github.com/aionnetwork/aion/commit/b6bc22fd5aba4cc14c2414fe95325363e19ed119,,adding balance records to storage for TRS,True
+https://github.com/aionnetwork/aion/commit/0887789e04b4d1b8248d068d0e90d63c5faec6e1,,"enhanced query methods for auction contract, refactored ans and fixed test cases.",True
+https://github.com/aionnetwork/aion/commit/180856e478348cac047773b6d09c94d50b08f8c2,,"removed direct reference of databases from AionBlockStore, avoiding redundant repeated flush on same objects",True
+https://github.com/aionnetwork/aion/commit/0b612c488735eea1199a76b2bdb544b71b59f9db,,contract now records total balance,True
+https://github.com/aionnetwork/aion/commit/cde5eb648194423cf50b5a72a457547fbbaaed42,,precompiled module refactor (onging),True
+https://github.com/aionnetwork/aion/commit/1a248404d6dd2a2452ee5621171169b6821699ec,,some refactoring,True
+https://github.com/aionnetwork/aion/commit/1cfa0e4996be74bf58791c403e6aa29c655fdc76,,"Incorporated Jay's suggestions; also noticed that toXML method wasn't implemented and the GUI code wasn't hooked up to the actual config.xml, so fixed those issues as well.",True
+https://github.com/aionnetwork/aion/commit/7decc6ee37afdefd68021f0602d1167db57f019f,,"Added Rich text box with reset/save/validate, but no tests yet",True
+https://github.com/aionnetwork/aion/commit/b5bdd57aed53008fdeef665fa5e074a38d63bc9c,,Decorators,True
+https://github.com/aionnetwork/aion/commit/fe682bafc1c0c2c9712fabba4e66b19db904ad5b,,"First iteration of support for turning in mining via JMX -- added
+InFlightConfigReceiver, DynamicConfigKeyRegistry; equals methods for Cfg
+classes; JMX startup logic in Aion.main.",True
+https://github.com/aionnetwork/aion/commit/5631e1025973ba845f6bdec0a25bf51c931095eb,,wip,True
+https://github.com/aionnetwork/aion/commit/1bcba69706e80584481cce72c7d24299eed81ff3,,more refactorings,True
+https://github.com/aionnetwork/aion/commit/534fbfd13f05048266d19474beda74fa31007935,,finished big clean up,True
+https://github.com/aionnetwork/aion/commit/e1458301f431fc6e3a8d7f4f6cf6a2c18a9fb882,,refactor precompiled contract & testcase,True
+https://github.com/aionnetwork/aion/commit/96ecf7f9b320e00c6e15dd26c7db00109f0b4863,,refactor ExecutionResult,True
+https://github.com/aionnetwork/aion/commit/a59d06c43bbf07b4045a465b6251791cb87af978,,added refund functionality,True
+https://github.com/aionnetwork/aion/commit/67f182e3dd0249e0a246f7de6d7e17f56ff39901,,"unit tests for DynamicConfigKeyRegistry and InFlightConfigReceiver,first attempt at pausable AionPoW",True
+https://github.com/aionnetwork/aion/commit/183b2989fdfaa7b72ac57377465d93f20e88e9c2,,wip: fixed threading/singleton AionPoW/AionHub issue,True
+https://github.com/aionnetwork/aion/commit/a38b5530a27baecd685fa9f09d5ae0761cbe4c8b,,added functionality to query and some tests,True
+https://github.com/aionnetwork/aion/commit/2ffe038085143263decadbf8af2f97ebec78b342,,some minor fixes to double data word,False
+https://github.com/aionnetwork/aion/commit/3c9e619fe3632e1f82b6026ae341bd4da4838591,,added some tests,True
+https://github.com/aionnetwork/aion/commit/c7a1d90e73311c7ccc7fbb55b119876b9e39e7c4,,"Can stop mining,  still need to modify event q to ignore events when mining stopped ",True
+https://github.com/aionnetwork/aion/commit/46b4c1fdcbda765db90349065d4f02be06793d2b,,add checksum initial implementation,True
+https://github.com/aionnetwork/aion/commit/3ae1e5cce83da3712b4bcdacfb2e87c86e515bd3,,fix networkBestBlockNumber doesn't be updated after sync to the top,False
+https://github.com/aionnetwork/aion/commit/3849f64400dfe816652cccde0a544312650a3906,,"finalize storage layout, add dummy repository",True
+https://github.com/aionnetwork/aion/commit/e6c2609d490553f49bdf22642b5b5c32eb192337,,updates to controller logic and tests,True
+https://github.com/aionnetwork/aion/commit/e9df056e1559fb2cb175f716d7c0b3f11eeca88d,,some fixes,True
+https://github.com/aionnetwork/aion/commit/77e3944a5ec5b7d63c96871484838c8a50f6858a,,"added periodsAt functionality and tests, some other cleanups",True
+https://github.com/aionnetwork/aion/commit/43a0c77693cb40cde71c26d55f18555bdc31c90d,,add controller logic,True
+https://github.com/aionnetwork/aion/commit/c1d471b8721184007a931c460a1796d9f9b458be,,tests for controller,True
+https://github.com/aionnetwork/aion/commit/b974dab37716ee384c206d767dbe356042ab5f23,,"added periods functionality and tests, updated build for ant tests",True
+https://github.com/aionnetwork/aion/commit/1e02dd7bf6a54723d5bb1a902774708d74281b08,,Integ test for turn on mining -- needs lots of refactor,False
+https://github.com/aionnetwork/aion/commit/96b11488868c87fef55884115fe65f66da50801d,,WIP: iter 2 of Mining test,True
+https://github.com/aionnetwork/aion/commit/e60ee2fd809242095812ce5e1facb015fb135c63,,initial deserialization commits,True
+https://github.com/aionnetwork/aion/commit/6ed4cfed102d0c0656ef81370d1fa390d24cfe51,,nodeMgr refactor,True
+https://github.com/aionnetwork/aion/commit/d272b8e1a00651c456eda125d460bb7275e48bc2,,Fixed a lot of bugs in the mining test.  It now persists to a temporary leveldb dir created just for the test.,False
+https://github.com/aionnetwork/aion/commit/97d75b700231dbb3bc40a846145abce3ab035c23,,most of deserialization and top layer logic done,True
+https://github.com/aionnetwork/aion/commit/0331a1c4c47fb250c9e9de6fc55ad417fb4cd7c6,,add ring initialize,True
+https://github.com/aionnetwork/aion/commit/6fa6b218cefc9de2a152d366ac36b429c768cf2f,,remove useless import causing builds to fail,True
+https://github.com/aionnetwork/aion/commit/be5dea1800f374c04c7e4652f1f751fbe7b668f6,,completed ans and auction implementation and testings,True
+https://github.com/aionnetwork/aion/commit/380c4e40502251acdabd9a0d130c907bda44e7af,,"implemented the hash contracts(blake2b and keccak), added unit tests to both.",True
+https://github.com/aionnetwork/aion/commit/fcdd597d1ed2f11628d6db3e025178ad3af99c7b,,"added bonus deposits functionality, some more withdraw logic",True
+https://github.com/aionnetwork/aion/commit/951b1133c65ebcd64163b33b4ece75991b01fc8d,,Removed singleton pattern from EquihashMiner and AionHub,True
+https://github.com/aionnetwork/aion/commit/3bba51c191848fac165c3670c1b4149a050623ed,,Aion watchguard + UUID check,True
+https://github.com/aionnetwork/aion/commit/e0ad45e4ead645d952929e33c3b7cf38d3b6842c,,function now switched using enums,True
+https://github.com/aionnetwork/aion/commit/c667ac610859642191c405e119e1df372ae29cba,,oops,True
+https://github.com/aionnetwork/aion/commit/004672acdbb5f18b6bda54d8f1ec0ba872f52bad,,add events and pure functions,True
+https://github.com/aionnetwork/aion/commit/d61803f43889e49b6469f33059f9f43ac8554a01,,Adding tests,True
+https://github.com/aionnetwork/aion/commit/6c2b9a080fd20702e0c3f4c37073418d897b940e,,"Delete empty test file, make ConfigManipulator more unit test friendly",False
+https://github.com/aionnetwork/aion/commit/290122cf232a614901370315fb4e829d5b4e857e,,"more tests, executioncontext to transactionresult",True
+https://github.com/aionnetwork/aion/commit/0f9cf0e34b29808dbcdb56e74db384b7d7608481,,"fixed build order, added dependency to modFastVM",True
+https://github.com/aionnetwork/aion/commit/67d1513641044013553dc3e5c519be7e464ac310,,package rename,True
+https://github.com/aionnetwork/aion/commit/a2a793ef979d249a5792fd30cde00411bfcfecdd,,"Fixed a few bugs introduced by refactoring: (1) jmx client closed the connection too early, (2) AionImpl.inst() had a circular dependency because it eventually calls a constructor of AionPoW that again calls AionImpl.inst(), (3) default port number of jmx was wrong",False
+https://github.com/aionnetwork/aion/commit/e4144b19de93350f9b4722f1874d80dff5056b8b,,"updated transfer, broke model",True
+https://github.com/aionnetwork/aion/commit/15dfd60e7fb0dd6ccbab096e9721c7abf0453372,,"fixes to dependency, comments, imports",False
+https://github.com/aionnetwork/aion/commit/47a9925e7c722f834501dd3f28d51e43a40dea05,,p2p debug log enhancement,True
+https://github.com/aionnetwork/aion/commit/973315a130e9afc098e6543fcd3ad37066f93a9f,,Added accounts pane (incorporated aion_ui's code).  Add Account works.  Need to make Unlock Account work -- left off on adding a handler for AbstractAccountEvent.Type.RECOVERED.  Probably ave lots of duplicated code.,True
+https://github.com/aionnetwork/aion/commit/4d29e71aa9485c042394f049b39cb02dd080ae91,,"added LRUMap implementations for query functionalities, adjusted testcases",True
+https://github.com/aionnetwork/aion/commit/8fd084e72b640a4d33b1180ab071b88900f0ec3d,,"tests for open,available and logic for available",True
+https://github.com/aionnetwork/aion/commit/4e7d8be43f2cda79ad6a0d52fa814cde99258d21,,Unlock account working,True
+https://github.com/aionnetwork/aion/commit/828223a5cccf1d054939cf43ab9201350ec58dae,,initial refactor to accomodate undertow http server,True
+https://github.com/aionnetwork/aion/commit/ed484b0ce2744933d158503fae3f90b36f50f67b,,1,True
+https://github.com/aionnetwork/aion/commit/f2796c953efbe40ec99e6b1b618c41e0353c0094,,Wired up account name and balance indicator in header pane,True
+https://github.com/aionnetwork/aion/commit/d75a4ab66972a990be7f30d024d440ad6212faf7,,add outGoingIP check,True
+https://github.com/aionnetwork/aion/commit/971ed253986cc4970bafd861d7b1c497eb4e811c,,small update and bug fix,True
+https://github.com/aionnetwork/aion/commit/74f99a135afce31b453d5d6b074a716b3311c09b,,Basic send functionality working,True
+https://github.com/aionnetwork/aion/commit/860c9649a494e36d4ae38735f6fc7a49ca3a195e,,Receive pane working,True
+https://github.com/aionnetwork/aion/commit/a6b9a9b8839a7cae9fef58c35cb1d364b7b6875c,,finished trs logic,True
+https://github.com/aionnetwork/aion/commit/99cf69183b4322833a51f97564b353701f9ccccb,,"updated gitmodules, rm unneeded import",False
+https://github.com/aionnetwork/aion/commit/fba121307820197f2fd8811951c2a089eeb2b0ec,,Txn history working,True
+https://github.com/aionnetwork/aion/commit/7e49c884c6d8254988661330e982b8e6e0f0676c,,"config to switch rpcServerVendor, added missing undertow jars, sslCert generator script, gitignore updates",True
+https://github.com/aionnetwork/aion/commit/47c0820756826129ccdf3bc2056f884dd0ddf8de,,correct implementation of the inherited-builder pattern,True
+https://github.com/aionnetwork/aion/commit/ffd214eeb0bdf7387aa5a483cf3f948b1753e106,,undo all changes to AionLoggerFactory,True
+https://github.com/aionnetwork/aion/commit/f3563dc896422ec204a431020b87b456e8ea638c,,"Export/import account for keystore format works now.  Need to test import private key.  Also, export breaks when env var local.storage.dir isn't set",False
+https://github.com/aionnetwork/aion/commit/4233df9f8b12b52f2004dbe1729054e6ee60605c,,"added default aion names handler, and refactor some test",True
+https://github.com/aionnetwork/aion/commit/c6a43b246b2526f56e09aa5dc7cbcbef0d0f4b0f,,fix inbound key remove bug,True
+https://github.com/aionnetwork/aion/commit/a31eee70f24f2056b2dad322662b384fcceb74b1,,update standalone blockchain to support a setting block number,True
+https://github.com/aionnetwork/aion/commit/9d16d2dbbc4dba387477a08d84c16de0d47a1493,,refine p2plog,True
+https://github.com/aionnetwork/aion/commit/918c246b632f5d5f016780300450772cd59c5887,,"fixed some bugs from merg, ans and auction contract tests should be good now",True
+https://github.com/aionnetwork/aion/commit/e2e911ca1922d1e9ebfa1d9d3ad7f0a97296e4a6,,refine log,True
+https://github.com/aionnetwork/aion/commit/e5f77cdf53fd25ca72d520f2efe565950719f4bc,,Incoporated aion_ui's idle monitor and console/log window.  Fixed CSS issue for header pane buttons.,True
+https://github.com/aionnetwork/aion/commit/c3cf6442e6edca7d4f9b544ea14f655229dc9229,,cleared factory of contract refs,False
+https://github.com/aionnetwork/aion/commit/930cfef698b7f45bd51168e35122e037cc146aed,,add TTC back in,True
+https://github.com/aionnetwork/aion/commit/4433b8d60e5ba3b6c041f45ff7ce9dbae186347e,,"update fastvm, create modVM, incomplete",True
+https://github.com/aionnetwork/aion/commit/7e36579d63fffbd7164ee43196a97bad4332cb2e,,ant builds modVM,True
+https://github.com/aionnetwork/aion/commit/a4dbfd74db2fcbcbbccc0d10795824e6077fb4db,,Refactors + started unit test for BlockProcessor,True
+https://github.com/aionnetwork/aion/commit/8045dcef2543f3ca0f55187a39bf6d3f7bf82614,,update module build settings,True
+https://github.com/aionnetwork/aion/commit/23e8f9db2d5ae2bd548e4f87c5cdb210740b15ab,,update implementation and tests,True
+https://github.com/aionnetwork/aion/commit/591a01f66ddbb04616141c2907171d61f334f8a6,,fix failing build,True
+https://github.com/aionnetwork/aion/commit/10c52c082fc6888477edfe6182e97f302a1f50ad,,Make ConsoleManager less staticky so classes that touch it can be unit tested without bringing up JavaFX,False
+https://github.com/aionnetwork/aion/commit/12a5f21b082a45f6649f5f5b3a759bc06f05697b,,add modP2p testcases,False
+https://github.com/aionnetwork/aion/commit/6ed264f4f7ea41a75aebbcff6f07e6b44f8c5c03,,fix build fail,True
+https://github.com/aionnetwork/aion/commit/e02b4fc72cea9fc251d352f95de8c6620ea9e14b,,complete rewrite of AionLoggerFactory,True
+https://github.com/aionnetwork/aion/commit/cd638663df5c4339b454d320835af530f3291cf8,,fix build after changes,True
+https://github.com/aionnetwork/aion/commit/474e2d64f708eb57826e7b74dbb9327ed1fa1f97,,merge code from fastvm fix-event branch,True
+https://github.com/aionnetwork/aion/commit/f96075cabd03935ceab33c71080b9a36c00965da,,test updates,True
+https://github.com/aionnetwork/aion/commit/eb0f078ece81f10024c1cde4f51b6567de1ca0b9,,revise interface to use ExecutionContext,True
+https://github.com/aionnetwork/aion/commit/7a6bc72538fb02b38363baa9920eecdc745fa6d9,,add in bridge encoder,True
+https://github.com/aionnetwork/aion/commit/d626894a8cdf22323cd136943df68353b73a1abd,,"Added code for status msg at the bottom of window, also tried to align it and broke everything in the footer",True
+https://github.com/aionnetwork/aion/commit/e914aac91f761d9342520f89ec0602d2ecc817b8,,"GUI changes for Settings pane, logic for JMX communication between GUI and Kernel process, logic for recognizing changed sections of Cfg",TRUE
+https://github.com/aionnetwork/aion/commit/0e3954fa5940ce9cdcc905fb26cb0421af2d8ee5,,added executionResult tests and refactored,True
+https://github.com/aionnetwork/aion/commit/d372729745972097311bd42f35ec57ba25cb967d,,"Add jdk modules for JMX to prepack.sh,  modules-info for JMX in modBoot/module-info.jvaa ",True
+https://github.com/aionnetwork/aion/commit/58caf024e46229d6cd66df465b6fce0579233700,,"Add jdk modules for JMX to prepack.sh, modules-info for JMX in modBoot/module-info.jvaa",True
+https://github.com/aionnetwork/aion/commit/5c14cd8dc7e253176c39e31ec8f852d5285349f8,,WIP: improving status bar,False
+https://github.com/aionnetwork/aion/commit/f055d88cce6061e2a0c4a240f08844daca85ff52,,added tests and some refactoring,True
+https://github.com/aionnetwork/aion/commit/5527ecc9fe863e87ca17091312db6ec590bbb1d4,,update p2p testcase,True
+https://github.com/aionnetwork/aion/commit/432fab2215216a6d761fd712f7af75f939ecb250,,Unix Process Terminator,True
+https://github.com/aionnetwork/aion/commit/3b78123398407ebc55fd02d17687a2fa49bc2dd0,,adding some txExecutor tests,True
+https://github.com/aionnetwork/aion/commit/6b9f6e017450e90aa4eb5e9f497afcefcefc3fcc,,"more tests added, minor mods",True
+https://github.com/aionnetwork/aion/commit/718aa2bc0359fd1f36f3c166b379af06f8222419,,"Incorporated some of Alexandra's PR suggestions,  mainly around making KernelLauncher/DashboardController more robust to external processes that can interfere with kernel process.  Still need to add unit tests for some new logic.",True
+https://github.com/aionnetwork/aion/commit/385c3d88452a58102c12c600cd2ce13936473f2a,,"Tidy up, Remove debug msgs from aion.sh, Fix test",True
+https://github.com/aionnetwork/aion/commit/a85ea65b9c77f310b95b1a381e7e50ffdf78cd49,,"ignore some modPC tests, added txExe constructor tests",True
+https://github.com/aionnetwork/aion/commit/3978b00882ba3cfc0fd4e41233a461b606f87f9c,,Test improvement,False
+https://github.com/aionnetwork/aion/commit/1db754cc187068a1c82124f8fd9ddac3bc299f23,,add testcases for ChannelBuffer,True
+https://github.com/aionnetwork/aion/commit/9b14f5162cd450d7e39f219415e93030ac174376,,"Minor chnages for some things broken by last merge,  small improvements to alignment of buttons in header pane",True
+https://github.com/aionnetwork/aion/commit/adfc403ae99368dff07d73e25f2c5828d4f734d8,,fixed up ssl cli,False
+https://github.com/aionnetwork/aion/commit/375db5bba6fdcf03fb29b25094b173b178bd0158,,"Minor bug fix in DashboardControllerIntegTest.  Had to refactor DashboardController to not use singleton EventBusRegistry because the test constructs multiple instances of it, which never get garbage collected because the EventBusRegistry singleton has a reference to it.  Those non-garbage-collected instances continue to respond to events, causing random NullPointerExceptions",False
+https://github.com/aionnetwork/aion/commit/5679b93cb5ccd8bdfbcd02e0a934600e6fcbd821,,bridge functionality updates,True
+https://github.com/aionnetwork/aion/commit/f5940164e50d660b1c5e9f5e298a5c97897d61cf,,WIP,False
+https://github.com/aionnetwork/aion/commit/bff8829f532302320530594b79d3482d14eef8ea,,Fixed some tests I broke while merging + copied over some changes that were in dev-modGui2 that I didn't merge properly into this branch.,False
+https://github.com/aionnetwork/aion/commit/027be52aee3123ee20327208fd5eb85676f2760b,,Test fixing from merge.  Still one broken integ test.,False
+https://github.com/aionnetwork/aion/commit/9acb82d2ba463a3eeaf2e2d26ceafaf5e51537d9,,Remove mining applier (not ready for upcoming PR),True
+https://github.com/aionnetwork/aion/commit/ec057eb090aa5e4d1e6c2baa50d9c789417630a8,,WIP: unit test improvement,False
+https://github.com/aionnetwork/aion/commit/c5f6e33bbc7c3b7eecf295333d7ef1cd9d257248,,"Fixed some issues raised in PR. 1) modified code for launching web browser when user clicks logo to make it work on more platforms, 2) removed footer pane because it breaks maximizing, wallet version of the GUI has big change to it that makes that problem go away anyway",False
+https://github.com/aionnetwork/aion/commit/bf8bc3bc34ad982de93f6ec8311a9ea5d8b1034f,,WIP: AccountManager unit tests,False
+https://github.com/aionnetwork/aion/commit/58a431fa03c08da0c4af0e654b86bea1a579947c,,WIP: AccountManager unit tests,False
+https://github.com/aionnetwork/aion/commit/2d7696c1e8466d7207afec4cc7a1b4f4acd6a051,,more AccountManager unit tests,False
+https://github.com/aionnetwork/aion/commit/b24c353eaac9d7e14bb7de745b4503399131d16f,,finished java unit tests,True
+https://github.com/aionnetwork/aion/commit/82a9788728d5059d8c5a30a97b423e7890a57641,,remove unnecessary arg checks,True
+https://github.com/aionnetwork/aion/commit/3404d381f833a72fcff5f31db83dc3b2b97558db,,"GUI changes for Settings pane, logic for JMX communication between GUI and Kernel process, logic for recognizing changed sections of Cfg",True
+https://github.com/aionnetwork/aion/commit/9d60f482981cb1f4df49d63c645be235a650d5b7,,"Add jdk modules for JMX to prepack.sh,  modules-info for JMX in modBoot/module-info.jvaa",True
+https://github.com/aionnetwork/aion/commit/0e7e69c1d33e90cd12f47ae4d4537f9fb9584393,,"Fixed some issues raised in PR. 1) modified code for launching web browser when user clicks logo to make it work on more platforms, 2) removed footer pane because it breaks maximizing, wallet version of the GUI has big change to it that makes that problem go away anyway",False
+https://github.com/aionnetwork/aion/commit/e3cff725536ed65804c20878aa1177fba471d482,,Address Alexandra's PR suggestions,True
+https://github.com/aionnetwork/aion/commit/5fc6a634184ec643790172e21b9b1154e8b96424,,fixed issues with PR,True
+https://github.com/aionnetwork/aion/commit/d76e9bbf6bf0b3dbd5d8d54f685e921e10a31653,,WIP: WalletStorage refactor + started on integ test for AccountManager.exportAccount,False
+https://github.com/aionnetwork/aion/commit/0188bfe4b7bcbe830f9bc4574c6468b3e2b2c264,,ATB-4 update,False
+https://github.com/aionnetwork/aion/commit/8d2a89569c336aa99e3cd0d95ca167ca237268a2,,ATB-4.1,True
+https://github.com/aionnetwork/aion/commit/5b170bbe61047d12b55b44fce8e377f6659af6b6,,Unit tests for MasterKey and CryptoUtils,True
+https://github.com/aionnetwork/aion/commit/dfc97b18882dc6530bf10a84593a4d01d3feb374,,WIP: Trying to make SettingsControllerIntegTest not rely on MainWindow,False
+https://github.com/aionnetwork/aion/commit/e429766cf4db038f3fb5f29ba58cdf72ca774cbb,,remove cast to DataWord,True
+https://github.com/aionnetwork/aion/commit/e25d1cb55fec346c027a9edb650cd914eecf5624,,Receive pane controller tests,False
+https://github.com/aionnetwork/aion/commit/f09db81a90a968e2855f53427f42dcad99f2fe34,,Minor tidy up,False
+https://github.com/aionnetwork/aion/commit/8d9dff4379c77bfb193f6ba2aa9aef047b676e19,,"Moved kernel pid file and output file to storage dir of wallet, instead of hardcoding to /tmp",False
+https://github.com/aionnetwork/aion/commit/0398594be18e77641cb40969a53b17fe9f386620,,"A few small fixes: make config filename in Settings pane actually reflect the config file, fixed issue with connectivity button not saying CONNECTED, fixed random exception msg when terminating kernel and unexpected disconnection erroneously detected",False
+https://github.com/aionnetwork/aion/commit/ec2eb525c1f0a8fd4f769ba3dcb2d31fe61341b1,,"recommited CLI network/datadir swtich from dev branch, fixed genesis testcases, added multiple cli option to -n and -d",True
+https://github.com/aionnetwork/aion/commit/53398fd1ca76c8eb4ec643ee8ffbe60631d61386,,trying to make accounts pane not go insane when maximizing,False
+https://github.com/aionnetwork/aion/commit/07f062b1de4c097a129d5b81d596fcff413cc9e9,,branch for merge dev,True
+https://github.com/aionnetwork/aion/commit/c9421e59ade3f9d99107f624338f8066ab5699b8,,"Reverted some testing code,  set limit on window size because accounts pane list view can't seem to resize nicely",False
+https://github.com/aionnetwork/aion/commit/0b6c312c4ae4b3395ca8a420e966996ae3cd4eec,,compact encoder testing and optimizations,True
+https://github.com/aionnetwork/aion/commit/9d714b16ba0422f25c0ed2f1934c7aa2d3ce96e6,,RLP class clean-up and specification tests,True
+https://github.com/aionnetwork/aion/commit/d934fa64175b684048309f0c042170e8449162e1,,add modP2p testcases,False
+https://github.com/aionnetwork/aion/commit/af2ce1dd34d6e3230ff4923431139aba6130b7ab,,fix build fail,True
+https://github.com/aionnetwork/aion/commit/eaa8a15ccdc971051e471feb587cf228ab422f9e,,update p2p testcase,True
+https://github.com/aionnetwork/aion/commit/4014ac2499b2272182ab3bebdfdbae5de72102e9,,add testcases for ChannelBuffer,True
+https://github.com/aionnetwork/aion/commit/f29edc4f6de792de6b26436dd19b4797ff236840,,"fixed cliTest, added keystore/config in user-specified database directory, update multi argument option",True
+https://github.com/aionnetwork/aion/commit/219fd81d471a5bb723a8720b9fbac8abb1bac4c0,,fixed aion.java,True
+https://github.com/aionnetwork/aion/commit/c552ed83a97924dc81f25ffadbc673a40fa4be17,,some changes to support testing,True
+https://github.com/aionnetwork/aion/commit/b58a53d232f4fc906ed3dc7692b3f4811e6f4bb2,,some PR changes,True
+https://github.com/aionnetwork/aion/commit/d4fc12b03544bb80db8abf7d1d1886315a24b6f8,,some cleanups,True
+https://github.com/aionnetwork/aion/commit/7fe122f815877e806e17f941262a7fa64a17f351,,nonnull annotation in ResHandshake1,True
+https://github.com/aionnetwork/aion/commit/e45aa4e92efc58f70c0f3fc9bf3cf741d8a1bb4c,,"removed FileUtils, rewrote CLI.java logic, fix CliTest.java, added target paths to logger, disabled defaulting to mainnet / database upon invalid user entry",True
+https://github.com/aionnetwork/aion/commit/ce31503eebc04f374c6bcc3f42302601a6372730,,Remove some unused code,False
+https://github.com/aionnetwork/aion/commit/79f72d49c2bc24d2a43a933ba32de475486d732a,,refine javadoc comment,True
+https://github.com/aionnetwork/aion/commit/ee34df215a2f4d382d06b835372dbd1e6e1bab51,,"commented unneccesary imports and variables, fixed formatting",False
+https://github.com/aionnetwork/aion/commit/7f07d4d3929e7407c400129b1f996610c0679433,,equihash package code inspection-based clean-up,True
+https://github.com/aionnetwork/aion/commit/078b75d530a44202d93bae77a7ad7cf819388ef5,,"more RLP clean-up,  test coverage of all used methods",True
+https://github.com/aionnetwork/aion/commit/99168535053bb5550666c52c180bbfa1f0a8a0dc,,applying some of Ross's optimizations,True
+https://github.com/aionnetwork/aion/commit/f90adb3fd5977d32f8df36717994541188e77ce0,,adding review-based changes for #571 and #572,True
+https://github.com/aionnetwork/aion/commit/67adca839b797bf1a6b988109d401a9b94da6979,,preparing AionHub for testing,False
+https://github.com/aionnetwork/aion/commit/426b21b8ce51961c8c48360e362313cf79edbb11,,update guave&truth lib,True
+https://github.com/aionnetwork/aion/commit/6da9ed79342c1d3e42fc348b87dad14fade44e26,,"Revert ""[Impl 2] AionHub testing""",False
+https://github.com/aionnetwork/aion/commit/d863968d2ca93e0fbaa750db6d2583ecacc490f6,,"rewrote cli logic, amended clitests",False
+https://github.com/aionnetwork/aion/commit/3c2bb7eb431771580a1432b7291c71f37de25bfd,,"updated -c option, fixed issue with creating directories",True
+https://github.com/aionnetwork/aion/commit/deb3fa39eee7fa7e05ad5a29cdae6adc9a1840cb,,finished up patch testing,True
+https://github.com/aionnetwork/aion/commit/06147126b721ff5edeac9b3efef9fb75e399f954,,Verify kernel is alive right after launch from GUI,False
+https://github.com/aionnetwork/aion/commit/13983e8b98f45038d60b02333e454d30c4dd0b39,,"Fixed a few bugs: disable send button when Tx in progress, logs werent showing up before, re-enabled some commented code for processing blocks upon reconnect",False
+https://github.com/aionnetwork/aion/commit/4e1618ecc2570dfaf594053146a054a8a560fa92,,renaming classes,True
+https://github.com/aionnetwork/aion/commit/f2920263a88034afef3d7609efb2f35e09e0bb9e,,ensuring the recipient and tx length are correct,True
+https://github.com/aionnetwork/aion/commit/d60719bb6fa2e928e957d83a0210b7fd5617cb70,,"Check API actually connected before calling it, instead of relying on API's exception-throwing to determine how to update GUI",False
+https://github.com/aionnetwork/aion/commit/a266f131db8208c717d1fe0634b6e10d2430dba6,,Delete unnecessary import,False
+https://github.com/aionnetwork/aion/commit/0565e701e6a74f11d863563ed052bcfcff6eaaf0,,a few more optimizations,True
+https://github.com/aionnetwork/aion/commit/b46bf8fa027395dc48260eca661cfc407e25eebc,,add mocked factory,True
+https://github.com/aionnetwork/aion/commit/4e477f42f07492040e52332eed7c3f8d01f02660,,preparing AionHub for testing,False
+https://github.com/aionnetwork/aion/commit/b34fcca650531e6cda840cd3868d413a32fc9b3a,,rpc server reliability upgrades,True
+https://github.com/aionnetwork/aion/commit/eface81f2113e62370c5528b6d7ca855628d9a17,,style and import fixes,True
+https://github.com/aionnetwork/aion/commit/f165aa3440c5080ac2c32c7b1b34c887d54fc6e3,,Have a task that will output all aion-related jars and dependent jars to a folder in build/distribution,True
+https://github.com/aionnetwork/aion/commit/1cb6da670cec63205e8c9ab11143d7666a1a9bb8,,Extend RpcMethods to take granular enable & disable lists,True
+https://github.com/aionnetwork/aion/commit/5bd12116fd57a496d060cbb5c5bdee2109d67c92,,Cleanup code,True
+https://github.com/aionnetwork/aion/commit/1e2d2d6ef406bcc2dc38f60313eec8140a7349d9,,Switch split method to not get empty strings,True
+https://github.com/aionnetwork/aion/commit/0060f69f1c2051d3b003a93124a87e969b8b5510,,Fix compile error,True
+https://github.com/aionnetwork/aion/commit/2a8ed3a755a6b0e48d4efac9f73e978023f0f7ab,,#623 fix,True
+https://github.com/aionnetwork/aion/commit/3343902c6fbd1614d7efabe3822f9af2b2a32c9d,,add solidity native lib and execution check,True
+https://github.com/aionnetwork/aion/commit/56a07ca17681ef7db8e3b9c7e9e3273d458e1a70,,zmq secure connection implement,True
+https://github.com/aionnetwork/aion/commit/49c46a7e66d962521f34288886ea3179e99162d5,,implement the curve key loading in the zmq ProtocolProcessor,True
+https://github.com/aionnetwork/aion/commit/be226bb0333ccafa8186f984bd806844877ad888,,multithreaded processing of batch requests + optimized getReceipts impl for bridge,True
+https://github.com/aionnetwork/aion/commit/66805519ede1a349a15d84e84972cdd02ba438b5,,add branching details log,True
+https://github.com/aionnetwork/aion/commit/a41f2ad1c51052588123eaaa625d68b828569a06,,persistent mock database implementation #636,True
+https://github.com/aionnetwork/aion/commit/56e46f93283d1d6257c8b02beaada70604e3dcb6,,refine logging the branching details,True
+https://github.com/aionnetwork/aion/commit/325d559a3fbc2116dea8f44154f28a7531f558be,,refactoring import classes,False
+https://github.com/aionnetwork/aion/commit/0af3fb006a38937bf12ab56c92851c5f20f309dd,,Have a task that will output all aion-related jars and dependent jars to a folder in build/distribution,True
+https://github.com/aionnetwork/aion/commit/9c9f988b449cfbe93aa38238f29aa90277fb43e9,,Add logic for modCrypto to build native blake2b and move to root project,False
+https://github.com/aionnetwork/aion/commit/edacfcf0a7d596a7b53b18d44064f9184c3b7548,,"Can build and run aion.sh (non-pack), removed dependency on org.aion.api.impl.internal.Message",True
+https://github.com/aionnetwork/aion/commit/73e3a7353487cd5d5b1935c7aafb60140f4d6790,,Have a task that will output all aion-related jars and dependent jars to a folder in build/distribution,True
+https://github.com/aionnetwork/aion/commit/4d75c1152a3bced2c99abe71986d9e1fe939aa36,,Add logic for modCrypto to build native blake2b and move to root project,False
+https://github.com/aionnetwork/aion/commit/9d606dd1e82270ba1d55166bd20c1d74e2126c2c,,"Can build and run aion.sh (non-pack), removed dependency on org.aion.api.impl.internal.Message",True
+https://github.com/aionnetwork/aion/commit/d375820b0df3516a3424aa72ae2d6cf2641b7374,,use Optional & fix 0x problem,True
+https://github.com/aionnetwork/aion/commit/3f84a20bad8ce67a72796d74284aeae576926d7f,,refactoring the getFiles method to a class,True
+https://github.com/aionnetwork/aion/commit/1c75109885bef0d22e1ffe48b5d3bdcba0c8bab0,,refactoring zmq secure connection for logging,True
+https://github.com/aionnetwork/aion/commit/33c68bde63e2093f846b9c9b11ebfd85f014ea2c,,"refactoring CfgApiZmq logging, ProtocolProcessor construct process and cli return logic fix for secure connect",True
+https://github.com/aionnetwork/aion/commit/8280d927e32ff4d158047ee50bed7d16b6c95af7,,enabled printing peer states for sync status,True
+https://github.com/aionnetwork/aion/commit/1d466ab66d6abfa3b5624074db192443e1ac8126,,added pending block store access to repository,False
+https://github.com/aionnetwork/aion/commit/6f71b1f64cffa8d4ecac982ab66eb191618fd050,,added pending block store access to blockchain class,True
+https://github.com/aionnetwork/aion/commit/a457b0fb274f858e7ba97dcbd48b20f1214949cc,,new sync strategy,True
+https://github.com/aionnetwork/aion/commit/7fe80fa8d8568fd229867a78c5cf0298ed537669,,"constants for defining state count thresholds,  some unit testing",True
+https://github.com/aionnetwork/aion/commit/e47a9e6ee286fc86c02aafde96070396ca778045,,strategy for fast states count to be double normal states plus a maximum threshold for normal states,True
+https://github.com/aionnetwork/aion/commit/7062ccdfabdc6fd627ad1c9cb5f08aae02b52550,,unit tests for lightning jump base selection,True
+https://github.com/aionnetwork/aion/commit/9563e4eb55bdfb54cdde462d2bad353601189675,,unit tests for isAlreadyStored method,False
+https://github.com/aionnetwork/aion/commit/1541598d9524bf02e97f7820998cb057cd76fd18,,unit tests for lightning jump method,True
+https://github.com/aionnetwork/aion/commit/ef30f53d9127bb6db35ee52858fc6bf4f0068cbc,,"pending block store clean-up,  unit tests for constructor functionality",False
+https://github.com/aionnetwork/aion/commit/dcf08b2ba0c2294890fc14f547c1ae565ebad42c,,copied the delete folder functionality to avoid unnecessary dependence on other modules,True
+https://github.com/aionnetwork/aion/commit/420fa1d4895a567e5f998bd4698f73aa36cba91c,,unit tests for deleting block ranges from storage,True
+https://github.com/aionnetwork/aion/commit/674782cd082ebfd601c4ab7b7b07b44903fb5eaf,,updated sync constants,True
+https://github.com/aionnetwork/aion/commit/6817b79e68cc4ad520fe46fc04119fb6f8ad1f9a,,renaming ambiguous functionality,True
+https://github.com/aionnetwork/aion/commit/131c0d8078c93c95bee8178936b11541f47e7211,,adding read locks and minor updates requested in reviews,True
+https://github.com/aionnetwork/aion/commit/072c28a6cea6b5779ccf5eb0c4be64f8ff536f5c,,"ensured correct shutdown when repository issues are triggered,  throwing exceptions for null database",True
+https://github.com/aionnetwork/aion/commit/4d4f3f6b0482cd0038629f029137ced4985f58d2,,"required non-null state, refactored close method",True
+https://github.com/aionnetwork/aion/commit/9fa05ce77a964a511dd46dad2f2de2481cce8348,,printing help using the command line parser usage functionality,True
+https://github.com/aionnetwork/aion/commit/d71200d669f0a4771c5ecd12ac39fc2279c9a3cb,,enum used for Cli return types,True
+https://github.com/aionnetwork/aion/commit/9f51a1bfa0503c715b474dbea11fc58416a8ab5d,,handling all options except -n and -d,False
+https://github.com/aionnetwork/aion/commit/6566f5b6e7ca1f3548f0f0cbfe07d876ff04845b,,updated the assignment of data directory and network,False
+https://github.com/aionnetwork/aion/commit/4b3f554829190ce6351078ce2331ceb070d7ac81,,debugging and unit tests for network option,True
+https://github.com/aionnetwork/aion/commit/7d90274fc9bb0442ffff00ca2b589981931aea52,,support for absolute paths for the log and database directories #627,False
+https://github.com/aionnetwork/aion/commit/5bf4f1501bb91bc4e0b08aff413ce012e5206531,,debugging and enhanced unit tests for config option,True
+https://github.com/aionnetwork/aion/commit/582becc0055a4ca23b30e6b500aafa540bc302b7,,debugging and testing creating and listing accounts,True
+https://github.com/aionnetwork/aion/commit/c9b166ca03c35c366245d308bbdeb33b3ffd965b,,debugging and refactoring,True
+https://github.com/aionnetwork/aion/commit/e4564c3d2a58f6aba45fda373f0f2e7a85c91862,,Add Mongo and the factory method for it,True
+https://github.com/aionnetwork/aion/commit/415caeaa67ca8ac2342d271b3738400e8ecb2ab1,,move zmq key pair generate ouside of Cli. Will be checked after config settings has been loaded,True
+https://github.com/aionnetwork/aion/commit/49a0fc4dd8c35d385d47bc48a209ec50c05da23f,,add branching details log,True
+https://github.com/aionnetwork/aion/commit/6096f594344f866a7e8500c68bd8223e7d5b3cb5,,refine logging the branching details,True
+https://github.com/aionnetwork/aion/commit/c99f6bdc80ce1e32b859036697f40d6fb958ba0b,,refactoring import classes,True
+https://github.com/aionnetwork/aion/commit/27caad4afcf0599ecb6003a004ad089bba5c04ee,,undo format Cli and remove comment in Aion class,True
+https://github.com/aionnetwork/aion/commit/b53a6fb8bb0561b367e7f4c6f086c880a3a548c1,,"Assorted Gradle fixes: 1) TxPoolA0 load error when kernel not invoked from IntelliJ, 2) Missing 'requires' in a few module-info files, 3) tell IntelliJ to use JDK10, 4) Fixes to modGui where resources path wasn't set correctly, 5) Fix to aion_gui.sh where classpath is wrong",True
+https://github.com/aionnetwork/aion/commit/788e59b9e97bfb01723a349292cf0cd20a3e49c4,,"Assorted Gradle fixes: 1) TxPoolA0 load error when kernel not invoked from IntelliJ, 2) Missing 'requires' in a few module-info files, 3) tell IntelliJ to use JDK10, 4) Fixes to modGui where resources path wasn't set correctly, 5) Fix to aion_gui.sh where classpath is wrong",True
+https://github.com/aionnetwork/aion/commit/38e451cd3249fc38d992da31a7866e3c9da4d338,,"Add in the Initial Mongo Database Implementation
+
+Basic Driver tests pass when there is a local running Mongo node now",True
+https://github.com/aionnetwork/aion/commit/d3478ddac743abd2d7d45ad7c0b5288fda6822ec,,More tests passing,True
+https://github.com/aionnetwork/aion/commit/699080a1a1e30ffe6ff0b2c5de3a6073ec337d94,,fix module-info settings for modAionImpl,True
+https://github.com/aionnetwork/aion/commit/0b707031adbc44f0cc9e20263b5dd5c42c70a9d1,,Add client sessions,False
+https://github.com/aionnetwork/aion/commit/1b8b08e79f947d9193056032950b184569ce6236,,Get aion node syncing,True
+https://github.com/aionnetwork/aion/commit/35236655d5c8bda05138a8841f399c66b70fd81c,,src/module-info.java,True
+https://github.com/aionnetwork/aion/commit/fd6f76b71b215d1f2f80fc6e91d53b80c7ad2042,,adding missing dependency for sync manager,True
+https://github.com/aionnetwork/aion/commit/2284556ae5d868b5f492a76b39715590f49a415f,,Little bit of code cleanup,False
+https://github.com/aionnetwork/aion/commit/8e4cc187387bf526c329dfb51b5ccef4a2513d96,,add missing dependent lib in modAion,True
+https://github.com/aionnetwork/aion/commit/e9f9d6d7473624d36d4e21bb120ec81c57356602,,Add readonly Mongo concept,True
+https://github.com/aionnetwork/aion/commit/26a204199157d3f746afa7ce4884fcf839dd15a2,,fix AionHub_test endless in the gradle CI_Build task,True
+https://github.com/aionnetwork/aion/commit/530d85f1dacf512ee517204830ab0b8b493549b5,,update module dependency,True
+https://github.com/aionnetwork/aion/commit/2cd076cd94baae510cee6b28edafa12305b170de,,"modAion: reformatted code, updated Copyright",False
+https://github.com/aionnetwork/aion/commit/1a68e78485fc55dde321e9910567c6e3a344d65f,,"modAionBase: reformatted code, updated Copyright",False
+https://github.com/aionnetwork/aion/commit/37a6165b6b5babe45c6e5becc76d03c619317f7b,,modAionImpl: code reformatted,True
+https://github.com/aionnetwork/aion/commit/4ffb1507d2a3b6a588f27198b6aaa67e2550f5e5,,modAionImpl: Copyright header update + more code reformatting,False
+https://github.com/aionnetwork/aion/commit/1c93487481b31f48df62fda449a09f6dbcf819a1,,modApiServer: reformatted,True
+https://github.com/aionnetwork/aion/commit/8f71af89b22672b7d5cab6095dca30b5534f36c0,,modBoot: reformatted + copyright done,False
+https://github.com/aionnetwork/aion/commit/90b13f398144d50e1319710183d653e6d6c5eace,,modCrypto: reformatted,False
+https://github.com/aionnetwork/aion/commit/08804ff860455fcf11269d5fb6abead657c9a0bf,,modDbImpl: reformatted code in this module,True
+https://github.com/aionnetwork/aion/commit/7a6bcaaf3b911a9900584d70183f1fcca3c74ec5,,modEvtMgr: code reformatted & copyright updated,True
+https://github.com/aionnetwork/aion/commit/5e932413e52414ad3db1447750cb281d7463901b,,modEvtMgrImpl: reformat done,False
+https://github.com/aionnetwork/aion/commit/75d6abbe164d56eadbfe02f88a3d14336a1e8ddf,,modGui: code reformatted,False
+https://github.com/aionnetwork/aion/commit/705291416b185cca33d345629a9739d1e7943370,,modMcf: code reformat,True
+https://github.com/aionnetwork/aion/commit/ea238255f511a26c3df92e22f9b6c6fccb15384b,,modMcf: updated all the licence headers + some code reformatting,True
+https://github.com/aionnetwork/aion/commit/c94bd552c0e931f2d78f377f6c71f10b858a6ced,,modP2pImpl: reformatted code (all license headers are fine),False
+https://github.com/aionnetwork/aion/commit/b006624ac6a5b057c4ad70c069c5b7b56778a6c9,,modPrecompiled: code reformatting,True
+https://github.com/aionnetwork/aion/commit/058eabdcc84e8ebb8f215f4f69353d6d0b598e7d,,modRlp: reformatted code & fixed some copyright headers,False
+https://github.com/aionnetwork/aion/commit/2adc45a2c21f60ad2f171923fe91d54d5df1eaf2,,"modTxPool: code reformatted,  license header fixed",False
+https://github.com/aionnetwork/aion/commit/ad741c0559cd4d8432b8734e1352ecf2ad24abe2,,"modTxPoolImpl: code reformatted, license headers fixed",False
+https://github.com/aionnetwork/aion/commit/dd163debc3b91ac91c34b6c702a7bb5aa300a8c3,,"modVM: reformatted code,  fixed license headers",False
+https://github.com/aionnetwork/aion/commit/c369ded467482bb5b10a003bff7f7c3b784f4019,,"Revert ""Code reformat""",True
+https://github.com/aionnetwork/aion/commit/f1db3deae290ef7b49cc1d47a7418e28e09e198e,,update module-info for missing module requires,True
+https://github.com/aionnetwork/aion/commit/3ab4910b0a974e0a9e538112a61406884ba81b88,,reformat modAion,False
+https://github.com/aionnetwork/aion/commit/da9738fe04aad3c23fab061d4fd5993c99848f84,,reformat modAionBase,False
+https://github.com/aionnetwork/aion/commit/f2e26b901410a1c1837d271cb44a043dc7deb9fa,,reformat modAionImpl,True
+https://github.com/aionnetwork/aion/commit/dcbd18412c802d0de56ae910227ce5f773ad44b9,,reformat modApiServer,True
+https://github.com/aionnetwork/aion/commit/bc81e172fe01b909dc7462b3e61b02f1b07b19cb,,reformat modBoot,True
+https://github.com/aionnetwork/aion/commit/fd817490d82641fc957e49163e9bda3af4da0dae,,reformat modCrypto,False
+https://github.com/aionnetwork/aion/commit/2a857ba7d7bb11fb35abdcdf76878d646f7dc60d,,reformat modDbImpl,True
+https://github.com/aionnetwork/aion/commit/697b000c2538db21b7ca286260b5dd043a577832,,reformat modEvtMgr,False
+https://github.com/aionnetwork/aion/commit/bd731203a0ddd76bda97bc3c46f885edba62fc2f,,reformat modEvtMgrImpl,False
+https://github.com/aionnetwork/aion/commit/0118351b94119cd6a3a2c42e951361007fae39c6,,reformat modGui,True
+https://github.com/aionnetwork/aion/commit/eaac4fe0275277e229d56ae4cc573f40fb20daaa,,reformat modMcf,True
+https://github.com/aionnetwork/aion/commit/27a98762ba173ad051615c50f0e418dc6be605d2,,reformat modP2pImpl,False
+https://github.com/aionnetwork/aion/commit/73dc362a17a485530b28d4d38fd85ac644eaad92,,reformat modPrecompiled,True
+https://github.com/aionnetwork/aion/commit/8634f1dd97efd2aaa7dc5a6ba6326576bd5dfb57,,reformat modRlp,False
+https://github.com/aionnetwork/aion/commit/c9c99686a4d611374f48ed270f9d0e38eb4c0dcd,,reformat modTxPool,False
+https://github.com/aionnetwork/aion/commit/0c2933b91def7361fc33383f9e2e2c4cd7710a67,,reformat modTxPoolImpl,False
+https://github.com/aionnetwork/aion/commit/4c030be7a6c2dc142b052c4b7579ea959db3a791,,reformat modVM,True
+https://github.com/aionnetwork/aion/commit/4eeb2c83396358b4134880decde32f856aa29a15,,task for storing blocks that cannot be imported yet,True
+https://github.com/aionnetwork/aion/commit/dae6e2febef4eac556a644527509fca88cc6194b,,optimized locks in PendingBlockStore for improved concurrency,True
+https://github.com/aionnetwork/aion/commit/29bef377d21c1d42c38eec853c40c53088afe5e9,,Import old commits,True
+https://github.com/aionnetwork/aion/commit/4e148f92aa64b48f325f1628ad216801209501d0,,patches,False
+https://github.com/aionnetwork/aion/commit/fc8e3d817ff3b7d242030c62e1cf94790b15a316,,patch ApiAion0.java,False
+https://github.com/aionnetwork/aion/commit/903a42dcd731dea175c0715dabe4ac9edc380885,,Split checkArguments() into methods for unit tests,False
+https://github.com/aionnetwork/aion/commit/01eab0edf3e9ee4189fb461a84023793f939bf98,,Split checkArguments() into methods for unit tests,False
+https://github.com/aionnetwork/aion/commit/6c06b4ad7c033bae2a221bf39e21fcc2ef26fb9c,,refine p2p-log,True
+https://github.com/aionnetwork/aion/commit/2706b415fa03e44ffcb5da233dda36c60d320bcf,,Applied code conventions,True
+https://github.com/aionnetwork/aion/commit/f4f8143ebf2f69f1862d5bd732e09b3d7643cb8f,,Fixed catching total block requests by peer for sync stats,False
+https://github.com/aionnetwork/aion/commit/e0853a964d58eeaa86d94cf1f5d3e600d7cb1196,,minor performance improvement and comment update,True
+https://github.com/aionnetwork/aion/commit/490786b303156c06d95e00d0b782732456a0e4c7,,patch nodeMgr lock issue,True
+https://github.com/aionnetwork/aion/commit/2238c4d5f583f3af86dee09c1fb48de31799233e,,replace guava cache library with caffeine,True
+https://github.com/aionnetwork/aion/commit/e9dff11f9d686a0088af42190bbf3e7e358052fb,,configuration for displaying specific statistics,True
+https://github.com/aionnetwork/aion/commit/72c99a468128fb68b978e496d3a076105a2d8731,,"removed unused reports,  print exception only when shutdown not requeste",True
+https://github.com/aionnetwork/aion/commit/286e468b629f402fb1ec6bd609f3643e7f8819bb,,display the stats separately depending on configuration,True
+https://github.com/aionnetwork/aion/commit/c3ab99ac917e56a034b3c812a2ecf9803d2cb725,,"corrected the unmodifiable list,converted to using sets",True
+https://github.com/aionnetwork/aion/commit/77eadc9dddb7470c34eb8fbf3529c2b1aa2f0564,,revise p2pMgr message sending mechanism,True
+https://github.com/aionnetwork/aion/commit/e5349a1c6631228856b7cb3e8aa155659d1466b0,,Add more test cases and document precompiled contract,True
+https://github.com/aionnetwork/aion/commit/65bdb28da3e9e5267d74acba99e442fc24bc3dd4,,Create EDVerify contract,True
+https://github.com/aionnetwork/aion/commit/bfa0a8322102c86e1b0424869a930b3f73b1b5f1,,revise hashing&EDVerify contract,True
+https://github.com/aionnetwork/aion/commit/b1b999bf04be7704ee4bae68f48b13ee5847e3b4,,refine Blake2bHash&EDVerify contract,True
+https://github.com/aionnetwork/aion/commit/18bfff08de2fc266516b78d000dc72794e530820,,remove Black2b 128bits hash implementation and fix edverify testcase,True
+https://github.com/aionnetwork/aion/commit/fb8fb78ab5f40a6d28d74459d83dd27aea4a9a00,,implement TXHash precompiled contract,True
+https://github.com/aionnetwork/aion/commit/4112b18bcfc49f9c5d88eed8bd3eb0cd1d94100d,,use permanent thread instead of the thread keeping create and delete,True
+https://github.com/aionnetwork/aion/commit/938783870440bccc20f2574ffcee0591eadb34e9,,fix precompiled contract test fail,True
+https://github.com/aionnetwork/aion/commit/99de446490ade8de5965ede625cc75055cc7424d,,add CfgFork,True
+https://github.com/aionnetwork/aion/commit/7ed73f0844553043518e3e2b9c1469009b4ca6c0,,add fork cases to getPrecompiledContract,True
+https://github.com/aionnetwork/aion/commit/31ecbb384a1e02b34783f5eb8b53bb055c24ab4e,,Get mongo working again,True
+https://github.com/aionnetwork/aion/commit/891035dfe02d2cce6e596c296ef59823b969f7b4,,patch nodeMgr lock issue,True
+https://github.com/aionnetwork/aion/commit/92a49055e96e72c5413a00f5bff5420026461357,,revise p2pMgr message sending mechanism,True
+https://github.com/aionnetwork/aion/commit/933cc1ee37601bf57f6ce36cef4055d921918957,,use permanent thread instead of the thread keeping create and delete,True
+https://github.com/aionnetwork/aion/commit/1247d70c66c33cea00514f4ed55a2f77461a53f7,,Get Mongo tests running again,True
+https://github.com/aionnetwork/aion/commit/edff9f24682bb5624fdcb8c064e66c3603b57e2e,,refactor contract,True
+https://github.com/aionnetwork/aion/commit/74aded9121481403a1c3e7ec1a04815d2a9219a1,,revise cfgFork class,True
+https://github.com/aionnetwork/aion/commit/41da690176de49fdb5bfa7da0607260c1e57a6b6,,revise testcase,False
+https://github.com/aionnetwork/aion/commit/16b7cc0983ab0712c77294c78f54e5becb1105df,,add difficulty length check in AbstractBlockHeader,True
+https://github.com/aionnetwork/aion/commit/1aa7445a2c5ae33574682d6e46ca892461b3d7e5,,refactoring classes by comments,True
+https://github.com/aionnetwork/aion/commit/e0e7adf013b6dfb9cd1d4c3c7b2e3109a947325e,,fix pack,True
+https://github.com/aionnetwork/aion/commit/1fec69eb49b0a0a635ee91e50af775d2adec9226,,fix fork default settings logic in Cli and CfgAion,False
+https://github.com/aionnetwork/aion/commit/999cac89911595e24d7d8e428fbac687ca095d3d,,"improved access to resources by using different locks,  replaces stream with parallelStream,  specified element types for lists",True
+https://github.com/aionnetwork/aion/commit/4bfe10bcb7875492b12e3b732eca157c22a43f75,,calculate average response times without producing incorrect negative value,True
+https://github.com/aionnetwork/aion/commit/03007e4c1e36a3d185b7a33776e78b59f92fe0e4,,"replaced streams used for computations with for loops,  updated back to stream for sorting the maps",True
+https://github.com/aionnetwork/aion/commit/a89e939a8f1960534183b2652aba9598d6aee85f,,introduced migration of old kernel configuration,True
+https://github.com/aionnetwork/aion/commit/7879884ab1783b51509254301280966157c5d165,,add google's VisiblForTesting to module-info,True
+https://github.com/aionnetwork/aion/commit/c11bc1e481ee0fc11e9cf17b1b654d2a14f1d399,,Add comments for the error codes,False
+https://github.com/aionnetwork/aion/commit/ecaab66ab252f520498a224e6b1d8b3e194911b1,,move genesis to new location for custom networks,True
+https://github.com/aionnetwork/aion/commit/89d729c8d2c224947ed00928ffd4fb036fb2e614,,Code cleanup,True
+https://github.com/aionnetwork/aion/commit/bc042f93b78b167fcfcb0c1774ef3ea45984f1e1,,Couple missed files,False
+https://github.com/aionnetwork/aion/commit/ecf2adcdeb9275b42e39ec1ff46eb98dbbfebfd6,,fix EDVerify precompiledContract,True
+https://github.com/aionnetwork/aion/commit/2be3a8ddde495acc9a4e3ccfaa703a098b1afe7e,,Reduce log level & suppress incorrect error message (CR feedback),True
+https://github.com/aionnetwork/aion/commit/9166c6b2e376b755631fe56d174258332c473f3e,,fix apiserver and blockHeader toJson format  bugs,True
+https://github.com/aionnetwork/aion/commit/afa8804afebc1507b8f42d8f39b4b55f6ce17d75,,added module for utility classes,True
+https://github.com/aionnetwork/aion/commit/8cbb442c34f2ef49f01864ab05942879541339f3,,decoupling p2p modules from modAionBase,True
+https://github.com/aionnetwork/aion/commit/86af7120b1225ddb947146c0cb80c51905e2843e,,decoupling rlp module from modAionBase,True
+https://github.com/aionnetwork/aion/commit/85ae7429a05453602eabdf0f0cb1c111e8f25fda,,decoupling crypto module from modAionBase,True
+https://github.com/aionnetwork/aion/commit/1c0b3548c17ca4547e9deed9b8f01c2be386de1a,,refactored package name as per review,True
+https://github.com/aionnetwork/aion/commit/fe3fffece7a74a265fcfd5fec0d69328404f9656,,Replace libJson.jar dependency with maven repo dependency,True
+https://github.com/aionnetwork/aion/commit/96f723754d3e579a1e0b50e6ac2bde5130d30935,,Replace libnsc with spongycastle via Maven,True
+https://github.com/aionnetwork/aion/commit/5f44e9666ac4dd6aadcc17d4179e2eb58d518423,,quickfix for estimating gas of contract creation txs,True
+https://github.com/aionnetwork/aion/commit/0f81aa9c351f0dbf387bd4c659c4440af8717147,,replacing sets with iterators as a return value for the database keys,True
+https://github.com/aionnetwork/aion/commit/161219fe846b9312617d750a0f3607331e2a2487,,Remove modGui dir,True
+https://github.com/aionnetwork/aion/commit/a89de3c68d49488c655ed8bad61d37a2deb26ce7,,defined the keys iterator over a snapshot for the leveldb database,True
+https://github.com/aionnetwork/aion/commit/96bec289b1dd18cde93007ca9082b2ae2ec1896f,,defined the keys iterator over a snapshot for the rocksdb database,False
+https://github.com/aionnetwork/aion/commit/f02a2bfb487918cf5d3dcd7c91eb032c8e3e1f9d,,addressed remaining review comments,True
+https://github.com/aionnetwork/aion/commit/c4e2c144398b17ce68f47e64b656fd870ab316af,,add --compact option to cli,True
+https://github.com/aionnetwork/aion/commit/2199047630914b9370727777fb628ea9b9cd2f5d,,syncLargeStorage performance enhancement,False
+https://github.com/aionnetwork/aion/commit/b24fa635c99c51598005eb96b2d80aa51e09b508,,replacing sets with iterators as a return value for the database keys,True
+https://github.com/aionnetwork/aion/commit/684842faeca5c80add2978751fea7d01c832bc45,,iterator for keys and formatting for MongoDB,True
+https://github.com/aionnetwork/aion/commit/1b7e1633ba46e4c7f9e5cb02ecf374ac590c656c,,defined the keys iterator over a snapshot for the leveldb database,True
+https://github.com/aionnetwork/aion/commit/6c545d01a19f8b7ddc3152f72d337f3069e34389,,defined the keys iterator over a snapshot for the rocksdb database,False
+https://github.com/aionnetwork/aion/commit/7486296d46b7b5bf04880f5823509cd512ebf6f0,,addressed remaining review comments,True
+https://github.com/aionnetwork/aion/commit/3d596a97e39134a197d04331af01bebc26ca1f8c,,remove license header in the java classes,False
+https://github.com/aionnetwork/aion/commit/5f4bcdf2b1a2e304f0ad642d1767acdf41c17a23,,Replace parameters for default nrg values with constants,False
+https://github.com/aionnetwork/aion/commit/d94c0abc1d49a78afa5bcbb9c3f9561605369590,,"Using TransactionResult from VM APi project
+
+- This change allows us to remove the old, overly complex structure
+  relating to this concept which consisted of: ExecutionResult,
+  TransactionResult (kernel side), AbstractExecutionResult, and
+  IExecutionResult. These are now all gone and replaced by the new
+  TransactionResult.
+- All changes to source code are simple replacements of these old
+  classes with the new class.
+- All changes to test code preserve the test logic prior to this
+  change and are only replacements and simple adjustments to new
+  semantics, of which there are few.",True
+https://github.com/aionnetwork/aion/commit/1c7b53edd863070a6a4449fd8be0482ebb467694,,"Bloom now implements IBloomFilter
+
+- Note that the BloomFilter class does not implement IBloomFilter.
+  This is because the VM-related components do not interact with
+  BloomFilter but rather with Bloom.",True
+https://github.com/aionnetwork/aion/commit/b99ef0b6ed185a3d2f3297af763729907082019b,,"Using VM API Address and IExecutionLog
+
+- The old kernel Address class is now AionAddress, and it implements
+  the Address interface in the VM API.
+- The kernel Log class now implements IExecutionLog.
+- The bulk of these changes are all renamings to allow for this swapping.",True
+https://github.com/aionnetwork/aion/commit/502eb1023a57f4dc5d5c34fdbf4f4834ddfcde43,,"AionTransaction now implements TransactionInterface
+
+- All of the bulk changes here simply relate to using this new
+  type and handling some of the side-effects that come with it.
+  For example, different method names and the Address type that
+  some of its methods return.
+- Also making a method in AionTransaction synchronized again (but
+  we should be looking into this ... it seems like improper
+  synchronization).",True
+https://github.com/aionnetwork/aion/commit/4279e1d1ff8ef41a60fc56c34440c8a27e3d47ad,,"AionInternalTx implements InternalTransactionInterface
+
+- All changes here are simply related to this new interface type.",False
+https://github.com/aionnetwork/aion/commit/abc846dd381789cf91f5f2234b85384000f8fb39,,"ExecutionContext implements TransactionContext
+
+- All of the changes here are re-namings related to this change.
+- One exception: the old ExecutionHelper is now a SideEffects implementation
+  and its old 'merge' method no longer performs a conditional merge. We
+  have separated the logic of this conditional merge out into two different
+  methods to better suit an API and as such we have replaced each occurrence
+  of that merge with this new logic, which is equivalent.",True
+https://github.com/aionnetwork/aion/commit/2d7448ede8518647463271e708d073005d89be63,,"ExecutionContext implements TransactionContext
+
+- The ExecutionContext class now implements the TransactionContext
+  interface in the VM API.",True
+https://github.com/aionnetwork/aion/commit/c75bcba300f1dea395f0dd24ae4850530a776da8,,"Adapting to new ResultCode, TransactionResult
+
+- These above mentioned classes are now interfaces and the kernel
+  side provdes two FastVM implementations of them. All changes here
+  simply relate to this new change.",True
+https://github.com/aionnetwork/aion/commit/17809b3d146549e3037f4c544d6a28f37e14774e,,"Using KernelInterfaceForFastVM
+
+- This is an implementation of KernelInterface for the fastvm.
+- Most chanegs here relate to how we are now using this in the
+  fastvm (namely in the Callback stack).",True
+https://github.com/aionnetwork/aion/commit/1c37655f87f7807747ebfc2a960b8f41bc928ae2,,"removed DataWord from interfaces in modAionBase
+
+- updated aion_fastvm, modAionImpl, modPrecompiled, modAion,
+  modApiServer, modVM, modMcf, aion_api with interface changes",True
+https://github.com/aionnetwork/aion/commit/0ba7617bc05245aa4e291fcd9688f2aa0491dff8,,"Added Precompiled Result and Code
+
+- The precompiled module will soon be detached from the fastvm and
+  so it will also need to provide its own implementation of
+  ResultCode and TransactionResult, that's what this commit introduces.
+- Currently these classes are unused.
+- Also note that they are copies of the fastvm logic. This is because
+  the two shared a single path of execution on these points prior to
+  this separation, and so this similarity needs be preserved.",True
+https://github.com/aionnetwork/aion/commit/917b3024a665317bba66878a858bc5014fffb02f,,"modPrecompiled has its own ResultCode, TxResult
+
+- All classes in modPrecompiled have changed to now deal with its
+  specific ResultCode and TransactionResult implementation in order
+  to move towards decoupling this module from the fastvm.
+- Note that its implementation is identical to the fastvm
+  implementation since the two used to share these classes.",True
+https://github.com/aionnetwork/aion/commit/d2ecc24eaf91319cfd0b90b838afeaf98bc9e7b8,,"Small dependency fixes
+
+We are no longer using the libnsc jar directly, and some other
+small fixes.",True
+https://github.com/aionnetwork/aion/commit/d8dfb9bddf53508efce5abcadb7a739c4a2ad1ef,,"Moved some classes from modVM into fastVM
+
+- The following classes were moved: TransactionExecutor,
+  AbstractExecutor, FastVmResultCode and FastVmTransactionResult.
+- This is a step on the way towards achieving the correct dependency
+  relationship between modVM, modFastVM and modPrecompiled.",True
+https://github.com/aionnetwork/aion/commit/ec907906bd16f2f68a322211270faa1df19733c8,,"Removed ExecutorProvider class
+
+- As well as its two subclasses - these all existed as a means of
+  injecting the fastvm & precompiled depencies into modVM to get
+  around the dependency inversion going on here. This is now done
+  with.",True
+https://github.com/aionnetwork/aion/commit/1c4aa47976ac10971b548e81af783e85d91fdde4,,"Moved some classes from modVM to fastVM
+
+- IPrecompiledContract is now PrecompiledContract and is now in
+  modPrecompiled. IContractFactory is removed. ExecutionContext and
+  SideEffects have been moved from modVM into the fvm.",True
+https://github.com/aionnetwork/aion/commit/76904a22863a24bde81e5bace5f647c0338c0713,,"BulkExecutor is now in place
+
+- Though it is far from its final place. It is merely here so that
+  the modVM, FastVM, modPrecompiled modules all have their dependencies
+  solved.
+- Now BulkExecutor in modVM sees FastVM instead of the other way round.
+- The fastVM and modPrecompiled modules no longer depend on modVM.",True
+https://github.com/aionnetwork/aion/commit/349f72f41cd3f2dd6121cd7adb48eeef58121bdf,,"Adding basic consensus test
+
+- This test checks against only a very basic case, that none of the
+  fundamental results required for network consensus are broken by
+  any changes we are doing.",True
+https://github.com/aionnetwork/aion/commit/f74a1f0a0372aaf98b87dd72a801476898f4c108,,"Added new class: BlockDetails
+
+- This class anticipates the needs of the BulkExecutor once it
+  eventually starts accepting transactions in bulk. In this case,
+  the bulk transactions and their corresponding contexts and
+  block will all be passed over using this single object.",True
+https://github.com/aionnetwork/aion/commit/66906f51c36cb18e88205b504e461f7f4a1b9c87,,"TransactionExecutor now using KernelInterfaceForFastVM
+
+- This will eventually be in terms of KernelInterface. But now
+  at least all explicit reliance on IRepoCache is removed.",True
+https://github.com/aionnetwork/aion/commit/99d6052edd06e54a01b787cabe67b704dc567df9,,"Some TransactionExecutor logic moved into BulkExecutor
+
+- The BulkExecutor mainly takes care of everything the
+  TransactionExecutor used to do in the finish() method. The
+  TransactionExecutor now uses the KernelInterface to do its
+  checks.",True
+https://github.com/aionnetwork/aion/commit/d6f468f845bbbfd3c63336a24213acc1247b9cac,,"Removed VirtualMachine interface; fix to BulkExecutor; updated ConsensusTest
+
+- The VirtualMachine interface is now removed. It will soon be replaced
+  by the interface of the same name defined in the VM API.
+- In the BulkExecutor, we are now using the repository more openly
+  to help dis-ambiguate it with the KernelInterface, and also removed
+  the failure rollback & updates that actually were already being done
+  in the vm (rightly), making this redundant.
+- Fastvm implements VirtualMachine
+- The BulkExecutor now properly uses the FastVirtualMachine instead
+  of side-cutting via the TransactionExecutor.
+- The test is a bit more comprehensive now: it tests a block with 7 non-
+  rejected transactions and 1 rejected transaction. One of these is a failed
+  transaction. There is also a balance transfer transaction.
+- The BulkExecutor no longer makes any assumptions about the number
+  of transactions it is being sent (formerly it assumed always 1).
+  Now it will handle an arbitrary amount of transactions and return
+  the results.
+- There is also some initial logic in place here to handle vm-
+  delegation.
+- The PostExecutionWork class now takes an extra parameter and the
+  transaction type is now AionTransaction.",True
+https://github.com/aionnetwork/aion/commit/8e59fb5227e36525562a6bd21ab4872e97402f99,,replaced deprecated util functionality with new one,True
+https://github.com/aionnetwork/aion/commit/8c67c2bfa13e3513b2f7d4b829f016fdc9eb775a,,updated database interface to enforce differentiated use of put and delete,True
+https://github.com/aionnetwork/aion/commit/32e4408405d4a8f489165a08e2e1d37e7e532ef3,,separating insert and delete functionality inside the trie implementation,True
+https://github.com/aionnetwork/aion/commit/144984fe09d66ac88e4d8081ab173e516736ab9e,,separate use of Address interface vs AionAddress implementation,True
+https://github.com/aionnetwork/aion/commit/40f8b6e6ec971015dc5e72537cfb185512b2f085,,"Added a method to flush a deep copy of a repository's state
+
+- AionRepositoryCache now has a flushCopiesTo() method that allows for
+  'sufficiently deep' (this term is defined in the method documentation)
+  copies of the state of the repository to be flushed to its target.
+- This method is essential for when a repository will flush to a parent
+  that will create further children before the current repository will
+  fully flush its changes all the way to the database.",True
+https://github.com/aionnetwork/aion/commit/af2d970e46084851a0589da87e088ef9b3aebcdc,,Repository now deals with arbitrary byte arrays,True
+https://github.com/aionnetwork/aion/commit/201ddb09e23bbc7fb600081e6cd6e2f1c12dd12e,,syncLargeStorage performance enhancement,False
+https://github.com/aionnetwork/aion/commit/5ba1c8c0839784aeda6fe27f9ac1054d4edcfc5f,,replace FastByteComparisons.equal/compareto with Arrays.equal/compare,True
+https://github.com/aionnetwork/aion/commit/1d41cc54f6c378eafb274fcf9ba3b424ede3b215,,update missing module definision in mcf,True
+https://github.com/aionnetwork/aion/commit/6293312f0deed25275fe505d944fe2be76ae0ca6,,enhance rlp module methods,True
+https://github.com/aionnetwork/aion/commit/63ebbdb114a3b444c670cef5c1fc2bb8a0f1186a,,fix rebase error,False
+https://github.com/aionnetwork/aion/commit/ba354d9051fd96abd17ec7523ba7b115d97c17f0,,validator for transactions ensuring AVM tx can be used only when the AVM is enabled,True
+https://github.com/aionnetwork/aion/commit/dcb7a5daa4e70887e1d41994d6fc09bf1d5599b6,,"VM API name change updates
+
+- This commit updates the kernel so that it is using the same VM API logic
+  as the AVM. The two are built off different vm_api commits, but this is
+  only because the AVM commit has jar-building support for that repository.
+- Otherwise, the production logic has not changed between the two.",True
+https://github.com/aionnetwork/aion/commit/03ecd02e0411bb025dac2159db9b11d88ddbb8a6,,BulkExecutor can now invoke the Aion virtual machine,True
+https://github.com/aionnetwork/aion/commit/0d85bbfd2909d3800e90d6747b07864add57c9f3,,"VMs init'd at start up, refactor VMFactory
+
+- The startup routine in Aion.java now initializes the virtual machines and
+  adds their shutdown to the shutdown hook.
+- The VirtualMachineFactory has been replaced by a more flexible design with
+  less reliance on static state.",True
+https://github.com/aionnetwork/aion/commit/52f05aa8395ea9d1e1d98d32cc90329006c9d14c,,"Added another Avm test, made some fixes
+
+- Some small fixes have been made and a test that covers each of their cases.
+- This test is ignored for now, until we can figure out how we want to handle
+  the clock drift buffer time issue.",True
+https://github.com/aionnetwork/aion/commit/cb9c0649414f225e9739988141b2db168d88fc60,,"Fix to Avm tests, AionAddress.equals()
+
+- Avm tests now enable the Aion virtual machine via the standalone blockchain.
+- AionAddress.equals() has been changed to not use the fast byte comparison.",False
+https://github.com/aionnetwork/aion/commit/136df121fb6e1c1561a8c69736185a2777d04a12,,"Cross-vm call detection added to the FVM
+
+- The KernelInterface used by the FVM now detects when a call is attempting
+  to be made to an Avm contract.",True
+https://github.com/aionnetwork/aion/commit/8fbcbd2485b38a066f06d79629938bf266b4ed33,,RPC layer now handles transaction type,True
+https://github.com/aionnetwork/aion/commit/7700499ec7d18173f07eadf94d74ab6cee482d97,,"updating the vm enabled flag use
+
+ - minor renaming
+ - making the flag portable to the execution path
+ - adding the enabled flag to the avmtestnet config
+ - removed the integrity check which is not need here",True
+https://github.com/aionnetwork/aion/commit/f776e12ec810fc8ffed9fd8f186377691ece4f8e,,"Switch to using createNewBlockInternal
+
+- This is a much better solution to the timestamp issue that occurred in
+  some tests.",True
+https://github.com/aionnetwork/aion/commit/1bce646df00b74e92fbab2d1f2c56111befdc593,,"Do not serialize transaction data if CREATE
+
+- We were incorrectly serializing the transaction data if the
+  transaction created a contract. We actually want to treat the
+  data as an empty byte array in this case.",True
+https://github.com/aionnetwork/aion/commit/2bcacedb25b702c7a5f9ee67fd3514074aa77b41,,functionality to rebuild the blockchain based on the current stored blocks,True
+https://github.com/aionnetwork/aion/commit/43083c66f6edccc7102489a2216c68d4a337582f,,adding the delete method to contract details,True
+https://github.com/aionnetwork/aion/commit/fcc9b1c1f69adebd8d9ac868dd8cee64feb8a24a,,"moved common bulk storage methods to abstract class
+
+ - removed one of the set storage methods because it was not used",True
+https://github.com/aionnetwork/aion/commit/6056d327a0e24ce6827951a5e758b2c477b4557d,,put/delete storage separation,True
+https://github.com/aionnetwork/aion/commit/36490e152e025569d20438da5d750869f98ade1a,,refactoring block import and vm validator,True
+https://github.com/aionnetwork/aion/commit/0fa8334b20e9b7b1dbc02ccb21bf11a07281ccb8,,Move ZMQ native libs and native loading logic into 3rdParty/libnzmq module,True
+https://github.com/aionnetwork/aion/commit/0bade9a04fd6e0d7a2f6958ca81df243ffe24f0f,,Send zips of solidity contracts to the FVM for compilation,True
+https://github.com/aionnetwork/aion/commit/a539bc3b7942cd91f315069751a1717a0fe8039f,,cleaning up some of the Trie functionality,True
+https://github.com/aionnetwork/aion/commit/e174b56b3a76c5d2e849ce7017cb31ef585c4a98,,Gradle build logic for publishing to arbitrary local Maven repo,True
+https://github.com/aionnetwork/aion/commit/e7c58605ee09258d15ca0904e4206dcd143e1b4d,,Allow solidity zip compilation over web3,True
+https://github.com/aionnetwork/aion/commit/480a4157f1622a536fdc59d98f8f18651ea96283,,introducing constants for V1 protocol,True
+https://github.com/aionnetwork/aion/commit/99842edb4aeb1db8eec216eebfae64951a68cb80,,"add module-info for zmq; not needed by Gradle build, but IntelliJ complains about missing it",True
+https://github.com/aionnetwork/aion/commit/a08be49045b52def732b5da401f8851de5927189,,bugfix: stats should not be collected when disabled,True
+https://github.com/aionnetwork/aion/commit/b84bdcdf4792ff096f9d9bd56e264a1963c9c88e,,disabling the type check till the fork point is established,True
+https://github.com/aionnetwork/aion/commit/2846244a27bfe9846e26c5e5c1bffe678ee93f5a,,add more info to top seeds stat,False
+https://github.com/aionnetwork/aion/commit/efb6218ef8ccf978e974c2cdf397965a3dcb216b,,handler for trie data request messages,True
+https://github.com/aionnetwork/aion/commit/f7011ef67f85b9fa482e127f68542ab16f8d5b67,,implemented trie node retrieval,False
+https://github.com/aionnetwork/aion/commit/a385e1ed4b66b573caaf1badd0a3f60433e65688,,delegating referenced node retrieval to trie implementation,True
+https://github.com/aionnetwork/aion/commit/ca363814f8b37ac7c47d742d9e52e3ac8e33d263,,implementation for refernced nodes retrieval,True
+https://github.com/aionnetwork/aion/commit/ee59d6db095b3c15482df04e60f759e26a463476,,moved the batch size constant to V1Constants,True
+https://github.com/aionnetwork/aion/commit/21bd16ef3c644067da86784c6016f210aa376459,,printing message bytes to log trace when decoding failed and trace is enabled,True
+https://github.com/aionnetwork/aion/commit/85f04d7940a8ad462c80a489104ec663322f67bd,,"addressed review comments:
+ - using Collections.emptyMap() instead of new set
+ - logging both error and trace messages
+ - checking for exceptions
+ - simplified limit calculation",True
+https://github.com/aionnetwork/aion/commit/900241c3209fdf20fc4840bdf460a56247e89fea,,printing response message bytes to log trace when decoding failed and trace is enabled,True
+https://github.com/aionnetwork/aion/commit/775aec1452ec13f023a1968eb3c21d7300885887,,"task for importing trie data, requiring:
+
+ - a new method for importing trie data inside the blockchain implementation
+ - a definition for the types of results that the import can return
+ - a skeleton of the fast sync manager for checking already imported data and completion",True
+https://github.com/aionnetwork/aion/commit/da1fc2c6b8f292abda3360e75e87a9fd71a39726,,implemented functionality for importing trie nodes,True
+https://github.com/aionnetwork/aion/commit/723dedf8d430a4ea8b025862a231de42163642f4,,unit tests for the importTrieNode with the different possible results,True
+https://github.com/aionnetwork/aion/commit/581d232ac0856439a3d637f622c1707714cdd6d0,,method for determining which nodes are missing from the trie,True
+https://github.com/aionnetwork/aion/commit/6a6779bb19324895be29ae89eb8f4a8d84056a0b,,expanding the FastSyncManager class skeleton,True
+https://github.com/aionnetwork/aion/commit/30e316a99225c260312d07a3761757156c10e3c8,,libnzmq - add native libs for Mac and Windows plus code to load them,True
+https://github.com/aionnetwork/aion/commit/b66d691f8f0ae9c2b70dd1628e4a7a7737a75e34,,extract ResponseMgr from SyncStats,True
+https://github.com/aionnetwork/aion/commit/fc2374b45f1669c44a883531f16719441a83df9c,,update sync response stats to include headers and bodies,True
+https://github.com/aionnetwork/aion/commit/c048f41c39943d602f58d3cfdfbd3f205c53d688,,"replace peerRequestTime List with Queue,  add test",True
+https://github.com/aionnetwork/aion/commit/d331aa043d7c9666adcb27da76c1e76ee7f73648,,"refactored response stats
+ - moved additional stats classes to new package
+ - corrected resource access / lock management
+ - expanded unit tests
+ - corrected aggregate functionality",True
+https://github.com/aionnetwork/aion/commit/68109982424e89de5a3330acb19f5bff076288c4,,refactored functionality in ResponseStats,True
+https://github.com/aionnetwork/aion/commit/001699dad8bb777ebcdfb38fe08a1d4775a7b136,,add more info to p2p node status handlers,True
+https://github.com/aionnetwork/aion/commit/f208d81cbf5f9eb54d0d856447d0e154fd9e5627,,"expand p2p node status to include version, peerCount, pendingTxNum and latency",True
+https://github.com/aionnetwork/aion/commit/835093dbc122f1a7ad06741b1a34af7ff619e23b,,bug fix: pass mempool pendingTxs instead of pendingTxSize,True
+https://github.com/aionnetwork/aion/commit/6b30a2aa35a4eaf8c1967d374f0a55a9435892fb,,"pass mempool to blockPropagationHandler, fix tests",True
+https://github.com/aionnetwork/aion/commit/86c8f849172fbba1e5baa79248666a6f8f40e254,,"replaced HashMap with bounded LRUMap,  solved #825",True
+https://github.com/aionnetwork/aion/commit/ebc3c2e2594f4a9a97a1cb93e6d98de071d8cc97,,using the max active peers from the config to limit the size of the kept stats,True
+https://github.com/aionnetwork/aion/commit/67de2caffc7bd0c05a7a2ce42ca01ab8d5ba2856,,rework avm integration with mpm branch,True
+https://github.com/aionnetwork/aion/commit/b1431fc442f0138c5361670e882549c704f87321,,"squash commits
+fixed NPE concerns in some classes & format revised",False
+https://github.com/aionnetwork/aion/commit/862c65fb0f5a1c3196275769df347b79d08e29c1,,fix redo import fail when the database is for avmtestnet,True
+https://github.com/aionnetwork/aion/commit/8312f75f247556ec458ce9a8c5b4dd4b21c248ad,,add handling for vm fatal status,True
+https://github.com/aionnetwork/aion/commit/605b7dca852b98b3b7e6c55362ec950f417b3e25,,rework avm integration with mpm branch,True
+https://github.com/aionnetwork/aion/commit/5d6075d2d6f2d94af2ed99cbcc95d117220ddbe4,,"squash commits
+fixed NPE concerns in some classes & format revised",False
+https://github.com/aionnetwork/aion/commit/f26f9c4c3c795a3ed51689c96ecaa8815b4da5b0,,fix redo import fail when the database is for avmtestnet,True
+https://github.com/aionnetwork/aion/commit/041912cb2730df1e5ee965ff127c54992ca6ea2c,,feature: method for retrieving block ranges in ascending or descending order,True
+https://github.com/aionnetwork/aion/commit/0488573a20b8a5bc09314d8e2bb6899def683602,,feature: handler for block range responses,True
+https://github.com/aionnetwork/aion/commit/c742598604cee42e58e18cce37fd01a4fdb5f50b,,enhancement: additional correctness checks for trie data responses,False
+https://github.com/aionnetwork/aion/commit/43efe0396246ad1bee61cfc08315774f73350ad0,,fix IntelliJ can't run the test in the mcf and aionImpl module,True
+https://github.com/aionnetwork/aion/commit/90c7514757fb9e95e9ebff3df23d379142038f69,,feature: implemented task for fast block imports,True
+https://github.com/aionnetwork/aion/commit/5b4b65fda19309112c898eb694d3b5cbac5fba88,,feature: implemented functionality for fast import blocks and tracing missing ancestor block,True
+https://github.com/aionnetwork/aion/commit/52b4f303be8a727c1ae9538a77ba72ea1cd0207f,,enhancement: allowing block range requests by hash as well as height,True
+https://github.com/aionnetwork/aion/commit/3c458069e9a469496154e1126ec718cc431daaf5,,enhancement: additional validation and tests for RequestTrieData constructor,True
+https://github.com/aionnetwork/aion/commit/f59f53587556ce920e0751e6e011b05712c8bcfb,,feature: functionality to check for block import completeness,False
+https://github.com/aionnetwork/aion/commit/da6a745759c3af9710637f7b7cae80844aacee61,,feature: implementation of validateAndAddBlocks using parallel threads,True
+https://github.com/aionnetwork/aion/commit/c1a76f8bf6d9d5784585b8309be14f2037ee170e,,"Small Refactoring in repo, trie and rlp",True
+https://github.com/aionnetwork/aion/commit/ac2d3635462a594176a3423bd8e963aa16203402,,add handling for vm fatal status,True
+https://github.com/aionnetwork/aion/commit/0e477ef2f80ee1143c77bc97ee16c89a6e68030f,,enhancement: limiting the size of the returned batch,True
+https://github.com/aionnetwork/aion/commit/d26b81bda19d97bf39195e76c2fd20196f9c3473,,feature: implemented takeFilteredBlocks and refactored TaskFastImportBlocks,True
+https://github.com/aionnetwork/aion/commit/735a4932f1b5d744ff0eb83119437ed185849c89,,enhancement: reducing object instatiations by keeping the hash wrappers in the block,True
+https://github.com/aionnetwork/aion/commit/c666574f274c5ede212b70ca5f6a6e91f17268b5,,feature: make requests to the network based on missing blocks,False
+https://github.com/aionnetwork/aion/commit/c297c37fa62ec3dca24710f6d4baf1b7b730e9a6,,"Pure balance transfers are now handled by Avm
+
+- A pure balance transfer is just a balance transfer to a non-contract address.
+  Formerly these were handled by the Fvm, now they are handled by the Avm.",True
+https://github.com/aionnetwork/aion/commit/1a64fafbef810e1fa12d46f1debd46efc86d27d3,,feature: storage for contract information involving inception block and VM used,True
+https://github.com/aionnetwork/aion/commit/48d62da5df063b974e581adb6bfbd62874502d82,,feature: saving contract info in new database,True
+https://github.com/aionnetwork/aion/commit/97253c23542b5fecdc1bc55ff545b7a8580bef5b,,"feature: fully removed the use of AVM specific contract prefix
+
+ - corrected address generation inside AionCapabilities.java
+ - expanded repository interface with check for VM deploy code
+ - updated the VM specs with two supported VM codes for contract deploy
+ - removed prefix checks from tests
+ - expanded tests to ensure the receipt output matches the contract address",True
+https://github.com/aionnetwork/aion/commit/7c4d198bef1c1b0b638f3834749dbc2188aaa900,,"enhancement: refactored the VM specs and introduced default transaction type
+
+ - using the local version of the vm_api since more changes are expected",True
+https://github.com/aionnetwork/aion/commit/35c2dbf35e2caa22a2f420063054b96d2d051b00,,refactor responseStatsTracker,False
+https://github.com/aionnetwork/aion/commit/bc36df726839e8491bb0377555ceb21ff8f23b43,,move requestStats functionalities to RequestStatsTracker,True
+https://github.com/aionnetwork/aion/commit/9bc603198bc798957a410bf3ad2c8502eec9915f,,move topSeedsInfo functionalities to TopSeedsStatsTracker,True
+https://github.com/aionnetwork/aion/commit/1f269f73e4683a34be647a5e7d81ceba51da8b46,,move topLeechesInfo functionalities to TopLeechesStatsTracker,True
+https://github.com/aionnetwork/aion/commit/799f386f0ad21c72629fa5d5b216dd9b85fea31f,,"syncStats: some renaming, code clean up, refactoring etc",True
+https://github.com/aionnetwork/aion/commit/d1ee90b0c41a5ec1dc50073106ef567f46b2b67a,,rewrote ResponseStatsTracker,True
+https://github.com/aionnetwork/aion/commit/81ca748334f76f0a7acc0d984cea4d01afee8b7f,,move RequestCounter class to the statistics package,False
+https://github.com/aionnetwork/aion/commit/196d4983d0a33530e9ae08fbb5c71bc28cba2244,,"moving AionContractDetailsImpl, AionRepositoryCache and ContractDetailsCacheImpl to modAionImpl",True
+https://github.com/aionnetwork/aion/commit/7cf3c3ae3d9cb895875838cd01ba6bc25976b8e4,,"Re #856: using out of space code on exit from tasks for fast block import
+
+ - also handling the interrupted exceptions in TaskFastImportBlocks",False
+https://github.com/aionnetwork/aion/commit/13d1fd7bcfe25bdd2d6f567a4cc84171e302bd56,,bug fix: checking for precompiled contracts before retrieving contract code,True
+https://github.com/aionnetwork/aion/commit/62447ce46a3bc0caa46c9d9f51fa841429e4b25b,,removed the unnecessary MIN_NORMAL_PEERS restriction,True
+https://github.com/aionnetwork/aion/commit/0e20a945188bddd92e7a3b80b381d98e087f48e8,,"Fixed the RPC eth_syncing logic
+
+- Previously we would report 'not syncing' when syncing and vice versa. This
+  is now fixed.
+- The API calls into eth_syncing now have documentation so we know what's going on
+  and are more well-defined: they now handle the error cases of not knowing the local
+  or network block numbers instead of giving these default values and pretending like
+  nothing happened. This should also make it easier now for a client to determine
+  whether or not they've connected to the network.
+- The block numbers are now computed in one place only (not several, as before) so
+  that the numbers are accurate.
+- Added some unit tests to cover the testable part of the logic: the ApiAion::getSyncInfo
+  method.",True
+https://github.com/aionnetwork/aion/commit/cf044a143a49fa8e62776c033aa39ba447cf57a6,,moved AbstractContractDetails.java to modAionImpl,True
+https://github.com/aionnetwork/aion/commit/ef0b52f8820154b3bb0072ff571cae326930128a,,removed the AbstractRepositoryCache and moved all functionality to the AionRepositoryCache,True
+https://github.com/aionnetwork/aion/commit/f12478874b89bf87cd0896431772861847bc05a9,,"1.) Updating avm libs and fixing test case
+        2.) Allow the balance transfer executing inside the avm",True
+https://github.com/aionnetwork/aion/commit/3bebc3eddc230056f578f9eb06294103818395d4,,bug fix: closing the contractIndexDatabase,False
+https://github.com/aionnetwork/aion/commit/07b0a4eef5cb86c191d813cd1971d255d90e107f,,updated encoding for FVM contracts,True
+https://github.com/aionnetwork/aion/commit/fa0083ace84458198587e38f39710ddd23d4c5ca,,1.) refine AionBlockchainImpl classes import 2.) Fix engergy charge issue of the AVM transaction,True
+https://github.com/aionnetwork/aion/commit/e3d61e5b094cc83d137c274fefab2347ea671fc2,,1.) refine AionBlockchainImpl classes import 2.) Fix engergy charge issue of the AVM transaction,True
+https://github.com/aionnetwork/aion/commit/7b50860d8fdb34e612bb0a39ae83351889db61fc,,introducing monetary policy update,True
+https://github.com/aionnetwork/aion/commit/60913271f88b5a0701fc0b46a29ec68a5a012b41,,refine monetary implementation,False
+https://github.com/aionnetwork/aion/commit/30cd0192388cf2f2f6c57b46e6a91494997d0338,,handle fvm forking logic,True
+https://github.com/aionnetwork/aion/commit/980f8934956404af982665cb76e52fa54ba1737a,,update test case with new KernelInterfaceForFastVM constructor,True
+https://github.com/aionnetwork/aion/commit/d28ebe0102fc8bd9ac5f09276c99b80fa5cf55e9,,add standalone testcase and fix the fork logic,False
+https://github.com/aionnetwork/aion/commit/9470c83e996479c9126932dbd17639748c0cf8c7,,remove avmEnabled relative logic,True
+https://github.com/aionnetwork/aion/commit/98431b59e5a976a3d25b5478a49779e974993c2c,,removing CfgVm and fixing test cases,True
+https://github.com/aionnetwork/aion/commit/018f55e0d70452b4fc0dd4f6e2f0077eec470264,,implementing get/set performedCode in the contractDetails,True
+https://github.com/aionnetwork/aion/commit/990699e1814ae71b4ecb4d651b1b03ea23200cd6,,fixing NPE issue & refining api exeception message,True
+https://github.com/aionnetwork/aion/commit/fbb6d1fd4eadf9b192df28f9ea07fb45903240ac,,fixing NPE issue & refining api exeception message,True
+https://github.com/aionnetwork/aion/commit/1204ab7aba83f514b8e6d9b631191915529fea31,,"object graph & vm type added to kernel, repository & contract details
+  - new database for storing the object graph
+  - functionality for saving the correct VM type into contract details
+  - new encoding of contract details
+  - interpret storage root based on the VM used",True
+https://github.com/aionnetwork/aion/commit/7f6be8cc0e000ebf4c8c4f231d1566f2f403b738,,"Update the Kernel to send Transactions instead of TransactionContexts to the VMs
+
+- The corresponding changes to the VMs and VM_API have already been made and pointers / libraries are updated in this commit
+- Since this commit updates the AVM jar, it also changes the test contracts to satisfy the renaming of BlockchainRuntime to Blockchain",True
+https://github.com/aionnetwork/aion/commit/34e70bcbc3252cb3ace8a97dd4d7193278b22c79,,excluding undefined transaction types after the fork is enabled,True
+https://github.com/aionnetwork/aion/commit/1b240a95f41291069c7f2da003714442566a9b05,,"distinct transaction type validation for contract deployments and other transactions
+
+ - updated the default setting to differ depending on the use case
+ - corrected the type setting in unit tests",False
+https://github.com/aionnetwork/aion/commit/6b656365d8151c81c1a914616f349027aea2a18c,,Bugfix: PrecompiledTransactionResult should correctly return its populated SideEffects,True
+https://github.com/aionnetwork/aion/commit/dff13171d5ab624fb2601121a6b4f972caff7e8e,,ability to save and import a trie state for unit tests,True
+https://github.com/aionnetwork/aion/commit/4ede1d3c58f31a7d52a583227c26fd242bcc2c5e,,fix p2p taskStatus disappear issue,True
+https://github.com/aionnetwork/aion/commit/8ced25a30b2bdce54236256eaac9120385e45bfb,,CLI functionality for retrieving the data for consensus tests,False
+https://github.com/aionnetwork/aion/commit/e4f03b7d77a498026547cd6e048dfc08e9cd2e79,,expanding tests with check for total difficulty and repository state,False
+https://github.com/aionnetwork/aion/commit/36603f304ebb38cb829e6b9ce19ac29191ac25c5,,Add a method that returns the block reward associated with a certain block number,False
+https://github.com/aionnetwork/aion/commit/49dd36b9280f4399d8b1271df165d431c9ce9120,,switching to 2 transaction types DEFAULT=0x1 and AVM_CREATE_CODE=0x2,True
+https://github.com/aionnetwork/aion/commit/ba9ffb9b33449c523f0c38a8cac0c96374ec8542,,"bug fix: copying the transformed code lead to a consensus break
+
+ - accounts were set to dirty due to the copy when they were unchanged",True
+https://github.com/aionnetwork/aion/commit/fcf99c9224b5bfd8647a8a6a2ea581a90c640e9f,,refining the vm type management,True
+https://github.com/aionnetwork/aion/commit/6e4796970c0b28314db1f6005ef6d49f7a500568,,InternalVmType class used by the interface methods,True
+https://github.com/aionnetwork/aion/commit/035a0eeee98dfe35615eff16d93f8d1ab91ee41a,,fixed deploy contract to an existed account,False
+https://github.com/aionnetwork/aion/commit/201ae4dda9919490c08feaed18fcad7c96dedbbb,,Fixed issue the avmTx allowed flag in the pendingstate when the kernel just start without new blocks generated,True
+https://github.com/aionnetwork/aion/commit/f4959fabc027fc171e1a1f0da01bc63e0f508bac,,Fixed transaction get empty transansaction when snapshot the transactionpool with the transactions have  the same timestamp,False
+https://github.com/aionnetwork/aion/commit/bab54a7fedf816777448586d16266bbdfafcfe9e,,"Revert commit add outGoingIP check d75a4ab66972a990be7f30d024d440ad6212faf7 and conflict fix.
+The issue happens because the outgoing ip use wget to ask the 3rd party service to retrive the outgoing ip of the running node when it boost up.
+If the service does not have any response then kernel will stuck in this steps (the default timeout of the wget is 900secs and the retry is 20 times)",True
+https://github.com/aionnetwork/aion/commit/c4dd1a3ad9c3cf3fdd44eef40577355ea1099456,,Fix AionPendingStateImpl Init exeception when seednode mode turns-on,True
+https://github.com/aionnetwork/aion/commit/bb35f1632e6396788f8424abb3c91bd4fd61fd0e,,"fixed eth_call fixed sender issue, the from address becaming to a optional argument. If the caller doesn't assign the from address in the call. the kernel will return an all 0 address",True
+https://github.com/aionnetwork/aion/commit/dd876ffb7189fd68712e38e9faf6fa9082eae052,,"VirtualMachineProvider now only supports avm
+
+- This class structure for maintaining the vm's is over-designed.
+- The fvm is always constructed afresh each time it is invoked. The
+  avm is long-lived. They have different life-cycling needs.
+- This change also fits into our goal of splitting the boundary points
+  between these vm's out more.",True
+https://github.com/aionnetwork/aion/commit/81218694b2edd87f678bd6ba300e1694a0549119,,"Create LongLivedAvm life-cycle manager
+
+- The old overly-designed VirtualMachineProvider (and its related classes) have been
+  removed and replaced by this simple LongLivedAvm (and AionVirtualMachine) classes.
+- The AionVirtualMachine itself is thread-safe. The LongLivedAvm is the instance that
+  everyone accesses over the lifetime of the kernel.
+- Most of this change is updating tests, which startup and shutdown the long-lived avm.",True
+https://github.com/aionnetwork/aion/commit/6d6bb9f90f3d6376bc90cfecc549fa18a3790992,,"PostExecutionWork now hides the top-level repository
+
+- The top-level repository was only being passed into the BulkExecutor so that it
+  could be input as a parameter to the work, which was very confusing because you
+  had to keep the two repositories distinct.
+- This change eliminates that confusion, so that the BulkExecutor only ever sees
+  a single top-level (from its POV) repository, that it is allowed to touch.",True
+https://github.com/aionnetwork/aion/commit/05d000dc402b75cc8a372e26d419a8f123ce6a1a,,"BulkExecutor can be invoked explicitly without post-execution work
+
+- The two constructors for the BulkExecutor were misleading, now the
+  executor provides two unambiguous factory methods, one that accepts
+  post-execution work and one that does not.
+- The other constructor would not take a top-level repository because
+  it only performed meaningless post-execution work.",True
+https://github.com/aionnetwork/aion/commit/0e1ffd7fac330756908c4642cf8981aa5f50fdf2,,"BulkExecutor is now built via a Builder class
+
+- The executor has a lot of parameters to be given, and many are booleans.
+  This not only simplifies the building process but also allows these booleans
+  to show up meaningfully (ie. not just 'true' but to have context).",True
+https://github.com/aionnetwork/aion/commit/54e23753c3120afad837dcff4b5a4de172d7af69,,"Remove transaction contexts from ExecutionBatch
+
+- With a previous change to eliminate the need of these transactions in the
+  kernel-vm interaction, these are no longer used.",True
+https://github.com/aionnetwork/aion/commit/17079ef67a703cb957476e4ed8bf502abb7ed79c,,"Created BulkExecutor factory methods to run entire block
+
+- This is the first part in a change towards removing the unnecessary
+  ExecutionBatch class. These two factory methods allow the caller to specify
+  that all transactions in the block will be run, rather than only some.",True
+https://github.com/aionnetwork/aion/commit/ea6bdbe78ae91cdc973f2fecf817c6a4c5d94f82,,"Deleted ExecutionBatch class
+
+- This class in not accomplishing much anymore (except for giving us an oddly-named class)
+  since the transaction contexts have been removed.
+- Trying to simply the executor and reduce the number of special classes needed to
+  interact with it.",True
+https://github.com/aionnetwork/aion/commit/1315b8e1947176c7266c4ecf1d185ff495e98de2,,"Separate Avm execution logic into its own class
+
+- This commit moves all of the logic related to specifically dealing
+  with avm transactions in the BulkExecutor out into its own class that
+  the executor now simply invokes.",True
+https://github.com/aionnetwork/aion/commit/6a21b0bffeee0ff63f520cfae27c3480b2f21882,,"Separate Fvm execution logic into its own class
+
+- This commit moves all of the logic related to specifically dealing
+  with fvm transactions in the BulkExecutor out into its own class that
+  the executor now simply invokes.",True
+https://github.com/aionnetwork/aion/commit/7acf2f32c6ae527ae6801616cf2c82ec63d55a9e,,"BulkExecutor is now stateless
+
+- The executor now has two public static methods as the only way it
+  can be interacted with. One of these methods runs a block of transactions
+  and the other runs a single transaction.
+- Removed the test TransactionExecutorTest::testExecutorFatal() because
+  mocking static methods requires a different dependency and this test is
+  actually only testing the correctness of Mockito (the mocked executor could
+  be replaced with any class and this test would remain the same).
+- AionBlockchainImpl and AionPendingStateImpl now have the RepositoryCache
+  with the correct generics - encountered an odd compile-time error that
+  was solved by correct usage of generics here.",True
+https://github.com/aionnetwork/aion/commit/f53c7bc2236da0f5f53bc2fbad5e68e586265c8e,,"Rename org.aion.types to org.aion.vm.api.types
+
+- The package name org.aion.types will be used by a new aion_types repo
+- This commit updates the vm-api and FVM pointers, and the AVM jars to use the new package name",True
+https://github.com/aionnetwork/aion/commit/36e98a2c1115a113fde3dac05239bbf519e9a74d,,"Use AionAddress
+
+- This is an immutable type representing Addresses that is used across the Aion projects
+- This commit updates the pointers to the vm_api and fastvm with the corresponding changes
+- This commit also updates the AVM jars for the corresponding change",True
+https://github.com/aionnetwork/aion/commit/4913bae43b14154f9108d9b51342284392dc25ad,,"1. Proccessing blockstore revert after found the best block and handle the exeception
+    2. Refactoring blockstore and added database corruption handle case including testcase
+    3. Adding totaldifficulty info into the log
+    4. fixed small issues in Aionhub
+    5. refactoring blockstore and added database corruption handle case in cluding testcase",True
+https://github.com/aionnetwork/aion/commit/53df85ac7f202e85c0e11910d55c7842ad99af4e,,"1. Revised logging and the getTotalDiffculty in the Aionblockstore
+2. Reverted checks in the test suites
+3. Added some documents in the methods of the AionBlockStore.",True
+https://github.com/aionnetwork/aion/commit/ae31c1ae713f7611da7d18ed3272725a1a08a3d7,,"Unit test and bug fix: ensures blocks with alternating AVM and FVM batches are handled correctly.
+
+ - The last transaction in the test block exposed a bug. It was failing because the AVM could not
+ retrieve the performed code. The cause was referencing the performed code database through two
+ variables, but not copying both when creating snapshots.",True
+https://github.com/aionnetwork/aion/commit/cf0befd46f40d771c2ba2af9f0a4cc64574fd5af,,Updated to work with AVM commit 6728dced6a952c8276112c0724b5d778f3f79016,True but should skip
+https://github.com/aionnetwork/aion/commit/8ff1b92cc46907cc3c07cbd2a68fc24c02e6ff97,,Updated to work with AVM commit c9a09a23dea4b7407fd3a3bd899619273eddf906,True but should skip
+https://github.com/aionnetwork/aion/commit/35ebbffc50ae6137ffd2e200e375b4cbdcc77d7a,,Updated to work with AVM commit ae60e126ab5096982310fd0cf8daa524f5deb5f2,True but should skip
+https://github.com/aionnetwork/aion/commit/d0a7f2621cc75793096ab88ff7e309c47d9504cc,,Updated to work with AVM commit 9a3f6b8f161d432ce73274bd028d954bcb185e85,True but should skip
+https://github.com/aionnetwork/aion/commit/84ad2862e4e11fc3741c6d52ef93d409a13e04a6,,Updated to work with AVM commit 123af75a745e7b4b5c3bc5621ffa67ab7564ddb8,True but should skip
+https://github.com/aionnetwork/aion/commit/b555dc98e93cac8d6340aae6530f5e8f83f459a8,,Updated to work with AVM commit 5586f1de8c52669969138758209a27222e170d5f,True but should skip
+https://github.com/aionnetwork/aion/commit/e15f484aa7423fd747168963b9e73ffe521acabb,,Updated to work with AVM commit 845f5364b6db840cf5599515babd648d6265e93c,True but should skip
+https://github.com/aionnetwork/aion/commit/4a52313011e5af13d1618fd8fae777d6a23ed7eb,,Updated to work with AVM commit 61ba422c601357167b7c0fb8cb5865df8b43ae15,True but should skip
+https://github.com/aionnetwork/aion/commit/659ae7b8e925656104313d84d977586525245aa7,,Updated to work with AVM commit 3cd006f4a4dd734a737214956f4ff782ef648a9f,True but should skip
+https://github.com/aionnetwork/aion/commit/ac5856adaa82af27b7ebb6e58372b036766ef3ea,,Updated to work with AVM commit 75f2b2fe29a3b29917e72ebd82cc54db1f36673d,True but should skip
+https://github.com/aionnetwork/aion/commit/1d94ad4ebd4a27a1b230cd89e2bc640c35bd1f85,,Updated to work with AVM commit f125286751a10cedff54c7ae0f20e83bf7cac7c1,True but should skip
+https://github.com/aionnetwork/aion/commit/85f401281ce5a1e3b3e5682272608f906a1738b5,,Updated to work with AVM commit 5c0d05591f2fe3544609b9ca97a451524c405781,True but should skip
+https://github.com/aionnetwork/aion/commit/478b8a4fb91393f9b8477fe72018bf7776569de5,,Fold PowBlockHeader into BlockHeader,True
+https://github.com/aionnetwork/aion/commit/7be5bb288cdc4443ae901098decf65da67d7ec8f,,Move PoW specific functionality out of AbstractBlockHeader and into AOBlockHeader,True
+https://github.com/aionnetwork/aion/commit/2a752fe13fe3e99b5c6a29e24a9769a9bc3f1983,,rename RecoveryUtils -> DBUtils,False
+https://github.com/aionnetwork/aion/commit/1b6b716d8c0c454e68bc8248d497af95bc329b3c,,"FastVmTransactionResult no longer implements TransactionResult
+
+- Additionally, the PrecompiledContract class no longer returns TransactionResult
+  in the execute() method and now returns PrecompiledTransactionResult. This is
+  both to remove the vm_api dependency here and also to make converting to the
+  FastVmTransactionResult type easier.",True
+https://github.com/aionnetwork/aion/commit/4dc8bb8a813005aa740a93a73280fe587be730ae,,PrecompiledTransactionResult no longer implements TransactionResult,True
+https://github.com/aionnetwork/aion/commit/5ad8bf389e34f1ae47f106863a61a383c101241b,,"Precompiled contracts have their own transaction context now
+
+- The new class is called PrecompiledTransactionContext. This is mainly to
+  circumvent dependency issues, since modPrecompiled should not depend on
+  the fvm. Since we will be removing the common vm_api interface between them,
+  the precompiled contracts now need a concrete class to talk about.",True
+https://github.com/aionnetwork/aion/commit/d2e68c0c079a74580ce3c34788c0f6e79e4d1338,,"PrecompiledTransactionContext no longer uses TransactionSideEffects
+
+- This is to remove the vm_api dependency. Rather than re-implementing
+  side effects, the class now directly holds the logs, internal transactions,
+  and deleted addresses.",True
+https://github.com/aionnetwork/aion/commit/99b6522bacaaa926015119c799ced458cc500e7a,,Using aion_types Log in the fvm SideEffects object,True
+https://github.com/aionnetwork/aion/commit/85d0280823f4292a6feb61a8b17502d0788ab692,,Formatting the whole project.,True
+https://github.com/aionnetwork/aion/commit/37e9be8dbbb6a74792036f70d5d8ac0d874b12e5,,Moved all types out of vm_api org/aion/interfaces/block,True
+https://github.com/aionnetwork/aion/commit/53c56a1a669456e474a0ecc4cf598bd2c967ba5c,,Moved all types out of vm_api org/aion/interfaces/db,True
+https://github.com/aionnetwork/aion/commit/9a2d78453eb596a2bd9ea5ff39adc6e08d7a8ac4,,Moved all types out of vm_api org/aion/interfaces/functional,True
+https://github.com/aionnetwork/aion/commit/de4306ca5a147b73f998dd6aae6d4c631860448a,,Moved all types out of vm/api/interfaces & interfaces/tx,True
+https://github.com/aionnetwork/aion/commit/582e66cb2da827c81df2900cbfe9c8a4c6b24d9c,,Move DataWord out of vm_api,True
+https://github.com/aionnetwork/aion/commit/e5d545a4de3467df4778cc87a614317c7aeafc4b,,Moved all remaining classes and tests out of vm_api,True
+https://github.com/aionnetwork/aion/commit/360cfa7f6af60a6b19fb5909e38b3f7b7be832eb,,Kernel is no longer dependent on vm_api,True
+https://github.com/aionnetwork/aion/commit/bf6d7e0c811bb018727533399d1e8be495c827bb,,Removed Made AionInternalTx a single concrete class,True
+https://github.com/aionnetwork/aion/commit/3175a353e46146775c8caa294ebcdd45ce7bab1b,,Eliminated Log class in modMcf in favor of aion-types Log,True
+https://github.com/aionnetwork/aion/commit/94bc03d33a7419fba342029d5c8b14c976c31dc1,,Implemented InternalTransaction from Aion types,True
+https://github.com/aionnetwork/aion/commit/137d0c4ba286a0cdb46ac6814ee459c4675feccd,,Moved all transaction types to ModBase,True
+https://github.com/aionnetwork/aion/commit/291fad0c24808192e15f831d5353d7c8698d278c,,"Removed references to ""Transaction"" Interface",True
+https://github.com/aionnetwork/aion/commit/43990b577f1818b20658b6056aeb426edf96bfcb,,AionTransaction down to one class,True
+https://github.com/aionnetwork/aion/commit/0570f0447d8bff7ec0795c6145ee4b1c9880cd23,,Removed some unneeded interfaces,True
+https://github.com/aionnetwork/aion/commit/397b27b89a7a679f689edafd8891cf457651eeaa,,Added CLI command for querying block/transaction/account details,True
+https://github.com/aionnetwork/aion/commit/4d4c5a37c41011f8db5534f8440c30bdbe85d581,,"Refactored parameters for BulkExecutor.execute methods:
+
+ - The BulkExecutor must receive the specific 5 parameters
+ (difficulty, number, timestamp, NRG limit, and coinbase)
+ required from the block instead of the block itself.",True
+https://github.com/aionnetwork/aion/commit/82a83d70bb38929779f33122c6161c858463a7a5,,"AKI-226: Aligning code with aionnetwork/AVM@d31a4fd:
+
+ - Using the new AVM run interface with caching-based optimizations applicable
+ when communicating the context in which transactions are executed.",True
+https://github.com/aionnetwork/aion/commit/c5f7e6293efb12ed4a3e5b2720eb3966f38f59d3,,"Checks for the AVM caching parameters passed under different scenarios:
+
+ - Verified cases for main chain, side chain, deep side chain, fork.
+ - The rebuild case is covered by AionHubTest.MockHubInst_wStartRecovery
+ which did not require any updates.",True
+https://github.com/aionnetwork/aion/commit/a0796e422b4331bf7b8a00de1c8d04a530f2d90d,,"Refactor BulkExecutor to prepare for precompiled contracts
+
+- This refactoring it both to make the executeInternal() call more readable
+  (by throwing the vm call logic into separate methods) since we will be
+  introducing a precompiled option to this method soon, as well as to improve
+  the readability/logic of determining which vm a transaction is for. This
+  was done by explicitly pulling out methods that can determine which type of
+  address the destination is, whereas before these types were being blended
+  together cleverly but obscuring the idea. This will make the precompiled
+  integration easier.",True
+https://github.com/aionnetwork/aion/commit/2165bd5b3303b1df48479717065f965b61d3ab71,,Fix PrecompiledTransactionResult bug,True
+https://github.com/aionnetwork/aion/commit/3d15a9a1e28d312ab033a149eeee847d0ba975c9,,FastVirtualMachine now executes only a single transaction,True
+https://github.com/aionnetwork/aion/commit/fe7523ce2942215b6d5238a2121390a9a97f1f67,,BulkExecutor now delegates to precompiled contracts,True
+https://github.com/aionnetwork/aion/commit/dad6fd00e019336d2e57ac9884826c44782af4ce,,Remove StatefulPrecompiledContract abstract class,True
+https://github.com/aionnetwork/aion/commit/7ee2031c24f1010781e487c8141453f949af4263,,"Pulled contract address/owner into ContractInfo class
+
+- Now there is one canonical location for contract address & contract
+  owner address information.",True
+https://github.com/aionnetwork/aion/commit/1f7ee03e39ca87140c9b645b2eb298bd62a08bcd,,"isPrecompiledContract() moved into ContractInfo
+
+- This method doesn't belong in a factory class, just separating it out.",True
+https://github.com/aionnetwork/aion/commit/736251f1e27827b643691f4c84a59a1e6945bd81,,Re #560: --redo-import now rewrites the index and prunes side chains,True
+https://github.com/aionnetwork/aion/commit/eb17dc8abe305ae17a709d74d52e7260c6d89380,,"New implementation for ContractInformation:
+
+- Refactored class to store multiple contract code varriants
+  with corresponding VMs, inception blocks and completeness status.
+- Unit tests added to ensure correct encoding when storing in the
+  database and decoding upon retrieval.",True
+https://github.com/aionnetwork/aion/commit/b152c6bfba70fc24b27d75d935373de5b3895a56,,"Expanded StandaloneBlockchain to allow importing contract index information.
+
+ - Updated MasteryConsensusTest for block 1023849 to include contract index in test setup.",True
+https://github.com/aionnetwork/aion/commit/5d1d605fe8cc0c48f89d33a39d6df7c33bc3e9f7,,"AKI-183: Contract details vmType converted to local variable:
+
+ - The ContractDetails snapshot now requires the vm type as parameter.
+ - The Repository retrieves vmTypes based on contract and codeHash.
+ - AionRepositoryImpl caches contract vm types while processing a block to allow transaction calls to
+ contracts deployed inside the same block.
+ - Updated AionContractDetailsTest encoding tests according to new specification.",True
+https://github.com/aionnetwork/aion/commit/037e1e8fb6983f06faf9e4f3fd11202bdc93a5d9,,Remove generics from validation rules and validators,False
+https://github.com/aionnetwork/aion/commit/30ad45ef804a674d5e5f567012849f889583b0e3,,Remove generics from Block and associated classes,True
+https://github.com/aionnetwork/aion/commit/628f22e5db240c872a5acbcf58b33364e65a4d5d,,Remove generics from AbstractBlock,False
+https://github.com/aionnetwork/aion/commit/34a8f5aa739c090c111c35f92e18a873ef918387,,"Add methods to the interfaces Block and BlockHeader
+
+- This is done to support getting rid of redundant interfaces, and the generics
+- This commit adds more methods than we probably need. We should revisit and delete unnecessary methods later.
+- The important part is that we do not move any PoW-specific functionality into these interfaces",True
+https://github.com/aionnetwork/aion/commit/7148510067fcbab40e40df5d5052416adbe92f42,,"Remove Block and BlockHeader generics from various interfaces and classes
+
+- This is done to support the introduction of the new StakedBlock and StakedBlockHeader
+- This change replaces generics BLK and BH with Block and BlockHeader
+- This change also replaces most usages of AionBlock and A0BlockHeader with the interfaces, which is again necessary before introducing StakedBlocks
+- This change renders IAionBlock obsolete, it is deleted in a subsequent commit",False
+https://github.com/aionnetwork/aion/commit/27e821dc78e825cb90f6b688d789d72fffea3fad,,Shutdown hook with heap dump added as test-only CLI option,False
+https://github.com/aionnetwork/aion/commit/1640d4248d938219ba494fd834a0d2cfad91d761,,"modPrecompiled now defines an IExternalStateForPrecompiled interface
+
+- This interface is based off the KernelInterface, which is now no
+  longer being used, but tailored for what the precompiled contracts
+  require.",True
+https://github.com/aionnetwork/aion/commit/d06ae0a5e727a5f04590672d99f007b6ca7aab41,,"modPrecompiled defines its own data words
+
+- The DataWord and DoubleDataWord are now defined inside modPrecompiled
+  and the IWorldState interface requires that they be used in place of
+  arbitrary byte array wrappers.",True
+https://github.com/aionnetwork/aion/commit/efc23a52005e091b55f6584882382a046332b9cb,,"Remove KernelInterface from PrecompiledTransactionResult
+
+- This commit also removes an unused alternative toString method.",True
+https://github.com/aionnetwork/aion/commit/8b566184423e32ee0146d2577fdf00e3818d52a1,,"Fvm now defines its own 'KernelInterface' named IExternalStateForFvm
+
+- The IExternalStateForFvm interface is just copied from the
+  KernelInterface but placed inside the fvm.",True
+https://github.com/aionnetwork/aion/commit/01c0b327be791312530da0765072a67127282f8c,,"Move precompiled call into IExternalStateForFvm interface
+
+- The fvm now calls precompiled contracts via IExternalStateForFvm
+  rather than directly, so the kernel must provide this ability.",True
+https://github.com/aionnetwork/aion/commit/cc696b67bf2434335bfb6ec98b1f8442dd90cbec,,Fvm now defines its own data word,True
+https://github.com/aionnetwork/aion/commit/04eaec94e1b464e8781521983c89c42aaba4fed4,,predefined error codes for exiting the application #856,True
+https://github.com/aionnetwork/aion/commit/139cb954e36e32dcfbd8d2cb62cad66f539ba846,,"Fvm moved some inner classes out of its Abi class
+
+- This commit just updates how we reference those classes.",True
+https://github.com/aionnetwork/aion/commit/be8b2b66ba4b8ae2de82cf0a237ee43501dc136e,,"Fvm now uses aion_types Transaction
+
+- A few tests had to be fixed because now the aion_types transaction will throw an
+  exception if there is no transaction hash, and if a transaction is not signed it
+  will have no transaction hash.",True
+https://github.com/aionnetwork/aion/commit/20f84ec533ddc3fcb6d092d1546f274918349e4b,,"Fvm removed modBase dependency, some constants from Constants
+
+- The fvm moved the constants related to it from Constants into its
+  own FvmConstants class. Now Constants are related to transaction
+  limits and fvm constants are in the fvm. The necessary modules that
+  depended on these now missing constants have a dependency on the
+  fvm in order to grab them.",True
+https://github.com/aionnetwork/aion/commit/44cdbeeff27ea827c01a06f18596e80cf7d6f3e3,,Rpc: add hook to delegate particular methods to a new RPC framework,True
+https://github.com/aionnetwork/aion/commit/ac4854980207c398b8a89286bd766753124ff520,,Incorporate initial version of auto-generated RPC framework,True
+https://github.com/aionnetwork/aion/commit/aa0808ae0130addf349ec8b174f2f7305a48ae48,,RpcGenerator.jar updated to AionRpc/c0cfe84,True
+https://github.com/aionnetwork/aion/commit/fe2ab919451e2dfc59d9ff5551cdcd16a6d69ac0,,Rename RpcGenerator.jar to AionRpc.jar  updated to AionRpc/018a165,True
+https://github.com/aionnetwork/aion/commit/83f80c0d6760945e9b840d112cec7941f3bb21f5,,AionRpc.jar: update to AionRpc/6f5930d (ResponseSerializer validation and bug fix),True
+https://github.com/aionnetwork/aion/commit/563ed827ed1de77bedcf088f49ef7be9c8b20824,,Removed lazy loading of AionTransaction,True
+https://github.com/aionnetwork/aion/commit/219192268547b89f5c6f651f93477231c238e114,,Moved encoding/decoding AionTransaction to utility class,True
+https://github.com/aionnetwork/aion/commit/753b20d7e6a9b710bae3c85acc323fba3e42d828,,Got rid of AionTransaction constructors without sender addresses,True
+https://github.com/aionnetwork/aion/commit/bbcad8c9316b509aeb1aeeda8fe218277ba18553,,Renamed AionTransaction fields to match Aion-Types,True
+https://github.com/aionnetwork/aion/commit/4ecb6f4e7daf39dddd5a4f036fd18f1aad07ef59,,Made all transactions signed in constructor,True
+https://github.com/aionnetwork/aion/commit/acb56a363c676572767acb4a878e1ff597136b8d,,Made AionTransaction immutable,True
+https://github.com/aionnetwork/aion/commit/2534ed917b7a2c63e6db2d567cdd2442c7b6109b,,Added some tests for PendingState,True
+https://github.com/aionnetwork/aion/commit/f063aecca98528a0ea1c5edfd5932872bf3badd5,,Refactored config files to allow config changes from the cli,True
+https://github.com/aionnetwork/aion/commit/39d99f20141a1cff13edf993d69c8ca0bf38b373,,"AionTxInfo clean up:
+ - Removed AbstractTxInfo class and unused parentBlockHash functionality from AionTxInfo.
+ - Moved the TransactionStore to modAionImpl since it was only used in this package.
+ It can now see the AionTxInfo without the need for an abstract implementation.
+ - Refactored blockchain interfaces to add the getTransactionInfo method only in the
+ adequate package, moving its declaration from modMcf to modAionImpl.",True
+https://github.com/aionnetwork/aion/commit/e620c4724c240b37b7d18bb6ad26cf13f307436f,,TransactionStore and TxRecpt no longer require AbstractTxReceipt,False
+https://github.com/aionnetwork/aion/commit/f2d0fe23540c1131107e59759d840acf173a38b6,,Removed AbstractBlockSummary (redundant) and IPowListener (unused),True
+https://github.com/aionnetwork/aion/commit/23714fb0796169d81ad19ab775f9d7ba835efdd5,,Removed IListenerBase (unused) and extracted its PendingTransactionState to a separate class,True
+https://github.com/aionnetwork/aion/commit/812de9ba006bcb3684b2b559b064a2f377cd74a1,,Removed AbstractTxReceipt moving useful functionality into AionTxReceipt,True
+https://github.com/aionnetwork/aion/commit/1c93483151ac4d27c430bb399421ba0e34adf8da,,Added methods to execute options on devcli class and removed options from argument class,False
+https://github.com/aionnetwork/aion/commit/32ca59f888a55ee199b1796d0ad19e966e2b7793,,AKI-266: extending AionTxInfo with internal transactions,True
+https://github.com/aionnetwork/aion/commit/ddaf09155799fb7f0a42e50fb4aa7ba15a002ae7,,Extending RPC with internal transaction retrieval,True
+https://github.com/aionnetwork/aion/commit/0b0fba8fda9c2212bf2e3df27fd2abf9814d5ad6,,AKI-24: Move modAion classes to modAionImpl,True
+https://github.com/aionnetwork/aion/commit/849a742e950a2e64b90e92c8dd9cd4b1a5982c10,,"AKI-24: Remove A0BlockHeader from modApiServer
+
+- This commit gets rid of the A0BlockHeader dependency in modApiServer,
+  making it possible in the next commit to move this class into modAionImpl
+  instead of modMcf, as well as the two related classes A0BlockHeaderVersion
+  and BlockStructureException",True
+https://github.com/aionnetwork/aion/commit/27af7281ffb1ef96441fba5e31e232d185bd9fbb,,"AKI-24: Move remaining modAion classes, delete modAion
+
+- These remaining classes have been moved into modAionImpl, or, where
+  necessary, modMcf. The modAion module is also deleted in this commit.",True
+https://github.com/aionnetwork/aion/commit/c62c89cc83e97463edd78bc68d0642b9d70f5cf0,,New RPC layer: update AionRpc.jar to AionRpc/2fc5db3.  Add example impls demonstrating object (de)serialization.  Update RPC-related generated code.,True
+https://github.com/aionnetwork/aion/commit/d71ecb374c6fd86317556b41271d23c50112c705,,RPC: Remove SomeStruct type.  Remove prototype RPC methods that were used only for testing AionRpc.jar.  Update AionRpc.jar to AionRpc/6036962,False
+https://github.com/aionnetwork/aion/commit/a2a1eb2d7a0574c3114fbe868b4db5c7a78f4c83,,Optimized check for stored blocks by using the cached index size,False
+https://github.com/aionnetwork/aion/commit/7b63e4abee88053d0701168c88bf3e961c38b826,,"Bugfix and optimized state pruning:
+
+- using a cache to retrieve the block numbers and hashes for pruning;
+- updated method signatures to take only needed data and avoid unnecessary
+  byte array conversions;
+- bug fix: all blocks at each level will be pruned.",True
+https://github.com/aionnetwork/aion/commit/52b9edcaf5dce177ce56b3a230d3d7d8306ad79b,,"ObjectDataSource alternatives with caching and debugging features:
+
+ - cached versions using LRU and Caffeine implementations
+ - new builder class for creating different instances
+ - new CACHE logging level for getting cache statistics
+ - updated caffeine library to 2.8.0",True
+https://github.com/aionnetwork/aion/commit/ec293a7dc57060b9b7f29966c1bc7878007f5b4f,,AKI-263: Cache imported blocks to increase performance,True
+https://github.com/aionnetwork/aion/commit/64a3d2658f4e69e291f6f3c9ca2c532def0b5381,,AKI-275: Cache contract index data + skip db access on empty code,True
+https://github.com/aionnetwork/aion/commit/3c9d1c8e3ac5ec156da7052d27fd5d6f2a02bb35,,"Implemented AccCli class and added test cases.
+
+Removed old tests that are no longer in use",True
+https://github.com/aionnetwork/aion/commit/c27fb09934dc01e7085f350c51e4036b3a7539a9,,FVM and Precompiled now returned wrapped transaction results,True
+https://github.com/aionnetwork/aion/commit/fc52d22731387e0599a77356fac551469d8325b4,,Now use TransactionStatus in Precompiled,True
+https://github.com/aionnetwork/aion/commit/72ae29e63f5a0ee8e3ad767268320108dcf06093,,Removed the dependency on aion.log from aion.p2p.impl,True
+https://github.com/aionnetwork/aion/commit/60bf80d24cf089a1c74acb5c29c7c7e4ce4c426c,,Removed the dependency on aion.util from aion.p2p.impl,True
+https://github.com/aionnetwork/aion/commit/c498862d8943fec17d9df29c1d6dc4799ac0d3d6,,Removed dependency on aion.p2p from modApiServer,True
+https://github.com/aionnetwork/aion/commit/837bd9426fdbeaf65817826c8600c20e72659e17,,"AKI-332: Avm's IExternalState block difficulty returns BigInteger
+
+- Updates the AVM jars to commit 21664bb.",True
+https://github.com/aionnetwork/aion/commit/1bd1537ea802a670c193e3cd2f2b5716779a5e95,,Got rid of AbstractTxTask,True
+https://github.com/aionnetwork/aion/commit/819c1699aa84061d92b7c7beddb70a1044190038,,AionTxExecSummary no longer has an RLP encoding,True
+https://github.com/aionnetwork/aion/commit/93e70de5f157075b020750575bf4bc1f2b7c48ad,,Moved ChainStatistics to AionImpl and deleted EventHub,True
+https://github.com/aionnetwork/aion/commit/74666849b2a23b78b7188af1b0e820075a8fcabd,,Cleaned up mine folder,True
+https://github.com/aionnetwork/aion/commit/1ec843885f310e6080fd31255868b5dae5b7cb84,,"Bugfix: Replaced the read-write lock in AionBlockStore with single lock
+
+ - also added concurrency test to prevent future issues;",True
+https://github.com/aionnetwork/aion/commit/49e8b318cd8e61a497007aa1a65013ef6e4d2855,,Removed IMineRunner,True
+https://github.com/aionnetwork/aion/commit/9170dd2e7fd902407dc8b038c8214291f22c5ff6,,Removed Query Interfaces,True
+https://github.com/aionnetwork/aion/commit/f9916f1d85c059ed6600b7799b8898161bab523d,,Removed two unused Blockchain Interfaces,True
+https://github.com/aionnetwork/aion/commit/daad58fbb986adcd6d18f908fd9b89e3db9748d4,,Removed IChainCfg,True
+https://github.com/aionnetwork/aion/commit/94728d7632bb19e7c1d4bad6a2e7d2d863d29168,,Moved some methods between PendingState interfaces,True
+https://github.com/aionnetwork/aion/commit/3e900f347a4dc36591d72202fee05cd79cee2c77,,Cleaned up BlockConstants,True
+https://github.com/aionnetwork/aion/commit/92c06a668ba7826475f3b04ec58ad62e79a532b4,,Made RuleError its own class,True
+https://github.com/aionnetwork/aion/commit/4a4372a8cc99de86e0bb6dfa33231a49384b0b8b,,Detaching aion.db.impl from aion.log,True
+https://github.com/aionnetwork/aion/commit/807c41bd8e3f60514b7a3d630719b87cc76c2ce7,,Moved AbstractRepository to modAionImpl,True
+https://github.com/aionnetwork/aion/commit/ea22c1c750a7606bbc7c6a21c6b2ba9b6cba93ab,,"Removed AbstractPowBlockstore, functionality moved to AionBlockStore",True
+https://github.com/aionnetwork/aion/commit/e3e6859bb7dca94f6b6794947d19454346c1eea5,,Moved DetailsDataStore to modAionImpl,False
+https://github.com/aionnetwork/aion/commit/5d7e430b2b4f24ef244a2afdb3371684cda7fc74,,Moved data store implementations and Flushable interface to modDbImpl,True
+https://github.com/aionnetwork/aion/commit/4d21e09e23ef3f735c3b2c9e6c27b4169fefda3d,,Detaching the database config from the DatabaseFactory and DBVendor,True
+https://github.com/aionnetwork/aion/commit/d7df708f3d1db4da5108cdd097e57b1adc7f11c6,,Moved the trie implementation into modAionImpl,True
+https://github.com/aionnetwork/aion/commit/5fdc8610ca0bab891603b38abb720439f529b2bd,,Removed p2p dependency from modMcf,True

@@ -1,0 +1,421 @@
+https://github.com/sormuras/bach/commit/c46ef40eda2301d4f931d0cc7d343238fc1fca4a,,Add new simple demo,True
+https://github.com/sormuras/bach/commit/f97c4071ab262fdc0dbfbcf204112d5201132a1e,,Add jdeps support and fix download up-to-date check,True
+https://github.com/sormuras/bach/commit/177b6b7c6a529a0c9ce532a372cded94f1454c71,,Add main entry-point and service to 01-hello-world example,True
+https://github.com/sormuras/bach/commit/a4929b8e162dfb09acb907be7ef60f3220ed0e1f,,Delete superseded demo,True
+https://github.com/sormuras/bach/commit/5ced4c24a4377444e95d4e3846933ad7f13b67e3,,Cleanup demo,False
+https://github.com/sormuras/bach/commit/7fd3031dad6aa12aaae5c0b67adde8f3c5d6df31,,"API, demo and documentation cleanup",False
+https://github.com/sormuras/bach/commit/03fd2f064dbd2f6b77c5827933c406e3d62ff21c,,Add tree copy feature,False
+https://github.com/sormuras/bach/commit/d52f443e8e945200ed50502c8a4e5cd42d20a707,,Support large command line by using @argument option in java and javac,True
+https://github.com/sormuras/bach/commit/698fbcbb772a1ce659ab1768063e27a36c5f7112,,"Add demo ""02-testing"" using --patch-module for executing tests
+
+* Share IDEA run configurations
+* Use $TRAVIS_BUILD_DIR in travis.yml",True
+https://github.com/sormuras/bach/commit/baacc03d63a979adcf6ba1093bf14695dfca694c,,"Add basic java.lang.module helper methods
+
+Rename Basics.fileName(URI) to Basics.getFileName(URI)",True
+https://github.com/sormuras/bach/commit/d890cde968a6b386f23947a911e1629f92c5825b,,Introduce ModuleInfo value class with parser and fail fast in substring,False
+https://github.com/sormuras/bach/commit/1d3eff0542bf3e72caa3ca230411b26f48c5c78c,,"Rename destination option and add ""."" to the end of default Jar command",False
+https://github.com/sormuras/bach/commit/9111b47fe3653c54c8fbb12e508bdb32e48059b4,,"Use `--scan-module-path` of JUnit 5 ""jigsaw"" feature branch",False
+https://github.com/sormuras/bach/commit/4dc0a4e20fd33e19bfb77396def2eb7001241a94,,Remove not longer required export statement,True
+https://github.com/sormuras/bach/commit/fce41b1aef349618539269796ddb6253db70e349,,Support more edge-cases,False
+https://github.com/sormuras/bach/commit/25fcd9eabac34914800ebb3023e7deb0c6c7da5f,,Use ModuleFinder directly instead of the provided jar tool,False
+https://github.com/sormuras/bach/commit/a972c10a3c85fb8a007ad66dd4076fd7e8fd796c,,Refactor programming model,False
+https://github.com/sormuras/bach/commit/9620f1d09a990c11de0ba7e7c89ac6a970037820,,Upgrade to JUnit 5.1,False
+https://github.com/sormuras/bach/commit/949986c6879366fa2bd2b9209d58a99469c5231f,,Merge Command.java and JdkTool.java into Bach.java,True
+https://github.com/sormuras/bach/commit/500911c46a4c189230c8ccf5bae685f74d5a029a,,First project-based compilation,False
+https://github.com/sormuras/bach/commit/94961c4c2f0dcd269fbde25100097a6ee84ca5d0,,"Move Project sample to demo 02 ""testing""",False
+https://github.com/sormuras/bach/commit/322ad90ff3039eb28df5bd02f17eac889d19159f,,Introduce nested builder for Project configuration,False
+https://github.com/sormuras/bach/commit/8220b924268b030aa841a1718cefa787ee95f791,,Introduce Util type containing static utilities and helpers,False
+https://github.com/sormuras/bach/commit/a760202482141d7d852d45b201e8e6ffe5555b62,,Introduce Task interface and cleanup,True
+https://github.com/sormuras/bach/commit/903a59b48a220b37886e994d605f41191ceacda6,,Introduce ModuleInfo utility,True
+https://github.com/sormuras/bach/commit/d11783aa9fa6ca8672e0c67c3014cc35624060ee,,Backup src directory to src-20180404,True
+https://github.com/sormuras/bach/commit/0f5049bf18884de8fa2eab336f7112913720a3c9,,"Let class Bach enclose Command, Util and other types",False
+https://github.com/sormuras/bach/commit/67878cb424553d50abe160491388dc2a794f1063,,"Add ""Using Google Java Format as library"" demo",True
+https://github.com/sormuras/bach/commit/9400f4ffbecb04e5711f6b07f16ffc4ce9517d18,,"Introduce ""Bach2"" skeleton",True
+https://github.com/sormuras/bach/commit/e28d026234a37804b6bb4732409e0bfe83a86999,,Update Bach2,False
+https://github.com/sormuras/bach/commit/b80f44210fb7c9f93a07adc7a88b529cc80fcfab,,Relaunch 2019,True
+https://github.com/sormuras/bach/commit/248a6153d9073266b039d52a9ae3f76d9d1da006,,Rename main() to apply() and cleanup,False
+https://github.com/sormuras/bach/commit/17153248d8e9e9f27e9eaa5e55ecf9f9d4ac1446,,Polishing,True
+https://github.com/sormuras/bach/commit/105963612838347f1ca033c1257d63d01220904c,,Add demo: 04-jigsaw-quick-start,True
+https://github.com/sormuras/bach/commit/913aecd039aaacd9b0dcdc666c2d51cae49d01a7,,Add demo: 05-maven,True
+https://github.com/sormuras/bach/commit/06c3a86750f35960c6e5ca4c94ee0bbc5d93a4f4,,Add project model,False
+https://github.com/sormuras/bach/commit/36b25122eaf1c1ca0bd13b2fba66b3e622e1035c,,"Major compilation unit refactoring
+
+- Define static types outside of class Bach:
+  o Command
+  o Property
+  o Util
+  o Tool
+- Remove support for Project/Group for now.
+- Add `bach.properties` support.",False
+https://github.com/sormuras/bach/commit/61a216e3f6125b507df3cf92c0124e0a6038aa12,,Add external tool support,False
+https://github.com/sormuras/bach/commit/4c5cf545f58ac19b8e8b0242d2dfd610eeb224cd,,Introduce Project and make base path a core property,False
+https://github.com/sormuras/bach/commit/3b086db8eedb7c1300007d266b9cf64d4ce42017,,Link realm targets and modules,False
+https://github.com/sormuras/bach/commit/37108757c616862713bc6014357be63c25657cd9,,...instead of rolling own implementation.,False
+https://github.com/sormuras/bach/commit/daac05cbbcc985686b7895986d13088c758eacce,,"Add simple ""modular"" Java program",True
+https://github.com/sormuras/bach/commit/ced12912b7b54c76a6bb8c4b209f78c9f1804217,,Add Layout,False
+https://github.com/sormuras/bach/commit/28d1958cd81d053476a5b8eac3f84dfb64970fcf,,Improve usage of Layout and introduce new constant: UNKNOWN,False
+https://github.com/sormuras/bach/commit/bdbddc3cbc53f9d2116d6b05e1f7ab9a36a48a75,,"More features, less friction, JUnit Platform 1.4",False
+https://github.com/sormuras/bach/commit/e717785e6a9b09ec4d718b5da5963cbdf15baf9e,,Deprecate current implementation,True
+https://github.com/sormuras/bach/commit/746ecdac7da831151e9a00b48da857cab493128e,,Initial commit demo projects,True
+https://github.com/sormuras/bach/commit/557b1fbccb0f41e9488c5b1be79e45dcece6b07a,,Assemble external modules and activate test realm,False
+https://github.com/sormuras/bach/commit/5193cd30ccc46778a59aaa83f8efebaca6f84b6a,,"Add extract ""action"" and support Maven as an external tool",False
+https://github.com/sormuras/bach/commit/ae08f132a756bd2fcb20064bc6b70a5a037f348f,,"Refactor Action, Tool and Utilities types",False
+https://github.com/sormuras/bach/commit/ccc1f786d29a0ba8719572965bcdb975bf79b0aa,,Polishing,False
+https://github.com/sormuras/bach/commit/3cea6be06026ebd605d9a178c196998c99d5a6c8,,Add demo: scaffold,True
+https://github.com/sormuras/bach/commit/8fc79f925c8ef70117547558435ec612aeb9f73d,,Extend scaffold project by a demo service,True
+https://github.com/sormuras/bach/commit/74564ebeb3c105fad4e947439f86f1da89f0d372,,Add demo: lwjgl,True
+https://github.com/sormuras/bach/commit/e3da774ed0402bc4300901d95491ba713f3aff3e,,Add missing natives,True
+https://github.com/sormuras/bach/commit/727cc67bdb68609ca48160ef0449bb165f27f1b0,,Support multiple values for single property,False
+https://github.com/sormuras/bach/commit/7cda866e13af7e69e04c14152e16dc4e2f7a4dc4,,Polish scaffold demo project,True
+https://github.com/sormuras/bach/commit/c380edd1ac77c563d09b6126dfdfd924527eae42,,Prepare JitPack build reactivation,False
+https://github.com/sormuras/bach/commit/28914b74039542ea21f645d244448e2d683d4473,,Introduce JavaFX demo,True
+https://github.com/sormuras/bach/commit/643fca3c155a45b62de190dfccfd7efa90f8fd20,,Format,True
+https://github.com/sormuras/bach/commit/d2463eb4bedf7b864512e26fde514a116b2b04ce,,Add Property enum and Tool interface,False
+https://github.com/sormuras/bach/commit/722c161cc709a8bd3937515237759859d22cc2d5,,Polishing,False
+https://github.com/sormuras/bach/commit/98cfaf068b6089370920171f244c46d2d68840e6,,Restore varargs variant of format,False
+https://github.com/sormuras/bach/commit/76bdbabfc1f41dd1ae58329e02b0282d9f30dc7d,,Scaffold build program,False
+https://github.com/sormuras/bach/commit/f314727b38fe0116c672cb34bd748574e9753ca6,,Introduce Action interface,False
+https://github.com/sormuras/bach/commit/c855490bb2b0a1cfa3bd2354354d68c699d16f74,,Add run actions method and move build(),False
+https://github.com/sormuras/bach/commit/4ff8c0c9bd0c0d6a011e9db54a453351aa17dd12,,Introduce main(String...) entry-point,False
+https://github.com/sormuras/bach/commit/d2342e67e59bdb4caace045857fbc94193071c1c,,Simplify build program,False
+https://github.com/sormuras/bach/commit/589e1d2ebb4c97dbcf42b8d004124136a70b2b30,,Add tool runner method,False
+https://github.com/sormuras/bach/commit/681767801c0b84aa2c73c19d27dc23d9a2ee4b67,,Introduce default tool action consuming remaining arguments,False
+https://github.com/sormuras/bach/commit/ec5d2461a261a261b7f6b4a67c252472825ff2a4,,Implement build program,False
+https://github.com/sormuras/bach/commit/8697aad7ab53078c362c483c36e235f27ade99cc,,Add project model with basic compilation support,False
+https://github.com/sormuras/bach/commit/893a3c55e0aa317fb1ee8175362f902140f85d9e,,Add static helpers,False
+https://github.com/sormuras/bach/commit/11f69a151ebcb5e80d7f073c2c889a685b0b79b7,,Introduce and use Property enumeration,False
+https://github.com/sormuras/bach/commit/1324f519e0e69f0e639a6e013fe282097707a00d,,Add ModuleInfo support type,False
+https://github.com/sormuras/bach/commit/eaa1a10a1cec7cc2ef1fdd5622588034cef41716,,Add missing test resource file,True
+https://github.com/sormuras/bach/commit/519ca5ffcdba77c5bcf24e3587c8d3b8a30a674e,,Build and launch minimal test project,True
+https://github.com/sormuras/bach/commit/80e11319241b15c8b82d40d946d8f077568d6a33,,Add launch/program test fixtures,True
+https://github.com/sormuras/bach/commit/03997a9ba3fdcb9b95fff15a96fd76478aefa495,,Add multi-value property getter,False
+https://github.com/sormuras/bach/commit/c3a0d0245966c5a31691c7aac087085f162bb20a,,Add paths to string joining support,False
+https://github.com/sormuras/bach/commit/efe9db07bd87372d181b98f779a0aeed7a9e6112,,Add extractFileName to Util,False
+https://github.com/sormuras/bach/commit/4704ead5015e15e0deda085399dc2fe3115afc90,,Add download() to Bach.Util,False
+https://github.com/sormuras/bach/commit/ec5209d389ae7e7a3a897dd34afd43eb31c5abd4,,Implement test step,False
+https://github.com/sormuras/bach/commit/6a143fc289a42259b22e10f0f0e4140c2266753f,,Add project.test() support,False
+https://github.com/sormuras/bach/commit/e4957efe7bb7f98cc94ae2ece5efac964253fc76,,Introduce bach.offline property and add convenience helpers,False
+https://github.com/sormuras/bach/commit/583d4b83528820064ab0f138e9777b6f32825f22,,"Introduce Tool interface with google-java-""format"" support",False
+https://github.com/sormuras/bach/commit/ec110d7be8a90db7844bd5d15fad47be56aab14c,,Promote treeCopy() to Bach.Util,False
+https://github.com/sormuras/bach/commit/912bfe2992dbfa2ac1b398f9bc39309d8483145b,,Add unzip() to Bach.Util,False
+https://github.com/sormuras/bach/commit/386e0a21a675e9f7017c9b8482093d612261dda7,,Improve logging and code coverage,True
+https://github.com/sormuras/bach/commit/fc0f264c4240108116acb68ee9c9d62046104d56,,Polishing Build.java program,False
+https://github.com/sormuras/bach/commit/cd328413803cac6b35663ef22e6d6ae8cd248b31,,Remove scaffold action with all assets,True
+https://github.com/sormuras/bach/commit/9c01514a35a6850d850a8de35fd967c8f880d69b,,Revert last 4 commits,True
+https://github.com/sormuras/bach/commit/d703f20b23d35f86beb2638a934a56749e961620,,Add module de.sormuras.bach,True
+https://github.com/sormuras/bach/commit/99bf3c7d5ae61e1b90a45cb5771bf655be4542cc,,Add generated single-file source-code program: Bach.java,False
+https://github.com/sormuras/bach/commit/2ec65f92dd528fcd1107a8fec56cb0eef0d85003,,Add Command class,True
+https://github.com/sormuras/bach/commit/05a843d13688b82ed161a1b82c50861cd2bbdb0d,,Add Run class,True
+https://github.com/sormuras/bach/commit/14a51464fb020943ba10867d2828ab0e46627487,,Split static and type import blocks,False
+https://github.com/sormuras/bach/commit/ce75551a242b811d693d89c5850c670bf8503d9d,,Add properties-files based configuration support,False
+https://github.com/sormuras/bach/commit/0b9a58d62c95188ccde5143165f6d55fa85a3037,,"Set logger level to ALL when ""-Debug"" mode is active",False
+https://github.com/sormuras/bach/commit/5cedf3163a775026eaedf5aa4a51e6993b055918,,Add Action interface,True
+https://github.com/sormuras/bach/commit/4ebb94c67afd5242a3349c7dc13547b4cc04abb2,,Improve logging,False
+https://github.com/sormuras/bach/commit/a169fdfd957c668e67f9c6fcfcea6725f5e002d7,,Stream dragons...,False
+https://github.com/sormuras/bach/commit/28471a64efe9c85f481975634f1fae49f7d69785,,Sort dragons,False
+https://github.com/sormuras/bach/commit/e9db7d5c39631f0a39142957e3787a376860c139,,Add synchronize() and default SYNC action,False
+https://github.com/sormuras/bach/commit/bcd2bb88981ae6411e5f716b379da160ff64b217,,Further improve logging in Downloader,False
+https://github.com/sormuras/bach/commit/e3f586fa0a7e091b9514a196f6292560d850f129,,Support user-defined ${...} variables in properties,False
+https://github.com/sormuras/bach/commit/1a9cd2894763b7cc0d91d0f50b3848f99510cb53,,Prepare Project setup and improve initialization logging,False
+https://github.com/sormuras/bach/commit/f06a703f7a7f5a1b56d114ad0d46591f5edcc206,,Add and use property enumeration to Project class,False
+https://github.com/sormuras/bach/commit/6814efe1efd24dadcfe005c1922986d724ec1011,,Refactor JigsawBuilder in preparation of a BUILD action,False
+https://github.com/sormuras/bach/commit/4c0d08b65b5d212c6cf48e34d7ec54bc0bf9ebb1,,Move modules() finder to Project class,False
+https://github.com/sormuras/bach/commit/019506bf993f9450a3fbb959e7e51408d48c0ef0,,Add `--module-path` generating factory to Project class,False
+https://github.com/sormuras/bach/commit/d7f6c5966193cade5dcbdc8a7f82b2797721ac66,,Update Bach.java 2-ea 0xf0ddc9da,False
+https://github.com/sormuras/bach/commit/8919e739644f9fe62ed3f72c0b1bc88c4a759ae6,,Sort classes in a OS-agnostic manner,False
+https://github.com/sormuras/bach/commit/d504b5aa0bde78f345b55e179dc4859dc9637eba,,Let JigsawBuilder implement Callable,False
+https://github.com/sormuras/bach/commit/11a525fadc46d0079d24745261be553895711d63,,Try to resolve a path property as a URI first,False
+https://github.com/sormuras/bach/commit/048f98bffe6fd7082a090afa5e6ad90d41b4670f,,Emit better error message on test run failures,False
+https://github.com/sormuras/bach/commit/a4347474c5a7f58d672bed0860ffbe2030e17e8b,,Move synchronizing logic into dedicated Synchronizer class,True
+https://github.com/sormuras/bach/commit/bc9f18cce1713a714cb81e993795f24195f50922,,Improve logging,False
+https://github.com/sormuras/bach/commit/e92497fd133f0a0a3eedcea077109379f2c4c4ec,,Emit build summary,False
+https://github.com/sormuras/bach/commit/0c6271a9ef5d7a2106733b64a2bd29c8e089ccba,,Add support for javac release and enable-preview options,False
+https://github.com/sormuras/bach/commit/912c1a4a8d9cd09b2055c589b1b05b037485801b,,Restart,False
+https://github.com/sormuras/bach/commit/13c235826259a37cfb86070ad517e82e01bc6740,,Introduce first modular demo project,True
+https://github.com/sormuras/bach/commit/3d315625d2f6c9042048779af23179efd939b700,,Add Project and Util class,False
+https://github.com/sormuras/bach/commit/6105116706f3e9218b4b1a5f2169994e24b66924,,Add Realm class,False
+https://github.com/sormuras/bach/commit/edea7df6528932ba497bfae7f381e7b982f1557c,,"Add 010-main(a,b,c) demo project",True
+https://github.com/sormuras/bach/commit/dcee7642f69616638ac884d4349e40a2f2e55c08,,Introduce classes with inter-module imports,True
+https://github.com/sormuras/bach/commit/1b6638f2bf2f3df1019489a14f13e04a20466a7c,,Add summary() to Bach's API,False
+https://github.com/sormuras/bach/commit/d4835849c28cb0879ad0192dc135e0e84469c82d,,Add various utilities and convenience run() methods,False
+https://github.com/sormuras/bach/commit/e36333264e02bba61b86773097f6e137b18b5753,,Activate build program,False
+https://github.com/sormuras/bach/commit/0438a31648541cee96c3ed3789e5cf672457f95d,,Improve summary by emitting size and modular information,False
+https://github.com/sormuras/bach/commit/c2ba49ad8f4fb08dfb03b578a7d55ddc86ed0ae4,,"Add 100-main-a-test-a,t demo project",True
+https://github.com/sormuras/bach/commit/b168a8ba1b61fbdf178b493c385eb87d66ed436d,,Support patched modules,False
+https://github.com/sormuras/bach/commit/1d15fb3d20d2e4bf584c232662e432b39a9e3467,,Don't filter regular files by default,False
+https://github.com/sormuras/bach/commit/02cb1089d2f2c0eb777074d091dba291734bfef5,,Add module de.sormuras.bach with tests,True
+https://github.com/sormuras/bach/commit/5f4ed7ae92753366fbf4b3a5c09e0cc2ecd7e6eb,,Introduce initial main and test realm support,False
+https://github.com/sormuras/bach/commit/cc398a23de8e00ad134187de96ec2cc31ded8a61,,Add Javadoc,False
+https://github.com/sormuras/bach/commit/eec803e04e91df19efba735c3bafc0f5cd36fdde,,Add module declaration parsing support,False
+https://github.com/sormuras/bach/commit/d8cb42a574cd8012ad6f852dfe0b863e357828da,,Extract module-related methods into a dedicated class,True
+https://github.com/sormuras/bach/commit/b576fad416516b5583c91eef90c6d67ee495557b,,Find external modules names for each realm,False
+https://github.com/sormuras/bach/commit/e704adaa08a9db594ae64296153900fb69b3d2df,,Simplify. Restart. Go!,False
+https://github.com/sormuras/bach/commit/d824e07470fa3dd48be9a00d50d734524ae857f7,,Introduce Configuration and Project support,True
+https://github.com/sormuras/bach/commit/f166ff71f840ea2ed95d09c0615a83f5518b2ab4,,Emit provided tools and better argument -> tool conversion,False
+https://github.com/sormuras/bach/commit/944de49bbb416d6836bf2bb636da59fd205aa7c3,,Support running external tools via Java's process API,False
+https://github.com/sormuras/bach/commit/88a13e52f4f896391f9725d0a7296f3b2030e96f,,Add Downloader class,False
+https://github.com/sormuras/bach/commit/af85467ee2c823e40c9563a567648b3371b6530d,,Refactor Configuration to non-static types,False
+https://github.com/sormuras/bach/commit/4973c735457663d1f00103ab01ad06b2e3a81351,,Fix project name configuration,False
+https://github.com/sormuras/bach/commit/e593ae145fa52d9ca198c3ef74d33a3030d90502,,Add treeDelete() utility methods,False
+https://github.com/sormuras/bach/commit/605f9e472223673e3a6e2f721f6a1a3674ca1319,,Add Modules helper class,False
+https://github.com/sormuras/bach/commit/85ca9c3b0abf16166358d4c3ba3bf88d35e2bf3d,,Add Realm class to Project,False
+https://github.com/sormuras/bach/commit/aad62644394edd3aa70f468296d7553fac09a81a,,Add Command class,False
+https://github.com/sormuras/bach/commit/deaa231a090121f1fa40d4622b19b8c5b011fa3e,,Add direct test run on the module-path,False
+https://github.com/sormuras/bach/commit/90b5b548a80fce41aa39a85977777f2475e4208b,,Add direct test run on the class-path,False
+https://github.com/sormuras/bach/commit/fd208c29b572b13b41b303abd1984156e2e042c1,,Add multi-release demo module,True
+https://github.com/sormuras/bach/commit/5c0397620aaa36e517cc66319a878d4a1629164f,,Test multi-release module,True
+https://github.com/sormuras/bach/commit/282ad0611bd98cc4392a31968a27c4d57f52adeb,,Read project's module-info.java files only once,False
+https://github.com/sormuras/bach/commit/160506bff766bb6fdba5b4915307db7ba151f77e,,Add test projects,True
+https://github.com/sormuras/bach/commit/8e70c779025354c159b99fe9f67e1d212f3f867e,,Add `requires-asm` test project,True
+https://github.com/sormuras/bach/commit/31f5703aa95b3e4f675eff45663a2d2a1a942141,,Improve exception handling and introduce '-Debug=[true|false]' mode,False
+https://github.com/sormuras/bach/commit/43c49e5389a9608d0f0e6b648f28697da734202a,,Format,False
+https://github.com/sormuras/bach/commit/08c7141fb9cbd10f0ea7ae5a58f4d3eebed93868,,Initial complete implementation of Lib.java,False
+https://github.com/sormuras/bach/commit/21369f6afb9fbf3bab450a8d37592fe00cd82b14,,Polishing,False
+https://github.com/sormuras/bach/commit/333e4090b7e985e0562c4c3acb83278852669530,,Restart modular source layout,True
+https://github.com/sormuras/bach/commit/fd2f70bfe987cf3978e225ca26f991ca67d7bd99,,Extract getBanner() method,False
+https://github.com/sormuras/bach/commit/24c62c8ee218b5e49accfaed1ae716cd3824a879,,"Introduce ""bach"" as a service",True
+https://github.com/sormuras/bach/commit/ff9fe5e8521ed5fc3d8fc9cb37c418a4f583bb96,,Implement new Bach API: help() and version(),False
+https://github.com/sormuras/bach/commit/64f733a25d2545a15c2a8a75412f2aa184f89d83,,Merge Bach.java,False
+https://github.com/sormuras/bach/commit/c7f9bfbdb3e8a1eb9643942b03f71f6cf9d02529,,Introduce home and work path properties,False
+https://github.com/sormuras/bach/commit/f084f588c78fc6dabbe837be09ecd2dec01445c1,,Extend Bach API with build() and validate() methods,False
+https://github.com/sormuras/bach/commit/1941380bbf07c8a85c757fb7817284ebc692955f,,Add directory listing helpers,False
+https://github.com/sormuras/bach/commit/3a6e2ca37f7e8df7671a367e93c4c3509da182ff,,Fine-tune validation,False
+https://github.com/sormuras/bach/commit/d4423b86281bc1c935c645b34b67db16414f5a29,,Require generated Bach.java to compile before copy,False
+https://github.com/sormuras/bach/commit/a81319a5f4fd36fb65101a7c5d9dd2e3e14ca6f1,,Extract properties to Configuration class,True
+https://github.com/sormuras/bach/commit/73cc18ccee60130aae9d084e8ee29c2c3afff887,,Merge Bach.java,False
+https://github.com/sormuras/bach/commit/139a62fbf0fa968b5159e3871e35b541fb208c32,,Introduce Transfer class dealing with getting files via HTTP,True
+https://github.com/sormuras/bach/commit/8ae32e187e19428c6a6c3efd997d9bc7f709fe9a,,"Implement Resolver tool, was Library",True
+https://github.com/sormuras/bach/commit/b268dde2d3847c00b3840b1778bf3e9bf2a5d879,,Refactor Resolver,False
+https://github.com/sormuras/bach/commit/3293920cb035fe94efd843ce40e1e6630419c8bb,,Extend collection of static helpers,False
+https://github.com/sormuras/bach/commit/6a586e86a3b036157727615b534e8be5db83c4cd,,Implement parallel download of files,False
+https://github.com/sormuras/bach/commit/3f8e95151f4395b822d806084eb8d45f415fbab1,,Resolve all missing dependencies,False
+https://github.com/sormuras/bach/commit/80437c2fbb3e8c2af47337ebadf90c3f946f6c6d,,Merge Bach.java,False
+https://github.com/sormuras/bach/commit/68bf1028bc104a75ebede198c099de025a186480,,Refactor Configuration implementation,False
+https://github.com/sormuras/bach/commit/0942cd8a4c1955b83c567ee240e9fca6019c8046,,Add custom configuration support,False
+https://github.com/sormuras/bach/commit/34095869f337085a59dd345406c1bdfa1428bc17,,Add dedicated invocation handler re-using default configuration values,False
+https://github.com/sormuras/bach/commit/5d55303a7da6b9aadc8b45d0b076c3dba4e8da6e,,Use 'bin/' as default destination directory,False
+https://github.com/sormuras/bach/commit/674ed07dc595fc4deedfa569d33ad3bce08da7e7,,Add Command: a command-line program argument list builder,True
+https://github.com/sormuras/bach/commit/806c49d6df448827d8f9ef6a06b054094d714b0a,,Add initial compile support,True
+https://github.com/sormuras/bach/commit/ab21e2d796efd557e00f4ada9a088b5f27eeb73d,,Support project version in Configuration,False
+https://github.com/sormuras/bach/commit/71f540d3987cc3f4ef2e3876f92b6247133ec38c,,Extract Validation type from Configuration,True
+https://github.com/sormuras/bach/commit/c1de917e066aef3b710a5f77b1cba69aaac1e93f,,Simplify configuration implementation,False
+https://github.com/sormuras/bach/commit/b21c4a1a7aa3692e51c35e63bdb80d2ded8661ea,,Respect custom configuration,False
+https://github.com/sormuras/bach/commit/fb1050b63f238f12639a0744a48ca0bb0b0a7b51,,Fix exception chain handling and respect compiled configuration,False
+https://github.com/sormuras/bach/commit/09fca50517f1d365c999ac7f71f1ca1c6f40cc60,,Support file schema and add convenient static transfer method,False
+https://github.com/sormuras/bach/commit/02ef4a8f7d099fd46374f5db5219446d3defc4da,,Simplify Configuration implementation,False
+https://github.com/sormuras/bach/commit/343872213fa8fe5f4dff9e306a9304cd7248b929,,Cleanup,False
+https://github.com/sormuras/bach/commit/4005194c3e73d76cb622696c8cad4dacd9750ebe,,Introduce common javac tool options,False
+https://github.com/sormuras/bach/commit/934e77a7db4d0ab4e726e6f0dfca68c4c88c7f70,,Generate module paths on-the-fly,False
+https://github.com/sormuras/bach/commit/b585f9409f4833e72c7deb70fd86fec442c5b9f6,,Improve module and module source path computation,False
+https://github.com/sormuras/bach/commit/ce741973b50bc06bb261ca64bcc7f8169a6e7af2,,Merge Bach.java,False
+https://github.com/sormuras/bach/commit/22b953d7b96e47f5185b907beb0820809457243e,,Polishing,True
+https://github.com/sormuras/bach/commit/d62a725d1ff6c2c0ce02f073fb172c82446b88ae,,Print all library modules after resolving,False
+https://github.com/sormuras/bach/commit/b1f1ef4bddbdcfbe38b605eb3f9eaa1638029e3d,,Merge Domain and nested types in Bach.java,False
+https://github.com/sormuras/bach/commit/71b76696f664d707dd2dac04e5995caa7d7b448e,,Backup,True
+https://github.com/sormuras/bach/commit/83cc5e25e59bb334f52fdd5154b21f0682dc039f,,Cleanup,True
+https://github.com/sormuras/bach/commit/14274196210e9961c2efe0d8714c66b10a7a1709,,Defer execution of command line actions,False
+https://github.com/sormuras/bach/commit/b057ae0334dd8bf3ef6a2ded0a0b8b175b878750,,Introduce Task type,True
+https://github.com/sormuras/bach/commit/9da0e80dbe6f0d5a938993e8e56f4abbab78a51a,,Add multi-adder overload delegating to a custom visitor,False
+https://github.com/sormuras/bach/commit/20cc59a2739a3864e6b49e53d5eec10f656f2ac0,,Merge Bach.java,False
+https://github.com/sormuras/bach/commit/ddbe055337fad656b0cdace9f99855fa9a6960f7,,Merge Bach.java,False
+https://github.com/sormuras/bach/commit/0df8c21bf307653a596ab6e66f5906c6cfc87d55,,Add --enable-preview and --release support,False
+https://github.com/sormuras/bach/commit/113cf2e0bd5af194f6c28e358dd29df959ba18ca,,Consume passed stream of paths,False
+https://github.com/sormuras/bach/commit/d65af9e23f42fe2d5415e92f63abc1bccb7070d0,,Polishing,False
+https://github.com/sormuras/bach/commit/ce549d44373768954c62a495d04d56815c225963,,Add find utility methods,False
+https://github.com/sormuras/bach/commit/f78cd9cbc817a71efbef61372ba7fcf9dc704da7,,Merge Bach.java,False
+https://github.com/sormuras/bach/commit/5cca481ef87f8b32b9e8f8b375bb03d43430c1ee,,Back to direct command execution,False
+https://github.com/sormuras/bach/commit/c8976a26f2579332840ed6b68bffe2d17abd1d52,,Add multi-release-multi-module test project,True
+https://github.com/sormuras/bach/commit/2b3a4cc41e8860a8a6b40126a2584066caa9c6eb,,Back to direct command execution in Jigsaw as well,False
+https://github.com/sormuras/bach/commit/0e1a1e6770656182c54e2d6dc694af8ba0a6c64e,,Scaffold default project configuration,False
+https://github.com/sormuras/bach/commit/30e748123ed49867eca445e9bda47852acc8f001,,Implement main-only build task,False
+https://github.com/sormuras/bach/commit/b37f73ec1373e2319a4198e67b54e5dc1e19b465,,Keep order of release paths,False
+https://github.com/sormuras/bach/commit/bcea56d427da6596bba2b27d7e37d31860d5b094,,Introduce download support,False
+https://github.com/sormuras/bach/commit/5a3adb960b7c47907bbde9f418e2eb9c6978eaa2,,Provide simple Project.Library constructor,False
+https://github.com/sormuras/bach/commit/337490a29707c7bb8c0d45b16f3de8ccaa9b829c,,Merge Bach.java,False
+https://github.com/sormuras/bach/commit/59071eaaa43533265b6fc3e39bb0e024abe00f89,,Fix javadoc generation for multi-release projects,False
+https://github.com/sormuras/bach/commit/f91161a12fe2ddc979650e40cfea7254d70864c8,,Format,False
+https://github.com/sormuras/bach/commit/1deb6fff39299cb850184309ac37147e94a07a29,,Compile test realm as well,False
+https://github.com/sormuras/bach/commit/f8338bae37acfac838781c83717ceff6c2042977,,Polishing,True
+https://github.com/sormuras/bach/commit/87481773f3fcb1ab25f63ba2ecdf8cef3a4f9fc3,,Use Modules in Resolver,False
+https://github.com/sormuras/bach/commit/bf0fd9d6a136204319e484db76b1ff0436061022,,Merge Bach.java,False
+https://github.com/sormuras/bach/commit/27b39714805fd167c2eea89275e2fd8fa55f57ca,,Introduce ModuleInfoReference as a first-class domain model type,False
+https://github.com/sormuras/bach/commit/345e56f03f6e5896f4284eb65cd44383eae47316,,Compute realm's module path in project model,False
+https://github.com/sormuras/bach/commit/5cb6349066a02b96db6309c353254967266813f3,,"Add test projects based on Jigsaw Quick Start Guide
+
+https://openjdk.java.net/projects/jigsaw/quick-start",True
+https://github.com/sormuras/bach/commit/7d3e421dd79563ec25c3cca214cc39109030a4c1,,"Refactoring
+
+- simplify creation of realms
+- rename ModuleUnit to ModuleSourceUnit",False
+https://github.com/sormuras/bach/commit/913646e062353c4889da2118556c18881b029b4a,,Merge Bach.java,False
+https://github.com/sormuras/bach/commit/13e114683a60702cc0e0d9c4a4f6f40038f49f6c,,Remove single static import statement,False
+https://github.com/sormuras/bach/commit/7ec9d5f89760dcfb9ee718c37a109f6c0cda4fdc,,Replace Property class with typed values in Project model,True
+https://github.com/sormuras/bach/commit/67f62799974ad575c4bb0e016b45cf02e7cabe86,,Fix Maven script generator,False
+https://github.com/sormuras/bach/commit/9a1c08d4c7628a497b70f079631e941e18e3025d,,Add convenient realm factories,False
+https://github.com/sormuras/bach/commit/bc212750a0a78dbf7ec2abc6d1b292c3f86f3177,,Move module source path generator to Modules,False
+https://github.com/sormuras/bach/commit/b13ceab6ef5b3f1a3281ce3b7fc88b885718a77d,,Unroll source-related maps in module to explicit Source type,False
+https://github.com/sormuras/bach/commit/e2a4ba9b5bd0a4142d17c478d6a2e21f1ca36e90,,"Convert boolean property to ""flag"" enum in Project.Source",False
+https://github.com/sormuras/bach/commit/1b59a723a546178b140eba560adc09099fb78fea,,Patch main sources into test modules,False
+https://github.com/sormuras/bach/commit/3b08b7a13d75290b43f326258cb7f5517056c81b,,Improve default project builder,False
+https://github.com/sormuras/bach/commit/5029a103e11d7573a40982a9b3cfc474bcbce0ce,,Support multi-release module units,False
+https://github.com/sormuras/bach/commit/5957ca17bf475a9c3dc877a154b3e09bfde70554,,"List all main modules, generate dot files
+
+Issue #77",False
+https://github.com/sormuras/bach/commit/33ced2f8cc888d99b3f8927655269cdb7af5032f,,Run Version.java w/o args to print current version,False
+https://github.com/sormuras/bach/commit/0781655d059bb93a51bd9e4e2b83db582fec58c1,,Quote argument values in shell scripts,False
+https://github.com/sormuras/bach/commit/a72b20d0e4167bcc9ffa57079e59fa7686d9a7fb,,Merge Bach.java,False
+https://github.com/sormuras/bach/commit/1e26495052e9c6c1e3bbb7f25bac9de106b5f2ce,,Implement multi-layered lookup,False
+https://github.com/sormuras/bach/commit/0d48a79d9dae3ded3a7f0d46dbdc25e0f0fb47b1,,"Auto-require module `java.net.http`
+
+Resources exposes types of module `java.net.http`:
+- HttpClient in its constructor/factory parameters
+- HttpResponse as the return type of its head() method",True
+https://github.com/sormuras/bach/commit/608d41b9fac427a93d6a93193c550c6fdd3d7b82,,Delete superseded Util.Downloader class,False
+https://github.com/sormuras/bach/commit/42ff39cca2eb59a7e85b574fbe851f1e997afa66,,Create missing target's parent directories and propagate exceptions,False
+https://github.com/sormuras/bach/commit/d5449774d2588e2e99ab35bf5bd8c466af1655fe,,Use Maven Group ID and version to determine the associated repository,False
+https://github.com/sormuras/bach/commit/0172a5be59cbf5cfc06df0cfb5efd58b0487202a,,Use Resources and Maven helpers to resolve missing dependencies,False
+https://github.com/sormuras/bach/commit/f8a9a82812245491c4218ef5072aaa4d3808e9c9,,Allow custom timeout value for head requests,False
+https://github.com/sormuras/bach/commit/045a400395b2f83dfbfb485457b25e452f4ba482,,Collect and emit all tool invocations as part of the summary,False
+https://github.com/sormuras/bach/commit/34729119620423fd20b5605765a81c9bf9fc1fb7,,Use own exception type,False
+https://github.com/sormuras/bach/commit/d3373f57c13e1143dce9dfe8aacb1657e23bfe72,,Add main method and version constant,False
+https://github.com/sormuras/bach/commit/2adc2dddf2836c719968602dc796f66435b8415b,,Add template-based build program generation support,True
+https://github.com/sormuras/bach/commit/825f87dc640918eb10ebdc04da912701fa573249,,Start Bach.java 2-ea development,True
+https://github.com/sormuras/bach/commit/39f6667c9d7fc5af70b8ca83eef8cc0cc85cd739,,Remove deprecated archive,True
+https://github.com/sormuras/bach/commit/740f6021c30baa6e8d6ebd464663fb633f7567ca,,Introduce Project and SourceGenerator classes,False
+https://github.com/sormuras/bach/commit/f61f086f1e436d3e578ab473394a6acb83d87ece,,"Add test project ""alpha""",True
+https://github.com/sormuras/bach/commit/ab35651816a1688e3d3251d80e03c6d30e178864,,Add ProjectBuilder class,False
+https://github.com/sormuras/bach/commit/27162137ea8a989483fed36491c94d269836c2c2,,"Implement main program with initial actions
+
+- build (noop)
+- project
+- version",False
+https://github.com/sormuras/bach/commit/570bfb92d37afd86ee39d8ddaf53c0ac2f4f435c,,Add Modules class,False
+https://github.com/sormuras/bach/commit/a05afb306df205ee1c7c5c83b0eacd9705900c4c,,Add module source path factory,False
+https://github.com/sormuras/bach/commit/d8a483b6ffe03700b69626ac1a32fe061ac1ec01,,Add Log class,False
+https://github.com/sormuras/bach/commit/1e61964d48884a9407bd931daae96fd35c7e9f46,,Add Tools class,False
+https://github.com/sormuras/bach/commit/2142cbb54c8de7f80a138b477592918aacbb5d84,,Record command executions,False
+https://github.com/sormuras/bach/commit/c133cdb03b1d289d2be63fc5e98f3a68f21a5f26,,Simplify Tools class,False
+https://github.com/sormuras/bach/commit/c60eec9dc504a405ff47f00f458d24fb186024d6,,Apply Google Java Format to all Java source files,False
+https://github.com/sormuras/bach/commit/57fee46c0c5704dbab380e03c38672b869952122,,Add initial Jigsaw compiler implementation,False
+https://github.com/sormuras/bach/commit/c19a957d234ef26070de03f8a49febdb84636429,,Fix indentation and emit all valid entry-points,False
+https://github.com/sormuras/bach/commit/3c8b28a655433064bc2762fc84d9a39aff110bf8,,Move summary creation into dedicated method and store as markdown,False
+https://github.com/sormuras/bach/commit/959a255049a753b826078ad29a09b40f87b4f65e,,Introduce Project.Path registry and Resources helper class,False
+https://github.com/sormuras/bach/commit/ee43626243c2bae314c6dfcb760534ff65b5d133,,Sort directory listing,False
+https://github.com/sormuras/bach/commit/f0185ae2c9938d5b70723f74ca70c91bd90bcdd5,,Introduce URI-related helper class,False
+https://github.com/sormuras/bach/commit/24a03e0b0ddaed382594616018388761d013f13a,,"Scan for module declaration in ""java"" and ""module"" context",False
+https://github.com/sormuras/bach/commit/6d34ea924636a62060ffb9f2f316aa5fa6466063,,Extend Realm with a set of modifiers,False
+https://github.com/sormuras/bach/commit/ad958873b1b662ae547141314da62e25311fa21f,,Introduce initial Tester implementation,False
+https://github.com/sormuras/bach/commit/2d07a0ac263cc4495b03f56093d4cc4e0f3f35aa,,Add copy() and unzip() helpers to Paths,False
+https://github.com/sormuras/bach/commit/d94a3b2c999b161eff9f2c24f52a953d7524d5d4,,Introduce Survey in Modules class,False
+https://github.com/sormuras/bach/commit/f43a8f9827bb4554eb4d74abb6d73e7541fecd92,,Green field is green,True
+https://github.com/sormuras/bach/commit/9d483485c2a177e8aa67f26ea667529d8f1eb0d7,,Commit modular sources,True
+https://github.com/sormuras/bach/commit/d7818f4249b5e01727a80aed360de69f287e80ea,,Add basic project types,True
+https://github.com/sormuras/bach/commit/e4ecb9c76e12ff6903a8bda81e97db46eaf6d720,,"Introduce Structure, Realm, and Unit types",True
+https://github.com/sormuras/bach/commit/3690b89159435a2e552507c9927df87be72a075c,,Implement basic build feature,True
+https://github.com/sormuras/bach/commit/f38ff702874d2adb37c6c45255c85135fb6655fd,,Introduce Task type,True
+https://github.com/sormuras/bach/commit/85b28712745aa939741e63ea492fa82e35e511ea,,List generated modules in summary,True
+https://github.com/sormuras/bach/commit/39444bf3cdefc9ba187d2ff1b54a677d57f4fe0f,,Move project's folder component into structure type,True
+https://github.com/sormuras/bach/commit/6730871f69d5e7f8e7d8ceb5887ad552ba883f0f,,Add test for demo project,True
+https://github.com/sormuras/bach/commit/e6e758631d76f0e80fcf4c6901ca51c081b331e5,,Record all log entries and all simple text messages,True
+https://github.com/sormuras/bach/commit/a385c1f995d9a00e32af7269c792e78bf03c1602,,Create log file in summary task,True
+https://github.com/sormuras/bach/commit/f7c0d67f11df31230536e3f5cecc71782deaad6e,,Introduce Path-related helper class,True
+https://github.com/sormuras/bach/commit/842392915445fa0842c110eefca79f81623a2f62,,Introduce project builder with basic auto-config support,True
+https://github.com/sormuras/bach/commit/629fbdfb543bb32eab468225a166188b83be110e,,Introduce modules helper with module-internal tests,True
+https://github.com/sormuras/bach/commit/56ab0588b43a6e7724964c77627189fd3dcfe3e6,,Add all tasks as skeletons,True
+https://github.com/sormuras/bach/commit/394a5d2fdc98d3b483167d6e982176eafcc12962,,Introduce tool call builder type,True
+https://github.com/sormuras/bach/commit/0c34c55d5d16ae229dec47a012fbe3f628d07334,,Introduce ToolProvider-related helper,True
+https://github.com/sormuras/bach/commit/d8043e929bd6887e647f16f26e51fb544815b073,,Support running and executing calls,False
+https://github.com/sormuras/bach/commit/bdf2f7362507477a987529fd00ae94ad067b8ee8,,Extend realm and unit model,True
+https://github.com/sormuras/bach/commit/f5a0fc8d1b55f7407e1a15b5291d9fc2798259dd,,Extend demo project,True
+https://github.com/sormuras/bach/commit/b75c318f0950d5990215d074873b4b8edd8b671e,,Use ROOT locale when formatting decimal numbers,True
+https://github.com/sormuras/bach/commit/1fc6b0c74bc7cdebe0e6fbfc19fc5ab58256de37,,Format numbers in test as well,True
+https://github.com/sormuras/bach/commit/b11b81f3a93cbe3334fda38afaabbe79aa51a101,,Sort JAR files before listing them,True
+https://github.com/sormuras/bach/commit/39e3feca2ceb1c53be2339678ebe6f2b73f5afbc,,Overload run() method accepting an explicit ToolProvider,True
+https://github.com/sormuras/bach/commit/cea8869dbab8a114f8abec5203cf6a5204559a10,,Extend Realm with Modifier enumeration,True
+https://github.com/sormuras/bach/commit/ab517741355305f2d2fcd924e3c57c2347792524,,Introduce URI-related helper type,True
+https://github.com/sormuras/bach/commit/2242f6f37e6874429dc8451873f24c86978c244e,,Implement Bach.java program,True
+https://github.com/sormuras/bach/commit/f64bd34290c9138127a541db40101ccf85aed6c4,,Improve single-file source-code programs,False
+https://github.com/sormuras/bach/commit/3821ddd3007524d2486b52c0f4558a54ed4e76b4,,Remove hard-coded version string,False
+https://github.com/sormuras/bach/commit/a394bf5b80851dc92f07d9268115e5a3dae69cc7,,Create Maven-based installed scripts on-the-fly,True
+https://github.com/sormuras/bach/commit/9dd1390b3a749e7ec7855c76dc7e64931d92ee55,,Introduce dedicated bootstrap program performing  builds,True
+https://github.com/sormuras/bach/commit/810a8ed01f23cdcf048d0a7e2834cdbae214b43c,,Support optional Maven-based deployment,True
+https://github.com/sormuras/bach/commit/bb08f9d711844b7b806a1447fb58fe7d6ebfe264,,Extend Paths with tree walker helper,True
+https://github.com/sormuras/bach/commit/945c39f340c22dc80a754c024b19b476718442bd,,Update model to use the new source type,True
+https://github.com/sormuras/bach/commit/e8850c0d3bafa415dd2653e79bc232318f873c59,,Prepare property-based project production,True
+https://github.com/sormuras/bach/commit/6cff2040817bbdf7397d84056a8d23348672fcb8,,"Extend demo project with multi-release ""demo.shell"" module",True
+https://github.com/sormuras/bach/commit/6e7b173b53ae71fa1133c350620f1dcad8d1f62b,,Load project properties file,True
+https://github.com/sormuras/bach/commit/343856d8feeecf4b2ce8787a039a254a2e4801f5,,"Introduce Hydra, the multi-release compiler",True
+https://github.com/sormuras/bach/commit/8f856f6fd9c692bb2a6d8cffdcd30c6b7f1f8e56,,Introduce property enumeration,True
+https://github.com/sormuras/bach/commit/11c03427c61da9bd887ddbfbffff0c176ec7e89a,,Create summary.md file,True
+https://github.com/sormuras/bach/commit/913e478ed3d41368ba1dd03059682c16ac561d9d,,Only compile normal modules and fix javadoc call,True
+https://github.com/sormuras/bach/commit/220b91a86fd54b9e20a0902e134cafb79fb872be,,Support realm-specific tool arguments,True
+https://github.com/sormuras/bach/commit/b6b0cc9c351f47b2c3ec2ebede775de2e025f2a7,,Read and use version from project properties file,False
+https://github.com/sormuras/bach/commit/78c5874b91a1a5906b134bf46542b71c30e6a953,,"Read deployment configuration from properties
+
+Closes #92",True
+https://github.com/sormuras/bach/commit/87e844b4ca0078085c09dff9fb2cde14ccd50a92,,"Sort modules by number of ""internal"" requires for compilation",True
+https://github.com/sormuras/bach/commit/5b28a5252afa2dfc030c62253bb61e7e96fba211,,Pre-sort units by their number of requires to other units,True
+https://github.com/sormuras/bach/commit/a474cec35e71d2751b4e995d2d12580b205bd934,,Simplify auto-configuration of units,True
+https://github.com/sormuras/bach/commit/247882352c55a2112828c73bc5148766d7f1d6c6,,"List all tool runs
+
+Issue #77",True
+https://github.com/sormuras/bach/commit/0d45f291650ab4dc01e4bb87a5042df31f8e0f0f,,Remove Unit.Type enum and make Maven POM file configurable,True
+https://github.com/sormuras/bach/commit/e964917ad2660cb6b76dfc41177f7bec09e5df0f,,Fix path to string with star mapping,True
+https://github.com/sormuras/bach/commit/cc64a06fd086e9e5351fef481914a9c4b0334f73,,"Generate dot files
+
+Closes #77",True
+https://github.com/sormuras/bach/commit/f26dbfd89cff8f45a7a56c08c76a11c95e1c414f,,"Move information logging into Bach.java
+
+Here, internal components (like tools) can be accessed.",True
+https://github.com/sormuras/bach/commit/67c1016344c6a2d9e182523ef5bae7b995bc001f,,Polishing,True
+https://github.com/sormuras/bach/commit/5664052656ccb31fe76c9df845ec591618cf010e,,Consume custom library instance in structure factory,False
+https://github.com/sormuras/bach/commit/bb5cee8481076ace49e9790383dae8c005781aa2,,"Read all project properties from ""project-info.java.properties""
+
+Closes #98",True
+https://github.com/sormuras/bach/commit/6bf7c85fa3ad63354b3c04e7c3c20cadefaa1ae2,,"Extract path-related method: name(Path, String)",True
+https://github.com/sormuras/bach/commit/90c46f5e1119cab561e29b4477132bc2703a4865,,"Support starting main program
+
+Closes #80",True
+https://github.com/sormuras/bach/commit/69ecdb6b739404cfc8e2c1ed26a8c40d13348243,,Read all required foundation tool provider modules,True
+https://github.com/sormuras/bach/commit/b3fdf5d4a532057f555f52134d37e08c9f2e3fb3,,"Add ""clean"" action",False
+https://github.com/sormuras/bach/commit/0139027fa5687cbcf8bc38d957e12de5cd94547a,,"Replace resolver class with library logic
+
+Closes #93",True
+https://github.com/sormuras/bach/commit/29fd0a029081d4e7de8c31862dbe410f5ecefced,,Move Property enumeration into a top-level type,True
+https://github.com/sormuras/bach/commit/4622e9fe8db4a061973ba809f28cb5a2c0e40d78,,Extract module resolving methods into dedicated class,True
+https://github.com/sormuras/bach/commit/5e74cd49872f6c2b53090bbad1f7ae5580f62bb0,,Delete dead code,True
+https://github.com/sormuras/bach/commit/d2c6e64c19b30e76253196b1ba2813157b150b53,,"Add Maven Central link factory
+
+Closes #99",True
+https://github.com/sormuras/bach/commit/e80d67602ab2462f5d3bb5c842a5cb57a52d142e,,"Add ""directory tree"" copy, delete, and walk methods",True
+https://github.com/sormuras/bach/commit/376cce8dfb6749686fba92636e20a34890c9066e,,Emit content of library folder before compiling,True
+https://github.com/sormuras/bach/commit/0ee7c53c540f6e26935267dc4e42aea086a19d1b,,Declare library modifier names constant,True
+https://github.com/sormuras/bach/commit/52a118b284755596853d62bb7a327afa2c951cd5,,Polishing,True
+https://github.com/sormuras/bach/commit/72e015458ff4249db005795f5f4a7adcf7af69b8,,Move template-related features to dedicated type,True
+https://github.com/sormuras/bach/commit/f3f14d519e34affb24cee5c8463893e48320d3ec,,"Extend deployment record with a global pom.xml template component
+
+Part of issue #101",True
+https://github.com/sormuras/bach/commit/8e3a4c010e5d90c850f79952ed7f90da6f532ece,,"Support `pom.xml` templates
+
+Closes #101",True
+https://github.com/sormuras/bach/commit/24e161787e0142b45a5f0d7948b939724a9e86e4,,"Introduce central ""namespace"" declaring default values",True
+https://github.com/sormuras/bach/commit/86b9cbee00e744b595c346717e01bcb4f95893fa,,"Introduce type-safe Configuration class, Java Bean-style
+
+Addresses #104",True
+https://github.com/sormuras/bach/commit/a549a68c8e29105d6062d4e8cd40858840af01d9,,Use new Configuration type in build program,True
+https://github.com/sormuras/bach/commit/5bbe071afca99b360e47958b134b7ccfea67470e,,"Update Version program
+
+Addresses #104",False
+https://github.com/sormuras/bach/commit/aca2d5a4bab1c2e7db2e334416f9082997d06663,,"Remove Property type and support of `src/project-info.java.properties`
+
+Closes #104",True
+https://github.com/sormuras/bach/commit/4f6e6a16fd1a59de2761174f2cf8b65908a4259c,,"Generate JShell scripts for Maven-related commands
+
+Closes #102",True
+https://github.com/sormuras/bach/commit/8aa77324f1c537f90bb8c79b6273e58c886ca291,,Extend Configuration with Log property,False
+https://github.com/sormuras/bach/commit/c2fbbf3223a378cd3fdb5adc0a0d3345cfed87d5,,Use new deploy output directories,False
+https://github.com/sormuras/bach/commit/33abe0c9ed8161a7737e2a7d8e1d0a94153992cf,,"Add ""tool"" action to Bach.java's main program",True
+https://github.com/sormuras/bach/commit/168ea2397ea9847a821868ee1cb8f1133096a5d4,,Support @arguments file,True
+https://github.com/sormuras/bach/commit/d4010e41ded633dcf00c8e388e6a6641c9cf703e,,Move tool launcher,True
+https://github.com/sormuras/bach/commit/b0d1331ee8961be7ba242a45368e5bee800d2806,,Replace Deployment by optional group property in Project,True

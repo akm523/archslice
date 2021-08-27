@@ -1,0 +1,2299 @@
+https://github.com/Azure/azure-sdk-for-java/commit/5f35ba801a1ac2532e9244fb4a26c5de182fe689,,"Refactor new client libraries to ship with full Java module support (#5181)
+
+* Very early stages of introducing module-info.java files. Code does not compile and tests do not pass.
+
+* Making more modules progress
+
+* A bunch more work on modules. Now it is failing on my machine with the groovy-eclipse-compiler not recognizing '--module-version' option.
+
+* Skip groovy tests and fix a few other JDK 9 related issues
+
+* Add module-info.java
+
+* Update azure-core module-info.java to export to storage modules
+
+* revert storage blob pom file
+
+* Spock and groovy tests for storage
+
+* Fix test failures
+
+* Fix storage tests
+
+* Updates for java8
+
+* Fix groovy tests after rebase
+
+* Add module-info.java to new packages
+
+* Add module-info.java to core management
+
+* Fix checkstyle and spotbugs
+
+* Update module-info after rebase
+
+* Fix RestProxyXMLTests
+
+* Address PR comments
+
+* Remove empty packages from module info
+
+* Update storage imports for new package
+
+* Change profile name from java9plus to java-lts to match CI pipeline names
+
+* Remove core test package from javadoc reports",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/e1183cdbffcba5e230785d79175ce46222e54f8b,,"Remove Event Hubs logic from ReactorSession. Fix NullPointerException (#5452)
+
+* Adding EventHubReactorSession that implements EventHubSession.
+
+* Use EventHubReactorSession in Connection.
+
+* Fix NullPointerExceptions in SessionHandler and the occasional one in super.onUnhandled.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/27bfe5de3197352f0877ccfea33c4d6c90345738,,Adding annotation @ServiceClient to Storage Blob,True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/78401b122bf01abf37e434df647e705a34368cc0,,Adding annotarion @ServiceClient to Storage-File,True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/b7ee401c476b0d6b5b3ffc0e1162e3f5368594aa,,Adding annotation @ServiceClient to Storage-Queue,True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/6b8e163374c172e860ba0b87e82c267b4642a3ef,,"Changes RequestRetryOptions Default Timeout (#5401)
+
+* Changed default retry timeout and extended test jitter bounds to fix transient tests
+
+* Extending retry bounds more",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/18b89f5357b33f4b4f6a4464cb276c3e4b154f55,,fix after impl renaming. Set new class name for  ServiceClient,False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/1d192b6231ca33b0e72a78f6e4ac37969d9f9663,,"Replace EventDataUtil and ManagementResponseMapper with MessageSerializer. Add EventHubClient.getEventHubName (#5474)
+
+* Add MessageSerializer interface.
+
+* Update documentation in EventData.
+
+* Rename EventDataUtil -> EventHubMessageSerializer.
+
+* Exposing EventHubClient.getEventHubName() as public.
+
+* Remove ManagementResponseMapper and consolidate into MessageSerializer.
+
+* Removing static public method from EventHubMessageSerializer.
+
+* Fix build breaks when passing MessageSerializer to EventHubAsyncProducer.
+
+* Adding tests for EventHubMessageSerializer. Fixing NullPointerException.
+
+* Move MessageSerializer into azure-core-amqp.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/b200de98fb927f7cfd411e917f05bbadc250f308,,Remove VoidResponse (#5477),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/7f8293bc22c3173975f6446891329acc567b646c,,"Migration of azure-core-amqp implementation  (#5346)
+
+* Move Reactor handlers into azure-core-amqp.
+
+* Move ReactorDispatcher, AmqpErrorCode to azure-core-amqp.
+
+* Add correct requires in module-info.java.
+
+* Moving implementation specific classes to azure-core-amqp.
+
+* Move tests into azure-core-amqp.
+
+* Use Mockito instead of concrete class.
+
+* Rename host to hostname.
+
+* Fix usages of FQDN.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/0d4dc77e556b57c26b198f428dd491b53c3545bd,,Fix UnsupportedOperationException when Block download and add test,True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/866a178296c314ef61cbb78dad736cb9dbb97d1f,,Removed AccessTierOptional and AccessTierRequired and Tag related models (#5534),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/a913f0a23cc744b2b0bfc97e968fec91d9136d99,,"Convert credential scopes param to TokenRequest (#5492)
+
+* Convert credential scopes param to TokenRequest
+
+* Fix build errors in event hubs
+
+* Change .block() to StepVerifier
+
+* Fix tests
+
+* checkstyle .* imports",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/6ad4b27fec809696dbe802a9e2f6040e7a0e4350,,"Throw better exceptions in chained token credentials (#5487)
+
+* Throw better exceptions in chained token credentials
+
+* Fix checkstyle: line too long
+
+* Better error message in chained credential
+
+* Fix test after new error message",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/6e0594dc31ed5273e5b328c89ed92c6b64d05dd6,,"Move Specialized BlobClients to Specialized Package (#5399)
+
+* Clients and code samples for LeaseClients
+
+* Updated tests
+
+* Updating unit tests
+
+* Using builder pattern for LeaseClients
+
+* Fix unit tests
+
+* Cleaning up documentation
+
+* Fix linting issues and more unit tests
+
+* Some moving of clients
+
+* Moved test files into correct folder
+
+* Moved sub-blob clients to specialized namespace, added BlobBaseClients
+
+* Refactoring unit tests
+
+* More cleaning up
+
+* More cleaning up
+
+* Cleaning up linting issues
+
+* Addressing PR feedback
+
+* Cleaning up Spotbug and linting issues
+
+* Updated SpecializedBlobClientBuilder to be a full-fledged builder
+
+* Updating CPK variable name and moving specialized test classes to specialized package in test
+
+* Cleaning up tests and linting
+
+* Fix test order and added exception comment",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/e6cd2cdc79aeaa15a566f38e52f1a2c541e14ce3,,"Optimisation for RestProxy createResponse API. (#5435)
+
+* (Untested) Optimisation for RestProxy createResponse API.
+
+* Make the build happy
+
+* Introducing LambdaMetaFactory based response cache.
+
+* Making LambdaMetaFactory work for Java 9+
+
+* Taking care of concurrent map race
+
+* Using singleton MethodType & Signature, using specialized types in function interfaces, replacing Stream with basic loop.
+
+* Using singleton MethodHandles.Lookup, adding JMH benchmark for MetaFactory/Reflection
+
+* Accomodating removal of core VoidResponse
+
+* Adding bench mark for reflection non-cached case
+
+* address checkstyle violations in BenchMark tests",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/12777793b3f9ec524bd18d3045149bdf2e4eb4f4,,"Storage: update 2019 04 01 (#5568)
+
+* Storage: update 2019 04 01
+
+* Storage: update pom",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/a72d8649df97eb5ba17bc3175955998532790138,,Switching to caching based on reflection (#5576),True,,,,,,,,,,,,,,issue,
+https://github.com/Azure/azure-sdk-for-java/commit/c72fcf1dcd74668ff32b595d72a28de76a1fa5ad,,"Changing SettingFields from Enum to ExpandableStringEnum (#5552)
+
+* remove java code isImple check but move to suppression and add only check for public class for external Dependency check
+
+* change enum to ExpandableStringEnum
+
+* make it final",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/cb5bfe910c6b4fcbd96214ed2439f3c8cfeda21f,,"Generate Internal Use Only Models in Implementation Package (#5564)
+
+* Generating with response models in implementation
+
+* Cleaning up model move changes
+
+* Moved models to implementation.models
+
+* Fix import in unit test
+
+* Fix broken test",True,,,,,,,,,,,,,,issue,
+https://github.com/Azure/azure-sdk-for-java/commit/88b7fbcb75726c4ce6acb1fcba34f72f1c4fc48a,,OpenCensus Tracing Plugin Package Cleanup (#5288),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/ebb8d8c3e821ec93b3d36602149ff86113f585e6,,"Move implementation models to implementation.models for storage-file (#5566)
+
+* Move implementation models to implementation.models for storage-file
+
+* Merged in master
+
+* Add back custom deserializer
+
+* Add back package-info
+
+* Fix samples and test imports
+
+* Fixing a few more imports
+
+* Open implementation.models to Jackson databind and Azure Core
+
+* Move StorageError back to models
+
+* Move another class into models
+
+* Cleanup pom
+
+* Fix pom change
+
+* Suppress SpotBugs issue in codegen model",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/0c011dc1fc795bfe772017cd0074aa091ee25a43,,"Move Storage queue internal model types to implementation (#5457)
+
+* Move internal model types to implementation
+
+* Move more annotations out of implementation
+
+* Move GeoReplication to models (recursively)
+
+* Also enums
+
+* Regenerate
+
+* add missing package-info
+
+* Move implementation models to implementation.models
+
+* Updated pom and module-info",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/597f0660360688b179b32b623aafd7388380428c,,downloadToFile Max overload method rename (#5547),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/0dd99fee06bbc766c04fada1d8c0e13079e25f59,,"Update return type for download API (#5613)
+
+* Update return type for download API
+
+* Remove unused method
+
+* Fix unit test",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/89569cbf29385478ea309181aa07ba09aa4c371d,,"Enables ""EnableReceiverRuntimeMetric"" feature from Track 1 (#5575)
+
+* Add trackLastEnqueuedEventInformation.
+
+* Integrate EventHubConsumerOptions.trackLastEnqueuedInformation into creating consumer.
+
+* Update to EventHubConsumerOptions.trackLastEnqueuedEventProperties
+
+* Update EventHubConsumer.LastEnqueuedEventProperties as each event is received.
+
+* Add tests.
+
+* Make LastEnqueuedEventProperties immutable.
+
+* Use AtomicReference in EventHubAsyncConsumer.
+
+* Throw exception if EventPosition.enqueuedDateTime could not be parsed.
+
+* Fixing log information in EventHubAsyncProducer.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/88115a55ab6368e2373d8465d9eebba89ae92ca6,,Renamed setTier to setAccessTier (#5619),False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/532dfa8711114280c7e311e68d41c2590303edd7,,"Added ParallelTransferOptions to buffered upload, upload from file and download to file methods (#5631)",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/8abbb78a25518308f4a44cd8df40f315ab4740d3,,"Removes Metadata Class from Azure Blobs (#5627)
+
+* Removed Metadata class in favor of Map
+
+* Cleanup unit tests
+
+* Fixed Metadata unit tests
+
+* Fix additional unit tests and typo
+
+* Changes to fix pipeline issues
+
+* More unit test and linting fixes
+
+* Fix for Mockito mocking",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/06e58a516ccb93390c94cbd47210e96f93ff7ed0,,"Update storage APIs based on review feedback (#5644)
+
+* Update storage APIs based on review feedback",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/e300dd83fdc6be5c774e2f6cd526e1662657126b,,Change URL Getters to String in Storage (#5648),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/bb8c64330304034052c48f0aefe22cf270408fcc,,move upload any methods from BlockBlobclient to BlobClient,True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/b6ad3283c6d301386d54515de9b7b694cc51f657,,"OkHttp: consistent with netty - don't send null header values, support subscription disposal (#5557)",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/fe03e64f3557711a634f2e0070554945c6a812fe,,"update getSetting (#5649)
+
+* update getSetting
+
+* based on feedback
+
+* resolve a few bugs
+
+* Update sdk/appconfiguration/azure-data-appconfiguration/src/main/java/com/azure/data/appconfiguration/ConfigurationAsyncClient.java
+
+Co-Authored-By: Alan Zimmer <48699787+alzimmermsft@users.noreply.github.com>
+
+* Update sdk/appconfiguration/azure-data-appconfiguration/src/main/java/com/azure/data/appconfiguration/ConfigurationAsyncClient.java
+
+Co-Authored-By: Alan Zimmer <48699787+alzimmermsft@users.noreply.github.com>
+
+* javadoc",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/74fcc08e4515115f0e12052547ee4de53257b37e,,Doc update tracing (#5632),True,,,,,,,,,,,,,,issue,
+https://github.com/Azure/azure-sdk-for-java/commit/2d0cd4760e0fba50b80ead1d309a930cdf5d5f4f,,API review changes. (#5681),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/1b56126cbc27bb14d555ab3a66c6f6192fe93f4f,,"Core crypto support in kv (#5659)
+
+Core Cryptography KV API Implementation",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/be73f7e8d62ac91a4c8aab6abb120afe6d441c4a,,"Removed SASTokenCredential and SASTokenCredentialPolicy (#5680)
+
+* Removed SASTokenCredential and SASTokenCredentialPolicy
+
+* Attempt to fix unit tests
+
+* Make SasTokenCredential and SasTokenCredentialPolicy an implementation class
+
+* Suppress checkstyle",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/eebd2a18bb44c5477989a46240cb0f1754f34bcd,,"Adds support for proxies in Event Hubs (#5621)
+
+* Add WebSocketsProxyConnectionHandler.
+
+* Update ReactorHandlerProvider to connect proxy.
+
+* Add Objects.requiresNotNull check.
+
+* Integration web proxy handler in ReactorConnection.
+
+* Fix API for MockReactorHandlerProvider.
+
+* Adding tests for WebSocketsProxyConnectionHandler.
+
+* Use logger.throw
+
+* Adding tests for ReactorHandlerProvider.
+
+* Adding documentation to WebSocketsProxyConnectionHandler. Using SystemDefaults when a proxy should be used.
+
+* Asserting UserAgent string is in connection properties.
+
+* Adding simple proxy for integration tests.
+
+* Update IntegrationTestBase to getProxyConfiguration from configuration.
+
+* Add ProxyIntegrationTest.
+
+* Add ProxyReceiveTest.
+
+* Handling PROTON_IO errors.
+
+* Add integration tests for proxy configuration.
+
+* Cleaning up simple proxy.
+
+* Ignore tests until simple proxy is fixed.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/de86f3dd938d0258ef7a824495d28c19e8ff6950,,Move the datalake error models to implementation model (#5695),False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/97b7af2de27e2944994bf84c02e68093a2da3540,,"Remove SAS Generation Methods from Clients (#5617)
+
+* Remove SAS generation methods from Azure Blob clients
+
+* Add some resource type logic to BlobServiceSASSignatureValues
+
+* Fix failing test
+
+* Removed SAS token methods in Queue clients
+
+* Fixing some more tests
+
+* Fix Javadoc links
+
+* Fixing linting issues, prototyping BlobSasConstructor
+
+* Minor refactoring in new class
+
+* Re-record failing tests
+
+* Fix checkstyle issues
+
+* Fix accidentally method name change
+
+* Fix javadoc issue
+
+* Cleanup checkstyle issues
+
+* Make SAS generation classes public API
+
+* Fixing checkstyle issues",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/3de3bbcc4c739fda240480a15e6f010cd9a7143b,,"azure-core JavaDocs and code snippet clean-up (#5653)
+
+* Updating comments in package-info.java.
+
+* Update documentation in Tracer and TracerProxy.
+
+* Add doc updates to Poller.
+
+* Making code snippets more reactor-ish.
+
+* Fix naming.
+
+* Fix typos.
+
+* Move ClientLogger java doc samples to correct location.
+
+* Update documentation in ClientLogger.
+
+* Fix codesnippet references.
+
+* Update package-info.java
+
+* Update parameter docs.",True,,,,,,,,,,,,,,has multiple local changes,
+https://github.com/Azure/azure-sdk-for-java/commit/3c371470fa100fcc3df5741fe65f4b21d5c7da0e,,Storage InputStream and OutputStream (#5455),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/9010b95d870d0a307ebc9c058f776d3b03c1146f,,"Renaming classes and methods as per naming guidelines (#5691)
+
+* Renaming classes and methods as per naming guidelines",True,,,,,,,,,,,,,,"has renaming, and class addition",
+https://github.com/Azure/azure-sdk-for-java/commit/1facbc0aac1691c82b09521c778b69df8642be87,,"Add remove to HttpHeaders (#5704)
+
+* Add remove to HttpHeaders
+
+* Use ConcurrentHashMap",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/aaae07998cfc813af0300db1191bc8c10a4a17ef,,"Fix proxy creation and proxy tests (#5709)
+
+* Re-write and document SimpleProxy.
+
+* Fix bug in reactor connection creation.
+
+* Update tests for new proxy interface.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/1fe9280fb3b2bace4954726a59e90a29f0f18ce8,,"Implements setReadOnly and clearReadOnly  (#5622)
+
+* lock unlock init
+
+* all works
+
+* update doc
+
+* tests passed and update json
+
+* map instead of flatMap, doOnSubscribe instead of doOnRequest
+
+* update javadoc
+
+* rearrange
+
+* remvoe method with ConfigurationSetting only
+
+* change back to flatMap from map
+
+* update record json files
+
+* refactor getSetting
+
+* refactor tests
+
+* remove unused import
+
+* remove nonexisit element
+
+* remvoe unused getLabel
+
+* update record json files
+
+* fix doc, space before (",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/5b80b66d489c6697798f43a156638407eb2c1906,,"Polling API update (#5091)
+
+Polling API update",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/1306f44d5125592847f6ceb41ebe6934a567aa6e,,"Remove configuration settings equals (#5546)
+
+* remove java code isImple check but move to suppression and add only check for public class for external Dependency check
+
+* remove equal overload
+
+* remove unused import
+
+* custom equal
+
+* checkstyle error
+
+* assertFalse with fail message
+
+* add missing import",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/c0c86cdd03b420c6d78d3158c3bf2abf61eff9fd,,Adding HttpLogOptions for Logging improvements (#5688),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/4fa9264ed4eeffee4d17db3b61397d23af07857d,,"Add Cognitive Service - Ink Recognizer Track 1 SDK (#5708)
+
+* before remove version
+
+* remove all version in order to stay same with all track 1 sdk",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/4bd6af986e6b53c8ebcfae97f9a0a3dd0125d621,,"Preview 4: Final API Review, Update java doc and sample (#5724)
+
+* save to remote branch and pull to personal computer
+
+* finallize API and DOC and SAMPLE
+
+* change options parameter name to selector
+
+* change api return type to String from URL
+
+* update json RECORD
+
+* Update sdk/appconfiguration/azure-data-appconfiguration/src/main/java/com/azure/data/appconfiguration/credentials/ConfigurationClientCredentials.java
+
+Co-Authored-By: Alan Zimmer <48699787+alzimmermsft@users.noreply.github.com>
+
+* Update sdk/appconfiguration/azure-data-appconfiguration/src/main/java/com/azure/data/appconfiguration/credentials/ConfigurationClientCredentials.java
+
+Co-Authored-By: Alan Zimmer <48699787+alzimmermsft@users.noreply.github.com>
+
+* update url
+
+* update return doc",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/a17ef91b518f0fb31039f0aad61d5d7a7beda0a8,,"Kv api update (#5701)
+
+KV Secret & Keys API updates",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/e54ecd867cbf09dc722491ffe6f138002321df2f,,"Kv certificate api update (#5720)
+
+KV Certificates API updates",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/4b812d99cd04af0e9409bc5a92698e0656b4008a,,"azure-core JavaDocs and code snippet clean-up (#5735)
+
+* Update documentation in Base64Url.
+
+* Update documentation in Configuration.
+
+* Update documentation for ExpandableStringEnum.
+
+* Update iterable stream documentation.
+
+* Fix exception messages.
+
+* Adding getGlobalConfiguration()
+
+* Update code snippets to be more reactive.
+
+* Update documentation in Page, PagedFlux, and PagedResponse.
+
+* Fixing PagedFlux and PagedFluxBase code snippets.
+
+* Update documentation for StreamResponse.
+
+* Fix broken link in PagedIterable.
+
+* Update documentation for SimpleResponse.
+
+* Update documentation in ResponseBase.
+
+* Fix potential NullPointerException in StreamResponse.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/6b69093345244917d06df92397f9fe186478847c,,Throw exception until hit the EOF (#5716),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/ff7146034cf101b33d3fe32f1f05ce598f27bd71,,Adding progress reporter to bulk operations,True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/3a4043d798d3cc533a17f2b6d963cb6b0319be2d,,update interface name from IProgressReceiverto ProgressReceiver,False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/fec0fa1d35e7b13654815d927a338746e7582b9a,,Fixed the logic of throwing exception before hit the EOF (#5758),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/d9842183aa002724074bf3e171ea68ef35a97231,,"Batching in Azure Storage Blobs (#5734)
+
+* New PR for batching in another module
+
+* More documentation and code snippets
+
+* More code samples and documentation
+
+* More API and Javadoc cleanups
+
+* Test playback records and alignment with .NET naming
+
+* Updating POM versions and README documentation
+
+* Updating POM versions and README documentation
+
+* More tests and linting cleanup
+
+* Updating versions to use new Azure Core version
+
+* Fixing Javadoc issues and moving test files to correct folder
+
+* Update test playback record
+
+* Update parent pom version
+
+* More version updates
+
+* A few more version updates
+
+* Spotbug fixes",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/f9b688989c09882d43eb614e2c2eeaa0f6361951,,"[#5657] Include error message when checking for null using Objects.requireNonNull() (#5729)
+
+* Adds an error message whenever using `Objects.requireNonNull()` to indicate which param is not expected to be null, provides sufficient information to a user to fix the issue.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/671953884088881aa3aa4eaa778c80d8871ac9f5,,Storage block blob encryption (#5528),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/ca4d63fd5f5e5b75ded7cc7896d03de242e78e69,,"Updated Swagger Transform README (#5769)
+
+* Updated Swagger transform README and updated code correspondingly
+
+* Delete codegen file that no longer will be generated
+
+* Fix linting issues with codesnippet names",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/c2056e98de72f87372d1e83054ad19c0d054bcb5,,"update .credential(ConfigurationClientCredentials) (#5778)
+
+* update .credential(ConfigurationClientCredentials) to .credential(String connectionString)
+
+* replace credential() by using connectionString()
+
+* fix javadoc
+
+* Update sdk/appconfiguration/azure-data-appconfiguration/src/main/java/com/azure/data/appconfiguration/ConfigurationClientBuilder.java
+
+Co-Authored-By: Connie Yau <conniey@microsoft.com>
+
+* Update sdk/appconfiguration/azure-data-appconfiguration/src/main/java/com/azure/data/appconfiguration/ConfigurationClientBuilder.java
+
+Co-Authored-By: Connie Yau <conniey@microsoft.com>
+
+* add err to the IllegalArgumentException
+
+* update CHANGELOG",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/94f534f8b63a463e954b58243454c15b44221e72,,API changes for queue and file (#5776),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/787ce73c5fba72d660b00c8adafb70308d44564c,,"Disabling DTD (#5706)
+
+XML Serialization had security issues regarding DTD. Disabling those features which are not required.
+Fixes #4466 .",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/ab07394081a7a634f746ed349eff2214f201df7d,,"Upgrade versions of external dependencies (#5795)
+
+* Upgrade versions of external dependencies",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/a11d29c1800a85e5405d3b4ac19f525111860231,,"Align File Upload and Download Methods with Blobs (#5800)
+
+* Cleanup of download API
+
+* Updated all download methods and removed duplicative uploading methods
+
+* Change File upload to use InputStream to match Blob upload
+
+* Fix linting issues
+
+* Fix Java 8 compile issue",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/385970344a9bda7d134c6b0946ed1229769207eb,,preview 5 API review comments (#5798),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/f28315c621087b123ca6ca8ec441f56684b67f88,,"Remove FileProperty from API (#5818)
+
+* Hide FileProperty from public API
+
+* Regenerated using updated swagger",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/3b0bfa10b6e80230b5d3577bffaca3f2c7135dc5,,"Updates to Poller implementation. (#5799)
+
+* Make pollResponse thread-safe. And pass activationOperation back into pollOperation
+
+* Organise private fields.
+
+* Add Mockito dependency and fix PollerTests.
+
+* Fix opens dependency for Mockito in Java LTS
+
+* Use compareTo rather than .toNanos()",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/7da63b6374005efe6dadbfb4e46f956e64e535a0,,"Remove Builder Inheritence Structure (#5784)
+
+* Updated BlobClientBuilder
+
+* Updated blobs and blob encryption
+
+* Updated File builders
+
+* Updated Queue builders
+
+* Fix incorrect ConnectionString constant
+
+* Cleanup unused BaseBuilder
+
+* Fix linting and test issues
+
+* Replying to code cleanup comments",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/94345f068d5ffc68dae1482fee15f592985f0835,,"Cosmos: ChangeFeedProcessor hot-fixes (#5739)
+
+* Fix CFP load balancing bug when another host is added at a later time.
+Handle 429 exceptions in the processing of the feeds rather than risking restarting the respective worker.
+
+* Update hotfix version
+
+* Revert versions back to 3.3.0",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/36b007973e2a722c9acc3947859a92332b86fa7c,,"Renaming autogen models BlobProperties & BlobContainerProperties to BlobItemProperties & BlobContainerItemProperties, applying x-ms-client-name for etag property. (#5808)",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/0478750cd9ac2354992d5ed2cc7c1ae198e25e2f,,"Getting rid of ProxyPolicy, Enabling proxy credentials to be specified in HttpClient level (#5836)
+
+* Getting rid of ProxyPolicy, Enabling proxy credentails to be specified in HttpClient level and supporting raw HttpClient config
+
+* Fix OkHttpAsyncHttpClientBuilder javadoc
+
+* Addressing review comments [userName -> username], remove config function
+
+* Rename ProxyOptions::credentails -> ProxyOptions::setCredentails",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/1e7a5ffe8422700b4888662f74a83467861af89e,,"Move post processor to policy (#5655)
+
+* Merge from mainline. Throw StorageException instead of StorageErrorException
+
+* Remove the version thing
+
+* Fixing linting.
+
+* Addressed comments.
+
+* Maxresult changes
+
+* fix linting issue
+
+* Borrow etag from common constant
+
+* Revert ""Borrow etag from common constant""
+
+This reverts commit 85c72203428414574df87b7f229ea8052b666a25.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/22fc154ba75310966f2684772d36c2e2a3076034,,"Removing test entities classes from azure-core and moving into test directory (and into azure-core-test) (#5834)
+
+* Removing test entities classes from azure-core and moving into test directory (and into azure-core-test)
+
+* Do not worry about leaking implementation API out of azure-core-test
+
+* Fixing nit",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/3e03bf225024df000ac34902866e903c4de7f152,,"Add overload to deserialize headers case insensitively (#5844)
+
+* Add overload to deserialize headers case insensitively
+
+* Wrap deserialize in callable
+
+* Simplify header mapper creation
+
+* Spotbugs for setAccessible
+
+* Checkstyle",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/6e966b440e1f0fe2d01e87f9a0c167d2e44512e4,,"Return errors in Publisher's error channel for ConfigurationAsyncClient (#5837)
+
+* Return errors in Publisher's error channel for ConfigurationAsyncClient",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/20a67a72779f2db35068418407a3e5cf1ff0d1d6,,Azure-core API feedback (#5827),True,,,,,,,,,,,,,,"yes, api review",
+https://github.com/Azure/azure-sdk-for-java/commit/4bbc226a8a6ee8c06c5f7db6b36ff7a71f36bcf5,,"Ported NPE from v2 (#5804)
+
+* Ported Sams Club NPE from v2
+
+* Fixed query documents with aggregate test
+
+* Updated retrieved documents count
+
+* Updated document load time to be greater than or equal to",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/205b57e7c8061bb67cfa3192cb2f17d274b4a2ce,,"Reactor-Netty HttpClient changes (#5185)
+
+* Reactor Netty Milestone release changes
+
+* Updated Milestone version to RC version
+
+* Code review comments:
+1. Reverted the RC1 back to M3 version.
+2. Added constants for literal values in Configs.java
+3. Removed inputStream implementation from HttpResponse.java as its not required
+
+* Setting default connections to 1000, and fixed Exception handling by unwrapping exception
+
+* Unwrapping exception
+
+* Fixed validate failure by unwrapping exception
+
+* Fixed multi-master conflict resolution test
+
+* Unwrapping exceptions wherever possible to make sure we check on inner exception cause
+
+* Fixed compilation errors
+
+* Fixed doOnError in Store Client and Consistency Writer to handle unwrapped exceptions
+
+* Handling empty response from backend
+
+* Updating number of documents and collection throughput size
+
+* Updated Feed Response Validator for query metrics
+
+* Fixed query documents with aggregate test
+
+* Updated retrieved documents count
+
+* Updated getLogicalPlanBuildTime for query metrics validation
+
+* Unused imports",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/ebc55115d2f81e33812bfb251ecf3a5c47756bb9,,"Return errors in Publisher's error channel for CertificateAsyncClient (#5847)
+
+* Return errors in Publisher's error channel for ConfigurationAsyncClient
+
+* Fix checkstyle
+
+* Helper method for mono error
+
+* Use helper method for mono error
+
+* Remove unused imports
+
+* Propagate exceptions in error channel for CertificateAsyncClient
+
+* Fix checkstyle",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/4486ee01367850a4d96845886b58af4cedb63bff,,"Prepend Common Queue Classes with Queue (#5831)
+
+* Rename common Queue name classes to begin with Queue
+
+* Updated transforms to look for the right XML properties
+
+* Added transform to fix codegen
+
+* Renamed StorageException to QueueStorageException and update playback records",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/2e240f5fed5992d25af46ac999db7b25dcde1df3,,Renamed StorageException to FileStorageException and updated playback records (#5843),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/93513d2a8eb55e1ee9ce405cd6f122af885cca0c,,Added the ScrubEtagPolicy to encryption (#5865),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/b3ce006bf11c1f3ea87f1a017d9051dfd2d656c7,,"Fixed PR merge issues, and removed unused imports (#5862)
+
+Flaky test failures. merging this in.",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/b34346285f499d3e21c62c9b73bae936dc463364,,"Use mono error in KV Keys async clients (#5858)
+
+* Use mono error in KV Keys async clients
+
+* use mono error for SecretAsyncClient",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/c04df856f28e5637708a70d2446747976eec7dfc,,"Rename IpRanges to SasIpRanges, and move it to sas package (#5863)",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/d181b71725e90ad0fa118efc3d6d9d82385ff23d,,"poller upgrade (#5820)
+
+Poller API support return",True,,,,,,,,,,,,,,"yes, issue",
+https://github.com/Azure/azure-sdk-for-java/commit/22ad65dc720849293c3388eece887062089d9c9f,,"New API for forceCloseHandles (#5873)
+
+* New API for forceCloseHanldes
+
+* forceCloseHandle API change, new JavaDocs, and new unit tests
+
+* Use monoError and fix Javadoc code snippet issue",True,,,,,,,,,,,,,,issue,
+https://github.com/Azure/azure-sdk-for-java/commit/2e5601153386daf8b82a9dc630ad4dca6234040d,,"Use mono error in storage async clients (#5870)
+
+* Use mono error for storage async clients",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/a10103027e4fdbe620b6253b09fcf478893353b1,,"Delete SR Class (#5866)
+
+* Delete the SR class from Storage Common
+
+* Moving more constants out of public API
+
+* Moved constants in public API to local location
+
+* Fixed poms",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/4f464ac3f898dfec9f80f2fe922c31771791f6ba,,"Mapping function to convert from PagedFlux<T> to PagedFlux<S> (#5848)
+
+* Map functionality for PagedFlux
+
+* Refactor common code and update method name
+
+* Merge from master",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/e7fe4bba7b23dd6c39401d784978bcb874328d7d,,"Prepend Common Blob Classes with Blob (#5856)
+
+* Initial transition of common names
+
+* Updated to use new class names, renamed StorageException to BlobStorageException
+
+* Updated playback records
+
+* Fix playback records that failed
+
+* Fix playback record
+
+* Updating playback record again
+
+* Deleted merged class
+
+* Fix reference change
+
+* Update failing playback test and re-recorded",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/595d60beb3af251b6c2ce70863e9f2f8855c86b3,,Allow users to specify the Service Version to use when sending requests (#5782),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/33f496228cc24442e1a8e0aa3e9a5d36b3eba8e8,,Add default set of headers to be white listed for logging (#5893),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/8af64f4ad257e4e5cc6a21a3fb797d35bd19c18a,,Hook up FaultTolerantObject error handler,True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/67c3fc579a432912729f0b8544b8dade063f0149,,"Json deserializer Utility using jsonwrapper  (#5853)
+
+* jsonwrapper utility
+
+* surpress wornings, update module-info
+
+* remove unsued method
+
+* surpress wornings
+
+* surpress wornings
+
+* update module-info
+
+* surpress wornings
+
+* exclude SIC_INNER_SHOULD_BE_STATIC_ANON bug
+
+* code style fix in tests",True,,,,,,,,,,,,,,issue,
+https://github.com/Azure/azure-sdk-for-java/commit/e2a2ad88e6f6c9511ebd710a2622cb4626ac91c4,,"Properly Pass Service Version through Client Hierarchy (#5902)
+
+* Fix passing service version through the hierarchy
+
+* Fix edge cases
+
+* Changed instance method to static",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/67e055907835075f8056ded98a377dfec12dcbf6,,Rename queue functions (#5876),False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/6be1d48eab4dc5c3c77ccdfebe56d0ffea848239,,"Removed URL from public API (#5898)
+
+* Removed URL from public API
+
+* Fix checkstyle issue
+
+* Updated IllegalArgumentExceptions with a message",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/8cf736e7e8d9904ffb9336da1d14e6062a70a518,,"Address Identity API review (10/16) (#5903)
+
+* Move credentials to root package and rename device code parameters
+
+* Return expiresOn in DeviceCodeInfo
+
+* Rename TokenRequest to TokenRequestContext
+
+* Move tests to root package
+
+* Fix references to identity in other sdks
+
+* Checkstyle",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/01eaea96b074b2477e45bc87c564f0cc0e499bce,,"Fixes for ManagedIdentityCredential (#5897)
+
+* Avoid waiting 60 seconds for VirtualMachine MSI timeout
+
+* Checkstyle
+
+* Fix app service client id query parameter
+
+https://docs.microsoft.com/en-us/azure/app-service/overview-managed-identity#using-the-rest-protocol
+
+* Fix DefaultAzureCredential test",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/82232d6198b1d7ffebe18fde6a260382707c1be7,,"Specialized async clients with async errors (#5907)
+
+* Specialized async clients with async errors
+
+* Fix checkstyle",True,,,,,,,,,,,,,,issue,
+https://github.com/Azure/azure-sdk-for-java/commit/e7097d6ab7caa27cdbc03f2d8a67a9675b02ecae,,"preview 4 API review comments (#5859)
+
+* preview 4 API review comments",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/530bf6e17b673583689e5c9069553b96a1c7def0,,"Fix default cached account for SharedTokenCacheCredential (#5917)
+
+Approved by adpship.",True,,,,,,,,,,,,,,issue,
+https://github.com/Azure/azure-sdk-for-java/commit/509efbe0f25cb45f40d1e5c77d73bedc5386963a,,"Cleanup Batching Implementation (#5892)
+
+* Addressing most points on the issue
+
+* Using aggregate exception for batch operation failures
+
+* Renamed exception
+
+* Fix linting issue",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/3297e88f4ceaf4e9c0e76e132ed90a3303826602,,Fix logging to redact headers when empty allowedHeaderNames (#5905),True,,,,,,,,,,,,,,issue,
+https://github.com/Azure/azure-sdk-for-java/commit/063e398dc95b3485bb08d04aa40a37cfb61dbcc9,,"Update File SAS token generation to match languages. (#5919)
+
+* Updating File Service SAS with algorithm.
+
+* Adding javadoc and samples.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/0e0a36ec8755a61bff248629fe0d4449fbdef665,,"Update Queue SAS token generation to match languages. (#5915)
+
+* Update Queue SAS token generation to match languages.
+
+* Adding codesnippets.
+
+* Update QueueService with better docs and samples.",True,,,,,,,,,,,,,,issue,
+https://github.com/Azure/azure-sdk-for-java/commit/baabf02944545611be2acd5d204bbe72c3e60d36,,"Adding support for all connection string formats (#5924)
+
+* Adding support for all connection string formats
+
+* Adding unit tests for storage connection string parsing
+
+* Exporting connection string to other modules (java9), Removing Utility::parseConnectionString()",True,,,,,,,,,,,,,,issue,
+https://github.com/Azure/azure-sdk-for-java/commit/1f87e471d41753f17e47fd15f357d1ccc03c0796,,"Sas generation (#5908)
+
+* Update sas generation to be consistent with Go and .NET.
+
+* Updating documentation and adding snippets.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/3ab5ac02b75dc1fd3b2b16c13ba113396555aa75,,"Update Append, Block, and Page BlobItem Constructors (#5934)
+
+* Updated the Append, Block, and Page BlobItem classes to use constructors that didn't expose implementation
+
+* Fix linting issues and incorrect parameter passing
+
+* Clone byte array",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/94221c372ae0cbb4d6c510f05ef007462bbc3618,,"Support IP Based Endpoints and Changes serviceVersion Methods (#5914)
+
+* Added test for IP endpoint
+
+* Add support for IP based URLs and fix the service version passing and retrieving
+
+* Cleaned up some public API and added IP based URL support to Queues
+
+* Fixed unresolved merge conflicts and added playback records
+
+* Fixing linting issues and passing snapshots
+
+* Changes based on PR feedback
+
+* Fix SpotBugs issue
+
+* Suppress SpotBugs issue",True,,,,,,,,,,,,,,issue,
+https://github.com/Azure/azure-sdk-for-java/commit/c7a1c802d4379557773f2c3e0fa8a411f9fdfc0e,,"AzConfig fixes for Renaming, Exception Handling, Doc. Tests (#5900)
+
+* delete addSetting(ConfigurationSetting)
+
+* renaming asOfDateTime to acceptDateTime
+
+* renamig lock and unlock to readOnly
+
+* getSetting 304 will not throw
+
+* exception hierachi
+
+* correct checkstyle errors
+
+* reoreder
+
+* enable user-defined retry policy
+
+* update conditional getSetting() request and tests
+
+* refactor based on connie feedback
+
+* update test Records
+
+* user default getKey() test
+
+* after getKey() update record",True,,,,,,,,,,,,,,issue,
+https://github.com/Azure/azure-sdk-for-java/commit/f4922a40264e82480c8bcc2cdbe2e09253e60b00,,Remove internal use method under implementations. (#5940),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/5a2361a1fe7046d785fdb8a0793b9d27cf7ef8dc,,"Adds Poller support for BlobAsyncClient and BlobClient beginCopyFromUrl (#5826)
+
+* Add BlobCopyInfo.
+
+* Add support for beginCopyUrl using Poller.
+
+* Update BlobClientBase. to use Poller API.
+
+* Fix codesnippets.
+
+* Update documentation in FileCopyInfo.
+
+* Make BlobCopyInfo export the same fields as FileCopy.
+
+* Update FileAsyncClient to return custom statuses and end polling when there is an Error.
+
+* Update BlobAsyncClient to end polling when an error occurs.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/7441888afc390e48b50aa4ca4ac642f2a5fe2791,,"Added @JsonIgnore to getLogger in JsonSerializable (#5951)
+
+* Added jsonIgnore to logger of JsonSerializable
+
+* Updated version to 3.3.1",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/f815c6a1575d8662dff8715fe0ff265c93833021,,"Storage Blobs Extends and Uses RequestConditions (#5955)
+
+* Removed codegen AccessCondition classes for hand-written classes
+
+* Cleaning up linting and tests
+
+* Fix unit tests and BlobOutputStream implementation
+
+* Fixed invalid JavaDoc",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/f49d347fa856ecd1478e623bca6725cade2cfbc7,,Remove dependency on azure-core-test in code snippets (#5963),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/ab6bcf677a7d98349e52814b03bd322672165098,,"Log more error details in azure core (#5703)
+
+* Log more error details in azure core
+
+* Update the util pkg
+
+* Update sdk/core/azure-core/src/main/java/com/azure/core/implementation/SwaggerMethodParser.java
+
+Co-Authored-By: Srikanta <51379715+srnagar@users.noreply.github.com>
+
+* Addressed feedback
+
+* Update sdk/core/azure-core/src/main/java/com/azure/core/implementation/ResponseConstructorsCache.java
+
+Co-Authored-By: Connie Yau <conniey@microsoft.com>
+
+* Update sdk/core/azure-core/src/main/java/com/azure/core/http/policy/HostPolicy.java
+
+Co-Authored-By: Connie Yau <conniey@microsoft.com>
+
+* Added error details for remaining packages and addressed comments.
+
+* Fixed tests
+
+* Removed unused logging
+
+* Fix linting
+
+* Update sdk/core/azure-core/src/main/java/com/azure/core/implementation/serializer/HttpResponseHeaderDecoder.java
+
+Co-Authored-By: Connie Yau <conniey@microsoft.com>
+
+* Update sdk/core/azure-core/src/main/java/com/azure/core/implementation/ResponseConstructorsCache.java
+
+Co-Authored-By: Connie Yau <conniey@microsoft.com>
+
+* Address Connie's Comments.
+
+* Remove unnessary message
+
+* Revert changes
+
+* Update sdk/core/azure-core/src/main/java/com/azure/core/util/polling/Poller.java
+
+Co-Authored-By: Connie Yau <conniey@microsoft.com>
+
+* Rename exception variable.
+
+* Added placeholder.
+
+* Make changes
+
+* Remove imports
+
+* make changes to message
+
+* Update sdk/core/azure-core/src/main/java/com/azure/core/implementation/util/FluxUtil.java
+
+Co-Authored-By: Connie Yau <conniey@microsoft.com>
+
+* Address Connie's feedback
+
+* Fixed linting",True,,,,,,,,,,,,,,,only disconnection
+https://github.com/Azure/azure-sdk-for-java/commit/69453e72597d13e52396a340956023b527361e9c,,"Logging on Retry policy and Temporary add AZURE_LOG_LEVEL to 2 for investigating (#5573)
+
+* add logging to retry policy and temprary AZURE_LOG_LEVEL to 2 for an debugging 429 code
+
+* add duration info in log
+
+* remove HTTP request and responds log info
+
+* info to verbose",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/10257e58980f5ab3d4ac76e1105e2be29d4d482e,,"Fixes Swagger Generation Naming and Moves Properties Classes (#5961)
+
+* Update Swagger to generate with correct casing, removed blob prefix from BlobHttpHeaders, move properties classes into models
+
+* Suppress SpotBug issues with implementation classes",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/d15066baea45f059a47315c517a0d055dfefff14,,"Update Account SAS token generation to match languages.  (#5952)
+
+* Update AccountSasSignatureValues to match the others. Add snippets.
+
+* Fix uses in test for removed static method",True,,,,,,,,,,,,,,issue,
+https://github.com/Azure/azure-sdk-for-java/commit/c96e58a780d5ba2e6b7859316c1ffcccb86611cf,,Skip signalling if dequeuing job is in progress (#5981),False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/97bbe57ae6f7d5a3191e89665f15b37eb30636a0,,"Update Linting Supressions and Documentation Cleanup (#5974)
+
+* Removed linting suppressions, added documentation, and annotated fluent and immutable classes
+
+* Fix typo and few naming casings",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/9fedee1b97646750a82c441273052d3ad2f47a7d,,Support for mapping paged iterable from one type to another (#5982),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/b8206459115c469fae4a34a12d68213e31c260d9,,Optimizations for default block size on HTBB,True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/2eab1034f27b0baae21c8ca57a228d2cb2852678,,DataMigration: regenerate package-2018-07-15-preview (#5983),False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/d00df28ef10bb974ec9f490a9f8dc860f61c818f,,"Identity README and release docs (#5970)
+
+* Preview 4 change log
+
+* Add README and samples for user auth
+
+* Add 1.0.0 change log
+
+* Change date & Add known issues",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/126f19539f0d232ff1d6ce57bb1b34329f069324,,"Enable exponential backoff for retry policy in http pipeline (#5953)
+
+* Enable exponential backoff for retry policy in http pipeline
+
+* Fix checkstyle
+
+* minor refactoring
+
+* Update testcases
+
+* Update retry policy based on PR feedback
+
+* Fix javadoc",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/29edd5aaf81ea94ec1b986ccbdeed0f9fbefd134,,"Updating documentation in azure-core (#6011)
+
+* Update documentation in exceptions.
+
+* Update documentation in HTTP classes.
+
+* Update documentation in policies.
+
+* Adding headers to PagedFlux
+
+* Update documentation and snippets in PagedFluxBase.",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/b196a679458afc8fa72e8f39df2b94c8599f9784,,Added ability to not overwrite by default (#6014),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/e37d8a5f3e4a15c2f2ddf442ca66a18298aa322b,,"Added UTF-8 encoding for blob names in methods that are used to build… (#5943)
+
+* Added UTF-8 encoding for blob names in methods that are used to build blob clients or manipulate blobs. Also added documentation where blob names are part of the flow so that the user knows what is happening in case they are thinking of passing an already encoded name.
+
+* Added missing comments about encryption to the Javadoc of some classes. Removed the use of the Utility.urlEncoder() in a couple methods where it was not necessary and would actually cause double encoding.  Added one use of said method to BlobAsyncClient.
+
+* Changed a few couple Groovy tests that were failing because the expected session records did not account for the newly added encoding
+
+* Removed a call to Utility.urlEncode() in BLobContainerAsyncClient that would make blob URLs to be encoded twice.
+
+* Broke a couple lines in BlobBatch into two parts to comply with the code style guidelines.
+
+* Added missing space to a line in BlobBatch. It was flagged by the CI style checker.
+
+* Fixed an issue that made some test cases fail: blobName needs to be encoded when putting together the blobUrl that is passed as a a constructor argument for specialized blob clients. Added blobName decoding before encoding it so that if users pass encoded names we can properly deal with them; little to no overhead was added by this.
+
+* Made sure that blob names are decoded from UTF-8 before being returned by getters and modified certain builders to account for this. Added encoding for setting the blobName in BlobServiceSasSignatureValues. Modified and added tests to account for encoding and added the generated session records as well. Corrected a test that did not compile on BlockBlobAPITest.
+
+* Because we are doing encoding blob names implicitly, there is no point in telling the user we are doing this, so I removed parts of the Javadoc that referenced the fact. For the sake of clarity, I added the the Javadoc in blob name getters so that users know the returned blob name will always be decoded (it's possible they set an encoded name and expect to see the same value from the get method). Also added a clarification that states blob names must be encoded to UTF-8 to the Javadoc of methods that take blob URLs as an argument.
+
+* Made sure that the blobName used to generate a SAS signature is decoded. According to Rick Ley from the Storage team: ""storage account name and the resource name must be URL-decoded"".",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/6073879e308293a9f87efdf05a9f5bbabfbf7c34,,"Revert ""Optimizations for default block size on HTBB"" (#5997)
+
+This reverts commit b8206459115c469fae4a34a12d68213e31c260d9.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/bec6aee2a2da0f64f611543c7d2b17109207b818,,"Add Deserialized Headers to Download Returns (#5990)
+
+* Update Blobs download to return deserialized headers
+
+* Update Files download to return deserialized headers
+
+* Fix build and linting issue
+
+* Split response and reliable download into two classes
+
+* Fix linting issue, regenerated File swagger to move model class out of implementation
+
+* Updated tests to use deserialized headers and reverted accidental class renaming",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/c978dbcd535f8350cacacbf02e2186997d692dda,,"Kv api updates preivew5 (#5910)
+
+KV Keys and Secrets API updates",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/7b3e05d77c9acc5ba98e32d1ebdc6a8f5c0f402d,,Added allowed headers and queries (#6013),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/0f5e87fb37ec0b83519c4856e8dcbec7d5d1d463,,"Improve shared token cache lookup (#6018)
+
+* Fix shared token cache lookup
+
+* Consistent error message with .net
+
+* Better error messages",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/0961229a43a01dac16a96feeb5b382dfb44fb81b,,"Rename ReliableDownloadOptions and methods (#6037)
+
+* Fix up naming of ReliableDownloadOptions methods.
+* Renaming from ReliableDownloadOptions to DownloadRetryOptions",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/aa8ef0cae3632981836886e8711481a2f201da9b,,"Update the default block size for HTBB blobs (#6030)
+
+* Added upload optimization for HTBB
+
+* PR feedback
+
+* Fixed spotbugs issue
+
+* Dang Integers
+
+* Checkstyle
+
+* Fixed build error
+
+* Fixed merge
+
+* Fixed build
+
+* Fix build
+
+* PR feedback
+
+* Fixed javadoc code snippet
+
+* Fixed some ci stuff
+
+* Checkstyle fixes
+
+* Removed unused method
+
+* Checkstyle and spotbugs
+
+* Checkstyle",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/19f2c248107c3d5a63c4dad44e30ec852757d5de,,"Update Key Vault secrets documentation (#6052)
+
+* Update docs for secrets.
+
+* Remove nested subscribe.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/351f7487dd746299dd7a7beebc4bfbd13bf819b0,,"Improve uploadFromFile Performance (#6042)
+
+* Mockup for upload from file to use upload or stage blocks
+
+* Minor changes
+
+* Cleanup upload from file logic for full review
+
+* Fixed check being used
+
+* Cache SwaggerMethodParser for interface in private static
+
+* Remove unneccessary comment
+
+* Cleanup linting, reduce client retrieval
+
+* Fix more linting issues
+
+* Cleaned up docuementation and error returns
+
+* Updated tests, fixedNPE",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/26710f1431c5638c2bd012f7fd4960533c590693,,"Poller - Sync poller and State less asynchronous poller (a.k.a PollerFlux) (#5987)
+
+* protyping poller very early draft
+
+* some comment fixes
+
+* Update LongRunningOperation.java
+
+* Update LongRunningOperation.java
+
+* Stabilizing prtotype
+
+* adding some PollerFlux usecase code in comments
+
+* Simplifying API surface of SyncPoller
+
+* Update sdk/core/azure-core/src/main/java/com/azure/core/util/polling/AsyncPollResponse.java
+
+Co-Authored-By: Jonathan Giles <jonathan@jonathangiles.net>
+
+* Adding PollerTests
+
+* Incorporating PollerFlux|SyncPoller to storage and keyvault
+
+* Adding tests for sync-poller and nullcheck for activationOperation in DefaultSyncPoller
+
+* Adding JavaDocCodeSnippets for Poller
+
+* More javadoc for poller, better error handling
+
+* Making AsyncPollResponse::getRetryAfter package private.
+
+* Adding PollingContext for state-mgmt across chain of poll calls & future extensibility (including serialization of poller)
+
+* Updating KV certificateClient use poller with context
+
+* Adapting key-vault to new Poller
+
+* spotbug exclusion for incorrect flagging
+
+* Fixing couple of checkstyle errors in poller types
+
+* Update storage groovy tests to adapt to new poller
+
+* Addressing spotbugs issues in keyvault/storage due to poller adaption
+
+* Checkstyle fixes for code-snippet
+
+* KV Poller fixes
+
+* More checkstyle fixes in keyvault.
+
+* addressing review comments on: using FluxUtil.monoError, clone() to copy(), rename exception type and DefaultSyncPoller class level comment on threadsafty.
+
+* BlobAPITest:: Moving from sync to async client requires blocking on upload
+
+* Re-recording BlobAPI tests
+
+* PollerFlux::getBlockingPoller -> getSyncPoller
+
+* ensure to unguard if sdk implementer in-correctly throw from activation ops, using volatile response vars in PollingContext and javadoc improvments",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/2296ce2bf8e61ff835da31685baaf8ac3b35ef76,,"KV README + docs updates (#6061)
+
+KV Readme + Javadocs updates",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/4fd26082591f69637c581a9ee17f727f08e50892,,"Transactional md5 (#5947)
+
+* Added md5 parameters to all method signatures but one
+
+* Regenerated to add transactionalMd5 to upload
+
+* Build cleanup
+
+* Added tests
+
+* Added recordings and cleanup
+
+* Blob upload API change for checkpoint store
+
+* Fixed javadoc errors
+
+* Fixed eventhubs
+
+* Fixed broken test
+
+* Fixed checkstyle issue
+
+* Updated javadocs
+
+* Fixed javadocs
+
+* checkstyle
+
+* spotbugs
+
+* Removing unused imports",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/c5618083c4c41a43feca1baa15e6ced9c91f8019,,Rename file to file share (#6066),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/12ca5cd5359fb41d33b43e3206455471a7b10da8,,"Move SAS classes into SAS package (#6065)
+
+* Move SAS classes into SAS package
+
+* Better package-info comments
+
+* Export new packages",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/e0aebbf4d13c0f659f896d31fee8f96c5bc81403,,"Update functionality of EventHub*Producer (#6068)
+
+* Adding EventHubLinkProvider.
+
+* Adding test for EventHubLinkProvider
+
+* Using EventHubLinkProvider in EventHubClient.
+
+* Move partitionId out of EventHubProducerOptions and into BatchOptions.
+
+* Delete EventHubProducerOptions.
+
+* Update documentation for BatchOptions and SendOptions.
+
+* Update EventHubAsyncProducer to use new send method.
+
+* Fix build breaks in EventHubAsyncClient.
+
+* Begin fixing doc samples.
+
+* Fix IntegrationTestBase/EventData. Remove EventHubProducerOptionsTest.
+
+* Update SendOptions test.
+
+* Update BatchOption tests to take into consideration PartitionId.
+
+* Rename EventHubAsyncProducer -> EventHubAsyncProducerClient.
+
+* Rename EventHubProducer -> EventHubProducerClient.
+
+* Rename code snippets.
+
+* Add test for mutliple partitions.
+
+* Creating EventHubProducers with EventHubClientBuilder.
+
+* Adding service methods to EventHubProducerClient and EventHubAsyncProducerClient.
+
+* Add FQDN to Event Hub Producer",True,,,,,,,,,,,,,,yes,
+https://github.com/Azure/azure-sdk-for-java/commit/92e47623716bc7e4d823dee43e8d86badcfd1067,,"Prefetch Upload To Determine Code Path (#6060)
+
+* Initial design for upload any data size choosing between put blob and stage blocks
+
+* Updated unit tests and support for hot publishers
+
+* Code comments
+
+* Use group by to handle pathing
+
+* Use windowing to prefetch
+
+* Cache initial 4MB, updating unit tests
+
+* Use Flux.generate instead of iterable to allow the cached buffers to be garbage collected sooner
+
+* Make the Put Blob code path replayable by using Flux.fromIterable
+
+* Fix ByteBuffer to Buffer return issue when setting position
+
+* Address PR comments
+
+* Linting fix and changes based on review comments",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/074dd7a33f58ec02f84bfb6b94fa48529a6997ad,,"API changes based on AzConfig API review from board (#5978)
+
+* move ClientCredential and CredentialPolicy to implementation folder
+
+* rewording in ConfigurationClientBuilder
+
+* checkstyle rule and suppresion
+
+* add samples, renaming apis
+
+* update record json files
+
+* renaming listSettings to listConfigurationSettings and update json
+
+* remove suppression
+
+* updates API, README, SAMPLES, TESTS
+
+* update API and json
+
+* bringh back checkstyle suppression
+
+* based on Connie feedback
+
+* update readme
+
+* More explaination on Conditional Request
+
+* Update sdk/appconfiguration/azure-data-appconfiguration/README.md
+
+Co-Authored-By: Connie Yau <conniey@microsoft.com>
+
+* Update sdk/appconfiguration/azure-data-appconfiguration/README.md
+
+Co-Authored-By: Connie Yau <conniey@microsoft.com>
+
+* Update sdk/appconfiguration/azure-data-appconfiguration/src/main/java/com/azure/data/appconfiguration/ConfigurationClientBuilder.java
+
+Co-Authored-By: Connie Yau <conniey@microsoft.com>
+
+* based on connie latest feedback
+
+* forgot the add
+
+* update changelog, readme, ETag, Contributing section
+
+* fixes one more change and use 10/31 as release date",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/3ca013a5aac64abb8cd354dd67553f408c3cff88,,"EventHubConsumer updates (#6085)
+
+* Renaming EventHubConsumer -> EventHubConsumerClient.
+
+* Fix codesnippets.
+
+* (QIP)
+
+* Update PartitionContext.
+
+* Adding partition consumer.
+
+* Adding ability to create links for each consumer.
+
+* Fixing build break in EventHubClient.
+
+* Expose PartitionEvent when emitting events.
+
+* Add documentation.
+
+* Move default consumer group into EventHubClientBuilder. Add properties for creating consumer..
+
+* Adding ability to receive multiple partitions at once.
+
+* Remove partitionId from createConsumer. Fix build errors.
+
+* Fix test breaks.
+
+* Fix receive test breaks.
+
+* Removed overlapping options in EventHubConsumerOptions.
+
+* Fix tests.
+
+* Fix EventHubProcessorTest.
+
+* Fixing event hub consumer.
+
+* Fix EventHubConsumerTest.
+
+* Adding metadata tests.",True,,,,,,,,,,,,,,issue,
+https://github.com/Azure/azure-sdk-for-java/commit/d779cb8d0c926d1914db139340d4fe585395a756,,Rename file share related classes (#6091),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/38c6cf3435ebae52e290fa4c21bd0e113b5e3d03,,"Updates to event processor surface area for preview 5 (#6107)
+
+* Updates to event processor surface area for preview 5",True,,,,,,,,,,,,,,issue,
+https://github.com/Azure/azure-sdk-for-java/commit/83ccbfb4e835a6e331b33524e880eee8d572b5aa,,"Add EventHubConnection (#6125)
+
+* Rename EventHubConnection -> EventHubAmqpConnection.
+
+* Rename linkprovider -> connection.
+
+* Fix usage of EventHubConnection.
+
+* Expose way to share connection.
+
+* Move PartitionLoadBalancer and Manager into main package.
+
+* Make Partition classes package-private.
+
+* Removing unused code snippets in package-private class. Fixing code snippets.
+
+* Making methods in EHC package-private.
+
+* Move creation of connection out of eventhubconnection.
+
+* Fixing README.",True,,,,,,,,,,,,,,issue,
+https://github.com/Azure/azure-sdk-for-java/commit/446ecceddd3895a2fc37fbc2ed6c614b6e67c480,,Network: update 2019 09 (#6137),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/8cee5a3b85ebecff9f42d52ff409ee9e3c69a624,,"Kv cert api updates (#6136)
+
+KV Certificate API updates",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/ca30bd37d27d49a7174c3ece080972d98ac84106,,"Expose way to get EventHubConnection (#6138)
+
+* Expose way to create EventHubConnection.
+
+* Rename property to FullyQualifiedDomainName
+
+* Only checking for connectionString if shared connection is not used.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/c675b1d5d4cc6218c9d713b62d62bdad923cf228,,Added ADLS SDK (#6071),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/81b31684df3369b6a3d1b123f9a366907321623b,,"Download to file refactor (#6143)
+
+* Initial port
+
+* Updated samples to not break
+
+* Some cleanup and started on tests
+
+* All tests pass except for etag locking
+
+* Fixed etag test
+
+* Re-added rangeGetContentMd5
+
+* Cleanup
+
+* Updated changelog
+
+* Added some test annotations
+
+* Fixed build failure
+
+* PR feedback
+
+* Small cleanup
+
+* Spotbugs
+
+* PR feedback and checkstyle",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/b26d2b142eb39858d0b9a854b237130acf7451be,,"Override HttpHeaders toString to show in format key1=value1, key2=value2, ... (#5855)",True,,,,,,,,,,,,,,issue,
+https://github.com/Azure/azure-sdk-for-java/commit/54db9bd86f972a69f5b8e0740dc075d820df71f9,,Event Grid: update 2020 01 preview (#6162),False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/a08d971a493efb06777f4b9572cb836f61412185,,"Support Azurite and Test Simple Scenarios (#6156)
+
+* Update builders to handle IP style URLs properly
+
+* Simple tests using Azurite
+
+* Test playback records
+
+* Removed isIpUrl from BlobUrlParts
+
+* Updates to BlobUrlParts and fix to use case insentive check in playback framework
+
+* Updating playback records
+
+* Using pipeline policy to correct service response and updated playback record
+
+* Update playback records, record new file",True,,,,,,,,,,,,,,issue,
+https://github.com/Azure/azure-sdk-for-java/commit/dc6871308827177af1c342b245dd15338a4c00e5,,"Enabling ignored query tests. Ported Queryplan and OffsetLimit (#5365)
+
+* Enabling ignored query tests.
+
+* Porting query plan from v2
+
+* Fixing failing tests
+Disabling non value aggregates
+
+* Porting offset limit support from V2
+Adding test to drain all the documents (#257)
+
+* Fixing failing tests
+
+* Fixing failing tests",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/37851850be5d30db6f5601aedc331e06d8cc5b70,,"Cosmos: CFP fixes and port consistency policy bug fix (#6148)
+
+* ChangeFeedProcessor; fixes and extra logging related to the creations of the lease documents.
+* Port consistency policy bug fix (see https://github.com/Azure/azure-cosmosdb-java/pull/196)
+* Port test fixes (see https://github.com/Azure/azure-cosmosdb-java/pull/196)
+* Fix condition chek issue.",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/6a6d10208856e63e1731fb057a463b342e64d9c0,,"Build and module improvements (#6080)
+
+Build and modules cleanup.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/b283af2d4c228edc4aaa0d3bca12a3c35492538a,,ADLS Create Refactor (#6154),False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/d87ec689aec2c355e95a956affde786c14cb7d60,,Refactored ADLS set access control and added builders for different types (#6173),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/4607b63654e71939a7ef29f13a7da81d8a9a8ef0,,"A fix to call non-blocking closeAsync in finalize instead of the blocking close method. (#6177)
+
+And minor tweaks.",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/990ca20e351df56215d0c01a909e9aa3d4d12f95,,Adding support for creating reactor-netty-http client from an existing client (#6179),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/ed15a26a0a35d540e5fc20c02ced81a3645f5f68,,"Cosmos CFP: fix for race condition issue (#6205)
+
+ChangeFeedProcessor: fix a race condition issue where the lease has been updated while we are trying to write the current state such as check-pointing the continuation token.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/a0f34edb17d55021a6b052f2e3f963e1b2e2b216,,Updated Datalake versioning (#6210),False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/d55bea7610cd0ebd23f08ffb1fe027a7191426e5,,"User agent util and JUnit 5 fix for app config (#6213)
+
+* User agent util and JUnit 5 fix for app config
+
+* Missing override method
+
+* Fixing unit tests
+
+* Fix tests in event hubs
+
+* Address PR feedback
+
+* Use updated spotbugs rules before running spotbugs
+
+* False positive spotbugs suppression",True,,,,,,,,,,,,,,issue,
+https://github.com/Azure/azure-sdk-for-java/commit/5f4be48106c7c1d15b3f827d7d8d5e2b4f199a7e,,Hana On Azure: update 2017 11 preview (#6229),False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/174bb3ebbcb3050c25991ffeb27932f966c2d010,,"Update Datalake versions after release (#6226)
+
+* Update Datalake versions after release",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/cfb3fa0a2e8d15887564a4c2846dbe59b0c21a44,,Refactored accessconditions to request conditions in all code (#6200),False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/d78d92040d56462322cf849807eb885b72e950ca,,Added support for IP style endpoints in datalake (#6245),False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/a688ba98b60e2111a14a8c380068e7c7415e0159,,"Add toReactorContext to FluxUtil (#6129)
+
+* Prototype for toReactorContext
+
+* Removed redundant null check and moved tests from NettyFluxUtilTests to FluxUtilTests
+
+* Update tests to use JUnit 5 annotations",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/40bad2e8430504ffec8fe378ce1247f027b19e63,,Initial work for setting up opentelemetry package (#6131),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/8a8441b5f6522159bbc61d2ea01f2e6935e33e8a,,"EventHubProducerClient and  EventHubProducerAsyncClient supports send batch only (#6257)
+
+* EventHubProducer*Client supports send batch only
+
+* Update README
+
+* Refactor unit tests to access package-private send methods
+
+* Update README",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/efe1dfc3e9bd80f5321055eb984035e5e70d0347,,Network: update 2019 08 01 (#6278),False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/a04464988bd564be418329b6b729971f9f0a7705,,"Sql: update 2017 03 01 preview (#6276)
+
+* Sql: update 2017 03 01 preview
+
+* fix: compile error
+
+* fix: SensitivityLabelSource parse from id in https://github.com/Azure/azure-rest-api-specs/blob/de100e16eabbd5d41551cba8b1d8cd97f3701bf9/specification/sql/resource-manager/Microsoft.Sql/preview/2017-03-01-preview/SensitivityLabels.json#L284",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/92cbbd7e41117805511524c9834168307a122c2d,,"Fixes authorization when using client credentials. (#6275)
+
+* Adding environment variables to tests.yml
+
+* Adding test dependency on azure-identity.
+
+* Adding ability to create builder using credentials.
+
+* Fix AAD scope.
+
+* Update CBS node to also take scope in addition to the audience.
+
+* Adding test for CBS channel.
+
+* Add tests for AzureTokenManagerProvider.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/ec0280c195f327aab5aaa934c0cb77a07a7496e8,,Added ADLS test recordings for URl encoding and added small refactor changes (#6265),False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/7e24d60d96f0aabaf5bef940b77c8568ea8e8f2a,,"Updates the ClientLogger Logging Logic (#6218)
+
+* Updated ClientLogger to be more robust, added some simple unit tests
+
+* Updated ClientLogger to be more robust, added some simple unit tests
+
+* Add parameterized unit tests
+
+* Finalizing changes to the ClientLogger
+
+* Plug into the SLF4J defaults and fixed linting issue
+
+* Additional documentation on unit tests
+
+* Removed properties model and changes code flow to only pass primitive types
+
+* Remove unnecessary null check",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/610242363dff564917c1757b5afeacc5382b8629,,"Removes EventHubConsumerOptions.setIdentifier() (#6308)
+
+* Remove identifier from EventHubConsumerOptions.
+
+* Remove tests and uses of .setIdentifier()",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/d659300713d63cc57dc1ab9d9d82cdf65e8df396,,"Adding synchronous receive all and tests (#6258)
+
+* Add synchronous receive all.
+
+* Remove unneeded constructor.
+
+* Adding tests for EventHubConsumer.
+
+* Fix null reference when shared connection is used.
+
+* Add integration tests for concurrent receives.
+
+*  Adding integration tests for EventProducers.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/94e9371025b9438a8f4acad90ecda2a18a0451d2,,"5945 retrypolicy response headers (#6196)
+
+* Retry after header name to be used in RetryPolicy
+* Using RetryPolicyOptions  to collect header name for retry",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/0e57d5b2fa0a7d94381e71347bc8b994bef2824f,,"Change FullyQualifiedDomainName -> FullyQualifiedNamespace. (#6306)
+
+* Fix fullyQualifiedDomainName -> fullyQualifiedNamespace.
+
+* Fix README.",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/0d74505bfdcb2475828f54d99095b8b9f95de587,,"Cpk https enforce (#6328)
+
+* Enforce https when building a client with cpk
+
+* Remove unused imports
+
+* CI and PR feedback
+
+* Checkstyle
+
+* Removed outdated test",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/01f2a4b58da233491e223de644191e73a6a0e842,,remove range (#6329),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/a108606911c1d982190033eabdab6d4a238b4813,,"Rename BatchOptions -> CreateBatchOptions. And getRetryMode. (#6324)
+
+* Rename batchOptions -> CreateBatchOptions.
+
+* Update usage in README.
+
+* getRetryMode -> getMode
+
+* Make public properties.
+
+* Rename getEventData() -> getData().",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/659891bf3045db7f0e0225f40f3d04ec7f681aee,,Support custom application id in user agent telemetry policy  (#6249),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/29a99b57c40f934e1382303b7e964c9c7e79ed20,,"Rename ProxyConfiguration -> ProxyOptions (#6384)
+
+* Move ProxyConfiguration out of models class. It's not a model.
+
+* Rename ProxyConfiguration -> ProxyOptions.
+
+* Updating documentation.
+
+* Removing unused module.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/c6226066ba2cadec54487ab7c91a9c45ecb56892,,Moved Lease Client to specialized package (#6394),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/c4360f67b4445d2da3f79e48eb641a70ea9864a5,,"Doc updates (#6374)
+
+* Doc updates
+
+* doc updates
+
+* Update sdk/storage/azure-storage-blob-cryptography/src/main/java/com/azure/storage/blob/specialized/cryptography/EncryptedBlobClientBuilder.java
+
+Co-Authored-By: Alan Zimmer <48699787+alzimmermsft@users.noreply.github.com>
+
+* Update sdk/storage/azure-storage-blob/src/main/java/com/azure/storage/blob/ProgressReceiver.java
+
+Co-Authored-By: Alan Zimmer <48699787+alzimmermsft@users.noreply.github.com>
+
+* Update sdk/storage/azure-storage-blob/src/main/java/com/azure/storage/blob/ProgressReceiver.java
+
+Co-Authored-By: Alan Zimmer <48699787+alzimmermsft@users.noreply.github.com>
+
+* Checkstyle",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/e843d15ecbd2684571702180012e936c087540f9,,"EventHubConnection is internal (#6404)
+
+* Make EventHubConnection internal and update builder to share connection.
+
+* Adding code snippet for sharing the connection.
+
+* Adding java-docs.
+
+* Fix integration test.
+
+* Adding tests for a shared connection.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/033aaf06c137d9dcb9424b074f12ca02ffe6cb96,,"Refactor AesCbcHmacSha2 class #4870 (#6353)
+
+* Refactor AesCbcHmacSha2 class #4870
+
+* Switch to JUnit version 5 for unit tests #4955
+
+- fix spotbug error At AesCbcHmacSha2.java:[lines 160-181] RI_REDUNDANT_INTERFACES
+
+* Refactor AesCbcHmacSha2 class #4870
+
+- fix checkstyle errors
+
+* Refactor AesCbcHmacSha2 class #4870
+
+- fix javadoc errors
+
+* Refactor AesCbcHmacSha2 class #4870
+
+- fix checkstyle errors",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/dfc2b1577a96b871fdada5e20fdcea054ee32374,,"Event Hub Consumer overhaul (#6403)
+
+* Expose method to set receivePosition.
+
+* Fixing EventHubClient for no longer needing event position.
+
+* Remove unused EventHubClient.createConsumer().
+
+* Update consumer to not reopen links if an existing link exists.
+
+* Removing stateful receiving for sync consumer.
+
+* Clean up consumer when users finish fetching from the Flux.
+
+* Adding ReceiveOptions.
+
+* Remove EventHubConsumerOptions in favour of using ReceiverOptions.
+
+* Remove unused receiveAll test from consumer.
+
+* Fix javadoc samples.
+
+* Updating subscriber to queue one item.
+
+* receive -> receiveFromPartition.
+
+* Clean up synchronous receive.
+
+* Remove startingPosition from Partition consumer.
+
+* Disposing of timer when a task is complete.
+
+* Returns IterableStream<String>
+
+* Add service annotations to methods.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/779c2fba80437643d742edffee6d3aed791f4071,,"Change event processor handlers from function to consumer (#6427)
+
+* Change event processor handlers from function to consumer
+
+* Fix typo",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/a94e1d0f0e63f25e9fe78f8b366a80e67e0470c9,,"Updating credentials and EventData from review (#6429)
+
+* Rename EventHubSharedAccessKeyCredential -> EventHubSharedKeyCredential.
+
+* Update EventData from API review. Remove Comparable.
+
+* Making Context constructors package-private.
+
+* EventHubSharedCredential does not throw checked exceptions.
+
+* Move EventHubSharedKeyCredential to implementation package.
+
+* Update EventData ctor",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/d874cb0630f800ca096f65d0303bac9b2f173c32,,"Update Dependencies to Test Dependency (#6447)
+
+* Fix dependencies to be test dependencies
+
+* Update module-infos to no longer require com.azure.core.test",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/d4611905bbad58b8748d01805337ed587b8fae4d,,"[Event Hubs] Name updates for event processor types (#6446)
+
+* Update names based on API review - part 1
+
+* Fix documentation
+
+* Fix checkstyle
+
+* Update sdk/eventhubs/azure-messaging-eventhubs/src/main/java/com/azure/messaging/eventhubs/EventProcessorClient.java
+
+Co-Authored-By: Connie Yau <conniey@microsoft.com>
+
+* Update javadoc
+
+* Fix unit tests
+
+* Fix unit tests",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/cc792c551fbda64f6a7066f8f7410bb4a85a33d3,,"Naming and documentation updates EventData, EventDataBatch, Builder (#6449)
+
+* Update documentation and move package-private methods to bottom.
+
+* Update documentation and samples in EventHubClientBuilder.
+
+* Update getSize() -> getCount().
+
+* Update documentation for EventDataBatch.
+
+* Add -Client to the builder.
+
+* CreateBatchOptions no longer implements cloneable.
+
+* SendOptions no longer implements cloneable.
+
+* Remove clone tests.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/404929db82c865a14dde72b2a63c573628265c1c,,Update addLinks support for eventhubs in Java tracing package (#6320),False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/56169abeeb779e4414bb5374db54c7206a3a5539,,"Remove cloneable (#6453)
+
+* RetryOptions and RetryPolicy no longer implement cloneable.
+
+* Rename ErrorCondition and ErrorContext to Amqp.
+
+* Move ExceptionUtil into implementation class.",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/28f41bc0f6bb4dda4ccd259ae15904e4a2fca470,,"Renames for azure-core-amqp (#6452)
+
+* Update TransportType -> AmqpTransportType.
+
+* Rename RetryOptions, RetryPolicy -> Amqp
+
+* Update RetryMode -> AmqpRetryMode.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/7376ee2d49e5b3598a50d7469dcac36f43cd77b7,,Rename contentMD5 to contentMD5 in Datalake and Shares (#6467),False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/e296d01e7e9e39e0f700ec5200d07cb2f548e452,,Tracing Instrumentation in Batch send operations Eventhubs (#6364),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/2bb9180d9fe410b90a9008ffd61f95255b96794b,,Added abililty to set/get access policy for datalake (#6419),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/b7dc7a9c6bbca79b9e9e3b506cd4a63f7ac50fa6,,"More azure-core-amqp, Event Hubs renames (#6472)
+
+* Add Amqp to MessageConstant.
+
+* Update CBS -> ClaimsBasedSecurityNode
+
+* Update getCBSNode(); method.
+
+* Remove final from RetryPolicy.
+
+* Rename from getProperties() -> getEventHubProperties().
+
+* Exposing getMaxSizeInBytes.
+
+* Make fromOffset(bool) overload private.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/10b83d96627d317d2d8b5cf8cba648c75b6c81fb,,"EventHubConsumer updates (#6492)
+
+* Update receiveAll to ""startReadingAtEarliestEvent.""
+
+* Update code snippets.
+
+* Updating PartitionBasedLoadBalancer.
+
+* Update Hostname -> FullyQualifiedNamespace.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/085d24fa3d0402c159cbe5b5ec350dc830b26d09,,"Changes for UserAgentPolicy (#6407)
+
+* Updated UserAgentPolicy to remove parameter in new constructor and deprecated old constructor
+
+* Add support for context to override or append to the User-Agent header in an ad-hoc manor
+
+* Updating calls to modified constructor
+
+* Open com.azure.core to all unnamed
+
+* Update opens to work correctly
+
+* Manor -> Manner",True,,,,,,,,,,,,,,issue,
+https://github.com/Azure/azure-sdk-for-java/commit/90cd2ca6ca60c991276d5299bd8043a9f82e6866,,"Properly Redact Query String (#6522)
+
+* Update the query string parameters before logging
+
+* Simple unit test for validating query string logging",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/68f0113de8e604032521754f56f7c4e520f4a213,,Added https enforce for bearer token (#6520),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/3862907826475da55f34ad0913b35fee96180ea6,,"Customizing azure-core Http Header in RetryPolicy  #6217 (#6400)
+
+Allow customer headers in RequestIDPolicy and RetryPolicy",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/f49b969efb920ac61bd9d050cc962add4b5a6ef9,,"AAD Token support  (#6282)
+
+* Add TokenCredential support",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/8583d3e5503cfc08873911800ef4f50e3e851975,,"Remove scheduler from EventHubClientBuilder (#6526)
+
+* Remove scheduler from builder.
+
+* Fix scheduler invocation.
+
+* Dispose of Scheduler when we have closed the event hub connection.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/41bf01cc594585b8dd72bb6bfeba415d9d1abdb5,,"Update checkpoint store interface (#6510)
+
+* Update checkpoint store interface
+
+* Fix spotbugs
+
+* Address PR comments
+
+* Update samples
+
+* Refactor checkpoint store
+
+* Fix spotbugs",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/3cd81d51ffea2be3f044e312fcdd99e75e486e6c,,"azure-core-amqp: Consolidate getEndpointStates and naming changes. (#6523)
+
+* AmqpConnection implements AutoCloseable. Add getEndpointStates().
+
+* AmqpConnection/Link/Session. implements AutoCloseable. Add getEndpointStates().
+
+* CBSNode implements AutoCloseable.
+
+* Delete EndpointStateNotifier. Add ShutdownSignals to Connection.
+
+* Delete EndpointStateNotifierBase.
+
+*  Update parameter name for MessageConstant.fromValue
+
+* Move AmqpExceptionHandler into implementation class.
+
+* Update documentation in AmqpReceiveLink.
+
+* Update CBS -> Cbs.
+
+* Add AmqpEndpointStateUtil.
+
+* Fix ReactorConnection.
+
+* Fix try/catch IOException.
+
+* Closing ReactorReceiver on errors or closures in link.",True,,,,,,,,,,,,,,issue,
+https://github.com/Azure/azure-sdk-for-java/commit/81b99a5beba91325baa7fe443d56f6f0ca5ef2d4,,"Rollback RequestIDPolicy API to support custom header. (#6527)
+
+* Rollback RequestIDPolicy API to support custom header.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/747500f031dd598edfa346936e3150b6be39ec48,,"Add Iterable<T> overload for IterableStream<T> (#6534)
+
+* Add overload for Iterable.
+
+* Adding tests.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/7ade319c153bf464c7ea0419bcae16133863d339,,"Use `IterableStream<T>(Iterable)` ctor in EventHubProperties (#6539)
+
+* Using Iterable overload in EventHubProperties.
+
+* Adding package-private ctor for Scheduler.
+
+* Update Integration tests to use parallel scheduler.
+
+* Adding try/catch around producer credential integration tests.
+
+* Update EventHubProperties to throw if is negative.",True,,,,,,,,,,,,,,issue,
+https://github.com/Azure/azure-sdk-for-java/commit/b6cdec02ae8d14d96cd0251112d23b20ec3ef780,,Bug fixes for ownership claim (#6547),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/0bde96f71364d833a3c68dd193c592740e264f97,,"Update samples for new Event Hubs core classes (#6546)
+
+* Fix javadocs.
+
+* Update Metadata sample.
+
+* Update publishing and consuming samples.
+
+* Fixing documentation when publishing events.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/bdaa88998860365c2a8324422e9b6b998fdc29e8,,"Certificates api changes (#6309)
+
+certificate API review updates",True,,,,,,,,,,,,,,issue,
+https://github.com/Azure/azure-sdk-for-java/commit/00f94fc5a618f9e0d6250b9b05adc28648bba0d5,,"Hide secret info from log info (#6555)
+
+* Hide secret info from log info",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/63f047aca5fe1bff498cc1c2c0630b52072903d6,,SqlVirtualMachine: regenerate package-2017-03-preview (#6550),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/3703f176cf78bb90b5184609659a1bd8d2857a99,,"Event Hubs doc updates (#6571)
+
+* Update documentation for EventPosition and ReceiveOperation.
+
+* Update sendOptions.
+
+* Update docs in EventData.
+
+* Update PartitionProperties.
+
+* Update documentation on EventData.
+
+* Update javadoc snippets.
+
+* Fix documentation for EventHubProducer*Clients.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/ecb95ae7edcace9622e3eeaec6796c5691716048,,"[Event Hubs] Replace constant strings with resource strings #3923 (#6529)
+
+* [Event Hubs] Replace constant strings with resource strings #3923",True,,,,,,,,,,,,,,issue,
+https://github.com/Azure/azure-sdk-for-java/commit/f95c6a22d73bd1d73bdfe68850977a3229fe197e,,Fixed Datalake OAuth (#6603),False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/7fad541202d587b9b7638644d847312166e8d0a4,,"README - compilable code snippets  (#6609)
+
+* Use compilable code snippets in README
+
+* Update paths and line numbers
+
+* Add warning to ReadmeSamples.java and update storage blob batch snippets as well
+
+* Address PR comments
+
+* Update Identity samples
+
+* Remove unused file",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/523929b5aac5130a9b7601a5f9caedeb54075bf7,,Return an object for force close handles (#6622),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/f5c0ce088f6c51a6499aa15a22deb3ff4be21df5,,"Updates to HttpLoggingPolicy (#6614)
+
+* Updated HttpLoggingPolicy to clone passed HttpLogOptions, to log atomically, and to only log HttpHeaders when the environment logging level is set to verbose
+
+* Created new file for LogLevel enum, updated getEnvironmentLoggingLevel to prevent NPE
+
+* Changes based on PR comments, updated Javadocs and removed use of String.formats
+
+* Fixed should skip logging check",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/280d8caccc294db3dbca12487a1f54c7aec155eb,,"Certificates api consistency review updates (#6563)
+
+KV Certificates API alignment updates",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/8ea68152a223988c4a311bc8829fad927185d592,,Returned a close handles info object for directory close handles APIs (#6639),False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/e7e9202b2bee00b5947a2aac34622f41885b6f6f,,"Cosmos Issue #6240: Port read-my-writes fix from V4 (#6242)
+
+* Port from v4
+
+* Corrected package misspelling in log4j.properties and removed System.exit from Main.java
+
+* Responded to code review comments",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/962c0da2d4fc5724bb5db9f5659be88cb68c43d5,,"Cosmos Issue #6253: Port RntbdRequestTimer memory leak fix from V4 (#6254)
+
+* Port from v4
+
+* Corrected package misspelling in log4j.properties and removed System.exit from Main.java
+
+* Port from V4
+
+* Responded to code review comments
+
+* Reverting tests.yml file back to master",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/6819bcc81cd0e9bd3fb48d8ca2678dda381db046,,"Prevent HttpLoggingPolicy Consuming Body (#6638)
+
+* Prevent HttpLoggingPolicy from consuming request and response bodies
+
+* Updated tests to use named ClientLogger and updated tests to use a string converted to bytes
+
+* Fixing linting issues",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/5e37d79a78848e5c50462cf72535c69ad9ae55ef,,"Remove hard-coded version and name from clients (#6557)
+
+* Remove hard-coded version and name from clients",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/9c8ab0339cd1b0a6946e612b2af2531c6ff77e19,,"Kv keys updates (#6657)
+
+Kv Keys update",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/1f44a1b83df05e81550b50e1749fefad155259cb,,"Revert ""Remove hard-coded version and name from clients (#6557)"" (#6684)
+
+This reverts commit 5e37d79a78848e5c50462cf72535c69ad9ae55ef.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/a7775d60885dbdef4bb3a67e9945bc80b1bb6838,,Fixed issue where account SAS does not work on clients (#6601),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/da4c03fe488cc8a1b22e42c2782703a4c6b3101e,,Storage: regenerate package-2019-06 (#6597),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/e3f61b302c5aae1d9aa594a12ba928b6645284c8,,"CosmosDB: regenerate package-2019-08-preview (#6628)
+
+* CosmosDB: regenerate package-2019-08-preview
+
+* CosmosDB: regenerate package-2019-08-preview",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/6b85ab77ee5868458d877490ecc8bc4fa278e8eb,,Blob Sas (#6409),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/d8bb377b73ba5e442322c9354d9b25bdf12bddc7,,"Add Custom Header - In AddHeaderPolicy and RequestIDPolicy  (#6602)
+
+New AddHeadersFromContextPolicy to add multiple headers and values for those headers.
+Allowing override header name in RequestIdPolicy.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/ef8545d638546c378c41e396069e4a617434d59e,,"Queue, File and Datalake Sas (#6709)",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/87a453635191d636d38e678dbbc2c3098464ca3d,,Fixed parsing of consistency level string value from property bag (#6708),False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/ba76215c574a0bcf59be2356880fc173b400d1ee,,Clients fetches module name and version from property file (#6734),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/da4bd6d3c77eca1e7d8520f02c0598cee943ece2,,Added null value holder change (#6737),False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/e5c47e6e50ba3ee9043835f7c8c7c8e84aa19186,,"Enhance Blob Test Reliability (#6566)
+
+* Updating tests to enhance reliability",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/6d443fa96c3388e8ca697401e822f63491451aa0,,"AzConfig: User provided Customized Headers Policy  (#6544)
+
+Added support for user-provided customized headers",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/ba4770ce014fdbda642e2313b6321f76529b3dc4,,Added response decoder configuration to fix max header size issue (#6690),False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/0f2e88fdb13ab4432dfc366979504badb867e266,,Add eventhub properties to processing spans (#6768),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/2622d88cb7c970cc8ceeeecfbed17e22ed8f9554,,Added support for ADLS Error Mapping (#6753),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/01f4e8bf5695bcc6543236f5ee2919219cf65598,,Added overloads that do not overwrite by default (#6774),False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/9f9a4550225e95d7957c5dc0e723e18fc720ce3e,,"Setting selector filter  (#6693)
+
+Allowed user to define KeyFilter and LabelFilter",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/b52329adae30c514cc7ef1da129c4d3cf6aed065,,"Update qpid-proton-j-extensions dependency (#6743)
+
+* Update to qpid-proton-j-extensions 1.2.2
+
+* Update module info.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/7bec67b14925da98c2bce39763ead20d8c69a52d,,Add links on batch send operation in eventhubs (#6773),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/f637ad08af77b8b68bda63c078581edae2cf2cb3,,KeyVault Certificate client API review consistency update (#6823),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/756fc6c2f4b5a8310f2e9faba0b404e17a9fc03a,,"Configure single shot upload (#6950)
+
+* Added maximumSingleUploadSize option to ParallelTransferOptions. Started tests
+
+* Changelog
+
+* Added tests
+
+* Changelog update",False,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/cf32dc27d539c994fa748da7e4b0ccdc448f0d46,,"More Robust BlobBatch Implementation (#6882)
+
+* Added unit tests for single operation failing and submitting batch multiple times
+
+* More robust Blob Batch implementation
+
+* Additional comments and change to use monoError instead of Mono.error",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/71ff41aadf370ceb72e420e0db3113279fd8b0bd,,"Text analytics Preview 1  (#6161)
+
+Have a preview version of Text Analytics",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/6f3e5d91a8b1981aafc87bf2029fb3875bc88e1f,,"Updates Event Hubs samples (#6986)
+
+* Update ConsumeEvents sample.
+
+* Add producer samples for web sockets and proxy.
+
+* Add sample for publishing streams of events.
+
+* Rename EventProcessor -> EventProcessorClient.
+
+* Adding EPH sample.
+
+* Update READMEs. Remove dead links.",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/f37c90c7497b8df59064578eba15eeaa444b471b,,"Update error handling logic and add tests for EPC (#6978)
+
+* Update error handling logic and add tests for EPC
+
+* Fix unit tests
+
+* Add message to exceptions and make initial position exclusive
+
+* Revert changes to make event position exclusive",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/ded5633c5650f21421c263d308e3db4e754c24bc,,"Media Services: generate 2018 07 01 (#7053)
+
+* Media Services: generate 2018 07 01
+
+* feat: change version",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/bdee14e039a7d354d447fec38450efc5245d9152,,Added ability to overwrite for download to file (#6994),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/e6792e8558e0733e894b2ee9ffdefce50551f806,,Split Text Analytics to function based package private clients (#7050),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/918103c2324d308b6b957e83259195eee170e4e4,,"Unit tests for user error handler (#7048)
+
+* User error tests
+
+* Update unit tes
+
+* Use jdk 8 methods
+
+* Add unit tests",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/ef05815f7e45e5b2e7bed4d4bacd6da557286af8,,"Move version and product name from amqp to event hubs library (#7092)
+
+* Move version and product name from amqp to event hubs library
+
+* Update AMQP library pass user agent info from client library
+
+* Fix checkstyle",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/bb7f7df165f55e684e05ac414c11eff3c2135cbf,,"Added async samples and refactored sync samples (#7073)
+
+* add async samples and refactor sync samples",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/600994dd4b14736ad62b21a11a75fed01ea74179,,"AAD sample and README revised, and correct indentation (#7074)
+
+* revised aad sample and readme
+
+* indentation
+
+* add ReadmeSamples and update readme automatically
+
+* fixes spotbugs
+
+* try catch final revised",True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/794c146daaea500a2b7f2ad796ef7095ed5e884a,,BlobOutputStream using BufferedUpload (#7067),True,,,,,,,,,,,,,,,
+https://github.com/Azure/azure-sdk-for-java/commit/019f360731c6ba72e6a66ba89b7d7a9854b4ef87,,"Added a package for Java nio implementation (#7105)
+
+* Added a package for Java nio implementation
+
+* Corrected version number
+
+* cleanup
+
+* PR feedback
+
+* docsettings and empty class for compiling
+
+* Javadocs",True,,,,,,,,,,,,,,,

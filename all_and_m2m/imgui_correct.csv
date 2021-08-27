@@ -1,0 +1,50 @@
+https://github.com/kotlin-graphics/imgui/commit/6672b39e89f89a3b2f06ce547805825614a32734,,up,True
+https://github.com/kotlin-graphics/imgui/commit/e4f1fd43688b211d2156bb79e9b5f9df3a9f17da,,multi-project merged back,True
+https://github.com/kotlin-graphics/imgui/commit/4b34abf6e0b8f7f281cded894bbfffebf2c8bc54,,vk demo commented,True
+https://github.com/kotlin-graphics/imgui/commit/fc9aad3de12356c1e2c833045d9be0182af02c96,,"javafx still failing for kool dep, small changes in core",True
+https://github.com/kotlin-graphics/imgui/commit/75e5c608f16199cfb349b70b076f6d6cd06e30e3,,:construction:    Internal: Minor tidying/reordering of sections within ImGuiContext / window DC.,True
+https://github.com/kotlin-graphics/imgui/commit/fe05d100d6135efee0953b7998789334f583bd81,,:construction:     Internal: Storing flags for NextWindowData so that we can clear everything with a single write and remove dummy condition fields.,True
+https://github.com/kotlin-graphics/imgui/commit/716a6b13cc1853fe6e2facc36569391274cd4b26,,Fix DrawVert_Buffer.get,True
+https://github.com/kotlin-graphics/imgui/commit/bde4afc12ba492ea5a66b379b4248465edc76e65,,Update ImplJFX.kt,True
+https://github.com/kotlin-graphics/imgui/commit/56ed941b1f0f7850fb055cc5b5eb1ee00768657a,,:construction:  Renamed SetNextTreeNodeOpen() to SetNextItemOpen(). Refactored SetNextItemXXX stuff to match SetNextWindowXXX code closely.,True
+https://github.com/kotlin-graphics/imgui/commit/10ebe6c67e4e6ba6fed71cbb60b18eb2438d342a,,":construction:   Internal: Removed GetNextItemWidth(), relying on ItemAdd or NextItemData.ClearFlags() to clear the width data. Amend 5078fa2 and undo some of its effects of imgui_widgets.cpp",True
+https://github.com/kotlin-graphics/imgui/commit/9607020651e74a1bebe45457f3c922324fe270c3,,":construction:    Internal: Renamed fields + minor tweaks (probably shallow break stack-layout pr, sorry!)",True
+https://github.com/kotlin-graphics/imgui/commit/c67e85e4d91b32b0a0a00838dcdffd25556f5090,,":construction:     Fixed InputFloatX, SliderFloatX, DragFloatX functions erroneously reporting IsItemEdited() multiple times when the text input doesn't match the formatted output value (e.g. input ""1"" shows ""1.000""). It wasn't much of a problem because we typically use the return value instead of IsItemEdited() here. (#1875, #2034)",True
+https://github.com/kotlin-graphics/imgui/commit/785d186a98a41449b107fdac02b9d95854bd6148,,:construction:         Internals: Extracted some of the tab bar shrinking code into a ShrinkWidths() function so columns/table can use it.,True
+https://github.com/kotlin-graphics/imgui/commit/537378d17632fdcfe12648924b859eb9d791a1fa,,:construction:          Internal: CloseButton takes an upper-left corner + a size to be consistent with similar widgets.,True
+https://github.com/kotlin-graphics/imgui/commit/5f2573fa2f03b1d829d0d8711f76751fa610c021,,":construction:         Style: Added style.WindowMenuButtonPosition (left/right, defaults to ImGuiDir_Left) to move the collapsing/docking button to the other side of the title bar.",True
+https://github.com/kotlin-graphics/imgui/commit/39b55db11f3181df2d07feaf7646bfda95e1030b,,:construction:  Internal: Renamed InnerMainRect to InnerVisibleRect. Printing coordinates in Metrics window.,True
+https://github.com/kotlin-graphics/imgui/commit/370671093320b8ff9a583bfc7f105940170ced9f,,":construction:   CollapsingHeader: When a close button is enabled, better clip the label to avoid overlap. (#600)",False
+https://github.com/kotlin-graphics/imgui/commit/ccbbf105d15c7ea95934e2d3bb81bea8da34a6f4,,Add Minecraft Behaviors,True
+https://github.com/kotlin-graphics/imgui/commit/1d829ed04a1e2f980052fbd13ddf184d431d63c0,,":construction:      Examples/Backends: DirectX9/10/11/12, Vulkan, OpenGL3 (Desktop GL only): Added support for large meshes (64k+ vertices) with 16-bits indices, enable 'ImGuiBackendFlags_HasVtxOffset' config flag in back-end. (#2591)
+
++  Fixed imgui_impl_opengl3 broken in previous few commits. (#2591, #2593, #2594)",True
+https://github.com/kotlin-graphics/imgui/commit/65cf1fda31b98373854f9f07b7529ac9c2afe470,,:construction:       Renamed ImGuiBackendFlags_HasVtxOffset to ImGuiBackendFlags_RendererHasVtxOffset to match naming convention already used in viewport/docking branch. (#2591) + Fix OpenGL3 code missing flag.,True
+https://github.com/kotlin-graphics/imgui/commit/aee1e8da61a2b4e35af57e37b7e8dc687d22a26f,,:construction:        Internals: Window rectangles: Renaming of all rectangles toward their final form. Should be a no-op. Renamed GetWorkRectMax() to GetContentRegionMaxAbs(). Metrics shows SizeContents.,True
+https://github.com/kotlin-graphics/imgui/commit/e9744d92787f7fe7680b1b7ad9e38365cd561d12,,":construction:            ImDrawListSplitter: extracted out of ImDrawList. Down the line we may obsolete the ImDrawList functions and encourage users to store the splitter aside, in the meanwhile ImDrawList holds a splitter.
+
+                         (This will allow columns/table to recurse.)",True
+https://github.com/kotlin-graphics/imgui/commit/2b98b5daf5c5291004379c69949ee9c4a22d805d,,":construction:           Combo: Fixed rounding not applying with the ImGuiComboFlags_NoArrowButton flag. (#2606, #2607)",True
+https://github.com/kotlin-graphics/imgui/commit/8bd9dbc662e37b0a4f7f2a08a7d80954b172795d,,":construction:         Window rectangles: Changed WorkRect to cover the whole region including scrolling (toward obsolete ContentsRegionRect) + using full WindowPadding*1 padding.
+
+                      Tweaked InnerClipRect.
+                      TreeNode, CollapsingHeader: Fixed highlight frame not covering horizontal area fully when using horizontal scrolling. (#2211, #2579)
+                      TabBar: Fixed BeginTabBar() within a window with horizontal scrolling from creating a feedback loop with the horizontal contents size.
+                      Columns: Fixed Columns() within a window with horizontal scrolling from not covering the full horizontal area (previously only worked with an explicit contents size). (#125)
+                      Demo: Added demo code to test contentsrect/workrect",True
+https://github.com/kotlin-graphics/imgui/commit/59ce915b439b9c47cf71a88a99b27bcc6aae3a7e,,":construction:          Internals: Renamed SizeContents to ContentSize, SizeContentsExplicit to ContentSizeExplicit. Tweaked Metrics->Show Rectangles functionality.",True
+https://github.com/kotlin-graphics/imgui/commit/6f78e9e0a2ae65c37c0f3d96aba4bd5b6ad6cc6f,,":construction:       Made PushID() behave the same in 32-bit and 64-bit, by not padding the integer into a void*. (Also technically faster.)",True
+https://github.com/kotlin-graphics/imgui/commit/1dfe05e118e17f3c52cccd6315e057ec65e9e4e3,,":construction:      Log/Capture: Fixed BeginTabItem() label not being included in a text log/capture.
+
+                   Extracted tab rendering code into a RenderTextEllipsis() function.",True
+https://github.com/kotlin-graphics/imgui/commit/403681b19c43376919e447b356243f924ea2c16d,,"- fixed rects assignments + window childComparer now static
+- fixed tests",True
+https://github.com/kotlin-graphics/imgui/commit/efb27efad254d5f2eba1c17eda6474981ca443e8,,fixing travis build,True
+https://github.com/kotlin-graphics/imgui/commit/e77092bede9ef9a0080308cc6006d9a64e8c3373,,fixed tabBar flag dirtyness + small tweaks,True
+https://github.com/kotlin-graphics/imgui/commit/ad04ecb91787016a4b12dcbafd348fb9ccce36df,,fixed columns,True
+https://github.com/kotlin-graphics/imgui/commit/1f6322c13ab83f733ed45b15a70259ee3030899d,,fixed Documents (wrong hashing calculation),True
+https://github.com/kotlin-graphics/imgui/commit/f350319bd8e8283f125834b8ed42e62022625a42,,"[demo] implemented:
+- ""Filtered Text Input""
+- Password input",True
+https://github.com/kotlin-graphics/imgui/commit/1603d32f96c1a0a878651edf6aa170dd64a2c6ac,,columns broken,True
+https://github.com/kotlin-graphics/imgui/commit/8703b500fad9db518a87bbd02ad9323404afbb41,,fuck,True

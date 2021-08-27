@@ -1,0 +1,1574 @@
+https://github.com/robstoll/atrium/commit/80f5b6ad975f697b9eaa641f2538d37bf78db853,,"define module-info.java and include it into jars
+
+Unfortunately I cannot yet define module-info.java for all modules
+because some of them contain deprecated code which causes split
+packages.",True
+https://github.com/robstoll/atrium/commit/daee3861208a29cd676eae9bca28f284bbf54904,,"turn domain-api and domain-builders into modules
+
+- move deprecated ReporterBuilder from domain-builders to
+  domain-api-deprecated
+- fix spelling in package failurehandlers in domain-api
+- adjust requires in other modules",True
+https://github.com/robstoll/atrium/commit/e707f4066884465816516025b3b0e7408db58b8b,,move domain-robstoll into domain.robstoll package,False
+https://github.com/robstoll/atrium/commit/0f329340f87156f28e334db82c4663374a02aca3,,move domain-robstoll-lib into domain... package,True
+https://github.com/robstoll/atrium/commit/7f38c71d18b0985e18ce7c6077c568efbe665822,,"move deprecated core to own module
+
+Moreover:
+- remove core-api-late-binding
+- turn core-robstoll into module",True
+https://github.com/robstoll/atrium/commit/efb4900c4b0a6c92320101154a9f40a24bceaa5b,,use AssertImpl instead of AssertionBuilder in domain-robstoll,False
+https://github.com/robstoll/atrium/commit/4c911de2278d5f19185b67c2c04ba4793cc895ed,,use AssertImpl instead of AssertionBuilder in spec,False
+https://github.com/robstoll/atrium/commit/ffb4664054d25ca6b2d0096b118fe1b08048c933,,use AssertImpl instead of AssertionBuilder in assertions,False
+https://github.com/robstoll/atrium/commit/e9ba2a779fe0c5326206902f9dbb91441f85d003,,"update deprecations, use AssertImpl instead of AssertionGroup",False
+https://github.com/robstoll/atrium/commit/05625de073610441ef32f2cf9c5cbc36ace23236,,"turn AssertionBuilder and co. into interfaces
+
+We want to have interfaces for extension points thus:
+- rename AssertionBuilder to AssertionBuilderImpl and make it internal
+  - same for other builders
+  - in lieu thereof extract interfaces and name them as the builders
+    where named previously
+  - introduce top val assertionBuilder which return the implementation",True
+https://github.com/robstoll/atrium/commit/8bb0b53f7ebfaa8a544351820c7b333f26665d64,,"introduce common AssertionGroupBuilder interface
+
+The create methods should only expect numbers of assertions and not
+assertion group specific data. This way we can easily add more create
+overloads. Thus:
+- move name and subject to property in AssertionBuilder, or in other
+  words, turn property into function which expects name and subject",True
+https://github.com/robstoll/atrium/commit/e76cc44b719f4cdfa489717d586dfa062568a14e,,"turn ReporterBuilder into an interface
+
+Also the ReporterBuilder might be extended and thus we should use
+interfaces as extension points.",True
+https://github.com/robstoll/atrium/commit/8e796b386b6f5a20954f8014f5346526269f08f1,,"shortcut fun messageContains
+
+I am using `message { contains(...) }` most of the times when creating
+a sub assertion for a thrown Throwable and I guess others do it as well.
+Thus:
+- add a shortcut function
+- fix #16 -- spec will fail otherwise, we need to fix it ;)
+  => AssertionCollector has to call `assertions` on the collected
+     AssertionGroups (incl. nested)",False
+https://github.com/robstoll/atrium/commit/a1628aaadb7d30199a24d85ac6aef26ce4bbdcb1,,"use messageContains where appropriate
+
+- fix BigDecimalAssertionsSpec, at many places we assert that the
+  message contains subject, where subject refers to the message and no
+  to the subject of the assertion.",False
+https://github.com/robstoll/atrium/commit/c387ff060146c697d53bbe73d7b99ddf5ea554a8,,"include actual size in hasSize
+
+- adopt corresponding spec for Collection and Map
+- remove DescriptionCollectionAssertion.HAS_SIZE
+- introduce DescriptionMapAssertion (should have been done earlier)
+- adopt bc-test => forgiving test; hasSize uses subject now and does no
+  longer include `has size` but `-> size`
+- fixes #17",True
+https://github.com/robstoll/atrium/commit/2853b0698f8278d40651ecb293050088294a2d36,,"generalise collecting assertion and add to AssertImpl
+
+- turn AssertionCollector into two interfaces, separating the behaviour
+  => one throws and the other does not.
+  - introduce Services for both
+- introduce a service for collecting assertions not in the context of
+  explanation (basically what mapAssertion and collectionAssertion used)
+- add services to AssertImpl with `collector` as entry point",True
+https://github.com/robstoll/atrium/commit/f617ec027e92f59d3ec06e75f81f08a6d97c86bb,,"move AssertImpl to ch.tutteli.atrium.domain.builders
+
+since it does not only refer to classes involved in `creating` but also
+`assertions`, we should place it one level up",True
+https://github.com/robstoll/atrium/commit/74304b9dacf6f3183a25519a46ae6975050dfcbe,,"move internal AssertionBuilder classes to package impl
+
+This way they are really not available starting with jdk9",True
+https://github.com/robstoll/atrium/commit/7eeefa1a9a473cdb85aa0cded3b335f789a6083c,,"add KProperty free property feature assertions fun
+
+We should add an overload which expects name and a lambda which returns
+the value as we did for _returnValueOf (overload without KFunction).
+This way one can write some feature assertions in a subjectLess style
+(in explanation).",True
+https://github.com/robstoll/atrium/commit/68a5ac29ba632350421a0fd338ec2ff427383ceb,,"evaluate feature AssertionGroup subject lazily
+
+This way we can provide feature assertions which are subject less. For
+this to work we need to:
+- pass subject lazily to AssertionChecker
+- introduce a LazyRepresentation which is only evaluated during
+  reporting
+- add an overload to AssertionBuilder::feature with a subjectProvider
+    which in turn creates a LazyRepresentation
+  - do not evaluate subject in FeatureAssertionChecker but use the new
+    overload instead",True
+https://github.com/robstoll/atrium/commit/7897799f27dd81dd075c64dd7182648b53a6a06c,,"rename AssertionGroup.subject to representation
+
+Most of the time it is the subject but sometimes it is not. Thus better
+rename it to representation.
+
+- also rename BasicAssertionGroupBuilder::subject to representation
+- rename EmptyNameAndSubjectAssertionGroup to
+  EmptyNameAndRepresentationAssertionGroup
+- rename EmptyNameAndSubjectAssertionGroupBuilder to
+  EmptyNameAndRepresentationAssertionGroupBuilder",True
+https://github.com/robstoll/atrium/commit/d0080ac0d8407ea813f6bc966cfdc84345cd0a94,,"add feature functions with class reflection
+
+These overloads are not dependent of the subject in the context of
+explaining assertions; meaning the subject might not be defined but
+we can still get the name of a feature.",False
+https://github.com/robstoll/atrium/commit/52b6f1fcbd890890ddf368fe061ad520fde290d5,,"rename impl classes ...Object... to ...Values...
+
+- remove KDoc of SearchBehaviour in robstoll-lib
+- rename arg containsBuilder to builder",False
+https://github.com/robstoll/atrium/commit/d309e73bf76a3e877b03cb91a8900b2e2fdfe4e1,,"expect List instead of vararg for Charsequence contains values
+
+We should not expect array on domain level, that is a first commit in a
+series of commits",True
+https://github.com/robstoll/atrium/commit/c888b40fb5a76924dc494e41e3757ad9a0c6a7fb,,expect List instead of vararg for Iterable contains,False
+https://github.com/robstoll/atrium/commit/e0029607b588ed720c806f2022483579faf34d0e,,expect List instead of vararg for CoreFactory::newTranslator,True
+https://github.com/robstoll/atrium/commit/f8578788ea4f36329e527b316278765ffc61ae84,,"use varargsToList, glue resp. from kbox",True
+https://github.com/robstoll/atrium/commit/1350e4408b91f47b2939f350ea8f90678cbcc77a,,"introduce `in order only grouped`
+
+- add possibility for values (entries will follow)
+- write spec
+
+not addressed yet:
+- Windows problematic with: order vs. Order
+- mix values and entries: grouped...(Values(1,2), Entries(...))",True
+https://github.com/robstoll/atrium/commit/dd02028d112234bef57c05005a3c3b27442b4b1b,,remove deprecated functions from cc-infix-en_GB,True
+https://github.com/robstoll/atrium/commit/28c70a01fd6aee09a2e6c60efaade14a5d0e82a6,,"remove deprecated functions from cc-en_GB
+
+Keep BooleanSpec even tough there is not a special boolean function
+anymore. I think it is a good thing to have a spec for this basic
+assertion which might be quite common. Even better, add it to infix as
+well.",True
+https://github.com/robstoll/atrium/commit/565d8dc73c18d4cecde650ee907cb9669af2261a,,rename methodObjects to parameterObjects,False
+https://github.com/robstoll/atrium/commit/1e1dc78c3cef97be83be710533e3673fe2a9c760,,"add module-info.java and remove dependency to domain-api-deprecated
+
+- en_GB api modules should not have any deprecated dependencies thus
+  remove dependency to domain-api-deprecated
+- add module-info.java to be JDK9 ready",True
+https://github.com/robstoll/atrium/commit/0bddd04951408c530e867a4c31e5fd5ccced0c81,,"move Impl classes to own package (which is not exported)
+
+furthermore:
+- do not use nameContainsNotFun in spec
+- use Assert instead of AssertPlant in nameContainsNotFun.kt",True
+https://github.com/robstoll/atrium/commit/ac32851e43fc37097d7fa39890a9b17bda7de00f,,"put helper keywords and param objects in different packages
+
+Some of them have the same name but only differ in case which makes
+problems on systems with a case insensitive file system (e.g. Windows).
+Thus:
+- move helperKeywords to package keywords
+- deprecate keywords in cc-infix-en_UK",True
+https://github.com/robstoll/atrium/commit/50bbb06f10da986f56c240604a741d95faa627a6,,"add bundle for en_GB incl. module-info.java
+
+Moreover,
+- extend SmokeSpec so that it covers custom assertion functions, once
+  with and once without i18n support, also AssertImpl should be in use",True
+https://github.com/robstoll/atrium/commit/d58e0e597c5d57b19705103e794b8a40a03fcc26,,"move verbs to package verbs and add module-info.java
+
+We cannot add a module-info.java since `assert` as package name is not
+supported in Java (is a reserved keyword). Thus:
+- move Assert.kt etc. into package verbs
+- re-add Assert.kt in package assert etc but deprecated",True
+https://github.com/robstoll/atrium/commit/f5aac68791616ba5ad0b54f5ef40f572aaf94408,,"use cc-en_GB instead of cc-en_UK in atrium-spec
+
+used the following replacements:
+- search for : (import .*)en_UK(.*)
+   replace with: $1en_GB$2
+
+- search for: isTrue\(\)
+   replace with: toBe(true)
+
+- search for: isFalse\(\)
+   replace with: toBe(false)
+
+- search for: isNull\(\)
+   replace with: toBe(null)
+
+- search for: ((?:inAnyOrder\.(?:only\.)?)|(?:inOrder\.only\.))`object`
+   replace with: $1value
+
+- search for: ((?:inAnyOrder\.(?:only\.)?)|(?:inOrder\.only\.))objects
+   replace with: $1values",False
+https://github.com/robstoll/atrium/commit/40591e020d1ca6446b119acd966136a336b236ab,,"remove new functionality from deprecated en_UK APIs
+
+- remove all map assertion functions
+- remove iterable contains grouped
+- remove toBe(null) (only cc-en_UK)
+- remove messageContains",True
+https://github.com/robstoll/atrium/commit/75793462b92b152a44a8d5150799938f4af95003,,"rename isNotNull to notToBeNull
+
+- also rename isNotNull in specs
+- adjust nullable types example in README.md",True
+https://github.com/robstoll/atrium/commit/fa32b9d4b652363424d1bb1ea0c95ab48597ab21,,"move ..CheckerOptionImpl to package impl in API cc-de_CH
+
+This way it resembles the structure of cc-en_GB and cc-infix-en_GB.
+Does not matter that cc-de_CH cannot yet specify a module-info.java",True
+https://github.com/robstoll/atrium/commit/61e5703457af6f6edc4683dfc84f386529eaca11,,move ReporterBuilder..OptionImpl to package impl,True
+https://github.com/robstoll/atrium/commit/227ca45128749566b6a3c2c364a424b7c531d894,,use ReporterFactory in atrium-verbs,True
+https://github.com/robstoll/atrium/commit/8a8e37981bc324da924b9d7fe431e46db2ae804b,,"move validateAtMost/ButAtMost from domain-api to domain-builders
+
+- remove export for package basic.contains.builders from:
+  - module-info.java
+  - packages.md",True
+https://github.com/robstoll/atrium/commit/87337943d1360fa7e7382c32fa8f43e35b575cae,,"introduce atrium-verbs-internal
+
+- shall define assert, expect as we use it in most tests
+- get rid of atriumVerbs spread all over the place
+- adjust imports in specs",True
+https://github.com/robstoll/atrium/commit/664b2f48a8dfb322984be9c4ab46fed6dea29ee8,,include verbs in bundles,True
+https://github.com/robstoll/atrium/commit/8f85d492a9b78dbca10a494cb46a516949ebfd05,,"add overload for property/returnValueOf for class reference
+
+We want to provide assertion function writers the possibility to use
+the overload which expects a class reference instead of a
+bounded reference from the API. Most users will be familiar with the API
+but not so much with the domain level. Hence, it is better if we
+provide it in the API as well. Moreover, we should encourage users to
+use it in context of a CollectingAssertionPlant",True
+https://github.com/robstoll/atrium/commit/eed57a05433f82ff63ccbe56413c0a6839ddc23c,,"use cc-en_GB in domain-robstoll-lib
+
+We can use the API instead of AssertImpl which reads much nicer.
+AssertIMpl has its legitimation when it comes to calls from the API to
+the domain, but it's not worth to use its assertion functions otherwise.",True
+https://github.com/robstoll/atrium/commit/af79f40d45128c0be4aca382a4b55a99794bcfc1,,"introduce representationProvider to CommonFields
+
+This way we can better compose assertion functions since the
+representation does not always have to be the subject
+
+- add overloads with representationProvider to FeatureAssertions
+  - change order of arguments, name should be last in order that one can
+    define an assertionCreator, otherwise we always run into overload
+    resolution ambiguities
+- add extension function evalOnce for `() -> T` which caches the return
+  value
+- add extension function toSubjectProvider to BaseAssertionPlant",True
+https://github.com/robstoll/atrium/commit/c34a1a238e9e03dfdfc5b87eb1735180c48cde64,,"allow translatable for property feature assertions
+
+We already use a translatable but hide if from the API and turn String
+into an Untranslatable. One should be able to use a Translatable for
+property feature assertions. We can extend it to methods as well if we
+have the need, so far I see only the need for properties.",True
+https://github.com/robstoll/atrium/commit/0f415ee9003b76fa718c7acf3a3ba9cec6a887b8,,"allow custom subject for AssertionCollector
+
+This way it is easier to define custom feature assertions which involve
+a transformation. For instance, turn an Iterable into a List and make
+the assertion based on the List. So far we have created
+CollectingAssertionPlants on our own and have done more or less what
+the AssertionCollector is responsible for. Hence:
+- expect a subjectProvider instead of an AssertionPlant
+- still add an overload which expects plant and calls the other overload",True
+https://github.com/robstoll/atrium/commit/4c4236bdf09e619b6eb78bdcdb6f471329ba94f1,,"do not format invisible group as group but each member
+
+This is currently a bug and gets apparent when we have a summary group
+which consists of a single invisible group. If this group does not hold
+then each member in the invisible group is marked as failing even though
+some of the assertions might hold.
+Thus:
+- adjust documentation in AssertionFormatterController
+- adjust AssertionFormatterControllerImpl
+- write regression spec
+  - add newTextSummaryAssertionGroupFormatter to CoreFactory",True
+https://github.com/robstoll/atrium/commit/e48addf038a0a71441408395d7392fd75e8c7559,,"turn InvisibleAssertionGroup into an object
+
+I think it is no good idea to leave InvisibleAssertionGroupType
+extendable since we have to treat it specially in
+AssertionFormatterController. Thus:
+- turn InvisibleAssertionGroupType into an object
+- remove DefaultInvisibleAssertionGroupType
+- remove InvisibleAssertionGroupFormatter incl. Specs",True
+https://github.com/robstoll/atrium/commit/4c41cf22f41ab372fcc10bc4a20fd696f404fa22,,use cc-en_GB for InOrderOnlyGroupedValuesAssertionCreator,True
+https://github.com/robstoll/atrium/commit/784ebd6745d69360158ac10baeaa7fa021674159,,"introduce grouped entries
+
+We have only added grouped values so far but have forgotten to add
+grouped entries. We could mix values and entries but do not do it as we
+did not do it for other `entries` functions. Thus:
+- introduce parameter objects `Entry` and `Entries`
+- add new functionality to IterableContainsAssertions
+- copy spec for values and adopt to entries
+  - add use case for first-win strategy
+- copy value creator and adopt for entries (we will reduce
+  code duplication in next commit)
+
+Moreover:
+- rename paramObject to parameterObject
+- replace `the lambda function` with `The identification lambda`
+- rename InOrderOnlyGroupedValuesAssertionCreator::createEntryAssertion
+  to createSingleEntryAssertion",True
+https://github.com/robstoll/atrium/commit/81e1cb0933807958101ce331b8af9066cb0c2625,,"reduce code duplication `contains ... grouped`
+
+InOrderOnlyGroupedValuesAssertionCreator and
+InOrderOnlyGroupedEntriesAssertionCreator share most code, thus:
+- introduce base class InOrderOnlyGroupedAssertionCreator",True
+https://github.com/robstoll/atrium/commit/d1560c74e8e997172c0191e0f3d6744c9c52de5e,,"reduce code duplication between contains in order only and ... grouped
+
+We can share most of the logic, matching and creating an assertion in
+the case of a group with a single element is the same for
+`contains in order only grouped Values` and
+`contains in order only Values`. Thus:
+- move the common logic out into an interface InOrderOnlyMatcher
+  - move logic for value matching into InOrderOnlyValueMatcher
+  - move logic for entry matching into InOrderOnlyEntryMatcher
+- reuse new interface by the corresponding creators
+- rewrite InOrderOnlyGroupedAssertionCreator to use the template an
+  the matcher as well",True
+https://github.com/robstoll/atrium/commit/5ab1743a95a37a3113445ca4c7521966b680def2,,use provider + index instead of Iterator in createEntryAssertionTemplate,True
+https://github.com/robstoll/atrium/commit/e08ddb5da715bbaa89d269e553593ae3bb0ef670,,"remove non-nullable overloads in IterableContainsAssertions
+
+We can get rid off the duplication at this level. It is up to the API to
+decide whether nullable entries are treated differently or not. On the
+domain level it is sufficient to implement a function which supports
+nullable entries.
+
+Moreover:
+- turn valuesInOrderOnlyGrouped and entriesInOrderOnlyGrouped into a
+  function which operates on `Iterable<E?>`",True
+https://github.com/robstoll/atrium/commit/63ad07bdd89edc996a0a673134a2dabc8b61bbf3,,add API fun for grouped nullable entries,True
+https://github.com/robstoll/atrium/commit/5e23ef364fd28663e4c07c2752ff78ea46975ef4,,"distinguish nullable in `contains...grouped`
+
+- introduce suptypes of `Group`
+  - `GroupWithoutNullableEntries` and `GroupWithNullableEntries`
+  - use them in the APIs => introduce NullableValue/Entries
+- adopt the same for infix API, meaning, introduce NullableValue/Entries",True
+https://github.com/robstoll/atrium/commit/2a2432b19e93c527fd9e071352938aed24698730,,"distinguish (non-)nullable in shortcut fun for contains assertions
+
+A second fix for #20",False
+https://github.com/robstoll/atrium/commit/e2fbc89f58056b7d49321cf1f4ec962aaddddd93,,"move contains in any order only nullable spec to specific spec
+
+The nullable version has to fulfill the same spec as the non-nullable
+version + a few more specs. Thus:
+- move contains in any order only entries from IterableContainsNullSpec
+  to IterableContainsInAnyOrderEntriesSpec
+- use asIterable() instead of `as Iterable`",True
+https://github.com/robstoll/atrium/commit/118664f3a976412b1990654588b319e3e69f3ae7,,"move contains in order only nullable spec to specific spec
+
+The nullable version has to fulfill the same spec as the non-nullable
+version + a few more specs. Thus:
+- move contains in order only entries from IterableContainsNullSpec
+  to IterableContainsInOrderEntriesSpec
+- harmonize the naming in the specs, use containsPair,
+  containsNullablePair, containsShortcutPair, ...",False
+https://github.com/robstoll/atrium/commit/258675651678436be5a008cb98041b787a174267,,"add spec for in any order at least 1 values
+
+- move specs from IterableContainsContainsNotAssertionSpec to
+  IterableContainsInAnyOrderAtLeast1ValuesSpec
+- delete IterableContainsContainsNotAssertionSpec, containsNot is
+  covered in IterableContainsNotAssertionsSpec",True
+https://github.com/robstoll/atrium/commit/4067f2b86e20b5014c3d905b447d92f341bdc676,,"add spec for in any order at least 1 entries
+
+- move specs from IterableContainsInAnyOrderEntriesAssertionsSpec to
+  IterableContainsInAnyOrderAtLeast1EntriesSpec
+- delete IterableContainsInAnyOrderEntriesAssertionsSpec",True
+https://github.com/robstoll/atrium/commit/c277b42d8506673cd52112f45f4d544bd38f595d,,introduce helper functions for nullable and nonNullableCases in Specs,False
+https://github.com/robstoll/atrium/commit/d9bcce163e96e5b2d268bc2125b0d650aadbbece,,"add spec for in any order only nullable values
+
+Moreover:
+- introduce nonNullableCases for Values (last commit was for entries
+  only)",False
+https://github.com/robstoll/atrium/commit/94a0d849d4bb68a5b68562805af8dc0728558a55,,"add spec for in order only nullable values
+
+Moreover:
+- simplify entrySuccess, no need for parameter actual",False
+https://github.com/robstoll/atrium/commit/b80801c50b02ee01d9a006ffe9dca4c7d97a3dd5,,"move grouped nullable entries spec to non-nullable spec
+
+...and remove IterableContainsInOrderOnlyGroupedNullableAssertionsSpec
+afterwards",True
+https://github.com/robstoll/atrium/commit/695f5a34403f6701240385634c6e0a255cee87ed,,"introduce contains in order only grouped nullable values
+
+So far we only supported nullable entries but not nullable values.
+- add assertions functions to API
+- complement IterableContainsInOrderOnlyGroupedValuesAssertionsSpec with
+  the nullable version",False
+https://github.com/robstoll/atrium/commit/c7ac0dab0ffde7b16e4196fceb466553c9c4e608,,"add suffix to containsNullable such as ...Values and ...Entries
+
+containsNullable is somewhat not complete; there is something missing
+(the noun). I think it is better if we add a suffix to make it clear
+otherwise one might come up with an interpretation like
+`... contains 1 or null` for `containsNullable(1)`
+=> containsNullableValue is clearer.
+
+For fluent APIS:
+- rename containsNullable to containsNullableValues/
+  containsNullableEntries
+- introduce singular form containsNullableValue/containsNullableEntry
+
+For infix API:
+- use NullableValue instead of containsNullable",False
+https://github.com/robstoll/atrium/commit/e16d28dc97644ac41c37e684115ff182ad9023c9,,introduce shortcut fun notToBeNullBut,False
+https://github.com/robstoll/atrium/commit/1213dfbf12e200e07c7f686a9a222c0ee33a8db0,,"introduce a PleaseUseReplacementException
+
+We currently throw an UnsupportedOperationException if one tries to use
+toBe in context of BigDecimal. It would be better if we indicate that
+this function cannot be used instead. So, instead of
+UnsupportedOperationException we use PleaseUseReplacementException
+to make it clearer",True
+https://github.com/robstoll/atrium/commit/7599193ad08c82f742e86c68780730b6b7837490,,"remove overload with Boolean from DescriptiveAssertionBuilder
+
+The reason is that I do not want to encourage the user to evaluate
+subject too early. However, there are cases where we already know if
+an assertion holds or not. Thus:
+- remove the overloads
+- add new overloads named createFailing/HoldingAssertion
+  - introduce true/falseProvider which is used internally",False
+https://github.com/robstoll/atrium/commit/1bb79f2bac0c4ebd82cbbccdd986e04c41da77d9,,"throw a PleaseUseReplacement for feature assertion with bounded ref.
+
+Let's enforce that a user has to use a class bounded reference, this way
+we help creating good APIs",False
+https://github.com/robstoll/atrium/commit/529f12c484fd21403d73b148554f720deb89b1e3,,"rewrite DescriptiveAssertionBuilder, add option for `holds()`
+
+`holds()`` is something which varies depending on the intended usage.
+For instance a constant holding assertion or a constant failing
+assertion etc. Thus it makes sense if we make it configurable.
+Moreover, we should be able to reuse it for descriptive.withFailureHint.
+Thus:
+- introduce interface DescriptiveAssertionHoldsOption
+- simplify DescriptiveAssertionBuilder move test options to
+  DescriptiveAssertionHoldsOption
+- introduce DescriptiveLikeAssertionBuilder which can be shared between
+  DescriptiveAssertionBuilder and extensions. This way also extensions
+  benefit from the defined default methods.
+- turn DescriptiveAssertionWithFailureHintOption and
+  DescriptiveAssertionWithFailureHintBuilder into an interface",True
+https://github.com/robstoll/atrium/commit/1c0beb700208139e79221967480440e62199de23,,"introduce interfaces for FixHoldsAssertionGroupBuilder
+
+          - move implementation classes to package impl and make them internal
+          - make FixHoldsAssertionGroupBuilder extend AssertionGroupBuilder (this
+            way we get all default methods). For this to work we have to:
+            - split up the FixHoldsAssertionGroupBuilder into two option steps
+              which define:
+              - holds
+              - type",True
+https://github.com/robstoll/atrium/commit/b1e1cadb8a7bc3108d21b6658c46226b6d09fc1c,,"rename fixHoldsGroup to fixedClaimGroup
+
+- rename also the associated classed and interfaces",True
+https://github.com/robstoll/atrium/commit/f0e5c38a92df0af709c4f168ef5a58278abbdef2,,"add overload without representation for fixedClaimGroup
+
+Better than users using RawString.Empty themselves",False
+https://github.com/robstoll/atrium/commit/822cf6fb9396d9379007ae1d7656a1503c30c9b6,,"harmonize AssertionBuilders and use build as final method
+
+- use only properties for the first step
+- introduce generic DescriptionAndRepresentation steps
+- introduce generic Assertion step",True
+https://github.com/robstoll/atrium/commit/d1aa2dba9f4d5ffb3d73e01ce7fa469686c8b69b,,"adapt DescriptiveAssertionBuilder to harmonized AssertionGroup Builders
+
+- introduce a final step with method build",True
+https://github.com/robstoll/atrium/commit/6b1b6087dc002ded69ea18c0ebb5f857bbf00808,,"adapt ExplanatoryAssertionBuilder to harmonized AssertionGroup Builders
+
+- introduce a final step with method build",True
+https://github.com/robstoll/atrium/commit/c5ae747694a9f2a95fa9145b35913f1feeb0a8c7,,"rename explanatoryGroup.withDefault to withDefaultType
+
+- same for withWarning -> withWarningType",False
+https://github.com/robstoll/atrium/commit/3e4ec1191ecb27a430f80c9591cdd3a565050805,,rename ExplanatoryAssertionGroupOption to ...GroupTypeOption,True
+https://github.com/robstoll/atrium/commit/6b48d8d3f6251f8a70d6678b273f99e7a3f595a9,,use AssertionBuilderImpl only in Companion object of interface,True
+https://github.com/robstoll/atrium/commit/48d8a99db79b1400e884fec5736af607e3a40b3e,,"move false/trueProvider to core
+
+- move them from DescriptiveAssertionHoldsOptionImpl to core
+- use it in DescriptiveAssertionWithFailureHintShowOptionImpl",True
+https://github.com/robstoll/atrium/commit/31458f5040a23129764230c2eb63af1e7e5ec89b,,"add overload for nullable representation to DescriptiveAssertionBuilder
+
+- use it where applicable",True
+https://github.com/robstoll/atrium/commit/16e090621353c8a9441082b54efc3f09fd4a6649,,prefix DescriptionAndRepresentation... with AssertionGroup,False
+https://github.com/robstoll/atrium/commit/4911e9c95c6f51f02e1e5ac2582b5f997f278e47,,"add overload for null and """" to AssertionGroup...RepresentationOption",True
+https://github.com/robstoll/atrium/commit/b9cac370eac501d31dd768f6a47dafefd90a2edf,,add shortcut fun createDescriptive to AssertionBuilder,True
+https://github.com/robstoll/atrium/commit/d4ea8f2a4af9f075e1ec8420a07abc52f02f293f,,group AssertionBuilder specific interfaces together in one file,True
+https://github.com/robstoll/atrium/commit/4956a398af4ce5ab692c02a985506f73d5131090,,update KDoc of the AssertionBuilders,False
+https://github.com/robstoll/atrium/commit/7666710135186b57cc0f4a8251866a1d4c610717,,rename ExplanatoryAssertionDescriptionOption to ...ExplanationOption,False
+https://github.com/robstoll/atrium/commit/ad7ea5678cc48657cb1310e1bee1aeb7e7375e17,,"show beginning of stacktrace as hint if wrong Exception was thrown
+
+Currently we show the message as hint, that's already great but it would
+be even better if we showed some lines of the stacktrace. This way we
+do not have to search but immediately see where the exception was thrown
+(unless it has a cause). Thus:
+- move failureHint after failingAssertion in
+  ExplanatoryFailureHandlerWithHint
+- add hint with stacktrace to ThrowableThrownFailureHandler
+- include check in spec that message and start of stacktrace are
+  included",True
+https://github.com/robstoll/atrium/commit/a05f7674fda9c1d156f83cfe33e2702e6c9b7694,,suffix withExplanatoryAssertion with s for overload with vararg,False
+https://github.com/robstoll/atrium/commit/7772df2722d4fc2020d49379ceb043a5c01a1e15,,"align ReporterBuilder with AssertionBuilders
+
+- use build as final method
+- introduce companion fun `create` in interface
+  - do not use Impl elsewhere
+- reduce code duplication in Impl, call other function instead of
+  duplicating logic
+- rename buildOnlyFailureReporter to onlyFailureReporter
+- rename buildCustomReporter to customReporter",True
+https://github.com/robstoll/atrium/commit/91172c4152bbef91a8c1c0cb105b6487a1a387cf,,deprecate toThrow() remove from cc-en_GB and cc-infix-en_GB,False
+https://github.com/robstoll/atrium/commit/fdb2046e2d6a15e2b88dcbd710578d5855caf9cc,,introduce `all` assertion fun for Iterable<T>,True
+https://github.com/robstoll/atrium/commit/5006d85838d9c9e40924062ca0eb88530de9292b,,"check there is at least one element for Iterable containsNot/none
+
+- add it as sub-assertion and use a summary group
+- adopt the specs accordingly",True
+https://github.com/robstoll/atrium/commit/8d7e1bbbca4fecbdf5bec57dc3f6e38bf39d747f,,return NotSearchBehaviour instead of InAnyOrderS... for containsNot,True
+https://github.com/robstoll/atrium/commit/f9e91dbc172f116db02d661187d5348d39582eac,,move containsEntriesFun.kt to iterable.contains,True
+https://github.com/robstoll/atrium/commit/ce10c1f9d96edb8af5dc178c59035ef5cbf7fc32,,remove duplicated createHasElementAssertion in iterableAssertions.kt,True
+https://github.com/robstoll/atrium/commit/d2fea2d7791adbd8ef023c326efc3ca2a6be3ca2,,"add spec for containsNot entries
+
+and rename IterableContainsNotAssertionsSpec to
+IterableContainsNotValuesAssertionsSpec",True
+https://github.com/robstoll/atrium/commit/96288009e751e76399797ff4fe8c2806b7f76247,,"include rootBulletPoint in Iterable contains spec
+
+A first step in preventing issues like #22",False
+https://github.com/robstoll/atrium/commit/1db1cd6a6df7d6cfb8fd67b06791b35337c6409f,,"turn multiple values in Iterable contains into sub-assertions
+
+- fixes #22
+- include rootBulletPoint also in CharSequence contains specs
+- improve DescriptionCharSequenceAssertion for ignoringCase
+- adjust bc-test, some tests will break since we adopted reporting, add
+  corresponding exclusions",True
+https://github.com/robstoll/atrium/commit/b938293bf57b553ba8f68431787f8a5471e3f366,,"move createAssertionGroupForSearchCriteriaAssertions up
+
+The implementation in ContainsObjectsAssertionCreator and
+InAnyOrderEntriesAssertionCreator is now the same, thus we can push it
+up to ContainsAssertionCreator and integrate it there into
+createAssertionGroup.",True
+https://github.com/robstoll/atrium/commit/da87cfa3b2c789d7e8ea630a3628afc80e28ed15,,remove usages of defaultTranslationOf,False
+https://github.com/robstoll/atrium/commit/e5ca5e864ea83c8f013002c6e064ce6ab9cab38c,,remove defaultTranslationOf from cc-en_GB and cc-infix-en_GB,False
+https://github.com/robstoll/atrium/commit/f28338b75aac887f4e1150db9ac923881e9e74ce,,suffix assertionCreator with OrNull in parameter objects,True
+https://github.com/robstoll/atrium/commit/905bffa50dfb871b449eb217cb688d5b7aa671d8,,"throw IllegalArg when searching for an empty String/CharSequence
+
+It does not make sense to search for an empty String/CharSequence.
+Besides, it results in an error because indexOf returns max index if one
+searches for an empty string beyond the max length of a string (strange
+behaviour but so what). Thus:
+- require a non-empty String and a non-empty CharSequence
+- write regression test
+  - add special case \0 to the spec
+  - complete spec with searching 'a' in 'aaaa' (to be sure that the
+    search actually goes forward)
+- fix CharSequenceAssertionsSpec, uses empty string for
+  containsDefaultTranslationOf
+  - accordingly, add exception to bc-test
+  - forgive also tests which throw an IllegalArgumentException
+- fixes #21",False
+https://github.com/robstoll/atrium/commit/4346f68cc9077d322559bda207c5d2bd65db9dac,,"mention `string matches regex` for CharSequence contains regex
+
+In 0.6.0 we used `contains ...`, we improved to `contains value...`
+by now but this is not enough for contains regex. Thus:
+- use `contains: string matching regex`
+- resolves #23",True
+https://github.com/robstoll/atrium/commit/dbb38adc720ffb150ed914cdecc2070c297844bc,,"suffix `isSame` and `isNotSame` with `As` => `isSameAs`
+
+Adopt the deprecation in cc-en_UK and cc-infix-en_UK",False
+https://github.com/robstoll/atrium/commit/4ac7d7862a090abd5de0e259337cdf9de0d98298,,"expect a subjectProvider for new...Plant in CoreFactory
+
+- change overloads for newReportingPlant, newReportingPlantNullable
+  and newCheckingPlant
+- adopt corresponding usages",True
+https://github.com/robstoll/atrium/commit/b32dfc8bfc220b113480d61abf00e6579a6c5274,,"make subjectProvider a property of BaseAssertionPlant
+
+I think it is beneficial if we do not have to make a copy of the
+subjectProvider to often. Instead we should reuse the same one, thus
+make it a field of BaseAssertionPlant
+
+- turn subjectProvider to public in CommonFields
+- implement subjectProvider in MutableListBasedAssertionPlant
+  - remove from CheckingAssertionPlantImpl and
+    CollectingAssertionPlantImpl
+- remove extension function toSubjectProvider (one can now use the
+  property)",True
+https://github.com/robstoll/atrium/commit/3efbefa30f081bf856c14b98e0defb440c8fe31c,,"update to kbox 0.9.0
+
+- replace usages of forThisAndForEachIn with forElementAndForEachIn",True
+https://github.com/robstoll/atrium/commit/f3077f5f283893d6530faf2f3b416d97f77773ff,,introduce changeSubject which allows to create a feature plant,True
+https://github.com/robstoll/atrium/commit/26f9648e32088625321e491b73179c0e76fd3db5,,use provide...with for core-/domain-robstoll in module-info.java,True
+https://github.com/robstoll/atrium/commit/4ef917f89ae9a3710a2fe926d8608659298aa01f,,"turn core-api into multi-platform
+
+- add common, jvm, js module for core-api
+  - remove existing module
+- move src to common as far as possible
+  - introduce polyfill for StringBuilder.appendln
+  - introduce polyfill for Locale
+  - introduce polyfill for Locale.getDefault
+  - introduce polyfill for String.format
+- use KClass instead of Class",True
+https://github.com/robstoll/atrium/commit/d1c40a392214022f3183e3e2df5f0ab410b929ad,,"turn System.properties and ServiceLoader into multi-platform
+
+We can narrow down what we really have to `expect` in API common. For
+instance, we can keep almost the same implementation for ReporterFactory
+if we create a polyfill for System.Properties.
+Hence:
+- introduce polyfills
+- move logic again from jvm to common
+- delete corresponding `actual` in jvm and js module",True
+https://github.com/robstoll/atrium/commit/641f49797e1c82f3a2effe10691df7cc69e63dd4,,"introduce an own Locale
+
+which uses null for script country and variant if undefined in contrast
+to java.util.Locale which uses an empty string.
+
+- introduce data class Locale
+- remove `expect Locale` in core-api-common and use data class instead
+- keep using java.util.Locale in:
+  - deprecated code
+  - specs
+  - introduce deprecated toAtriumLocale => adopt module-info.java
+- establish invariants for Locale, do not support ROOT
+  (as java.util.Locale does)
+  - remove PropertiesBasedTranslationSupplier::getNotForRoot and delete
+    implementation for `get` (keep it abstract)
+  - remove TranslationSupplierSpec, no longer required if there is no
+    ROOT
+  - adopt KDoc in TranslationSupplier and LocaleOrderDecider",True
+https://github.com/robstoll/atrium/commit/d4de47f15807b248e7deb6603f26b576f51888db,,"introduce ext String.format as replacement of String.Companion.format
+
+I think that is better for two reasons. 1) there is a bug in Kotlin,
+Intellij respectively which makes that extension functions of interface
+Companion are not suggested in code completion -> makes working with it
+cumbersome. 2) this way it is clearly distinguished from Java's
+String.format and we can restrict the actual interface to some basic
+functionality (JVM will provider richer functionality but this is then
+considered an implementation Detail).
+
+Moreover:
+- introduce an invariant for TranslatableWithArgs, check that arguments
+� are defined
+- expect a List instead of an Array in TranslatableWithArgs
+  - add overload for two arguments",True
+https://github.com/robstoll/atrium/commit/25772ef631101f550d6771aa473d491166803a64,,write KDoc for polyfills and rename loadService to loadSingleService,True
+https://github.com/robstoll/atrium/commit/b035ee8ab42b6063cbf8fad46a638591b25bfa67,,"move core-robstoll-lib jvm code to common
+
+There is only DetailedObjectFormatter which is platform specific. We
+can see a common pattern, JS does not support qualifiedName. Hence:
+- introduce KClass.fullName as quasi polyfill for qualifiedName
+  - export polyfills in api-core-jvm
+- introduce DetailedObjectFormatterCommon which implements most cases
+  (just Class cannot be formatted in common because it is JVM specific)",True
+https://github.com/robstoll/atrium/commit/178208ab37435b81e7376e85532bb0325ae69659,,"move core-robstoll jvm code to common
+
+CoreFactory::newPropertiesBasedTranslationSupplier shall only be
+available for JVM. It is currently not possible to define default
+methods on `expect` interfaces. Thus:
+- introduce CoreFactoryCommon, define all functions there
+  - we have to define default method for
+    newReportingPlantNullable overloads which make use of an optional
+    parameter still in CoreFactory to retain bbc",True
+https://github.com/robstoll/atrium/commit/7b53e596dd5211987dddc1ecca5c87f7d5ad3e41,,"fix getDefaultLocale() in JVM, should use toAtriumLocale
+
+Currently it just passes the value of java.util.Locale to Atrium's
+Locale which leads to errors since Atrium's Locale uses `null` instead
+of empty strings to represent an absent configuration.
+
+Moreover: so war we have used Class.name in all occasions in
+DetailedObjectFormatter. This due to the fact that Java's primitive
+`int` and the boxed type `Integer` are both represented as kotlin.Int
+I still think it is a good idea if one sees the difference but since we
+expect Any? for `format` we receive the boxed type in all cases. Hence
+we can also just show the kotlin type in such cases. Which leads to the
+following:
+- make fullName return String instead of String?
+- use qualifiedName if KClass is not a primitive type and use java.name
+  as backup if qualifiedName returns null (which is the case for
+  anonymous classes)
+  - add this use case to ObjectFormatterSpec",True
+https://github.com/robstoll/atrium/commit/16ad66f7535a937affc28f735aa090dd7a090d75,,"move translations...-jvm to ...-common
+
+with the exception of DescriptionBigDecimalAssertions. BigDecimal is
+Java specific and the corresponding assertion functions will not be
+available for other platforms (at least for now)",True
+https://github.com/robstoll/atrium/commit/12b1bf22e8cb7d1899adf31e73a59ac782794772,,use loadSingleService instead of SingleServiceLoader,True
+https://github.com/robstoll/atrium/commit/32ef5f234c604a7cef0bab0c6ae7dbb8eff2d306,,update KDoc reference to loadSingleService and not SingleServiceLoader,False
+https://github.com/robstoll/atrium/commit/6dd64bc078c975b54b65a2e7d8fdd7ea4aa48bca,,refer to loadSingleService instead of SingleServiceLoader in KDoc,False
+https://github.com/robstoll/atrium/commit/dfe84fb1225fd064f03652efec32420fc504da4c,,"move domain-builders jvm code to common
+
+- we cannot move where we needed JvmName, use `expect`/`actual` in those
+  cases => FeatureAssertionsBuilder and nullable.kt (also due to
+  features)
+- do not move BigDecimalAssertions as it's only applicable to JVM
+- introduce `expect` FloatingPointAssertionsBuilder and AssertImpl
+  because:
+  - JS does not need to provide toBeWithErrorTolerance for BigDecimal
+  - JS does not need to provide any BigDecimalAssertions
+  - keep toBeWithErrorTolerance for BigDecimal in JVM
+  - keep bigDecimal property in AssertImpl of JVM
+- introduce `expect` ReporterBuilderImpl because
+  withDefaultTranslationSupplier is platform specific
+- introduce `expect` ReporterBuilder, TranslationOption and
+  TextAssertionFormatterOption because JVM has to support deprecated
+  methods with java.util.Locale in addition
+  - introduce ...Common in such cases",True
+https://github.com/robstoll/atrium/commit/1d59cbd5cbd593f1e07d65e50ae06d3cf280ec2e,,remove unnecessary imports from AssertImpl,False
+https://github.com/robstoll/atrium/commit/7663620c9bf9b892c33f7196cc612501e9e8bdde,,"introduce JvmName for common modules.
+
+- refer to Kotlin's JvmName on the JVM platform
+- use a dummy implementation on JS platform
+- simplify domain-builders, move more code from jvm to common",True
+https://github.com/robstoll/atrium/commit/5c68de279ee082773ec3853049a3956e76911e5e,,"move api-cc-en_GB jvm code to common
+
+- no need to move bigDecimalAssertions
+- we could move functions in floatingPointAssertions not involving
+  BigDecimal but that would break bc (we would have to name the
+  file differently), thus:
+  - `expect` functions in common module instead
+  - duplicate functionality in JS",True
+https://github.com/robstoll/atrium/commit/28b52653644638dd3eb134bb0452e9896ecf3d48,,"move api-cc-infix-en_GB jvm code to common
+
+- no need to move bigDecimalAssertions (only available for JVM)",False
+https://github.com/robstoll/atrium/commit/071f5e9cae19ceaf6bab63090aedf39797caea64,,"move api-cc-de_CH jvm code to common
+
+We do not want to provide deprecated functionality for the JS platform.
+Yet, since we want to stay binary compatible we have to make sure
+functions are finally generated in the same class. Thus:
+- declare `expect` declarationts in common modules
+  - copy logic from JVM for JS and remove @Deprecated functions.",True
+https://github.com/robstoll/atrium/commit/f6526b27292d77454e6ad3c3897b2096bd3c0aaf,,"reduce code duplication, use JvmMultifileClass
+
+So far we have declared `expect` fun in the common module since we did
+not want to include deprecated functionality in the JS platform. Thus
+we have duplicated the implementation for JS and JVM. We can reduce
+the code with the help of JvmMultifileClass.
+
+This commit will not compile due to a bug in Kotlin, (file names have
+to be different in common and jvm) but we make the commit nonetheless so
+that git interprets it as a modification and not as new files. Fix
+follows with the next commit.",True
+https://github.com/robstoll/atrium/commit/dbcba37f00982d297d3ba1f7d9b0bf34c1390809,,"use JvmMultifileClass for floatingPointAssertions
+
+We can reduce code duplication by using JvmMultifileClass also for
+floatingPointAssertions.kt",True
+https://github.com/robstoll/atrium/commit/d10c54c5ff584d8052825711c5bb318d6473876f,,"move domain-robstoll-lib jvm code to common
+
+- split floatingPointAssertion, functions for BigDecimal are only JVM
+  specific
+  - introduce `expect` formatNumber so that we do not need DecimalFormat
+    in common module (is JVM specific).
+- use fullName instead of java.name in DownCastAssertionCreator and
+  NoOpCheckerOption
+- use KClass.simpleName instead of java.name in
+  ThrowableThrownFailureHandler and KClass.fullName if simpleName
+  returns `null`
+- introduce KClass.cast for common modules (kotlin.reflect.full is not
+  part of stdlib-common)
+  - rename fullName.kt to kClassExtensions.kt
+- use Regex instead of java.util.regex.Pattern in
+  RegexSearcher and IgnoringCaseRegexSearcher
+- adjust ThrowableThrownAssertionCreator, default method had to be
+  defined in the JVM module to retain bbc, thus duplicate the behaviour
+  and add TODO that it has to be change with 1.0.0",True
+https://github.com/robstoll/atrium/commit/d6bf50d7642f169dec56c7fd27ca90d2d6d5e2bc,,change issue URLs to new template based URLs,False
+https://github.com/robstoll/atrium/commit/a7174907822f9ec06f26ddc9396878d4e40852f0,,"introduce default methods of CoreFactory as extension fun in common
+
+this way we can still use the methods from other common packages (we
+cannot move the default method to common because this would break bbc).",False
+https://github.com/robstoll/atrium/commit/3486204881225ed1d4310f291d9c89588415e647,,"move atrium-verbs jvm code to common
+
+- do not move deprecated verbs in dedicated package (keep them only in
+  JVM).",False
+https://github.com/robstoll/atrium/commit/874100087b9687bd8dd3175e8b0f72e9b19bf416,,"move atrium-verbs-internal jvm code to common
+
+- AssertionVerbFactory cannot be moved since spec is not multi-platform
+Ready => move it into an own file and keep only in JVM.",True
+https://github.com/robstoll/atrium/commit/e9994c41d5f12296b4b0d706609bd5d90d826da6,,"simplify AssertImpl, use ext val for bigDecimal
+
+- push overrides up to common module
+  - only keep AssertImpl.bigDecimal and implement it as extension val
+  - remove AssertImpl from JS",True
+https://github.com/robstoll/atrium/commit/d8535cc317f8b5388b95dfabe3782674bb905dd4,,Add isNotBlank for CharSequence,False
+https://github.com/robstoll/atrium/commit/32ab3cafdf97be68d4e94e85396810c6a90920a5,,"suppress deprecations when building cc-en_GB, add TODOs to remove them",False
+https://github.com/robstoll/atrium/commit/08093defadffddc425edb53319f4f19e69442818,,"use Atrium's Locale in Translator...Spec
+
+- replace deprecated ReporterBuilder....withDefaultTextCapabilities
+  with withTextCapabilities",False
+https://github.com/robstoll/atrium/commit/e04ba0ffd76e1dac0b5a3ef0e0cc34b0c3c583e4,,"require kotlin.stdlib in every module-info.java
+
+we were only too lazy to add it everywhere but as the warning states
+we should not rely on an automatic module (and we don't want to see
+the warning all the time)",True
+https://github.com/robstoll/atrium/commit/20d787272d337be35e2bc9dc6babf567f9834e8e,,"complement specs for asEntries, asKeys, asValues",False
+https://github.com/robstoll/atrium/commit/5c66f45c1b79cf92a80755febad9c39bdaaf0d0c,,throw a NoSuchElementException if more than one service is found,False
+https://github.com/robstoll/atrium/commit/9de2cd16ea1f74df215e3e14f72ff0c31ef61f02,,"implement loadService for JS platform
+
+- move checking for single service to common
+  - update kbox to 0.11.1 so that we can use forEachRemaining in common
+    module
+  - remove SingleServiceLoader from jvm incl Spec
+    - transform Spec into JUnitTest and implement in common module
+- introduce private multi-map serviceRegistry (have to check if this
+  naive implementation suffices later on)",True
+https://github.com/robstoll/atrium/commit/5c627d6d6445f9d60e96ec0c92971beacab4d5f6,,"rename formatNumber to formatFloatingPointNumber
+
+- rename specs as well
+- there are also floating point issues in JavaScript, add some examples",True
+https://github.com/robstoll/atrium/commit/a5de3913a9c21a7285487e5e669060c93c7a350e,,write spec for String.format for JS platform,False
+https://github.com/robstoll/atrium/commit/87c4343b52fbc38a960b2ac17e1c4f04d8981180,,"write spec for Throwable.stack
+
+- make sure JS stack does not include initialisation of the exception
+- reword `fill in a bug report` to `file a bug report`",False
+https://github.com/robstoll/atrium/commit/193725431aaf147280af428ad94d9c8f74424144,,"adjust stackTrace for JVM, filter out junit and spek
+
+- introduce AtriumError and a factory method which performs the
+  adjustment platform specific
+  - thus remove adjustStack
+  - write regression test also for JVM
+  - adjust documentation",True
+https://github.com/robstoll/atrium/commit/dd6ccbfeda5e1df70092b0f49e946d8ab3236cb6,,"move stack adjuster into own class which can be configured
+
+- add newRemoveRunnerAtriumErrorAdjuster to CoreFactory
+- adjust ThrowingAssertionChecker, pass an AtriumErrorAdjuster in
+ addition
+ - adapt CoreFactory accordingly
+- simplify CoreFactory in JS, use extension function from common (as in
+ CoreFactory for JVM)",True
+https://github.com/robstoll/atrium/commit/4fb54b8c193927561885b5704833c53fff32c646,,"add NoOp- and RemoveAtriumFromAtriumErrorAdjuster
+
+- move tests from core-api to core-robstoll-lib
+- define newRemoveRunnerAtriumErrorAdjuster in CoreFactoryCommonImpl
+  and use expect for RemoveRunnerAtriumErrorAdjuster instead",True
+https://github.com/robstoll/atrium/commit/b76587750a86742c98504ec65951a4509997af26,,"add MultiAtriumErrorAdjuster
+
+One might want to use more than one adjuster, we for instance :)
+- use it as default AtriumErrorAdjuster in combination with :
+  - newRemoveAtriumFromAtriumErrorAdjuster(),
+  - newRemoveRunnerAtriumErrorAdjuster(),
+
+Since stack manipulation is costly we want to be able to perform the
+stack adjustment independently of other adjustments. Thus:
+- add adjustOtherThanStack to AtriumErrorAdjuster and a platform
+  specific function which gets a Sequence of stack frames:
+  - hence introduce AtriumErrorAdjusterCommon and make
+    AtriumErrorAdjuster platform specific
+- rename filterUndesiredFrames to filterUndesiredStackFrames",True
+https://github.com/robstoll/atrium/commit/6cd2a5e6e236fabc5fc983cb544313f7354d120a,,"move AtriumErrorAdjuster into ReporterBuilder
+
+This way one can define different AtriumErrorAdjuster per Reporter. It
+belongs to reporting anyway and it is kind of wrong to have it
+separately. Yet, moving creates also a bit of an unnecessary coupling
+between Reporter and AtriumErrorAdjuster. But anyway..
+
+- add additional step to ReporterBuilder for AtriumErrorAdjuster
+- add val atriumErrorAdjuster to Reporter
+  - use it in ThrowingAssertionChecker
+  - remove AtriumErrorAdjuster from ThrowingAssertionChecker
+- adjust CoreFactory.newOnlyFailureReporter and re-add the existing
+  method as additional deprecated overload",True
+https://github.com/robstoll/atrium/commit/5b6151a096116a7e5334539e0dcfdb6280117163,,re-order module-info.java and remove kbox as dep if implicit via core,False
+https://github.com/robstoll/atrium/commit/a5d580aca5386c74e019ebe50a59aa7524272e7a,,"add android modules, use src/main/kotlin and resources from jvm
+
+- exclude android and js modules from jacocoSources",False
+https://github.com/robstoll/atrium/commit/7b27d3f7058414054ad882235091cee64b1bbfda,,"rename stack to stackBacktrace
+
+this way it is not confused with JS's stack and neither with JVM's
+stackTrace",False
+https://github.com/robstoll/atrium/commit/53a3797f8cf0b3261d8414b0b3bc62d612e45143,,"add deprecated overload for toBe/notToBe if keyword is passed
+
+- add fix for bc-cc-infix-en_GB 0.7.0
+- fixes #55",False
+https://github.com/robstoll/atrium/commit/cef74ef8c08bd69810592f917aea875766ff433c,,add deprecated overload for notToBeNullBut and BigDecimal,False
+https://github.com/robstoll/atrium/commit/63b307b32e2542566008693fefd261b9b152e656,,add keys and values once as val and once as fun with assertionCreator,True
+https://github.com/robstoll/atrium/commit/01688e72c3458b1a512ba5594cc970835b0402cc,,rename param warning to warningCannotEvaluate,False
+https://github.com/robstoll/atrium/commit/39befe940a0d1c5c452eeaf90506d91b1cd1f5fc,,add getExisting for Map with non-nullable value types,True
+https://github.com/robstoll/atrium/commit/753403d0abf15a8839c63c6684226b57a3e29c30,,"add getExistingNullable for Map with nullable value type
+
+- introduce CollectingAssertionPlantNullable
+  - adapt AssertionCollector and AssertionCollectorForExplanation
+    they need to support a nullable subject as well
+     - introduce MaybeSubject, we cannot longer use null to represent
+       an absent subject
+- generalise _getExisting so that it works for both non-nullable and
+  nullable subject
+- complement spec with the case that one forgets to define assertions
+  within the assertionCreator lambda -> should throw
+- rename getExisting in de_CH to getExistierend",True
+https://github.com/robstoll/atrium/commit/d0a3f6959212ed1ef46192b18505811fb54f3ec9,,move logic for Assert<Map>.keys/values from api into domain,False
+https://github.com/robstoll/atrium/commit/0cc818bbc424fabaa60915f974fbeef9a21cb9b2,,remove duplicate top property anyAssertions,False
+https://github.com/robstoll/atrium/commit/97edab5c30b0a368577a6ed630262b9d44f22031,,add `get` for List for non-nullable and nullable entry type,True
+https://github.com/robstoll/atrium/commit/7d6bc91495dcaa8ed32b7abe0704f52b2c412ec9,,"introduce partially fixed assertion group and use it for Map/List.get
+
+showing whether a key exists in a Map or if the index is within its
+bounds for List is kind of redundant information. It suffices that the
+assertion group fails. Yet, we cannot use fixedClaimGroup since if
+the pre-transformation (in this case extracting a feature) holds, then
+the group can still fail if sub assertions fail. Thus
+
+- introduce a group with a partially fixed part which forms an AND
+  operation with the sub assertions.
+- use it for List/Map.get
+  - remove Description keys which are not longer required",True
+https://github.com/robstoll/atrium/commit/4c799fef133cbbc2635a53369d862f02bfaf2064,,introduce safe feature extraction,True
+https://github.com/robstoll/atrium/commit/7e883f14fb87d50bac650a039f9922fb6429c5cd,,move collectOrExplain into AssertionCollector,True
+https://github.com/robstoll/atrium/commit/6d79d2d9f38cd86dc36ad38fec6aab4e468cd8d0,,"move FeatureExtractor into domain-api and make creator lib-specific
+
+- remove exports in domain-robstoll's module-info, the provides suffices",True
+https://github.com/robstoll/atrium/commit/80e4caf716332b522a0d3d34543fd50d0d761e32,,create interface groups for (partially)fixedClaimGroup,True
+https://github.com/robstoll/atrium/commit/6e79e3ca1160e262b9c0ec3f85d9852767ca739f,,create interface groups for descriptiveWithFailureHint,False
+https://github.com/robstoll/atrium/commit/dcaffbb9bff562f41dc4d96d885f461a79a41fdc,,create interface groups for descriptive,True
+https://github.com/robstoll/atrium/commit/47c1077d67c9254836cbbf05ea0235e9a460f286,,"create interface groups for explanatory(Group)
+
+Cannot remove ExplanatoryAssertionGroupTypeOption entirely as it is
+already in use in tests and would therefore break bbcTests. We have to
+remove them in 1.0.0",True
+https://github.com/robstoll/atrium/commit/00de75a08c78bf85ec0656bfe3ce81affb5b7631,,use createDescriptive instead of builder where appropriate,False
+https://github.com/robstoll/atrium/commit/085497519614ded5f9e995c9dd80ad66625e0e9e,,remove type parameters where they are not really used,False
+https://github.com/robstoll/atrium/commit/c44eebe10b2561caa3ceacc56964f9152bc06e4b,,"Add containsKey assertion
+
+Add assertion that assert that map contains key
+Affected modules:
+* api-cc-en_GB-common
+* api-infix-cc-en_GB-common
+* api-cc-de_CH-common",False
+https://github.com/robstoll/atrium/commit/a2bee629523cfe99ab5bc9d52a6239420f5322b8,,"add Map.contains for non-nullable value types
+
+We could reuse getExisting but I decided that `contains` should be
+reflected in the output. Thus:
+- add formatArgument to MethodCallFormatter
+- adjust FeatureExtractor
+  - use Translatable for featureRepresentation
+  - rename method to methodCall in RepresentationOption
+  - rename subAssertions to extractAndAssertIt (sounds more like a
+    terminal action)
+-",False
+https://github.com/robstoll/atrium/commit/4f0ca1c441906167ee0a52e4386e203868ee2ea8,,add Map.contains for nullable value types,False
+https://github.com/robstoll/atrium/commit/3dd4212ad3381d08efae7d856ed4eec1db7e79cd,,"#27 rename contains strictly to contains exactly (#57)
+
+rename containsStrictly to containsExactly, re-add deprecated overloads
+
+- Add containsExactly and its variants, deprecate containsStrictly
+- Add enthaeltExakt and its variants, deprecate enthaeltStrikt
+- Replace usages of containsStrictly and enthaltStrikt with containsExactly/enthaeltExakt",False
+https://github.com/robstoll/atrium/commit/c46eae308b942982bae8f67de7eb5fb357795603,,add Map.contains with assertionCreator for non-nullable value type,True
+https://github.com/robstoll/atrium/commit/8acde51226af6a500fe9f8f6b1551c1972108b41,,add Map.contains with assertionCreator for nullable value type,False
+https://github.com/robstoll/atrium/commit/bf06b17a9b55b416d524520f280fe1cf7ac08afd,,"Renamed assertion, fix tests, fix spelling
+
+* Fix tests for Map Assertions
+* Renamed notContainsKey to containsNotKey
+* Renamed nichtEnthaeltKey to enthaeltNichtKey
+* Fix spelling mistakes in tests and docs",False
+https://github.com/robstoll/atrium/commit/3fe374b59953f39300cd287ae586868f75e397c8,,add shortcut to Map.Entry for non-nullable key and value,True
+https://github.com/robstoll/atrium/commit/74e02b7e12af3bf0d6dd719bc1b71d089dc15a94,,add shortcut to Assert<Map.Entry> for nullable key and value,False
+https://github.com/robstoll/atrium/commit/f2cde49a5a7412a05028efc2c28bfc805b9980df,,add isKeyValue to Map.Entry for non-nullable key and value,True
+https://github.com/robstoll/atrium/commit/08ddbb69994ed9996ac96a8d8efe3b62eb2634cb,,"add first/second shortcut for Pair
+
+- for non-nullable first,second
+- for nullable first,second",True
+https://github.com/robstoll/atrium/commit/dc97d750bf57447d5b68c7dcc3dbd6ce834078ca,,"add mapArgument with toAssert and others as second step
+
+with others is meant:
+- toNullOrAssert
+- toAssertionPlantNullable
+- simply `to` with a custom mapper",True
+https://github.com/robstoll/atrium/commit/c06b33bede4ea807cfe96cb40ad12d1bdba36184,,"add mapArguments for ByteArray etc. and toNullOr only for nullable
+
+- write spec for String and for all special array types",False
+https://github.com/robstoll/atrium/commit/89dd4608654c8cc611043caa90759e5923e0ae71,,"refactor AtriumErrorAdjuster, adjust all Throwable, cause and suppressed",False
+https://github.com/robstoll/atrium/commit/5850d6a1169076f857b8111cc75943ba5fbbcfa8,,"include cause and suppressed in hint of unexpected Throwable
+
+Moreover:
+- simplify AtriumErrorAdjuster, no need for type parameter if Throwable
+ is not returned
+- RemoveAtriumFromAtriumErrorAdjuster should filter and not only
+ takeWhile as atrium can occur in stack trace of a cause or suppressed
+ Throwable
+- adjust example in README
+- extend ThrowableAssertionsSpec accordingly
+  - forgive bc tests which fail due to the new reporting",True
+https://github.com/robstoll/atrium/commit/1bb234d55c6c37e64d36ae990611dd8398a63b4f,,"add notToThrow to ThrowableThrown.Builder
+
+Moreover:
+- adjust a caught Throwable so that reporting an unexpected exception
+  does not contain Atrium in stacktrace (if adjuster is configured
+  correspondingly)
+- use NoOpAdjuster in testing",True
+https://github.com/robstoll/atrium/commit/95235a4e19d7ceb91a7392eb8dc43fc41c8aca7c,,add overload with assertion creator to asEntries,False
+https://github.com/robstoll/atrium/commit/3d08e14dc320404384d86fe159c906e5132f9830,,"move KeyValue from domain to api
+
+so far we have all parameter objects in the API and it makes sense to
+do the same here as well. Why?
+- different APIs could name it differently
+- we should only rely on common types in domain, kotlin bugs might get
+  fixed in the future so that we can use Pair in the API as well",True
+https://github.com/robstoll/atrium/commit/ae0266bef07ffc8e0b8deab359cab9f4a85c17dd,,add toBeNullIfNullElse,False
+https://github.com/robstoll/atrium/commit/6636ce3a306366fd48ebb745bcf9b8769033c6b7,,"move implementation of toBeNullable/NullIfNullElse into domain
+
+this way we can reuse it in other places in the domain",False
+https://github.com/robstoll/atrium/commit/de1d57858edf489c7c585a3981e82c4017ecc783,,add shortcut property/fun size for Collection,True
+https://github.com/robstoll/atrium/commit/3ff92358376e3c3987bd4f57ad147ef7c0289289,,add AssertImpl.changeToNullableSubject,False
+https://github.com/robstoll/atrium/commit/6dba7be19cb624a977360a6687485982b02774bf,,"add overload for getExisting which returns AssertionPlant
+
+For this to work we have to:
+- introduce `extract` to the FeatureExAssertionCreator
+- relax FeatureAssertionChecker that one can pass a BaseAssertionPlant
+- distinguish between nullable and non-nullable features",False
+https://github.com/robstoll/atrium/commit/f62880a6a29626eeefad4c478f46d9fd5556df97,,add overload for List.get which returns AssertionPlant,False
+https://github.com/robstoll/atrium/commit/803e3d920edeb63654afbd05415ec6d68b88dd9c,,"remove polyfill for JvmName and JvmMultifileClass
+
+Kotlin changed behaviour, JvmName can now be applied without having an
+actual implementation in JS",True
+https://github.com/robstoll/atrium/commit/df05fac366284baaf5d8cda91d52a9244a9edb20,,"remove withDescriptionAndNullableRepresentation
+
+... and use Any? for withDescriptionAndRepresentation",False
+https://github.com/robstoll/atrium/commit/eaa707618f87ea367c314146909bda8569acf712,,update mockito-kotlin to 2.1.0,False
+https://github.com/robstoll/atrium/commit/35a7047bf5989d077cd8449852feb45c6513c41b,,add newTextNextLineAssertionPairFormatter to CoreFactory,False
+https://github.com/robstoll/atrium/commit/12c49bc0f9c685406cdaae6a3efe7a5b797ad317,,rename package ch.tutteli.atrium.robstoll.core to ...core.robstoll,True
+https://github.com/robstoll/atrium/commit/da770de08b7153b7630e007fb4314285d1375eea,,allow Any? for LazyRepresentation,False
+https://github.com/robstoll/atrium/commit/b7d571d834bf334c61af9289ba2ca52f8f8fb3f6,,deprecate map assertions in API containing nullable in name,False
+https://github.com/robstoll/atrium/commit/42ca7bb3d080d1e06a5596967f3887d18da7de53,,"open up toBe for nullable subjects and deprecate notToBeNullBut
+
+- fixes #77",True
+https://github.com/robstoll/atrium/commit/2c7354c9b173fadf8f86203b6ce6bc6f21cae5c3,,"deprecate API shortcut fun containing nullable for Iterable
+
+- adjust REAMDE
+- adjust differences.md
+- fix spek problem in cc-infix and fix AnyAssertionSpec",True
+https://github.com/robstoll/atrium/commit/77b760125a193af631826d09ce560c54598df34e,,deprecate Iterable assertion builders in API containing nullable in name,True
+https://github.com/robstoll/atrium/commit/18256c2cb96b3cdda4012895d334c9e6405ae0ce,,deprecate parameter objects which contains Nullable,True
+https://github.com/robstoll/atrium/commit/abc1fe16b8369b1cc91207b36327240f57b091bc,,"open up contains, containsNot and containsExactly in cc-infix
+
+Moreover:
+- modify IterableContainsInOrderOnlyGroupedEntriesAssertionsSpec, the
+  groups without nullable elements do no longer have to be tested",False
+https://github.com/robstoll/atrium/commit/2cbf7d192cd790f5574032de0e30a6dedc6f7705,,"open up contains, containsNot and containsExactly in cc-de_CH",False
+https://github.com/robstoll/atrium/commit/6c654ef39885c1e108fa5114260f721ebed631d4,,"open up non-nullable overloads for Map assertions
+
+...and delete the once which have been used for nullable",False
+https://github.com/robstoll/atrium/commit/9e515023a66e564e4c6b39abfeb63469b0b70899,,move smoke tests in bundles to common module,True
+https://github.com/robstoll/atrium/commit/64d58f69f3810e3c847eb0bbc25a47eccfcda8b5,,provide KDoc for Locale and other doc improvements,True
+https://github.com/robstoll/atrium/commit/3c184c7ec68e018654b7ca1a4545fcb3dd9ff8d5,,update to kbox 0.13.0 use blankToNull,False
+https://github.com/robstoll/atrium/commit/b7aa16f147bc409b44c139a805051d33649ba9fe,,"use term `reporting` instead of `error reporting` where appropriate
+
+We will generate reports also if everything works out fine in the
+future. Thus error reporting is wrong",False
+https://github.com/robstoll/atrium/commit/da020309098066db6cfa95e9708c3f0578057a99,,"introduce AssertionContainer with an invariant T without upper bound
+
+PoC for assertion containers with an invariant T and without Any as
+upper bound.",True
+https://github.com/robstoll/atrium/commit/2993e8580c8fc52da0f6f07950eeb8186adc47e4,,"start the transition to spek2 - use it for tests based on Expect
+
+For this to work:
+- introduce a MPP spec module which uses spek2 and fakes it for JS
+- move AnyAssertionsSpec and the new SubjectLessAssertionSpec
+  into en_GB-common
+- update kotlin to 1.3.31 (required by spek2)
+  - make sure we are still compatible with kotlin 1.2
+  - put dependency to unzip in bc-test before creating the bc task ->
+    seems like kotlin 1.3.31 behaves differently here (I guess
+    dependencies are no longer lazy evaluated or something like that)
+- use spek v2.1.0-alpha.0.1+cb69d79 as the stable version has a bug
+  and AnyAssertionsSpec would not run",True
+https://github.com/robstoll/atrium/commit/7fd1f83fe890782dead5fa865bfcc68f00b4daa5,,transform CheckingAssertionSpec to Expect,True
+https://github.com/robstoll/atrium/commit/149c6d02572b9ec37f39b31f641676a5546f51d2,,"implement toBe for nullable subject of Expect
+
+For this to work we have to:
+- implement toBeNull for SubjectProvider
+  - make AssertionPlantNullable a SubjectProvider as well so that we
+    can share the logic
+  - rename AnyAssertions isNull to toBeNull
+- implement notToBeNull for Expect
+- introduce AssertionHolder so that we can reuse some functionality
+  where we only need to add assertions
+- implement AssertionCollector.collect for Expect (don't use a warning
+  as we intend to hide subject from the user with #88 anyway)
+
+Moreover:
+I realised that the transformation of the subject from nullable to
+non-nullable should not be type transformation but a more general
+transformation. We already have that named changeSubject. Thus:
+- introduce a SubjectChanger which does exactly this, changing a subject
+  - distinguish between reported changes and unreported changes
+  - introduce a helper on the domain level which facilitates reported
+    changes (as they constitute an assertion)
+  - skip failure handling for a moment (we surely need a way to be able
+    to handle failures differently, e.g. by augmenting the failure
+    message with hints)
+- introduce ExpectImpl aside to AssertImpl",True
+https://github.com/robstoll/atrium/commit/863002beb3ed71a98491c97d3816d12538e8ae39,,transform toBeNullIfNullGiven to Expect,False
+https://github.com/robstoll/atrium/commit/81bd14ff65cb9b984a5fc0d081f8d57f00cfadb2,,"transform noToBe, isSameAs, isNotSameAS to Expect",False
+https://github.com/robstoll/atrium/commit/bb30f164acde83f6dead8013dab8fbfd1e0ec080,,"remove subjectProvider and introduce maybeSubject in Expect
+
+For this to work we need:
+- a minimalistic version of Option (don't provide a `get` function)
+- change CoreFactory.new...AssertionContainer so that they use Option
+- add `T` to lambdas like `test` in createAndAddAssertion or
+  subjectProvider in SubjectChanger
+  - rename subjectProvider to transformation in SubjectChanger",True
+https://github.com/robstoll/atrium/commit/003f7f766ddcb028f2ff560440f1c5d35009b5bb,,"deprecate subject, add migration path for maybeSubject
+
+- add maybeSubject to SubjectProvider
+  - add SubjectProvider to BaseAssertionPlant (remove from
+    AssertionPlant)
+- add examples how `subject` can be replaces with `it` due to the fact
+that in most cases `subject` is now passed as argument.
+  - add overload for withTest to Descriptive.HoldsOption which expects
+    a subjectProvider -> this way we can remove subject in the future
+    - same for withFailureHind and showOnlyIf
+  - add overload for AssertionBuilder.createDescriptive which expects
+    a subjectProvider
+
+- replace `subject` where it is currently used (add TODOs with a note
+  in case we don't replace it)
+
+Moreover:
+- add deprecated overload AssertImpl.changeSubject which expects
+  `Expect` instead of BaseAssertionPlant so that the transition
+  from Assert to Expect is easier
+- add deprecated overloads for ExpectImpl.changeSubject.unreported
+  which expect BaseAssertionPlant AssertImpl to ExpectImpl is easier
+  - add also overloads to SubjectChanger accordingly
+- use only one AnyAssertion.toBe overload, expect SubjectProvider",True
+https://github.com/robstoll/atrium/commit/14ecec849122ceb5b7084b51cdd50ba930b9e9f1,,"expand assertions in SubjectLessAssertionSpec
+
+and:
+- remove expansion in _collectAndThrowIfNothingCollected
+- rename SubjectLessAssertionSpec to SubjectLessSpec",False
+https://github.com/robstoll/atrium/commit/61ef02d01579530f1ac78934875abc5b129fcbae,,"make descriptive assertion creation subjectLess
+
+- provide an explicative API for defining a failure hint based on the
+  subject where one can provide a factory in case the subject is defined
+  and a factory in case it is absent
+  - once for withFailureHintBasedOnSubject
+    - add special case withFailureHintBasedOnDefinedSubject
+  - once for showOnlyIf
+    - add special case showOnlyIfSubjectDefined
+- descriptive.withTest should return true if subject is absent",True
+https://github.com/robstoll/atrium/commit/3874202175a5c159fbc1821b2d41a717424d4072,,pass subject to FeatureExtractor.canBeExtracted and featureExtraction,False
+https://github.com/robstoll/atrium/commit/a125fc910f3ba54593ebfd6d76a05487b91b134b,,"introduce factory methods for Option steps in SubjectChangeBuilder
+
+this way it is consistent with other builders",False
+https://github.com/robstoll/atrium/commit/803e07c48059efad565bf55e7dd7ae39b47d9f75,,deprecate CoreFactory.new..AssertionPlant,False
+https://github.com/robstoll/atrium/commit/601535eadd447a0eb787c7cf2bbe8293ee1f7faa,,"introduce api-fluent-en_GB, move anyAssertions based on Expect
+
+This new api module will only contain assertion functions for Expect
+and constitutes the future of Atrium
+(cc-en_GB will be removed with 1.0.0)",True
+https://github.com/robstoll/atrium/commit/4b2fdf54783b63945a81e33138862f5e13ef322b,,"add bundle fluent-en_GB, do no longer include -robstoll
+
+I currently doubt we are going to provide another implementation of
+core and domain in the Atrium repository. Or in other words, the
+-robstoll implementation is the default one and does not need to be
+mentioned.",True
+https://github.com/robstoll/atrium/commit/520b2e52c167bdbc7b51c7d6012fe0e7a73a5418,,"re-implement feature extraction based on maybeSubject
+
+- introduce new FeatureExtractor including builder in domain (similar to
+  SubjectChanger(Builder)
+- use List.get as PoC
+- refactor AssertionContainerWithCommonFields: we have
+  LazyRepresentation and thus can simplify to `representation: Any`
+- generalise FeatureAssertionChecker to expect an AssertionHolder
+- add filter to Option
+- move SubjectChanger impl classes to one file named defaultImpls",True
+https://github.com/robstoll/atrium/commit/82f99bf481e6a091cc9eaec0e157651fbe9252e3,,"re-implement isA for Expect, delegate notToBeNull to isA
+
+- generalise isA for nullable types as well (implements #91)
+ - remove specific implementation for notToBeNull, delegate to isA
+    instead also on domain level
+  - return Expect<TSub> instead of Unit (implements #94)
+- add down casting as special case of a subject change
+- make evaluation of LazyRepresentation safe regarding
+  PlantHasNoSubjectException
+- make TypeTransformationAssertionCreator subjectLess
+
+moreover:
+- deprecate DescriptionTypeTransformationAssertion
+- fix changeSubject, assertionCreator should not be applied but added
+  to the plant via addAssertionsCreatedBy
+- generalise asExpect for all types of BaseAssertionPlant
+- split domain-lib implementation into deprecated and non deprecated",True
+https://github.com/robstoll/atrium/commit/a05d79286b00da3d1bd8f02c72170454701e2dfa,,activate smoke-test for bundle fluent-en_GB,True
+https://github.com/robstoll/atrium/commit/33a4a49d5a37336ca83464a9b3a6657c8d34c031,,"deprecate AnyTypeTransformation and the like
+
+- deprecated FailureHandler as well",False
+https://github.com/robstoll/atrium/commit/d316864482e77885c00cfce0b2d287fbb3d5053b,,"move array, collection, comparable and sequenceAssertions to Expect",True
+https://github.com/robstoll/atrium/commit/2952f67d9bb75c5b3f2a2401efbd706ca8585e9b,,move floatingPointAssertions to Expect,True
+https://github.com/robstoll/atrium/commit/3a8a2957b54d04d90d305a3c1dd47f05be5b1c15,,move mapAssertions to Expect,True
+https://github.com/robstoll/atrium/commit/c4e029bf9e11a7d70f3d28bbf5b1fd9fc345071a,,use only ExpectImpl in new impl files in domain-robstoll-lib,False
+https://github.com/robstoll/atrium/commit/bb3d899e6b8c74db36cea0c62cba3c692fd27045,,"move CharSequence to Expect
+
+- use SubjectProvider instead of AssertionPlant in the sophisticated
+  `contains` builder (also for iterable)",True
+https://github.com/robstoll/atrium/commit/4087af74b0cce99295db76e6c2f292928e9d4ade,,"move Iterable assertions to Expect
+
+for this to work we have to:
+- re-implement iterable contains creators which make use of Assert
+- rename IterableContainsAssertions.entriesIn.. which use Assert
+  so that we can add new overloads which use Expect
+
+Moreover:
+- use a translatable error message for the case that `subject` is
+  accessed too early",True
+https://github.com/robstoll/atrium/commit/7c0545daba5c4db9d670d72051b44b833371c552,,"move BigDecimal assertions to Expect
+
+Moreover:
+- rename showOnlyIfBasedOnSubject to showBasedOnSubjectOnlyIf",True
+https://github.com/robstoll/atrium/commit/87081a77b41fce395334c41acc9875e5af194aac,,further attempt to fix code coverage + fix robstoll-lib-common dep,False
+https://github.com/robstoll/atrium/commit/5e229e0525d5cdf2d8a124a8734a6decbec35bea,,"implement new feature mechanism
+
+- implement feature based on substep (fixes #40)
+- add overload for feature which accepts a string
+  and a lambda (part of #87)
+- make sure we have a consistent return type (#92)",True
+https://github.com/robstoll/atrium/commit/c381c97a27c417175b6b3c1c4972f840991b13e2,,deprecate FeatureAssertions,False
+https://github.com/robstoll/atrium/commit/c06ba28cb5978b7ace543a54bc55d59cde7387bd,,create a jdk8 extension module,True
+https://github.com/robstoll/atrium/commit/abb50d577f0fa45593ccfbe7126064d607023afa,,add jdk8 bundle and fix module name of fluent-en_GB bundle,True
+https://github.com/robstoll/atrium/commit/4f13d1f58b3087506431cdcf61d6e76d8159dc7a,,"prepare Path and Optional assertion functions
+
+- groundwork for #47 and #104",True
+https://github.com/robstoll/atrium/commit/94f5ba4533c1a02edef4a5e7497bf0efc9924850,,move testUtils to package specs,True
+https://github.com/robstoll/atrium/commit/fb1a5e6943754f7d2d82db46bc059f8c49061d4d,,"simplify specs, introduce funN and featureN to create FunN, FeatureN",False
+https://github.com/robstoll/atrium/commit/80b2806885d69ea9a698314f3129b39262cf8653,,"make kbox a transitive dependency.
+
+I think it might be useful to Atrium users as well (e.g. glue)",True
+https://github.com/robstoll/atrium/commit/52134a6e09df1888fee96fd1d9a5d1ec8da9c883,,"prepare isEmpty and not isPresent
+
+isPresent is kind of bad style as I think in most cases one should use
+`get` instead. We can still add it there is a high use for it",False
+https://github.com/robstoll/atrium/commit/79a00846bf32d38492d13245a283aa82a411cb45,,"add option to specify a representation instead of feature to Builder
+
+Currently this option is only available directly on the
+FeatureExtractor. Thus:
+- provide it in FeatureExtractorBuilder
+- implement genericFeature in terms of the Builder",False
+https://github.com/robstoll/atrium/commit/3db4178bd8dcd1371dd2a6752edc8331630b3e43,,introduce ExtractedFeatureOption and simplify feature and listAssertions,True
+https://github.com/robstoll/atrium/commit/b123c208a222d5854d8201fbd850a321747df03b,,add Collection.size to Expect,True
+https://github.com/robstoll/atrium/commit/066d35dd4dda360cbb12bd4123ce53795af551f6,,"add Map features to Expect
+
+- translate size feature (also for Collection)",True
+https://github.com/robstoll/atrium/commit/f1c32e6f612d45660b50014068fb9a8beed8350c,,"apply idea of ExtractedFeatureOption also to subject transformation
+
+- make ExtractedFeatureOption an interface and name it PostFinalStep
+- simplify FeatureExtractorBuilder
+- simplify SubjectChangerBuilder
+- simplify isA
+- simplify notToBeNull",True
+https://github.com/robstoll/atrium/commit/281ce79f89250f92fe60a350e124de48bc243830,,deprecate AssertionCollector methods involving AssertionPlant,True
+https://github.com/robstoll/atrium/commit/c9fd37dc0c58583f009ef6a50a645846c47e738a,,"add toThrow/notToThrow and message/messageContains to Expect
+
+- add an overload for toThrow which does not expect an assertionCreator
+  lambda to be consistent with other functions.
+  - throw an IllegalStateException in case no assertion is created
+    in case an assertionCreator lambda is passed
+- adopt specs use toThrow from api.fluent and no longer from api.cc
+- change signature of isA in domain, downcast from `out Any?` to TSub
+  and not from TSub to TSub
+- introduce a FailureHandler in SubjectChanger providing a default
+  handler and one which provides extra information for throwable thrown
+  (reuse logic from ThrowableThrownFailureHandler)
+- do no longer extend SubjectChanger in SubjectChangerBuilder -- better
+  if we do not provide this API to the user",True
+https://github.com/robstoll/atrium/commit/e060ed9ca2a455096c4c725331ef7bbfd6bf4ced,,deprecate ThrowableAssertions using Assert,True
+https://github.com/robstoll/atrium/commit/7a31ae0a36a46b6b9cec157647a841108db3861f,,"add Map.Entry assertion functions to Expect
+
+- fixes #114",True
+https://github.com/robstoll/atrium/commit/557f784e858269b3beaa0f8302e114b089642ab3,,deprecate MapEntryAssertions based on Assert,True
+https://github.com/robstoll/atrium/commit/a782f7d7459daa87a851d01a6901801ec02740cc,,add PairAssertions functions to Expect,True
+https://github.com/robstoll/atrium/commit/af6d338b6b897903348e26fc37769726aa64579f,,remove CheckingAssertionContainer including Spec,True
+https://github.com/robstoll/atrium/commit/7a8d1f6803b63528820af18f6d515f85ef50aae2,,"provide toBe, is and isNotDescr in testUtils",False
+https://github.com/robstoll/atrium/commit/ac5d8b0cf1cfe33611c2dc4cc92f9b99ed2dc97a,,"move withFailureHint and fixed/partiallyFixedGroup to core
+
+- deprecate AssertionComposer
+- deprecate withExplanatoryAssertions => typo,
+  introduce withExplanatoryAssertion instead",True
+https://github.com/robstoll/atrium/commit/c16e979cb81416161e211180a79f856bb589c943,,move impl classes to one file defaultImpls,True
+https://github.com/robstoll/atrium/commit/1316f23d7bb145468a62ccf46816d89f3bda7721,,"fail in case of an empty assertionCreator-lambda
+
+For this to work we have to:
+- always use addAssertionsCreatedBy and not simply apply an
+  assertionCreator-lambda
+  - use Expect instead of CollectingAssertionContainer in
+    AssertionCollector
+- add a failing assertion to the collected assertions in case an
+  assertionCreator does not define any assertion
+- adopt specs:
+  - introduce AssertionCreatorSpec
+  - use it instead of tests checking for IllegalStateException
+
+Moreover:
+- introduce AssertionCollector.collectForComposition as replacement
+  for AssertionCollectorForExplanation
+  - deprecate AssertionCollectorForExplanation and the like
+- return an Assertion instead of an AssertionGroup in
+  AssertionCollector.collect => allows for optimisations
+- use Option instead of a nullable assertionCreator-lambda in
+  SubjectChanger and FeatureExtractor (and the like); a nullable
+  assertionCreator-Lambda is quickly confused with creator or null",True
+https://github.com/robstoll/atrium/commit/226117175fd66c8f5392cf19e28bacd084114c37,,"revise specs, further AssertionCreatorSpecs",False
+https://github.com/robstoll/atrium/commit/a9f2738b77f05a65e2656eb2edfb832ce9118602,,deprecate old ThrowableThrown features,True
+https://github.com/robstoll/atrium/commit/cccc760525ac6943f49c83810766da08ddf06a88,,"provide a String overload where a Translatable is expected
+
+... in case of:
+- creating Assertions
+- option steps in building processes
+
+Moreover:
+- rename Explanatory.withDescription to withExplanation.",False
+https://github.com/robstoll/atrium/commit/94c03d3475aef2cd9badae9798034974f0185479,,"introduce AssertionVerbBuilder, add String overload for verb
+
+moreover:
+- add reporterBuilder to ExpectImpl and deprecate top val
+- fix Translatables of assert and assertThat",True
+https://github.com/robstoll/atrium/commit/a11ef07cc98f0b045cc5142e7065eeaeea2922e8,,"reduce dependency on cc-en_GB in specs, do not use AssertImpl
+
+- remove dependency on cc-en_GB entirely from fluent-en_GB",False
+https://github.com/robstoll/atrium/commit/aaefced7d9faab221b24aa4fb79a887da7e5498b,,open functions with assertionCreator for nullable T,False
+https://github.com/robstoll/atrium/commit/d5713c4f423ccfdf5335cea0be4c97f44f00bb1a,,"deprecate mapArguments.toAssert and the like, introduce toExpect
+
+moreover:
+- switch to Spek2
+- use api-fluent instead of api-cc where possible",False
+https://github.com/robstoll/atrium/commit/74ea8df1aa57ff6d9bf5caa1d5f4efb20c57791a,,deprecated MaybeSubject and PlantHasNoSubjectException,False
+https://github.com/robstoll/atrium/commit/2f56c4e07805b4f5f1d1606151e8c5d884002be1,,"use api-fluent-en_GB instead of api-cc-en_GB
+
+Found a kotlin JS bug concerning name clash of toBe and JsName,
+using a default parameter as current workaround.
+
+Moreover:
+- remove translations-en_GB-android as dependency from api-fluent",False
+https://github.com/robstoll/atrium/commit/bb8d379a3f907d23051b0c6c0624f5a9daf7bc15,,use api-fluent for createSizeFeatureAssertionForInOrderOnly,False
+https://github.com/robstoll/atrium/commit/73dc00096d3a4f07e22786d2c894233ddef07f2b,,"use bundle fluent-en_GB instead of cc-en_GB-robstoll in mocha example
+
+moreover:
+- fix package in fluent-en_GB-js",False
+https://github.com/robstoll/atrium/commit/e273884699dc57ce5ba8920e323a4badce9e9835,,replace cc-en_GB usage with fluent in specs-common,False
+https://github.com/robstoll/atrium/commit/84dc3996e8c4a48040e8a17c95f7f30b05739e21,,"deprecate all integration tests of atrium-spec
+
+turn also warnings into errors in non multiplatform modules",False
+https://github.com/robstoll/atrium/commit/aef0a326f1ec2c0ad4b7ba8644dd0c7474d6d272,,"move AssertionVerb and AssertionVerbFactory from specs.verb to specs
+
+This will ease the migration from spek1 to spek2",False
+https://github.com/robstoll/atrium/commit/a5baca4f225ff203ea3ee403ce808ca6a88a78cf,,"move non-integration tests from spec to specs and use api-fluent
+
+The migration from spek1 to spek2 is another issue (see #116)",True
+https://github.com/robstoll/atrium/commit/063f0f4aaa6b4dd67620d58eaf0af933e8ecd0d2,,"turn FeatureAssertionCheckerSpec into common spec
+
+- use mockk instead of mockito_kotlin",True
+https://github.com/robstoll/atrium/commit/5c54dbac2bd2103968bd8fa1e39b3d26f0d4e3a4,,deprecate api-cc-en_GB anyAssertions,False
+https://github.com/robstoll/atrium/commit/adec7bea306403a75daa06091954d84bb578c431,,deprecate asAssert and asExpect,False
+https://github.com/robstoll/atrium/commit/ab4a30a627eceff816253229df0a64a3e41c2312,,"deprecate toBe for BigDecimal?, still allow toBe(null) though",False
+https://github.com/robstoll/atrium/commit/428d2a5f74e61b264cd84cf2f99e72009eedf7a4,,deprecate AssertionPlantWithCommonFields and BaseAssertionPlant,False
+https://github.com/robstoll/atrium/commit/299539f0551d433ab113a9f6ba532581edd2fd14,,"introduce ReportingAssertionContainer.AssertionCheckerDecorator
+
+Which means:
+- remove AssertionContainerWithCommonFields or rather turn it into
+  AssertionCheckerDecorator but:
+  - introduce an interface
+  - provide two implementations where one evaluates the subject and the
+    representation lazily
+- adjust CoreFactory accordingly",True
+https://github.com/robstoll/atrium/commit/5c6554d0ec3757b5d227695d66422605330c4a6b,,"introduce CoreFactory.newDelegatingReportingAssertionContainer
+
+on the other hand, remove overload which expects a Reporter",False
+https://github.com/robstoll/atrium/commit/db14c7a1c5e71ffeecc839cd0b74ec4f71a84b33,,"add deprecated assert, assertThat and expect to Expect and Assert",False
+https://github.com/robstoll/atrium/commit/da8167c5e3cb7ad92954c7f1c981e0ff44a517f1,,format specs,False
+https://github.com/robstoll/atrium/commit/423db18c87a6b499a4c3969d7885335ccb7cea5f,,"use Expect in FeatureAssertionCheckerSpec as AssertionHolder
+
+and replace `plant` either with `expect` or `container` in specs",False
+https://github.com/robstoll/atrium/commit/091f714df65ba0927cd3e1149156acd370841797,,"revise the remaining examples, small formatting cleanups",False
+https://github.com/robstoll/atrium/commit/515f27d94d4e8a8fa63651139f2f3e33a1f1863a,,add overload expecting String to Expect.createAndAddAssertion,False
+https://github.com/robstoll/atrium/commit/5398527b8bca755b1407ca02929dd9c2f1976eae,,"reformat assertion funs, use static name for containsNot instead of fun",False
+https://github.com/robstoll/atrium/commit/41daeb9f7acaab77ad7388169f94c03284a535c1,,"remove AssertionVerbFactory from specs
+
+This makes things just complicated and since we can configure reporting
+via a ReporterFactory (introduced in 0.8.0 as far as I remember)
+it is no longer required.
+
+this also means:
+- we need a dependency from specs to verbs-internal
+- remove AssertionVerbFactory from verbs-internal and with it the
+  dependency to specs",True
+https://github.com/robstoll/atrium/commit/43140a444247223ccff621ba0ac23f4d1c7bc6fe,,"update to niok 0.3.1, resolves issues with jdk9",True
+https://github.com/robstoll/atrium/commit/61be9f617c9d8ffc837b5b52a1c86b83abb4bcb2,,reformat domain-robstoll-lib-common code,False
+https://github.com/robstoll/atrium/commit/e3904996f7e8bda53135fab9a17434293393e482,,"Add assertion for Path#exists and Path#existsNot
+
+ #108",True
+https://github.com/robstoll/atrium/commit/587128de009a7b178c1c22b2692771b6bb2b6d6c,,Move (NOT_)TO(_BE) constants into DescriptionBasic,True
+https://github.com/robstoll/atrium/commit/d7b5afd623e9290d29032e7bff7d5cc00e4c87ba,,Fix translation loading logic in PropertiesPerEntityAndLocaleTranslationSupplier,False
+https://github.com/robstoll/atrium/commit/cb2c2f3745d58df9ac19e5d06b84d917aa644b76,,"make sure all TranslatorIntSpec are carried out
+
+moreover, we want to make sure that `it` is not picked up but
+we also want to be sure that it is picked up if configured as fallback.",False
+https://github.com/robstoll/atrium/commit/60d938ffc0de3edf11808bdc9803511dd5243893,,"kotlin.code.style.official, reformat newer code
+
+no need to reformat deprecated functionality",False
+https://github.com/robstoll/atrium/commit/dd065af11730b72bfe43aefc068a66e8f598f99c,,define provides FeatureExtractor in module-info of domain-robstoll,True
+https://github.com/robstoll/atrium/commit/5f095e0487d0c1257a8bb8f1596cca8adf5f6cc9,,"workaround dokka super-bug, refer subject via SubjectProvider",False
+https://github.com/robstoll/atrium/commit/db4b8dd37fc552360c00d70121b8ea4a0c2453e8,,use new fail-ifno-tests flag for ConsoleLauncher,False
+https://github.com/robstoll/atrium/commit/08a93beaffd3c46ef8fa55814525643dba128ac0,,"allow to add code samples without an error, rewrite further examples",False
+https://github.com/robstoll/atrium/commit/0adb40113d3ea5d0006563ea65750720f5d73a14,,transform map examples and data-driven test examples,False
+https://github.com/robstoll/atrium/commit/82079af797d12d5c847080355d13c89d40277dd2,,transform own assertion and do not require a test for snippets,False
+https://github.com/robstoll/atrium/commit/38f3182b6ad22c02ff7e427c640b014490a51ce2,,transform i18n and FAQ,False
+https://github.com/robstoll/atrium/commit/a11af8b2d113fb3ff9d212a7d0aeaaecad1312ed,,"fix snippet-import, exclude Assertion",False
+https://github.com/robstoll/atrium/commit/0ca081bb2456e6b60eea28ec2ab5c01a6d6d2898,,"deprecate cc-en_GB feature assertions, introduce asAssert for nullable",False
+https://github.com/robstoll/atrium/commit/5ab8f78797d5e1ce68550006c33b6f67a4ec1d13,,"introduce ExpectBuilder, allow to configure the verbs
+
+a bit more in detail:
+- rename AssertionVerbBuilder to ExpectBuilder
+- introduce ExpectOptions which are non-mandatory options, meaning
+  one does not have to define those options but can still build
+  an Expect
+  - remove ReporterOption, make it optional respectively
+  - allow to override the assertion verb
+  - allow to specify only a specific option without the need to define
+    the rest (no fluent builder as in other cases) => introduce
+    a builder via lambda
+- implements #153",True
+https://github.com/robstoll/atrium/commit/26f67cec56ad0b19a968d76716a156fc1b4669cc,,"remove coreFactory from ExpectImpl, use it directly",False
+https://github.com/robstoll/atrium/commit/40e6df641efac7179c07f5f86203d6f28215ec7b,,remove assertionVerbBuilder from ExpectImpl,False
+https://github.com/robstoll/atrium/commit/806aefbbdf10c4aa5deded081df799add56b234f,,"do not create an ExpectOptions if not required
+
+I think it is better if we use `ExpectOptions?` and only create an
+ExpectOptions if really required. As this function is always used when
+one states an assertion it should not create an superfluous object IMO.",True
+https://github.com/robstoll/atrium/commit/e5916b6b3f3762d725bd1e9c7c2de1441ed270ae,,remove reporterBuilder from ExpectImpl,False
+https://github.com/robstoll/atrium/commit/f0cf94214b056db8def6b1d1643d5c430487e13e,,require java.base transitively in jdk8 module-info.java,True
+https://github.com/robstoll/atrium/commit/59588b807d93577377a7ea7cb6260560aa7d1b89,,introduce RepresentationOnlyAssertion,True
+https://github.com/robstoll/atrium/commit/b7f56122c01103f6ec8255f582cc010f371dd5b6,,"Add hasNext for Iterable
+
+- resolves #158",True
+https://github.com/robstoll/atrium/commit/2355d8589ca4951df68d7b8417270b32e2b953de,,"robstoll#174: Adding shortcut for LocalDate.year, LocalDateTime.year and ZonedDateTime.year",True
+https://github.com/robstoll/atrium/commit/d734147714965d5c17f657662ba54dcdbfa2afc4,,"introduce CharSequence.mismatches (#181)
+
+resolves #165 CharSequence.mismatches accepting a Regex",False
+https://github.com/robstoll/atrium/commit/236f3f4c7ea1dc93a829ccbfc987ef6b9e3d304b,,"Added hasNotNext function for Iterable Expect (#186)
+
+- resolves bonus of #158",False
+https://github.com/robstoll/atrium/commit/b3493d291790dfdf45ef21675ed813177b46e748,,Adding shortcut for Path.getParent (#185),True
+https://github.com/robstoll/atrium/commit/ce89bb20861ca6aad48ad9fb006c46cd70899ec4,,"improvements for Path.getParent, e.g. use a description
+
+using `method` is a bit misleading in reporting as one does not use
+`parent()` but `parent`",False
+https://github.com/robstoll/atrium/commit/ac149d0a4e3a37aceeea47479b3134132ec1f031,,"#175 shortcut for LocalDate, LocalDateTime and ZonedDateTime.month",False
+https://github.com/robstoll/atrium/commit/07b1b7dcb28683b478e88943459d0780287bfc76,,"Add convenient fileNameWithoutExtension to Path (#191)
+
+- resolves #170
+- add test cases for file without extension and directory",False
+https://github.com/robstoll/atrium/commit/a2b1f5c9cbf6371e3714bf504cc4fd469106ad86,,fix type inference problems with `out` and other PR cleanup,False
+https://github.com/robstoll/atrium/commit/3762c71f9facafc71485b00f05444baeafdfa736,,"#188 path ends with (#192)
+
+- resolves 188",False
+https://github.com/robstoll/atrium/commit/ce95f2323195d6cca7d0072a9cd5a0b3f66e4ff2,,"Path starts (not) with (#196)
+
+- create assertions for path starts with and path does not start with,
+  so these can be used in a user friendly way.
+- resolves #187 and #189",False
+https://github.com/robstoll/atrium/commit/9cbfcd231f8cecf178308c827bc58e3a2e81a23a,,"Path.endsNotWith (#197)
+
+* resolves #190",False
+https://github.com/robstoll/atrium/commit/07dc642868305432da3750daa0ba0fdd3a2e9147,,"introduce kotlin 1.3 extensions for bundle, api and domain",True
+https://github.com/robstoll/atrium/commit/8260e0e38488a37d1c2a8556d5c48adced9d51bd,,"Optional isEmpty spec (#205)
+
+- add META INF file so OptionalAssertions can be found
+- update build.gradle so OptionalAssertions are not loaded for JS (causes failing tests otherwise)
+- resolves #47",True
+https://github.com/robstoll/atrium/commit/e08a58918b53844d4d2b1288f115819eaf04d960,,"#193 upgrade spek to 2.0.7 and use spek's `include` (#195)
+
+* resolves #193 can only update to 2.0.7 though as spek 2.0.8 has a breaking change",False
+https://github.com/robstoll/atrium/commit/7a4834363e4975edaa0d3069418542d0c920e9ce,,"shortcut for Path.fileName.toString
+
+* pull request #199
+* resolves #109",False
+https://github.com/robstoll/atrium/commit/d81d8c0ae2b36180141127b303cdb549f2b231ac,,Force locale to en_GB when building examples for readme,False
+https://github.com/robstoll/atrium/commit/cbbd6a8bc885b28fbcd3e79ae0030d290ce0efdf,,add Path extension assertion,False
+https://github.com/robstoll/atrium/commit/1f37f9974c0b7464328dc6c45efea21353443491,,add modules for the new infix api,True
+https://github.com/robstoll/atrium/commit/df4dc6772849c07e6f17890beb4e1e991c543c1e,,remove unnecessary JvmMultifileClass and JvmName from api-fluent-en_GB,False
+https://github.com/robstoll/atrium/commit/4f02556c6b0098560ba4cd659769f18bc209f910,,"turn SubjectChangerBuilder into an interface
+
+Which means:
+- add a companion object with a create method expecting Expect
+  - adapt current code which is using it
+  - also add a deprecated overload for BaseAssertionPlant
+- introduce an additional KindStep (as well as a DeprecatedKindStep)
+  where one can choose either unreported or reporterBuilder",False
+https://github.com/robstoll/atrium/commit/5559e6738ba7f294958feb207cfc6e8974de1051,,"Elaborate path assertions (existence, type, permissions) (#140)
+
+* take care of Windows compatibility
+* add examples to README via ReadmeSpec
+* test handling of unknown exceptions
+* resolves #111
+* resolves #112",True
+https://github.com/robstoll/atrium/commit/da897cb2322872452deb0e22ef875c16043a3b9d,,"Adds Expect<Iterable<Comparable<E>>>.min() (#246)
+
+Signed-off-by: Piyush Mor <piyush.mor@gmail.com>",True
+https://github.com/robstoll/atrium/commit/9e4e618688cfb774a1cbf1b30e1b5fb02f64795b,,#218 update tutteli-spek-extensions to 1.0.1 (#249),False
+https://github.com/robstoll/atrium/commit/fabde3df968e74a6128e392aa64c1967e4d1565f,,add Iterables<Comparable<T>>.max shortcut (#252),False
+https://github.com/robstoll/atrium/commit/b093162dbba01a582006bef6a62768255d40c252,,"cleanup Iterable.has(Not)Next, should also work for nullable and *",False
+https://github.com/robstoll/atrium/commit/febae1bd508872864255761ecef6bb4226f41270,,"add dayOfWeek for LocalDate, LocalDateTime and ZonedDateTime (#257)",False
+https://github.com/robstoll/atrium/commit/4cab4ad94e021629817fa4da6fee9201620005b9,,fix ListFeatureAssertionsSpec in api-infix + cleanup,False
+https://github.com/robstoll/atrium/commit/6d99dd3cbeb41184cb4623b4dba9a5f7eb8a0002,,skip PathAssertionsSpec tests which fail due to symlink loop bug,False
+https://github.com/robstoll/atrium/commit/7ee7470457346d2a65ba520d621c781d541e708e,,Migrate DelegatingAssertionCheckerSpec to spek2 and mockk (#209),False
+https://github.com/robstoll/atrium/commit/e271bc54bde1045912158fa3ab025b290f429c9f,,add overload for containsRegex/regex which expects Regex,False
+https://github.com/robstoll/atrium/commit/fe421caf6eeeaf08c09ced69ad05943381099e3a,,"make Iterable and CharSequence multi time consumable in the searchers
+
+If we want to keep the abstraction of ContainsAssertionCreator (which
+I decided we want), then we have to change the subject under the hood.
+For this to work we have to change the SubjectProvider. It needs to
+implement AssertionHolder so that we can perform the subject change.
+
+Moreover:
+- ContainsAssertionCreator needs to transform the subject before
+  searching
+- use SubjectProvider in SubjectChanger.unreported
+- rename deprecated SubjectChanger.unreported to unreportedToAssert
+  to disambiguate overloads (otherwise we need to provide type
+  parameters for code which is not deprecated)",True
+https://github.com/robstoll/atrium/commit/779fea2a85a74fabcddc4021903494e0dcd47a28,,"optimise the subject change to list, only perform if not already a list",False
+https://github.com/robstoll/atrium/commit/6b7c1edaee246d54bf77073d7109cf1fea0c38a8,,moved DelegatingAssertionCheckerSpec from jvm to common,False
+https://github.com/robstoll/atrium/commit/47dda6ff0d2bddc0f1024439dcf75a548e1f2bf6,,"remove bundles for extensions, keep smoke test though
+
+IMO it is better if we only have a bundle for the main API. Extensions
+can be added individually. That's only one additional dependency and
+it is probably better to document the usage of an extension anyway.",True
+https://github.com/robstoll/atrium/commit/c79acff8ff83d309e0dff6f2e3614201dab9a079,,"remove bundle from module name in module-info.java
+
+- resolves #273",False
+https://github.com/robstoll/atrium/commit/57e7cea96fdbff6a2ba22fe137b185eed62512cd,,use de_CH translations in tests of new infix API,False
+https://github.com/robstoll/atrium/commit/6ce12288efb8ebca7ef1b0c9e7475cd3c3ebc388,,remove unnecessary imports from pre-defined assertion verbs,False
+https://github.com/robstoll/atrium/commit/5d71cfc5310252bf3772a462b7d36cfabaff039d,,"do not split feature extraction and check into two steps
+
+...but work with Option. Might be less familiar to potential
+contributors but makes things more type safe",False
+https://github.com/robstoll/atrium/commit/7f4c40765791998f26ab7a7b6d3af26972095436,,"do not split subject changes and check into two steps
+
+...but work with Option. Might be less familiar to potential
+contributors but makes things more type safe",False
+https://github.com/robstoll/atrium/commit/504dab6187fd6c6605755b9622dae5a8a3366717,,#176 add shortcut for LocalDate(Time) and ZonedDateTime.day (#275),False
+https://github.com/robstoll/atrium/commit/1289e2bce67c44a1dcf1eb6a5617ad0553d52b49,,"replace ThrowableThrown by normal expect
+
+For this to work we have to:
+- introduce Fun0Assertions with the two assertion function
+  isThrowing and isNotThrowing
+ - rename expect which expects an act to expectOld (remove in
+   subsequent commit)
+- fix old smoke tests which use wrong assertion verbs",True
+https://github.com/robstoll/atrium/commit/bc36be149876f7ea40fc8248f8b9716b8a0a7fbd,,"move toThrow and notToThrow specs to new Fun0AssertionsSpec
+
+- keep ThrowableAssertionsSpec for message, messageContains etc.
+- remove ThrowableAssertionsJvmSpec though, as it was only for toThrow
+  and notToThrow (introduce Fun0AssertionsJvmSpec instead)
+
+moreover:
+- introduce notToThrow with an assertionCreator-lambda
+- add specs for it",True
+https://github.com/robstoll/atrium/commit/374d37b08e750c1d362cb109b231dc0707e46e36,,"move Either to core, might be handy in other cases, generalise left type",True
+https://github.com/robstoll/atrium/commit/f99ddbb51dadba358fb1b7dea52cdf9e22f25763,,deprecate ThrowableThrownBuilder and remove api functions for it,True
+https://github.com/robstoll/atrium/commit/a1cd016e7d62b095d80f1e947ffcb5ff903b886c,,introduce FailureHandlerAdapter and withFailureHandlerAdapter,False
+https://github.com/robstoll/atrium/commit/55c3ce0a07e3df9232f7bca5f10ae1f3390d75a7,,"change representation of thrown exception in case none is thrown
+
+Previously we had `no exception thrown`, in this branch we are currently
+showing `null` which is misleading. Thus we want `no exception thrown`
+back. For this we need a way to override the representation of the
+feature. Following the current approach of providing default arguments
+to define Options is actually not ideal, because we could no longer have
+a `val` for a feature such as size. Moreover, we already run into
+ambiguity issues for the verbs, ideally we only have two versions,
+fail-fast and non-fail-fast but not one for an act-lambda in addition.
+For all this reasons:
+- remove representation and options from the assertion verbs
+- introduce RootExpect (part of #280)
+- add an withOptions method to RootExpect so that one can re-define
+  the ExpectOptions.
+- introduce FeatureExpect (part of #280) together with FeatureOptions
+  and the possibility to override them via withOptions
+- introduce RootExpectConfig and FeatureExpectConfig on core-level
+- introduce FeatureOptions analogous to ExpectOptions
+- turn FeatureExtractorBuilder.OptionalRepresentationStep into
+  an OptionsStep where one can pass/define FeatureOptions
+- fix extractFeature: failure case should also show the intended
+  feature in a group with a FeatureAssertionGroupType
+- remove representation and ExpectOptions from verbs and simplify
+  VerbSpec again",True
+https://github.com/robstoll/atrium/commit/cd4a7aba93ae2ce928c5c060a6a9d9b6a4d6695e,,"remove nullRepresentation from ReportingAssertionContainer...Decorator
+
+moreover:
+- remove ThrowableThrownAssertions for Expect, they have been introduce
+  in 0.9.0-alpha and thus should be removed instead of being deprecated",True
+https://github.com/robstoll/atrium/commit/0824d6bc99e0926b23d55eaf019f2366c19039a6,,suppress `Symbol of an unnamed module` bug in more files,False
+https://github.com/robstoll/atrium/commit/f0f0e3e302139792eaf0980f47eb36243571c11a,,#259 ChonoLocalDate(Time) and ChronoZonedDateTime.isAfter (#282),True
+https://github.com/robstoll/atrium/commit/fed24ecb2fa9c156b0393981b26049bf6370219d,,#261 ChronoLocalDate(Time) and ChronoZonedDateTime isBeforeOrEquals (#286),False
+https://github.com/robstoll/atrium/commit/04afbac605add1be77ac38e8ce7809f80ff085f7,,"WIP add Result.isSuccess
+
+this commit is incomplete and requires additional changes, see
+https://github.com/robstoll/atrium/pull/270",True
+https://github.com/robstoll/atrium/commit/5d35bc0c449fa1ad702128d2bac9e3f8f2aade3c,,"fix feature.extractor usage (changed in the meantime) and other issues
+
+other issues were described in detail at
+https://github.com/robstoll/atrium/pull/270",False
