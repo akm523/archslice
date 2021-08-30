@@ -1,0 +1,40 @@
+* Our tool script can read and write slices into yaml file in the following format
+----------------------------------------------------------------------------------------
+- module_name:
+  - mo_add: only_add
+  - connect:
+      module_name:
+      - package/class_name
+  - disconnect:
+      module_name:
+      - package/class_name
+- module_name:
+  - mo_delete: only_delete
+- module_name:
+  - modified_class:
+    - class_name:
+        _connect:
+        - methods:
+            method_name>>class_name:
+        - module_name:
+          - class_name
+    - class_name:
+        _disconnect:
+          module_name:
+          - class_name
+    - class_name:
+        _connect:
+          module_name:
+          - class_name
+    - class_name:
+        _disconnect:
+          <<API>>:
+          - api_class/package_name
+  - deleted_class:
+    - class_name:
+      others_parts are same as modified class
+  - added_class:
+    - class_name:
+      others_parts are same as modified class (except not processed the methods)
+  - not_in_m2m: class_name
+

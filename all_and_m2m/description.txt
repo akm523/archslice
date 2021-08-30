@@ -1,0 +1,1 @@
+*Column D represent m2m change -- TRUE means M2M change, FALSE means not an architectural change
