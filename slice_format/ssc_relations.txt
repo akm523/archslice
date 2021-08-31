@@ -1,0 +1,17 @@
+CLASS_ADD
+CLASS_DELETE
+MO_NEW %new module addition
+DELETE_MO % module deletion
+MO_CONNECT % module's new cross dependency add within module-info.java
+MO_DISCONNECT % module's cross dependency remove within module-info.java
+MODIFY_CONNECT % class have new cross module dependency
+MODIFY_DISCONNECT % class remove cross module dependency
+MODIFY_NEW_METHOD
+MODIFY_DELETE_METHOD
+MODIFY_ADD_DELETE_METHOD
+MODIFY_CONNECT_API
+MODIFY_DISCONNECT_API
+MODIFY_NEW_API_METHOD
+MODIFY_DELETE_API_METHOD
+MODIFY_ADD_DELETE_API_METHOD
+

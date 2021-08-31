@@ -1,0 +1,72 @@
+- bundles/cc-de_CH-robstoll/atrium-cc-de_CH-robstoll-js:
+  - modified_class: []
+  - not_in_m2m: ch/tutteli/atrium/cc/de_CH/robstoll/dependOnMe.kt
+- bundles/cc-en_GB-robstoll/atrium-cc-en_GB-robstoll-js:
+  - modified_class: []
+  - not_in_m2m: ch/tutteli/atrium/cc/en_GB/robstoll/dependOnMe.kt
+- bundles/cc-infix-en_GB-robstoll/atrium-cc-infix-en_GB-robstoll-js:
+  - modified_class: []
+  - not_in_m2m: ch/tutteli/atrium/cc/infix/en_GB/robstoll/dependOnMe.kt
+- bundles/fluent-en_GB/atrium-fluent-en_GB-js:
+  - added_class:
+    - ch/tutteli/atrium/cc/en_GB/robstoll/dependOnMe.kt:
+        _connect:
+          core/robstoll/atrium-core-robstoll-js:
+          - ch/tutteli/atrium/core/robstoll/dependOn_atrium_core_robstoll
+          domain/robstoll/atrium-domain-robstoll-js:
+          - ch/tutteli/atrium/domain/robstoll/dependOn_atrium_domain_robstoll
+- bundles/fluent-en_GB/atrium-fluent-en_GB-jvm:
+  - mo_add: only_add
+  - connect:
+      apis/fluent-en_GB/atrium-api-fluent-en_GB-jvm:
+      - ch/tutteli/atrium/api/fluent/en_GB
+      domain/builders/atrium-domain-builders-jvm:
+      - ch/tutteli/atrium/domain/builders
+      misc/verbs/atrium-verbs-jvm:
+      - ch/tutteli/atrium/verbs
+      translations/atrium-translations-en_UK-deprecated:
+      - kotlin/stdlib
+      translations/en_GB/atrium-translations-en_GB-jvm:
+      - ch/tutteli/atrium/translations/en_GB
+- misc/verbs/atrium-verbs-common:
+  - added_class:
+    - ch/tutteli/atrium/api.verbs/assert.kt:
+        _connect:
+          <<API>>:
+          - ch/tutteli/atrium/verbs/AssertionVerb/EXPECT
+          - ch/tutteli/atrium/verbs/AssertionVerb/EXPECT_THROWN
+          core/api/atrium-core-api-common:
+          - ch/tutteli/atrium/creating/Expect
+          - ch/tutteli/atrium/creating/ReportingAssertionContainer
+          core/api/atrium-core-api-jvm:
+          - ch/tutteli/atrium/reporting/Reporter
+          - ch/tutteli/atrium/reporting/reporter
+          core/robstoll/atrium-core-robstoll-js:
+          - ch/tutteli/atrium/core/CoreFactory
+          - ch/tutteli/atrium/core/Some
+          domain/api/atrium-domain-api-common:
+          - ch/tutteli/atrium/domain/creating/throwable/thrown/ThrowableThrown
+          domain/builders/atrium-domain-builders-js:
+          - ch/tutteli/atrium/domain/builders/AssertImpl
+          translations/atrium-translations-en_UK-deprecated:
+          - ch/tutteli/atrium/assertions/Assertion
+    - ch/tutteli/atrium/api.verbs/assertThat.kt:
+        _connect:
+          <<API>>:
+          - ch/tutteli/atrium/verbs/AssertionVerb/EXPECT
+          - ch/tutteli/atrium/verbs/AssertionVerb/EXPECT_THROWN
+          core/api/atrium-core-api-common:
+          - ch/tutteli/atrium/creating/Expect
+          - ch/tutteli/atrium/creating/ReportingAssertionContainer
+          core/api/atrium-core-api-jvm:
+          - ch/tutteli/atrium/reporting/Reporter
+          - ch/tutteli/atrium/reporting/reporter
+          core/robstoll/atrium-core-robstoll-js:
+          - ch/tutteli/atrium/core/CoreFactory
+          - ch/tutteli/atrium/core/Some
+          domain/api/atrium-domain-api-common:
+          - ch/tutteli/atrium/domain/creating/throwable/thrown/ThrowableThrown
+          domain/builders/atrium-domain-builders-js:
+          - ch/tutteli/atrium/domain/builders/AssertImpl
+          translations/atrium-translations-en_UK-deprecated:
+          - ch/tutteli/atrium/assertions/Assertion
