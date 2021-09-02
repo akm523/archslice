@@ -167,7 +167,7 @@ class ChangeRelation(ModuleFind):
         self.id = None
         self.modules = []
         self.all_modules = [] # all the modules in the project directory
-        self.all_packages=[] # packages are primarliy used for searching modules
+        self.all_packages=[]
         self.module_names = []
         self.module_names_in_file = dict() # module name within module-info.java file: module_name --> module relative directory
         self.repo_path=None
@@ -183,9 +183,7 @@ class ChangeRelation(ModuleFind):
         self.n_disconnected_api=[]
         self.n_disconnected_modules=[]
         self.n_new_methods = []
-        self.n_new_methods_api = []
         self.n_deleted_methods=[]
-        self.n_deleted_methods_api=[]
         self.total_m2m=0
         self.total_non_m2m = 0
         self.total_deleted_cls = 0
@@ -229,14 +227,6 @@ class ChangeRelation(ModuleFind):
         return len(self.n_new_methods)
     def getDeletMthdSize(self):
         return len(self.n_deleted_methods)
-    def getNewAPIMthdSize(self):
-        return len(self.n_new_methods_api)
-    def getDeletAPIMthdSize(self):
-        return len(self.n_deleted_methods_api)
-    def getAddDeletAPIMthdSize(self):
-        return self.contain_add_delete_mthd_with_api
-    def getAddDeletMthdSize(self):
-        return self.contain_add_delete_mthd
     def setProjectRoort(self,proot):
         self.repo_path = proot
     def setId(self,id):
@@ -251,8 +241,7 @@ class ChangeRelation(ModuleFind):
         self.all_packages = packs
     # find the module of a relevent class
 
-    def extendsPacDirs(self,dirs):
-        self.all_packages.extend(dirs)
+
     def findModlOfCls(self, cls):
         for mdl in self.all_modules:
             mdl_path = str(mdl).replace(self.repo_path + "/", "").replace("module-info.java","")  # remove local repo dir part
@@ -492,10 +481,9 @@ class ChangeRelation(ModuleFind):
                             for mthd in list(cls.import_in_add_methods):
                                 if("<<>>" in mthd): #TODO-- we assume that <<>> indicates API class import and >> indicates usual class import
                                     has_add_api = True
-                                    self.n_new_methods_api.append(mthd)
                                 else:
                                     has_add_class = True
-                                    self.n_new_methods.append(mthd)
+                                self.n_new_methods.append(mthd)
                     if(len(cls.disconnected.keys())>0):
                         modify_disconnect = True
                         for ky in cls.disconnected.keys():
@@ -515,26 +503,25 @@ class ChangeRelation(ModuleFind):
                             for mthd in list(cls.import_in_delete_methods):
                                 if("<<>>" in mthd): #TODO-- we assume that <<>> indicates API class import and >> indicates usual class import
                                     has_delete_api = True
-                                    self.n_deleted_methods_api.append(mthd)
                                 else:
                                     has_delete_class = True
-                                    self.n_deleted_methods.append(mthd)
+                                self.n_deleted_methods.append(mthd)
 
                     if(has_delete_mthd and has_add_mthd):
                         if(has_add_api and has_delete_api):
                             self.contain_add_delete_mthd_with_api +=1
                         else:
                             self.contain_add_delete_mthd +=1
-                    # if (has_delete_mthd == False and has_add_mthd == True):
-                    #     if (has_add_api):
-                    #         self.contain_only_add_mthd_with_api +=1
-                    #     else:
-                    #         self.contain_only_add_mthd += 1
-                    # if (has_delete_mthd == True and has_add_mthd == False):
-                    #     if(has_delete_api):
-                    #         self.contain_only_delete_mthd_with_api +=1
-                    #     else:
-                    #         self.contain_only_delete_mthd += 1
+                    if (has_delete_mthd == False and has_add_mthd == True):
+                        if (has_add_api):
+                            self.contain_only_add_mthd_with_api +=1
+                        else:
+                            self.contain_only_add_mthd += 1
+                    if (has_delete_mthd == True and has_add_mthd == False):
+                        if(has_delete_api):
+                            self.contain_only_delete_mthd_with_api +=1
+                        else:
+                            self.contain_only_delete_mthd += 1
             if(modify_connect):
                 self.modify_connect +=1
             if(modify_disconnect):

@@ -1,0 +1,17 @@
+######### This script is separated from a large project #############
+######### Please contact amit.mondal@usask.ca if there is any anomaly in running the code ############
+
+########## Many hand coded directory structure needs to be updated for running the script ############
+########## Require downloding project repositoroes in the local system ######################
+
+Script file: MainEntry
+- Commits download from 2017 to 2020
+- Common strcutural change extraction
+- Then M2M detection based on the strcutual change information
+
+Script file: MainRelationClass
+-- SSC information extraction
+-- SSC summary information generation
+
+
+****This tool is an ongoing project. Further enhanced version will be available upon request.
