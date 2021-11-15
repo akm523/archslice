@@ -1,4 +1,5 @@
 # archslice
 Semantic slice generation of module level architectural changes
 
-Dataset and tool script are on the process of uploading..............
+The tool is going through enhancements. The enhaced version will be available in another branch (or upon request to amit.mondal@usask.ca).
+This tool can only be used for academic and research purposes without permission.
